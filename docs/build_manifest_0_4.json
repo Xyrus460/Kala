@@ -1,0 +1,36 @@
+{
+  "version": "0.4.0",
+  "built_utc": "2026-10-25T05:16:11.560Z",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "compatible_engine_tested": "4.8.dev7.official.c971f93e7 (revision suite)",
+  "architecture": "Windows x86_64",
+  "separate_pck": true,
+  "custom_template": "Godot editor executable, native player runtime mode",
+  "checks_stable": 381,
+  "checks_dev7": 63,
+  "tests": {
+    "integration_04.log": 174,
+    "layout_validation_04.log": 110,
+    "story_regression_04.log": 28,
+    "claw_combat_04.log": 6,
+    "revision04_final.log": 63,
+    "revision04_dev7.log": 63
+  },
+  "package_files": 496,
+  "packaged_web_runtime": false,
+  "packaged_danu_voice": false,
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "modified_utc": "2026-10-25T05:10:29.288Z",
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 119675604,
+      "modified_utc": "2026-10-25T05:10:44.800Z",
+      "sha256": "4138b9e4256e789d5adc60dcc84749b1c32f214a8efdcf7fb5cc4f590cff3248"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+window.addEventListener('error',function(e){if(window.__tumbalReady)return;const s=document.getElementById('loadStatus');if(s)s.textContent='Game gagal dimuat. Pastikan WebGL aktif di browser desktop, lalu muat ulang.';});

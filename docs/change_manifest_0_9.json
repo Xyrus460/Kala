@@ -1,0 +1,172 @@
+{
+  "revision": "0.9.0",
+  "source_files": [
+    {
+      "path": "scripts/enemies/enemy.gd",
+      "change": "modified",
+      "sha256": "fa0850fc56563a4a1315c222f4d94e6c56b5d725d16d88ab86fb083e6f2922f3"
+    },
+    {
+      "path": "scripts/player/player.gd",
+      "change": "modified",
+      "sha256": "9c88507b8b4c853ebf15b076de48e1d03218d56f65e00eef2c98eace5b1ad88a"
+    },
+    {
+      "path": "scripts/systems/audio.gd",
+      "change": "modified",
+      "sha256": "222f3015f698521cd38c94631d79816e403ac71dba739819e9a1a947211d2910"
+    },
+    {
+      "path": "scripts/systems/chapter_flow.gd",
+      "change": "modified",
+      "sha256": "a156d262da2ef20753b65ffa46a88a7f95a319dd037198ee198bf259e41084e7"
+    },
+    {
+      "path": "scripts/systems/chapter_world.gd",
+      "change": "modified",
+      "sha256": "8b853eaf1696f12b25f31f9e98b35bcf499cdfd00d1d1af6a9a6cb1cc92b2e01"
+    },
+    {
+      "path": "scripts/systems/continuous_campus.gd",
+      "change": "added",
+      "sha256": "51a6c4f87abeb1957e283faff9fec4a41938ae678d7529193129bb441eb5560e"
+    },
+    {
+      "path": "scripts/systems/factory_overhaul.gd",
+      "change": "added",
+      "sha256": "743d3dd9e8cf9409628baaf3299561169129dbb254e52304596d634529a2ce8a"
+    },
+    {
+      "path": "scripts/systems/free_assets.gd",
+      "change": "modified",
+      "sha256": "e802a84e1961da1809ef3726c733160024c60b684ca99175a5ba4e2ece9806c7"
+    },
+    {
+      "path": "scripts/systems/home_detail.gd",
+      "change": "modified",
+      "sha256": "edf286fa71ee27b8962f04a1f320da930c0ddd0dfee4ebe52c42db9d2d817dca"
+    },
+    {
+      "path": "scripts/systems/main.gd",
+      "change": "modified",
+      "sha256": "2a5de059406fab504049d21f043cb89b942eb0a91b675d5f99b13dfc36d7e7a9"
+    },
+    {
+      "path": "scripts/systems/neighborhood_backdrop.gd",
+      "change": "modified",
+      "sha256": "9f965c98f55c7a849c7fa01dbcb456a7b2d023dd833403b2b540b74b46d9129d"
+    },
+    {
+      "path": "scripts/systems/school_detail.gd",
+      "change": "modified",
+      "sha256": "5351779ad790ecc595c8c93706f0a7de184a7cc49f6c818f278e8eed4711492c"
+    },
+    {
+      "path": "scripts/systems/street_connection.gd",
+      "change": "modified",
+      "sha256": "5ba4dcba2bf23fa1a0b5410c1d6fec155be67587b46ffb0309f9b4999328e46b"
+    },
+    {
+      "path": "scripts/systems/world_detail.gd",
+      "change": "modified",
+      "sha256": "d0441be05d5eebd32584e796384fdcb8b9e872cc371f679dccc0fc3ae7e0d242"
+    },
+    {
+      "path": "scripts/ui/dialogue_card.gd",
+      "change": "added",
+      "sha256": "e7bca0231d55c078e8371ff1aa21cadeb627b197c5bb6a0c7a8d37802b268fd0"
+    },
+    {
+      "path": "scripts/ui/field_note.gd",
+      "change": "added",
+      "sha256": "d2e25f701b0f800aff3103d554aff19bb9a32313b23cb20dc9bb57d310957b23"
+    },
+    {
+      "path": "scripts/ui/hud.gd",
+      "change": "modified",
+      "sha256": "01d3137e212745e236cc2b295e2ae5919700868149939534f7396224cf2ee6b1"
+    },
+    {
+      "path": "scripts/ui/lentera_tutorial.gd",
+      "change": "modified",
+      "sha256": "f82671062e8240408dec010a4cf8d5efdb4e3926edf7096570b9abdd124a2b03"
+    },
+    {
+      "path": "scripts/ui/wiring_board.gd",
+      "change": "added",
+      "sha256": "467ae2b5714ef9b3c216a346a3ea6a6fde7be5c9351a0fd2ed5339c29488c878"
+    },
+    {
+      "path": "tests/capture09.gd",
+      "change": "added",
+      "sha256": "df0b45029e7d09972dd6aefa671e04c09c600817bdfbabc34d00ed931c8923b8"
+    },
+    {
+      "path": "tests/revision06.gd",
+      "change": "modified",
+      "sha256": "5915be905e7d1e368c75df16bb84e400442ae3371e11ec2e4abc521b1f3707d2"
+    },
+    {
+      "path": "tests/revision09.gd",
+      "change": "added",
+      "sha256": "9b4f5861da58b8e4c43caf7ca33cb59a3b4993de7c3c67632b262cae4436b32e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2d980f63d6c3d083ed9779a27a3f02938a55507b7476865362182bed1cf3f18c"
+    },
+    {
+      "path": "project.godot",
+      "sha256": "eb49d55b9222046752f4d965aefce28b56a23a15dd2fb4d407433844eec581cc"
+    },
+    {
+      "path": "export_presets.cfg",
+      "sha256": "cfe61b00a3bbe43cc9719e81a15e7654d9febb744ee275e89e904743a621bf9f"
+    },
+    {
+      "path": "assets/story.json",
+      "sha256": "a12192df99ade27bd2a84dc9a4c01caa7df347670e4d7e71eddeb0bfc5c7efa7"
+    },
+    {
+      "path": "assets/cinematics.json",
+      "sha256": "c2501771ef3ad6416a9d59c51bcae402e85f031555b6c016a793cce4f68f8d40"
+    },
+    {
+      "path": "assets/walkable_bounds.json",
+      "sha256": "1ebe51d29b2848f043dcc3c52d682c40231eb5f489e7707ab6037d47ab705f5f"
+    },
+    {
+      "path": "assets/vendor/licenses.json",
+      "sha256": "59a2a2de8d941cf4cbdbd6ea52d0708ecf78c381f2ec26c9cd0d699e418d55ad"
+    },
+    {
+      "path": "assets/materials/campus_ground.gdshader",
+      "sha256": "6f7a7aa75a4a6af2c8ac3a855750de3e23a98df3755ce905330f2b528193f461"
+    },
+    {
+      "path": "assets/materials/factory_metal.gdshader",
+      "sha256": "bbc4e9789b57e72ad06dc8849a66ee2795a77b2012a4e10af43c3671cd6acfe2"
+    },
+    {
+      "path": "assets/fonts/Caveat.ttf",
+      "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988"
+    },
+    {
+      "path": "assets/fonts/Caveat.OFL.txt",
+      "sha256": "1f9d81d094273d82f3898a1ee8b598a717d050ecbf5ff7bede105b704880157b"
+    },
+    {
+      "path": "tools/TEST_PROJECT.ps1",
+      "sha256": "918c33a1f4df8dc69c447df2ecf5a04b64654f6cf59d34acae1ccf639adc6697"
+    },
+    {
+      "path": "tools/rewrite_cinematics09.py",
+      "sha256": "1dd2722a9815e6446dda502d25f4b33190e5922029fc42b12f9f6ef49fc56858"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "89aee8059ce0bc486abc10b13bd296e2fb0ac8735851280590aa59f9f1b9ca9a"
+    }
+  ],
+  "vendor_assets": "docs/vendor_manifest_0_9.json"
+}

@@ -1,0 +1,80 @@
+{
+  "version": "0.4.0",
+  "logs": [
+    {
+      "file": "import_04_final.log",
+      "errors": false,
+      "rooms": 0
+    },
+    {
+      "file": "bake_04.log",
+      "errors": false,
+      "rooms": 0
+    },
+    {
+      "file": "integration_04.log",
+      "errors": false,
+      "summary": "KALA INTEGRATION: 174 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "layout_validation_04.log",
+      "errors": false,
+      "summary": "KALA LAYOUT: 110 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "story_regression_04.log",
+      "errors": false,
+      "summary": "KALA STORY: 28 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "claw_combat_04.log",
+      "errors": false,
+      "summary": "KALA CLAW: 6 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "revision04_final.log",
+      "errors": false,
+      "summary": "KALA REVISION04: 63 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "revision04_dev7.log",
+      "errors": false,
+      "summary": "KALA REVISION04: 63 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "revision04_visual.log",
+      "errors": false,
+      "summary": "KALA REVISION04: 62 checks, 0 failures",
+      "rooms": 0
+    },
+    {
+      "file": "capture_04_final.log",
+      "errors": false,
+      "rooms": 0
+    },
+    {
+      "file": "export_windows_04.log",
+      "errors": false,
+      "rooms": 0
+    },
+    {
+      "file": "exe_smoke_04.log",
+      "errors": false,
+      "rooms": 10
+    },
+    {
+      "file": "exe_render_04.log",
+      "errors": false,
+      "rooms": 10
+    }
+  ],
+  "package_forbidden": [],
+  "stable_checks": 381,
+  "compatible_revision_checks": 63
+}

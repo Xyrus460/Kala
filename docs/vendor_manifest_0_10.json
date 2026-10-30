@@ -1,0 +1,228 @@
+[
+  {
+    "file": "assets/vendor/revision10/bed_double.glb",
+    "title": "Double Bed Upholstered (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-double-bed-upholster-4c7d1e0e",
+    "download": "https://cdn.3dassets.dev/assets/38770/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "EF86F37A0C0A6C7277EF9C7342B8AE8FAE5DE958D7954CE642D08CDB9D767F76",
+    "original_sha256": "086BE35DA80CEFFD6528AF9490136CCF3F25C10E67160FD2E37D4BB0A9D9E367"
+  },
+  {
+    "file": "assets/vendor/revision10/bed_single.glb",
+    "title": "Single Bed Timber (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-single-bed-timber-bf8bfbfb",
+    "download": "https://cdn.3dassets.dev/assets/38771/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "B189741F3C4904E7990430972257EAA5A9522AA18020EE005912831621F8A6BF",
+    "original_sha256": "D1DCA54AE11C7AC0793FB8F574A29329D83CDE653C734C0E2955125105B4D0D0"
+  },
+  {
+    "file": "assets/vendor/revision10/armchair.glb",
+    "title": "Armchair Lounge (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-armchair-lounge-6873b63b",
+    "download": "https://cdn.3dassets.dev/assets/38780/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "2AF33211E7D573DF3072DA51DE336A61D9E40402F8D13693258E770A8FB7FF23",
+    "original_sha256": "89C8B7B530CADBE7BCA5AE1826409AC1167143390C3ACD5FBA31243B16B2099D"
+  },
+  {
+    "file": "assets/vendor/revision10/task_chair.glb",
+    "title": "Desk Task Chair (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-desk-task-chair-e1320da0",
+    "download": "https://cdn.3dassets.dev/assets/38786/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "0E9CA0B44AE278B0784602FECFC8B876758DA45FB547902AA7712812C3CA444D",
+    "original_sha256": "9A1EFB2112523AB1757EC7EED96DBB44C6001B1246004CE64BCD66DA403E2DC6"
+  },
+  {
+    "file": "assets/vendor/revision10/rocking_chair.glb",
+    "title": "Rocking Chair Timber (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-rocking-chair-timber-56f3ad40",
+    "download": "https://cdn.3dassets.dev/assets/38787/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "3A0B194F4E461492C38F6C51852CF80FB3769F0EF6024C2BC13E661451593B83",
+    "original_sha256": "117005E65B19760CAF3E4D508C247F61FCF29941976B0B53DED9CFD74AF454B1"
+  },
+  {
+    "file": "assets/vendor/revision10/side_table.glb",
+    "title": "Side Table Square Drawer (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-side-table-square-dr-0e5df392",
+    "download": "https://cdn.3dassets.dev/assets/38794/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "D2168F0C314456E73217E591876341ADCF0D68686B20EA119CB7066D0C99B1EE",
+    "original_sha256": "813B7A56329F3A760A0B1EA173C1135AC7719A3FC0BD09B16D975DB8C3D89FB8"
+  },
+  {
+    "file": "assets/vendor/revision10/desk.glb",
+    "title": "Desk Writing (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-desk-writing-2f6be817",
+    "download": "https://cdn.3dassets.dev/assets/38795/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "042BE9A7326C0F43236061A199A2E766E18C55A143BE0EBE1FC3DAA2E6A72527",
+    "original_sha256": "29678A25099BEED66D4B225B439E0C5FE05ECCED4362791D130A15EEB7386146"
+  },
+  {
+    "file": "assets/vendor/revision10/floor_lamp.glb",
+    "title": "Floor Lamp Drum (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-floor-lamp-drum-eb15aef6",
+    "download": "https://cdn.3dassets.dev/assets/38796/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "D6F0EEAC6677ADDB6C4B6D0F74509CCD3C33867993422425D1D3D9105B38DD65",
+    "original_sha256": "E6AD3AF44896242E22A85EA736EE297C3462F3F3B0F5C208065EE237427616B6"
+  },
+  {
+    "file": "assets/vendor/revision10/table_lamp.glb",
+    "title": "Table Lamp Dome (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-table-lamp-dome-0c974308",
+    "download": "https://cdn.3dassets.dev/assets/38799/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "A77E621C5B7BC022D87560AA1E69C7EEA996C77EE582451C11B524BF08C308F6",
+    "original_sha256": "F66836CCB5E1BC62DADC20FAE5803D4C4F4233194AEC4BE5BC4EAA4537B62A98"
+  },
+  {
+    "file": "assets/vendor/revision10/wardrobe.glb",
+    "title": "Wardrobe 2 Door (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-wardrobe-2-door-de288b64",
+    "download": "https://cdn.3dassets.dev/assets/38805/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "BFDAEA1E6FADF8DBFB2080D7AA46E3BE1D7B5AA5061285A8AD79B40F4D0FE58D",
+    "original_sha256": "21D0C8DBE1AA4CC0AB847F186FFF2114BD2E397F72C7963883F07885A7C825FC"
+  },
+  {
+    "file": "assets/vendor/revision10/chest.glb",
+    "title": "Chest Of Drawers 6 (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-chest-of-drawers-6-50dcdf4d",
+    "download": "https://cdn.3dassets.dev/assets/38806/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "44EC8017B07ED74FD0B5C4263C6F1879F76DB765CBB16FE4FC08C5DFE5463B88",
+    "original_sha256": "825CE4911EBF6254B200792DC9A796466E882E126A2F4452E43A9A97EA43BBD3"
+  },
+  {
+    "file": "assets/vendor/revision10/bookcase.glb",
+    "title": "Bookcase 5 Shelf (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-bookcase-5-shelf-8af13000",
+    "download": "https://cdn.3dassets.dev/assets/38810/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "B29AE19666C2F6BFCC946D598436FEC7197E08F803CF01180922538A3740780C",
+    "original_sha256": "1D1153178630E74CC1E284D10B2BE8224182FDD91CD44CFAFA8C90FDA73CBE94"
+  },
+  {
+    "file": "assets/vendor/revision10/wool_rug.glb",
+    "title": "Rug Wool Large (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-rug-wool-large-14b20ed0",
+    "download": "https://cdn.3dassets.dev/assets/38814/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "347EBF54A197927D8D84C88BBE3EDB3ED803FED54CF12A0EB45D7711DCD30B6C",
+    "original_sha256": "CACD741F15426BBD8C4C367BF92A27C0730DBA39B2533BB4C2B6C6DE345A88D9"
+  },
+  {
+    "file": "assets/vendor/revision10/jute_rug.glb",
+    "title": "Rug Round Jute (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-rug-round-jute-1be22f81",
+    "download": "https://cdn.3dassets.dev/assets/38812/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "E1AC029B6ADB9B41F338FA160197DD23955E367E6D25BEA2657D58BEF34A8B8D",
+    "original_sha256": "1CFEDDE6CB3F06C495C533A1AE16BACAB8E1CCF19FF1D32A5F11AF6F550F41A4"
+  },
+  {
+    "file": "assets/vendor/revision10/curtains.glb",
+    "title": "Curtains Linen Pair (Bedroom and Living Room Furniture)",
+    "source": "https://3dassets.dev/assets/bedroom-and-living-room-furniture-curtains-linen-pair-d22db984",
+    "download": "https://cdn.3dassets.dev/assets/38813/v1/model.glb",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "sha256": "F3C265DB5DFB35C0E4FC9C622D215F19A485FD6EDD71CA25CB70225E064D9D08",
+    "original_sha256": "0D079A1E57DC76DFA3881A7A0C027C8AE3C7AE29C7C8DD557BCBC3ECD49F6245"
+  },
+  {
+    "file": "assets/vendor/revision10/cartridge_fuse.glb",
+    "title": "Cartridge fuse 10 x 38 mm gG 16 A",
+    "author": "Innerscene",
+    "source": "https://www.innerscene.com/tools/library/3d-parts/cartridge-fuse-10-x-38-mm-gg-16-a-32915eb2",
+    "license": "CC0-1.0",
+    "sha256": "544F66C3E9C44642BE599B31595865BC42694184086324714CA1DB90376CA706"
+  },
+  {
+    "file": "assets/vendor/revision10/nightstand.glb",
+    "title": "ClassicNightstand 01",
+    "author": "Kirill Sannikov / Poly Haven",
+    "source": "https://www.innerscene.com/tools/library/3d-parts/victorian-nightstand-28fb8e24",
+    "license": "CC0-1.0",
+    "sha256": "41911D3B445161AAC6B13E50880BE20378D5CB948CC4ABC4482D68110A7BCBC6"
+  }
+]

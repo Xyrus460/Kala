@@ -1,0 +1,1096 @@
+{
+  "school": {
+    "effects": [
+      {
+        "name": "Source_131",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_135",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_139",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_143",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_147",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_151",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_155",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_159",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_163",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_167",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_171",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_175",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_179",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      },
+      {
+        "name": "Source_183",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          0.623960391667596,
+          0.8069522576650873,
+          0.6583748172725346
+        ]
+      }
+    ],
+    "walls": []
+  },
+  "street": {
+    "effects": [
+      {
+        "name": "Source_792",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          1,
+          0.6938717612856897,
+          0.3515325994898463
+        ]
+      },
+      {
+        "name": "Source_797",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          1,
+          0.6938717612856897,
+          0.3515325994898463
+        ]
+      },
+      {
+        "name": "Source_802",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          1,
+          0.6938717612856897,
+          0.3515325994898463
+        ]
+      },
+      {
+        "name": "Source_807",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          1,
+          0.6938717612856897,
+          0.3515325994898463
+        ]
+      },
+      {
+        "name": "Source_812",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0,
+        "color": [
+          1,
+          0.6938717612856897,
+          0.3515325994898463
+        ]
+      },
+      {
+        "name": "Source_880",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.46207699964472876,
+          0.4793201830913402,
+          0.33245153633549385
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_838",
+        "surface": 0
+      }
+    ]
+  },
+  "relay": {
+    "effects": [
+      {
+        "name": "Source_1368",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5972017883558645,
+          0.4793201830913402,
+          0.3094689228067428
+        ]
+      },
+      {
+        "name": "Source_1372",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.3277780980458375,
+          0.4232676699760063,
+          0.43415363616478553
+        ]
+      },
+      {
+        "name": "Source_1413",
+        "surface": 0,
+        "type": "roof",
+        "intensity": 0.035,
+        "color": [
+          1,
+          0.76052450467022,
+          0.450785782828426
+        ]
+      },
+      {
+        "name": "Source_1494",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6866853124288864,
+          0.5647115056965487,
+          0.35640014413537763
+        ]
+      },
+      {
+        "name": "Source_1570",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      },
+      {
+        "name": "Source_1606",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_1307",
+        "surface": 0
+      },
+      {
+        "name": "Source_1308",
+        "surface": 0
+      },
+      {
+        "name": "Source_1309",
+        "surface": 0
+      },
+      {
+        "name": "Source_1310",
+        "surface": 0
+      },
+      {
+        "name": "Source_1311",
+        "surface": 0
+      },
+      {
+        "name": "Source_1312",
+        "surface": 0
+      },
+      {
+        "name": "Source_1522",
+        "surface": 0
+      },
+      {
+        "name": "Source_1531",
+        "surface": 0
+      },
+      {
+        "name": "Source_1541",
+        "surface": 0
+      },
+      {
+        "name": "Source_1562",
+        "surface": 0
+      },
+      {
+        "name": "Source_1594",
+        "surface": 0
+      },
+      {
+        "name": "Source_1625",
+        "surface": 0
+      },
+      {
+        "name": "Source_1626",
+        "surface": 0
+      },
+      {
+        "name": "Source_1627",
+        "surface": 0
+      },
+      {
+        "name": "Source_1628",
+        "surface": 0
+      },
+      {
+        "name": "Source_1750",
+        "surface": 0
+      },
+      {
+        "name": "Source_1751",
+        "surface": 0
+      },
+      {
+        "name": "Source_1752",
+        "surface": 0
+      },
+      {
+        "name": "Source_1753",
+        "surface": 0
+      },
+      {
+        "name": "Source_1756",
+        "surface": 0
+      },
+      {
+        "name": "Source_1776",
+        "surface": 0
+      },
+      {
+        "name": "Source_1777",
+        "surface": 0
+      },
+      {
+        "name": "Source_1780",
+        "surface": 0
+      }
+    ]
+  },
+  "loading": {
+    "effects": [
+      {
+        "name": "Source_1878",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5711248294565854,
+          0.6444796819634361,
+          0.4286904966038916
+        ]
+      },
+      {
+        "name": "Source_1882",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5711248294565854,
+          0.6444796819634361,
+          0.4286904966038916
+        ]
+      },
+      {
+        "name": "Source_1886",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5711248294565854,
+          0.6444796819634361,
+          0.4286904966038916
+        ]
+      },
+      {
+        "name": "Source_1968",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      },
+      {
+        "name": "Source_1999",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_1802",
+        "surface": 0
+      },
+      {
+        "name": "Source_1803",
+        "surface": 0
+      },
+      {
+        "name": "Source_1804",
+        "surface": 0
+      },
+      {
+        "name": "Source_1805",
+        "surface": 0
+      },
+      {
+        "name": "Source_1806",
+        "surface": 0
+      },
+      {
+        "name": "Source_1807",
+        "surface": 0
+      },
+      {
+        "name": "Source_1915",
+        "surface": 0
+      },
+      {
+        "name": "Source_1924",
+        "surface": 0
+      },
+      {
+        "name": "Source_1934",
+        "surface": 0
+      },
+      {
+        "name": "Source_1959",
+        "surface": 0
+      },
+      {
+        "name": "Source_1991",
+        "surface": 0
+      },
+      {
+        "name": "Source_2020",
+        "surface": 0
+      },
+      {
+        "name": "Source_2021",
+        "surface": 0
+      },
+      {
+        "name": "Source_2022",
+        "surface": 0
+      },
+      {
+        "name": "Source_2023",
+        "surface": 0
+      },
+      {
+        "name": "Source_2024",
+        "surface": 0
+      },
+      {
+        "name": "Source_2025",
+        "surface": 0
+      }
+    ]
+  },
+  "production": {
+    "effects": [
+      {
+        "name": "Source_2145",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6795424696265424,
+          0.21952619971859377,
+          0.05126945836711539
+        ]
+      },
+      {
+        "name": "Source_2151",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6795424696265424,
+          0.21952619971859377,
+          0.05126945836711539
+        ]
+      },
+      {
+        "name": "Source_2157",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6795424696265424,
+          0.21952619971859377,
+          0.05126945836711539
+        ]
+      },
+      {
+        "name": "Source_2163",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6795424696265424,
+          0.21952619971859377,
+          0.05126945836711539
+        ]
+      },
+      {
+        "name": "Source_2176",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.35640014413537763,
+          0.5457244613615395,
+          0.4452011945063733
+        ]
+      },
+      {
+        "name": "Source_2180",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6375968739867731,
+          0.5711248294565854,
+          0.35640014413537763
+        ]
+      },
+      {
+        "name": "Source_2260",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      },
+      {
+        "name": "Source_2295",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_2039",
+        "surface": 0
+      },
+      {
+        "name": "Source_2040",
+        "surface": 0
+      },
+      {
+        "name": "Source_2041",
+        "surface": 0
+      },
+      {
+        "name": "Source_2042",
+        "surface": 0
+      },
+      {
+        "name": "Source_2043",
+        "surface": 0
+      },
+      {
+        "name": "Source_2044",
+        "surface": 0
+      },
+      {
+        "name": "Source_2209",
+        "surface": 0
+      },
+      {
+        "name": "Source_2218",
+        "surface": 0
+      },
+      {
+        "name": "Source_2228",
+        "surface": 0
+      },
+      {
+        "name": "Source_2251",
+        "surface": 0
+      },
+      {
+        "name": "Source_2284",
+        "surface": 0
+      },
+      {
+        "name": "Source_2316",
+        "surface": 0
+      },
+      {
+        "name": "Source_2317",
+        "surface": 0
+      },
+      {
+        "name": "Source_2318",
+        "surface": 0
+      },
+      {
+        "name": "Source_2319",
+        "surface": 0
+      },
+      {
+        "name": "Source_2320",
+        "surface": 0
+      },
+      {
+        "name": "Source_2321",
+        "surface": 0
+      }
+    ]
+  },
+  "office": {
+    "effects": [
+      {
+        "name": "Source_2407",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          1,
+          0.6104955708001716,
+          0.21586050010324417
+        ]
+      },
+      {
+        "name": "Source_2489",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      },
+      {
+        "name": "Source_2528",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5775804404214573,
+          0.508881320845802,
+          0.34670405634441115
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_2335",
+        "surface": 0
+      },
+      {
+        "name": "Source_2336",
+        "surface": 0
+      },
+      {
+        "name": "Source_2337",
+        "surface": 0
+      },
+      {
+        "name": "Source_2338",
+        "surface": 0
+      },
+      {
+        "name": "Source_2339",
+        "surface": 0
+      },
+      {
+        "name": "Source_2340",
+        "surface": 0
+      },
+      {
+        "name": "Source_2437",
+        "surface": 0
+      },
+      {
+        "name": "Source_2446",
+        "surface": 0
+      },
+      {
+        "name": "Source_2456",
+        "surface": 0
+      },
+      {
+        "name": "Source_2481",
+        "surface": 0
+      },
+      {
+        "name": "Source_2514",
+        "surface": 0
+      },
+      {
+        "name": "Source_2550",
+        "surface": 0
+      },
+      {
+        "name": "Source_2551",
+        "surface": 0
+      },
+      {
+        "name": "Source_2552",
+        "surface": 0
+      },
+      {
+        "name": "Source_2553",
+        "surface": 0
+      },
+      {
+        "name": "Source_2554",
+        "surface": 0
+      },
+      {
+        "name": "Source_2555",
+        "surface": 0
+      }
+    ]
+  },
+  "ritual": {
+    "effects": [
+      {
+        "name": "Source_2680",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.5332764040016892,
+          0.20863687013464577,
+          0.174647403645279
+        ]
+      },
+      {
+        "name": "Source_2684",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.07618538147321911,
+          0.14126329113044458,
+          0.3277780980458375
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_2567",
+        "surface": 0
+      },
+      {
+        "name": "Source_2568",
+        "surface": 0
+      },
+      {
+        "name": "Source_2569",
+        "surface": 0
+      },
+      {
+        "name": "Source_2570",
+        "surface": 0
+      },
+      {
+        "name": "Source_2571",
+        "surface": 0
+      },
+      {
+        "name": "Source_2572",
+        "surface": 0
+      },
+      {
+        "name": "Source_2573",
+        "surface": 0
+      },
+      {
+        "name": "Source_2574",
+        "surface": 0
+      },
+      {
+        "name": "Source_2711",
+        "surface": 0
+      },
+      {
+        "name": "Source_2720",
+        "surface": 0
+      },
+      {
+        "name": "Source_2730",
+        "surface": 0
+      }
+    ]
+  },
+  "corridor": {
+    "effects": [
+      {
+        "name": "Source_2833",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.6653872982754769,
+          0.48514994004665124,
+          0.3094689228067428
+        ]
+      },
+      {
+        "name": "Source_2837",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.3712376804636741,
+          0.25818285291079235,
+          0.12743768042608497
+        ]
+      },
+      {
+        "name": "Source_2865",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.19806931954941637,
+          0.33245153633549385,
+          0.4232676699760063
+        ]
+      },
+      {
+        "name": "Source_2869",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.19806931954941637,
+          0.33245153633549385,
+          0.4232676699760063
+        ]
+      },
+      {
+        "name": "Source_2873",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.19806931954941637,
+          0.33245153633549385,
+          0.4232676699760063
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_2799",
+        "surface": 0
+      },
+      {
+        "name": "Source_2800",
+        "surface": 0
+      },
+      {
+        "name": "Source_2801",
+        "surface": 0
+      },
+      {
+        "name": "Source_2802",
+        "surface": 0
+      },
+      {
+        "name": "Source_2803",
+        "surface": 0
+      },
+      {
+        "name": "Source_2804",
+        "surface": 0
+      },
+      {
+        "name": "Source_2805",
+        "surface": 0
+      },
+      {
+        "name": "Source_2806",
+        "surface": 0
+      },
+      {
+        "name": "Source_2849",
+        "surface": 0
+      }
+    ]
+  },
+  "daisy": {
+    "effects": [
+      {
+        "name": "Source_2932",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.4793201830913402,
+          0.6172065624120635,
+          0.6866853124288864
+        ]
+      }
+    ],
+    "walls": []
+  },
+  "pursuit": {
+    "effects": [
+      {
+        "name": "Source_3132",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.508881320845802,
+          0.3915724777393922,
+          0.24620132669705552
+        ]
+      },
+      {
+        "name": "Source_3136",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.508881320845802,
+          0.3915724777393922,
+          0.24620132669705552
+        ]
+      },
+      {
+        "name": "Source_3140",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.508881320845802,
+          0.3915724777393922,
+          0.24620132669705552
+        ]
+      },
+      {
+        "name": "Source_3144",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.508881320845802,
+          0.3915724777393922,
+          0.24620132669705552
+        ]
+      },
+      {
+        "name": "Source_3148",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.508881320845802,
+          0.3915724777393922,
+          0.24620132669705552
+        ]
+      },
+      {
+        "name": "Source_3239",
+        "surface": 0,
+        "type": "cone",
+        "intensity": 0.021,
+        "color": [
+          0.7454042095350284,
+          0.5840784178830671,
+          0.2874408377161099
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "name": "Source_3093",
+        "surface": 0
+      },
+      {
+        "name": "Source_3094",
+        "surface": 0
+      },
+      {
+        "name": "Source_3095",
+        "surface": 0
+      },
+      {
+        "name": "Source_3096",
+        "surface": 0
+      },
+      {
+        "name": "Source_3097",
+        "surface": 0
+      },
+      {
+        "name": "Source_3098",
+        "surface": 0
+      },
+      {
+        "name": "Source_3099",
+        "surface": 0
+      },
+      {
+        "name": "Source_3127",
+        "surface": 0
+      },
+      {
+        "name": "Source_3230",
+        "surface": 0
+      },
+      {
+        "name": "Source_3248",
+        "surface": 0
+      }
+    ]
+  }
+}

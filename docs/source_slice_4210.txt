@@ -1,0 +1,180 @@
+}
+function door(room,z,label,w=3,color=0x48544d){const d=hingedDoor(room.group,room.cx-w/2,z,w,2.9,color,0,z>0?1.38:-1.38);sign(room.group,room.cx,Math.min(room.height-.2,3.22),z+(z>0?-.18:.18),label,Math.min(2.8,w+.1),.4,z>0?Math.PI:0);return d}
+const doors={relay:door(relayRoom,-16.7,'PRODUKSI'),relayEntry:door(relayRoom,16.7,'BANGSAL MUAT'),loading:door(loadingRoom,-21.7,'RUMAH RELAI / UTARA'),production:door(productionRoom,-19.7,'KANTOR'),office:door(officeRoom,-9.7,'AKSES TERBATAS'),ritual:door(ritualRoom,-14.7,'PEMELIHARAAN'),corridor:door(corridorRoom,-19.7,'KELUAR'),loadingEntry:door(loadingRoom,21.7,'BANGSAL MUAT'),productionEntry:door(productionRoom,19.7,'RUMAH RELAI'),officeEntry:door(officeRoom,9.7,'PRODUKSI')};
+// Classroom openings from the school scene used to have only a lintel.
+for(const [side,z,label] of [[-1,-20.3,'LAB IPA'],[-1,9.7,'KELAS 1A'],[1,-14.3,'LAB KOMPUTER'],[1,13.7,'KELAS 2B']]){
+ const d=hingedDoor($t,side*2,z-.66,1.32,2.15,0x4d6757,-Math.PI/2,side<0?-1.43:1.43);d.open=true;d.target=d.openAngle;d.pivot.rotation.y=d.target;
+ sign($t,side*1.83,2.55,z,label,1.45,.28,side<0?Math.PI/2:-Math.PI/2,'#e0d2b6','#31483c');
+}
+// BK is a report interaction rather than a traversable room. Its door must
+// sit on the corridor side of the wall, not inside the wall's thickness.
+const bkDoor=hingedDoor($t,1.76,-8.46,.92,2.14,0x55664e,-Math.PI/2,.2);doors.bk=bkDoor;
+sign($t,1.64,2.45,-8,'RUANG BK',1.05,.26,-Math.PI/2);
+// Replace the old thin exit leaves with a complete gate and a stable frame.
+$t.traverse(m=>{const p=m.geometry?.parameters;if(m.isMesh&&p&&Math.abs(m.position.z+29.6)<.01&&p.width===.85&&p.height===2.25)m.visible=false});
+doors.schoolExit=hingedDoor($t,-.92,-29.55,1.84,2.28,0x3b4c41,0,1.35);
+
+// Loading hall: separated clue stations and clear circulation around pallets.
+for(const [x,z,h] of [[-10,10,2.3],[9,12,1.8],[-9,-4,2.5],[10,-9,2.2],[-6,-15,1.4],[5,0,1.3]]){
+ const xx=400+x;box(loadingRoom.group,xx,.12,z,3,.24,2.6,mats.wood);box(loadingRoom.group,xx,h/2+.24,z,2.3,h,2.1,mats.wood,true,loadingRoom);box(loadingRoom.group,xx,h+.29,z,2.5,.12,2.3,mats.metal);
+}
+box(loadingRoom.group,406,.5,8,2.4,1,3,mats.rust,true,loadingRoom);box(loadingRoom.group,406,1.6,8,2,.12,2.5,mats.metal);box(loadingRoom.group,406,2.1,8.7,.15,1.2,.15,mats.metal);for(const x of [405,407])for(const z of [7,9])cylinder(loadingRoom.group,x,.3,z,.33,.28,mats.black);
+for(const [x,z]of[[392,14],[408,-12],[400,-2]])light(loadingRoom,x,4.3,z,0xc7d2af,55,19);
+const panelMesh=box(loadingRoom.group,413.8,1.5,-15,.28,1.6,1.3,mats.metal);sign(loadingRoom.group,413.61,2.6,-15,'PANEL 04',1.7,.45,-Math.PI/2);
+// New relay chapter uses the existing room, door, light and collision systems.
+for(const x of [1587,1613])for(const z of [-8,2,12]){box(relayRoom.group,x,1.6,z,.7,3.2,2,mats.metal,true,relayRoom);box(relayRoom.group,x,5.6,z,.12,.12,8,mats.rust)}
+light(relayRoom,1600,5.8,10,0xcbb897,34,20);light(relayRoom,1600,6,-10,0x9baeb0,38,24);
+// Conveyors, pressure pipes, guards and machinery.
+for(const x of [590,610]){box(productionRoom.group,x,.75,0,3.5,1.5,18,mats.metal,true,productionRoom);for(let z=-8;z<=8;z+=.65)cylinder(productionRoom.group,x,1.55,z,.12,3.35,mats.rust).rotation.z=Math.PI/2;sign(productionRoom.group,x,2.15,-8.9,'JANGAN DEKATKAN TANGAN',3.2,.35)}
+for(const [x,z] of [[583,-12],[617,11],[584,12],[616,-12]]){box(productionRoom.group,x,1.3,z,3.5,2.6,3.2,mats.rust,true,productionRoom);cylinder(productionRoom.group,x,3,z,.5,1,mats.metal);light(productionRoom,x,3.7,z,0xd78140,23,9)}
+const productionValveWheels=[];
+for(const x of [585,589,593]){cylinder(productionRoom.group,x,2.8,-18,.11,5,mats.rust);const v=cylinder(productionRoom.group,x,1.65,-17.7,.35,.12,mats.rust);v.rotation.x=Math.PI/2;productionValveWheels.push(v);sign(productionRoom.group,x,2.8,-19.75,x===585?'I':x===589?'II':'III',1,.4)}
+light(productionRoom,600,5,3,0xa1c3b2,80,26);light(productionRoom,600,5,-12,0xd1c7a1,60,22);
+box(productionRoom.group,589,2.7,-18.2,11,.6,.3,mats.metal);sign(productionRoom.group,589,2.7,-18,'TEKANAN AMAN: SEMUA PANAH KE ATAS',6,.4);
+// Office.
+box(officeRoom.group,800,.85,-5.8,4.5,1.7,1.8,mats.wood,true,officeRoom);box(officeRoom.group,797.8,1.02,-5.7,.45,.12,.6,mats.paper);for(const x of [792,808]){box(officeRoom.group,x,1.6,-5,1,3.2,5,mats.wood,true,officeRoom);for(let z=-6.8;z<-2.8;z+=.4)box(officeRoom.group,x,2,z,.9,.55,.2,mats.paper)}
+light(officeRoom,800,3.05,-4,0xffcd80,38,13);sign(officeRoom.group,800,2.6,-9.75,'D. / ARSIP PRIBADI',3.2,.5);box(officeRoom.group,809.6,1.5,2,.25,1.6,1.6,mats.metal);sign(officeRoom.group,809.35,2.65,2,'AUDIT / 17 MARET',2.3,.5,-Math.PI/2);
+// Ritual floor and candles, made from simple reusable shapes.
+for(let i=0;i<64;i++){const a=i/64*TAU;const m=box(ritualRoom.group,1000+Math.cos(a)*8,.015,Math.sin(a)*8,.13,.025,.85,new Cn({color:0x643d38}));m.rotation.y=-a;}
+for(let i=0;i<8;i++){const a=i/8*TAU,x=1000+Math.cos(a)*10,z=Math.sin(a)*10;cylinder(ritualRoom.group,x,.35,z,.11,.7,mats.paper);sphere(ritualRoom.group,x,.72,z,.018,new Cn({color:0x302e28}));}
+light(ritualRoom,1000,5,-1,0xc17e74,105,30);light(ritualRoom,990,3,10,0x4e699b,30,14);
+// Corridor: apparent exit and concealed metal access on the east wall.
+light(corridorRoom,1200,2.7,12,0xd5b997,16,10);light(corridorRoom,1200,2.7,-12,0xa48b64,14,10);for(let z=-16;z<18;z+=6)box(corridorRoom.group,1197.25,2.45,z,.12,.16,5.8,mats.rust);
+const hiddenDoor=box(corridorRoom.group,1202.78,1.2,8,.12,2.4,1.55,mats.metal);sign(corridorRoom.group,1202.66,1.8,8,'D—08',.7,.3,-Math.PI/2,'#746f60','#303931');
+// A neutral painted display cabinet, rather than a red-lit horizontal crate.
+const crate=new It();crate.name='Daisy_Glass_Display_Cabinet';crate.position.set(1400,0,-.4);daisyRoom.group.add(crate);
+const cabinetShell=new It();crate.add(cabinetShell);
+const cabinetMats={paint:new Xe({color:0xc9c7b8,roughness:.8}),recess:new Xe({color:0x7b827b,roughness:.94}),trim:new Xe({color:0x4c4941,roughness:.83}),brass:new Xe({color:0x9c9474,roughness:.5,metalness:.55}),glass:new Xe({color:0xd1e0de,roughness:.15,metalness:.03,transparent:true,opacity:.085,depthWrite:false,side:xn})};
+enableHardSurfaceEdges([cabinetMats.paint,cabinetMats.trim,cabinetMats.brass],.008);
+box(cabinetShell,0,.13,0,1.94,.26,1.34,cabinetMats.trim);box(cabinetShell,0,.42,0,1.77,.36,1.18,cabinetMats.paint);
+box(cabinetShell,0,.57,0,1.61,.10,1.08,cabinetMats.recess);box(cabinetShell,0,1.62,-.56,1.74,2.12,.10,cabinetMats.recess);
+for(const side of [-1,1]){box(cabinetShell,side*.865,1.62,0,.13,2.18,1.2,cabinetMats.paint);box(cabinetShell,side*.765,1.61,.585,.045,1.93,.065,cabinetMats.trim);}
+box(cabinetShell,0,2.76,0,1.96,.18,1.38,cabinetMats.trim);box(cabinetShell,0,2.64,0,1.79,.10,1.20,cabinetMats.paint);
+box(cabinetShell,0,.40,.61,1.43,.20,.035,cabinetMats.trim);sign(cabinetShell,0,.40,.634,'DAISY',.72,.16,0,'#dad5bc','#45483f');
+const crateLid=new It();crateLid.name='Daisy_Glass_Door_Hinge';crateLid.position.set(-.79,.62,.615);crate.add(crateLid);
+for(const x of [0,1.58])box(crateLid,x,.98,0,.075,2.02,.07,cabinetMats.trim);for(const y of [0,1.96])box(crateLid,.79,y,0,1.64,.075,.075,cabinetMats.trim);
+const daisyGlass=box(crateLid,.79,.98,.003,1.48,1.84,.025,cabinetMats.glass);daisyGlass.name='Daisy_Transparent_Display_Glass';daisyGlass.castShadow=false;daisyGlass.receiveShadow=false;
+for(const y of [.40,1.55])box(crateLid,-.015,y,.015,.12,.16,.11,cabinetMats.brass);
+for(const y of [.74,1.18])box(crateLid,1.43,y,.09,.055,.055,.14,cabinetMats.brass);box(crateLid,1.43,.96,.15,.05,.49,.05,cabinetMats.brass);
+for(const x of [-.69,.69])for(const y of [.35,2.53])sphere(cabinetShell,x,y,.62,.018,cabinetMats.brass);
+batchDollPieces(cabinetShell);
+daisyRoom.colliders.push({minX:1399.03,maxX:1400.97,minZ:-1.08,maxZ:.30});
+
+// Daisy: a child-proportioned porcelain doll with a smooth face, articulated
+// limbs, individual fingers, braided hair, a pleated dress and real eyelids.
+// Static pieces are batched by material to keep the higher polygon model cheap.
+const doll=new It();doll.name='Daisy_Porcelain_Doll';doll.position.set(0,.62,0);doll.visible=false;crate.add(doll);
+const dollBody=new It(),dollFineDetails=new It();doll.add(dollBody,dollFineDetails);
+const dollMats={skin:new Xe({color:0xe7c5ae,roughness:.68}),cheek:new Xe({color:0xd6ad97,roughness:.88}),dress:new Xe({color:0x345d80,roughness:.94}),trim:new Xe({color:0xd8d1b7,roughness:.94}),hair:new Xe({color:0xb99a58,roughness:.82}),hairLight:new Xe({color:0xd2b470,roughness:.9}),hairDark:new Xe({color:0x806539,roughness:.9}),shoes:new Xe({color:0x282d35,roughness:.7}),white:new Xe({color:0xe2e1d9,roughness:.45}),iris:new Xe({color:0x527ca1,roughness:.4}),irisDark:new Xe({color:0x2b4e70,roughness:.6}),pupil:new Xe({color:0x101b24,roughness:.45}),lip:new Xe({color:0x9b6461,roughness:.82}),thread:new Xe({color:0x7895a7,roughness:.95})};
+function ellipsoid(group,x,y,z,rx,ry,rz,mat,segments=32,rings=24){const m=new ae(new Mn(1,segments,rings),mat);m.position.set(x,y,z);m.scale.set(rx,ry,rz);group.add(m);return m}
+function limb(group,a,b,r1,r2,mat,segments=24){const start=new I(...a),end=new I(...b),direction=end.clone().sub(start);const m=new ae(new dn(r2,r1,direction.length(),segments,3),mat);m.position.copy(start.add(end).multiplyScalar(.5));m.quaternion.setFromUnitVectors(new I(0,1,0),direction.normalize());group.add(m);return m}
+function surfaceMesh(group,rows,columns,point,mat){const positions=[],uvs=[],indices=[];for(let y=0;y<=rows;y++)for(let x=0;x<=columns;x++){positions.push(...point(x/columns,y/rows));uvs.push(x/columns,y/rows)}for(let y=0;y<rows;y++)for(let x=0;x<columns;x++){const a=y*(columns+1)+x,b=a+columns+1;indices.push(a,b,a+1,b,b+1,a+1)}const g=new rn();g.setAttribute('position',new sn(new Float32Array(positions),3));g.setAttribute('uv',new sn(new Float32Array(uvs),2));g.setIndex(indices);g.computeVertexNormals();const m=new ae(g,mat);group.add(m);return m}
+function hairStrand(group,points,radius,mat){const positions=[],uvs=[],indices=[],radial=8;for(let j=0;j<points.length;j++){const p=new I(...points[j]),before=new I(...points[Math.max(0,j-1)]),after=new I(...points[Math.min(points.length-1,j+1)]),tangent=after.sub(before).normalize();let right=new I(0,1,0).cross(tangent).normalize();if(right.lengthSq()<.01)right=new I(1,0,0);const up=tangent.clone().cross(right).normalize();for(let i=0;i<=radial;i++){const a=i/radial*TAU,q=p.clone().addScaledVector(right,Math.cos(a)*radius).addScaledVector(up,Math.sin(a)*radius);positions.push(q.x,q.y,q.z);uvs.push(i/radial,j/(points.length-1))}}
+ for(let j=0;j<points.length-1;j++)for(let i=0;i<radial;i++){const a=j*(radial+1)+i,b=a+radial+1;indices.push(a,a+1,b,b,a+1,b+1)}const g=new rn();g.setAttribute('position',new sn(new Float32Array(positions),3));g.setAttribute('uv',new sn(new Float32Array(uvs),2));g.setIndex(indices);g.computeVertexNormals();group.add(new ae(g,mat));}
+// Continuous porcelain face, recessed glass eyes, woven dress and continuous braids.
+const porcelainCanvas=document.createElement('canvas');porcelainCanvas.width=porcelainCanvas.height=1024;
+{const c=porcelainCanvas.getContext('2d'),d=c.createImageData(1024,1024);let seed=371;for(let i=0;i<d.data.length;i+=4){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const v=(seed/4294967296-.5)*3;d.data[i]=244+v;d.data[i+1]=239+v;d.data[i+2]=228+v;d.data[i+3]=255;}c.putImageData(d,0,0);}
+dollMats.lip.side=xn;
+const porcelainMap=hdTexture(porcelainCanvas,true);dollMats.skin.color.set(0xf0d9c4);dollMats.skin.map=porcelainMap;dollMats.skin.roughness=.43;dollMats.skin.metalness=.015;useHDMaterial(dollMats.dress,'cotton',0xd2dfed);dollMats.dress.roughness=.92;
+const hairCanvas=document.createElement('canvas');hairCanvas.width=hairCanvas.height=1024;{const c=hairCanvas.getContext('2d');c.fillStyle='#bca16d';c.fillRect(0,0,1024,1024);for(let i=0;i<650;i++){const x=(i*79.17)%1024;c.strokeStyle=i%3?'rgba(58,37,11,.16)':'rgba(255,229,159,.40)';c.lineWidth=i%4?1:2;c.beginPath();c.moveTo(x,0);for(let j=1;j<20;j++)c.lineTo(x+Math.sin(j*.37+i)*2,j/19*1024);c.stroke();}}const dollHairMap=hdTexture(hairCanvas,true);for(const m of [dollMats.hair,dollMats.hairLight,dollMats.hairDark]){m.map=dollHairMap;m.roughness=.62;}
+for(const side of [-1,1]){
+ const x=side*.104;sculptLimb(dollBody,[x,.55,0],[x,.30,.015],.060,.045,dollMats.skin);ellipsoid(dollBody,x,.30,.015,.046,.047,.043,dollMats.skin,32,24);sculptLimb(dollBody,[x,.29,.016],[x,.10,.025],.043,.032,dollMats.skin);sculptLimb(dollBody,[x,.20,.025],[x,.087,.028],.042,.036,dollMats.trim);
+ for(let i=0;i<5;i++)ringMesh(dollFineDetails,x,.181-i*.010,.025,.042,.0015,dollMats.white,'y',24);
+ ellipsoid(dollBody,x,.061,.074,.066,.055,.119,dollMats.shoes,40,28);box(dollBody,x,.018,.072,.129,.022,.219,dollMats.shoes);box(dollBody,x,.101,.08,.119,.015,.028,dollMats.shoes);metalBolt(dollFineDetails,x+side*.058,.103,.084,.009,dollMats.trim,'x');
+ hairStrand(dollFineDetails,[[x-.051,.025,.16],[x,.019,.18],[x+.05,.026,.16]],.002,dollMats.thread);
+}
+ellipsoid(dollBody,0,.79,0,.159,.18,.105,dollMats.dress,48,32);
+const dressProfile=[[.33,.30],[.335,.326],[.30,.42],[.25,.53],[.19,.65],[.159,.78],[.179,.865],[.14,.943]];
+surfaceMesh(dollBody,42,112,(u,v)=>{const p=v*(dressProfile.length-1),i=Math.min(dressProfile.length-2,Math.floor(p)),f=p-i,A=dressProfile[i],B=dressProfile[i+1],a=u*TAU,r=A[0]+(B[0]-A[0])*f,fold=(.010+.016*(1-v))*Math.cos(a*16)+Math.sin(a*32)*.002;return[Math.cos(a)*(r+fold),A[1]+(B[1]-A[1])*f+Math.sin(a*16)*.003*(1-v),Math.sin(a)*(r+fold)*.72];},dollMats.dress);
+const lace=surfaceMesh(dollFineDetails,6,192,(u,v)=>{const a=u*TAU,r=.342+.022*Math.cos(a*16);return[Math.cos(a)*r,.297+v*.033-Math.sin(a*64)**2*.006,Math.sin(a)*r*.72];},dollMats.trim);
+{const g=lace.geometry,a=g.index.array,uv=g.attributes.uv,out=[];for(let i=0;i<a.length;i+=3){const u=(uv.getX(a[i])+uv.getX(a[i+1])+uv.getX(a[i+2]))/3,v=(uv.getY(a[i])+uv.getY(a[i+1])+uv.getY(a[i+2]))/3;if(!(Math.sin(u*TAU*64)>.45&&v>.35&&v<.7))out.push(a[i],a[i+1],a[i+2]);}g.setIndex(out);}
+sculptLimb(dollBody,[0,.88,0],[0,1.005,0],.048,.047,dollMats.skin);
+for(const side of [-1,1]){const collar=ellipsoid(dollBody,side*.057,.932,.084,.064,.019,.046,dollMats.trim,40,24);collar.rotation.z=side*.32;for(let j=0;j<8;j++)ellipsoid(dollFineDetails,side*(.016+j*.014),.925-j*.002,.117,.009,.004,.008,dollMats.white,16,10);}
+for(const y of [.86,.797,.73]){ellipsoid(dollFineDetails,0,y,.116,.010,.010,.006,dollMats.trim,24,16);for(const side of [-1,1])ellipsoid(dollFineDetails,side*.003,y,.122,.0018,.002,.001,dollMats.thread,12,8);}
+function dollRibbon(group,x,y,z,width,mat){for(const side of [-1,1])surfaceMesh(group,10,32,(u,v)=>{const a=u*Math.PI,r=Math.sin(a)*width,fold=(v-.5)*.027;return[x+side*(.01+r),y+Math.sin(a*2)*.020+fold,z+Math.sin(a)*.018+Math.cos(v*Math.PI)*.008];},mat);ellipsoid(group,x,y,z+.016,.014,.018,.010,mat,24,16);}
+dollRibbon(dollFineDetails,0,.896,.126,.058,dollMats.dress);
+for(const side of [-1,1]){
+ const shoulder=[side*.18,.875,0],elbow=[side*.237,.70,.016],wrist=[side*.255,.545,.037];ellipsoid(dollBody,...shoulder,.061,.073,.061,dollMats.dress,40,28);sculptLimb(dollBody,shoulder,[side*.213,.79,.01],.056,.043,dollMats.dress);sculptLimb(dollBody,[side*.213,.79,.01],elbow,.038,.032,dollMats.skin);ellipsoid(dollBody,...elbow,.033,.034,.031,dollMats.skin,32,24);sculptLimb(dollBody,elbow,wrist,.030,.023,dollMats.skin);
+ const hand=ellipsoid(dollBody,side*.258,.513,.041,.030,.041,.020,dollMats.skin,32,24);hand.rotation.z=side*.10;
+ for(let j=0;j<4;j++){const x=side*(.239+j*.013),len=[.032,.045,.041,.031][j];sculptLimb(dollFineDetails,[x,.486,.044],[x+side*.002,.486-len*.55,.048],.0068,.006,dollMats.skin);sculptLimb(dollFineDetails,[x+side*.002,.486-len*.55,.048],[x+side*.004,.486-len,.057],.006,.004,dollMats.skin);ellipsoid(dollFineDetails,x+side*.004,.487-len,.060,.0034,.006,.0015,dollMats.trim,16,12);}
+ hairStrand(dollFineDetails,[[side*.234,.525,.043],[side*.219,.508,.052],[side*.222,.491,.062]],.008,dollMats.skin);
+}
+const bodyBeforeHead=new Set(dollBody.children),fineBeforeHead=new Set(dollFineDetails.children);
+const faceSkin=dollMats.skin.clone();faceSkin.vertexColors=true;
+const dollHead=ellipsoid(dollBody,0,1.185,0,.230,.267,.210,faceSkin,96,72);
+{const g=dollHead.geometry,p=g.attributes.position,colours=[];for(let i=0;i<p.count;i++){let x=p.getX(i),y=p.getY(i),z=p.getZ(i);x*=1-.19*clamp((-y-.06)/.9,0,1);if(z>0){const cheeks=Math.exp(0-((Math.abs(x)-.45)/.27)**2-((y+.19)/.27)**2),bridge=Math.exp(0-(x/.082)**2-((y+.015)/.32)**2),tip=Math.exp(0-(x/.112)**2-((y+.20)/.11)**2),orbit=Math.exp(0-((Math.abs(x)-.39)/.24)**2-((y-.15)/.15)**2);z+=cheeks*.075+bridge*.062+tip*.16-orbit*.065;const blush=cheeks*.10;colours.push(1,1-blush*.7,1-blush);}else colours.push(1,1,1);p.setXYZ(i,x,y,z);}g.setAttribute('color',new sn(new Float32Array(colours),3));p.needsUpdate=true;g.computeVertexNormals();}
+for(const side of [-1,1]){ellipsoid(dollBody,side*.225,1.17,-.006,.031,.052,.027,dollMats.skin,40,28);ellipsoid(dollFineDetails,side*.241,1.17,.012,.010,.028,.010,dollMats.cheek,28,20);ellipsoid(dollFineDetails,side*.011,1.138,.244,.0045,.0027,.002,dollMats.cheek,20,12);}
+// Shaped lip surfaces follow a quiet cupid's bow, without a protruding mouth sphere.
+for(const lower of [false,true])surfaceMesh(dollFineDetails,10,48,(u,v)=>{const x=(u-.5)*.079,t=Math.sin(u*Math.PI),cupid=Math.exp(0-((u-.35)/.11)**2)*.002+Math.exp(0-((u-.65)/.11)**2)*.002;return[x,1.075+(lower?-1:1)*v*t*(lower?.009:.007)+(lower?0:cupid),.209+t*.009+Math.sin(v*Math.PI)*.003];},dollMats.lip);
+hairStrand(dollFineDetails,[[ -.034,1.075,.213],[ -.017,1.074,.219],[0,1.075,.222],[.017,1.074,.219],[.034,1.075,.213]],.0016,dollMats.cheek);
+const dollEyes=[],dollEyelids=[];
+const irisCanvas=document.createElement('canvas');irisCanvas.width=irisCanvas.height=1024;{const c=irisCanvas.getContext('2d');c.fillStyle='#284454';c.fillRect(0,0,1024,1024);for(let i=0;i<1100;i++){const a=i/1100*TAU,r=198+(Math.sin(i*7.17)+1)*55;c.beginPath();c.moveTo(512+Math.cos(a)*r,512+Math.sin(a)*r);c.lineTo(512+Math.cos(a+.0008)*485,512+Math.sin(a+.0008)*485);c.strokeStyle=i%4?'#7496a5':'#a9bfbd';c.lineWidth=i%3?1.1:2.7;c.stroke();}c.strokeStyle='#203b4c';c.lineWidth=58;c.beginPath();c.arc(512,512,472,0,TAU);c.stroke();c.fillStyle='#07141d';c.beginPath();c.arc(512,512,185,0,TAU);c.fill();}
+const irisTex=hdTexture(irisCanvas,true),glassIris=new Xe({color:0xffffff,map:irisTex,roughness:.18,metalness:.06});
+const sleepyCanvas=document.createElement('canvas');sleepyCanvas.width=512;sleepyCanvas.height=256;{const c=sleepyCanvas.getContext('2d');c.strokeStyle='#6d5842';c.lineWidth=4;c.lineCap='round';c.beginPath();c.moveTo(35,90);c.quadraticCurveTo(256,194,477,90);c.stroke();}const sleepyTexture=new Ms(sleepyCanvas);sleepyTexture.needsUpdate=true;const sleepyMaterial=new Cn({map:sleepyTexture,transparent:true,depthWrite:false});
+for(const side of [-1,1]){
+ const x=side*.087;ellipsoid(dollBody,x,1.224,.202,.053,.035,.021,dollMats.white,48,32);
+ const disc=surfaceMesh(dollBody,12,64,(u,v)=>{const a=u*TAU,r=v*.027;return[x+Math.cos(a)*r,1.224+Math.sin(a)*r,.223+Math.sqrt(Math.max(0,1-v*v))*.006];},glassIris);const uv=disc.geometry.attributes.uv;for(let j=0;j<uv.count;j++){const u=uv.getX(j),v=uv.getY(j);uv.setXY(j,.5+Math.cos(u*TAU)*v*.5,.5+Math.sin(u*TAU)*v*.5);}dollEyes.push(disc);
+ ellipsoid(dollFineDetails,x-.008,1.236,.231,.004,.005,.0015,dollMats.white,20,12);
+ for(const upper of [true,false]){const points=[];for(let i=0;i<=24;i++){const t=i/24;points.push([x-.053+t*.106,1.224+(upper?1:-1)*Math.sin(t*Math.PI)*(upper?.036:.026),.208+Math.sin(t*Math.PI)*.016]);}hairStrand(dollFineDetails,points,upper?.0055:.0035,dollMats.skin);}
+ for(let j=0;j<9;j++){const a=(.12+j*.09)*Math.PI,xx=x-Math.cos(a)*.052,yy=1.224+Math.sin(a)*.036;hairStrand(dollFineDetails,[[xx,yy,.216],[xx+(j-4)*.0008,yy+.006,.220],[xx+(j-4)*.0016,yy+.010,.217]],.0013,dollMats.hairDark);}
+ const brow=[];for(let j=0;j<18;j++){const t=j/17;brow.push([x-.046+t*.092,1.287+Math.sin(t*Math.PI)*.011,.195+Math.sin(t*Math.PI)*.010]);}hairStrand(dollFineDetails,brow,.0032,dollMats.hairDark);
+ const lid=ellipsoid(doll,x,1.224,.229,.056,.037,.007,dollMats.skin,48,32);const lash=new ae(new _t(1.8,1.1),sleepyMaterial);lash.position.set(0,-.03,1.035);lid.add(lash);lid.visible=false;dollEyelids.push(lid);
+}
+function scalpPoint(phi,t,offset=0){const maxTheta=2.28-1.17*(Math.sin(phi)+1)/2,theta=t*maxTheta,r=.240+offset;return[Math.cos(phi)*Math.sin(theta)*r,1.20+Math.cos(theta)*r*1.10,Math.sin(phi)*Math.sin(theta)*r*.94-.012];}
+surfaceMesh(dollBody,48,96,(u,v)=>scalpPoint(u*TAU,1-v),dollMats.hair);
+for(let i=0;i<120;i++){const phi=i/120*TAU,points=[];for(let j=0;j<22;j++)points.push(scalpPoint(phi+.035*Math.sin(j/21*Math.PI),.025+j/21*.96,.003));hairStrand(dollFineDetails,points,.00135,i%4===0?dollMats.hairDark:dollMats.hairLight);}
+// Side-swept small locks interrupt a perfect hemisphere and frame the forehead.
+for(const side of [-1,1])for(let i=0;i<7;i++){const points=[];for(let j=0;j<25;j++){const t=j/24;points.push(scalpPoint(Math.PI/2+side*(.13+i*.13+.12*Math.sin(t*Math.PI)),.06+t*.94,.006));}hairStrand(dollBody,points,.0038-i*.00025,i%2?dollMats.hair:dollMats.hairLight);}
+for(const side of [-1,1]){
+ for(let k=0;k<3;k++){const points=[];for(let j=0;j<=42;j++){const t=j/42,a=t*TAU*2.5+k/3*TAU,r=.028*(1-t*.38);points.push([side*(.239+.028*Math.sin(t*Math.PI))+Math.cos(a)*r,1.144-t*.408,-.012+Math.sin(a)*r]);}hairStrand(dollBody,points,.022,dollMats.hair);for(let i=0;i<8;i++){const p=points.map((p,j)=>[p[0]+Math.sin(j*.2+i)*.007,p[1],p[2]+Math.cos(j*.2+i)*.009]);hairStrand(dollFineDetails,p,.0015,i%2?dollMats.hairDark:dollMats.hairLight);}}
+ dollRibbon(dollBody,side*.251,.79,.018,.052,dollMats.dress);
+}
+
+// One mesh per material per detail tier, retaining smooth normals and UVs.
+function batchDollPieces(group){group.updateMatrixWorld(true);const inverse=group.matrixWorld.clone().invert(),batches=new Map(),source=[];group.traverse(m=>{if(!m.isMesh)return;source.push(m);const g=m.geometry.clone().applyMatrix4(inverse.clone().multiply(m.matrixWorld));const flat=g.index?g.toNonIndexed():g;const key=m.material.uuid;let b=batches.get(key);if(!b){b={mat:m.material,positions:[],normals:[],uvs:[],colours:[]};batches.set(key,b)}b.positions.push(flat.attributes.position.array);b.normals.push(flat.attributes.normal.array);if(flat.attributes.uv)b.uvs.push(flat.attributes.uv.array);if(m.material.vertexColors)b.colours.push(flat.attributes.color?.array||new Float32Array(flat.attributes.position.count*3).fill(1));flat!==g&&flat.dispose();g.dispose()});const join=arrays=>{const out=new Float32Array(arrays.reduce((n,a)=>n+a.length,0));let offset=0;for(const a of arrays){out.set(a,offset);offset+=a.length}return out};for(const m of source){m.parent.remove(m);m.geometry.dispose()}for(const b of batches.values()){const geometry=new rn();geometry.setAttribute('position',new sn(join(b.positions),3));geometry.setAttribute('normal',new sn(join(b.normals),3));geometry.setAttribute('uv',new sn(join(b.uvs),2));if(b.colours.length)geometry.setAttribute('color',new sn(join(b.colours),3));geometry.computeBoundingSphere();const m=new ae(geometry,b.mat);m.receiveShadow=false;group.add(m)}}
+const dollHeadRig=new It(),dollHeadMain=new It(),dollHeadDetails=new It();dollHeadRig.position.y=1;dollHeadRig.add(dollHeadMain,dollHeadDetails);
+for(const [parent,keep,to]of [[dollBody,bodyBeforeHead,dollHeadMain],[dollFineDetails,fineBeforeHead,dollHeadDetails]])for(const m of [...parent.children])if(!keep.has(m)){to.add(m);m.position.y-=1;}
+for(const lid of dollEyelids){dollHeadRig.add(lid);lid.position.y-=1;}
+batchDollPieces(dollBody);batchDollPieces(dollFineDetails);batchDollPieces(dollHeadMain);batchDollPieces(dollHeadDetails);doll.add(dollHeadRig);
+light(daisyRoom,1401.7,3.4,-1.1,0xb8ced8,13,8);
+
+// Dress the two existing labs without adding blockers or changing clue stations.
+// Static props share materials and are merged per lab; screens emit no lights.
+const schoolLabProps={computer:new It(),science:new It()},schoolLabInventory={computers:0,flasks:0,testTubes:0,skulls:0};
+schoolLabProps.computer.name='LabKomputerAssets';schoolLabProps.science.name='LabIPAAssets';
+$t.add(schoolLabProps.computer,schoolLabProps.science);
+const labMats={case:material(0x8b8979),edge:material(0x323d38),keys:material(0xb1ae98),glass:material(0x91a7a0),bone:material(0xd4c6a2),socket:material(0x292d28),cork:material(0x7f6041),red:material(0x9a4942),blue:material(0x427d9b),green:material(0x68834f),amber:material(0xb58b45)};
+function computerScreen(){
+ const canvas=document.createElement('canvas');canvas.width=256;canvas.height=192;const c=canvas.getContext('2d');
+ c.fillStyle='#192d2a';c.fillRect(0,0,256,192);c.fillStyle='#527363';c.fillRect(0,0,256,22);
+ c.font='12px monospace';c.fillStyle='#c4d1b7';c.fillText('SMP KARTINI / LAB KOM',10,15);
+ c.strokeStyle='#718a76';c.strokeRect(22,49,212,111);c.fillText('INVENTARIS SEKOLAH',32,70);
+ for(let i=0;i<4;i++){c.fillStyle=i===1?'#78947e':'#455d50';c.fillRect(32,84+i*16,142-i*19,5)}
+ c.fillStyle='#8b9d83';c.fillRect(8,177,44,9);c.fillRect(63,180,155,3);
+ const tex=new Ms(canvas);tex.colorSpace=vt;return new Xe({map:tex,emissiveMap:tex,emissive:0xffffff,emissiveIntensity:.42,roughness:.82});
+}
+const labScreenMat=computerScreen();
+for(const z of [-16.2,-12.6])for(const x of [4.9,7,9.1]){
+ const g=schoolLabProps.computer,top=.835;
+ box(g,x,top+.025,z-.14,.34,.05,.25,labMats.edge);
+ box(g,x,top+.12,z-.15,.08,.19,.08,labMats.case);
+ box(g,x,top+.37,z-.18,.64,.43,.30,labMats.case);
+ box(g,x,top+.37,z-.016,.55,.34,.035,labMats.edge);
+ const screen=new ae(new _t(.49,.285),labScreenMat);screen.position.set(x,top+.37,z+.003);g.add(screen);
+ box(g,x+.26,top+.195,z+.006,.025,.013,.008,labMats.green);
+ box(g,x,top+.024,z+.28,.57,.045,.16,labMats.edge);
+ for(let row=0;row<3;row++)for(let k=0;k<10;k++)box(g,x-.241+k*.053,top+.05,z+.226+row*.044,.039,.011,.031,labMats.keys);
+ box(g,x,top+.052,z+.351,.23,.012,.021,labMats.keys);
+ ellipsoid(g,x+.41,top+.035,z+.27,.054,.031,.078,labMats.case,12,8);
+ limb(g,[x+.41,top+.018,z+.20],[x+.37,top+.017,z-.25],.009,.009,labMats.edge,6);
+ box(g,x+.70,top+.19,z-.12,.22,.38,.39,labMats.case);
+ box(g,x+.70,top+.28,z+.081,.17,.028,.012,labMats.edge);
+ for(let k=0;k<4;k++)box(g,x+.70,top+.12+k*.028,z+.081,.12,.008,.012,labMats.edge);
+ schoolLabInventory.computers++;
+}
+function labFlask(group,x,y,z,color,round=false){
+ const r=round?.070:.058;
+ if(round)ellipsoid(group,x,y+.074,z,r,.072,r,color,16,12);
+ else{const flask=new ae(new dn(.027,.077,.14,12),color);flask.position.set(x,y+.07,z);group.add(flask)}
+ cylinder(group,x,y+.158,z,.023,.07,labMats.glass);
+ cylinder(group,x,y+.199,z,.029,.018,labMats.glass);

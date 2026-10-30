@@ -1,0 +1,3491 @@
+{
+  "version": "0.4.0",
+  "format": 4,
+  "engine": [
+    4,
+    7,
+    2
+  ],
+  "file_count": 496,
+  "excluded_danu_voice": [
+    32,
+    33,
+    34,
+    35
+  ],
+  "forbidden_entries": [],
+  "entries": [
+    {
+      "path": ".godot/exported/133200997/export-2b1b949643034248e4bd75e1e4710f2c-interactable.scn",
+      "offset": 71623440,
+      "size": 776,
+      "md5": "bc276536cebfffec0a9f85a58df728ec",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-3dd574e7cc90356dd2273970ff79c538-relay.scn",
+      "offset": 101878992,
+      "size": 11384377,
+      "md5": "de5c16846a804cb846adc73f5c6fcb38",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-43825d6fd229811db158965dba3f91f2-daisy.scn",
+      "offset": 72664640,
+      "size": 20587133,
+      "md5": "1a2e7eb5efd49e21760a96c0c340e309",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-502e3dbe07c95ac432e63dae5c89aa3d-pursuit.scn",
+      "offset": 99629232,
+      "size": 2249753,
+      "md5": "6f7ff26f32450af7b29c1dfab884e3ce",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-60130645f2840f9f949654519ffe5af2-office.scn",
+      "offset": 95555552,
+      "size": 1806835,
+      "md5": "b3fe3cc88f8572bdd01c6d4819655a93",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-662af1c714fda40f513ee858477c9bf5-ritual.scn",
+      "offset": 113263376,
+      "size": 876101,
+      "md5": "b2be7ecd0ae13a6b215b3597181a063f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-77fd3534a905ce1385b8962e0a69d0b0-school.scn",
+      "offset": 114139488,
+      "size": 4910889,
+      "md5": "e2b160aa50a7876a7e61d32a01cae374",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-c296933a456827a1f60a034b7519e424-production.scn",
+      "offset": 97362400,
+      "size": 2266819,
+      "md5": "72027a9d1141e2cdde7293232b0b993f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-c2c62cb8c73458cd122faf659769dc80-player.scn",
+      "offset": 119498624,
+      "size": 1990,
+      "md5": "36fdf94577223ac1341eba56e71e81e8",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-cfce9c67de3148f5fdba61fd10e7c2f4-street.scn",
+      "offset": 119050384,
+      "size": 443919,
+      "md5": "242eb2e8a8110c63a46d24237196f384",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-d496fb4024c05fbba0fd73b9befafeea-enemy.scn",
+      "offset": 71622704,
+      "size": 732,
+      "md5": "f16c7208f28a7f8c31c5bb01bd0e4969",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-f0d06ebadf896b14245e4dea28c18829-corridor.scn",
+      "offset": 71624224,
+      "size": 1040408,
+      "md5": "bbb5fa7a2781952d5255b0747ee9ae09",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-f26fe175837e58804f1c48b99041ac16-hud.scn",
+      "offset": 119500624,
+      "size": 683,
+      "md5": "f2f4b54ef71a5e9d2f2fd4316d06ecfa",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-f2b67d29981875126b3637ac3fc83e44-loading.scn",
+      "offset": 93251776,
+      "size": 2303775,
+      "md5": "5ae8874817fee10079a62e38a128ef50",
+      "flags": 0
+    },
+    {
+      "path": ".godot/exported/133200997/export-f39996a6d27a38698d16421ab974097b-main.scn",
+      "offset": 119494304,
+      "size": 4309,
+      "md5": "9562adbbe8e828d204ac8ce664abf7c0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/global_script_class_cache.cfg",
+      "offset": 119610576,
+      "size": 1202,
+      "md5": "0115213988cab2ff45dd54181c8214cf",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/actor_daisy.glb-3dccffd24f7112cbf77b20a045734433.scn",
+      "offset": 17255616,
+      "size": 8296957,
+      "md5": "ea2b6d51fd157b4f074aa147eaae83ea",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_0.png-87db07d10d57009d1c0f14ac839d26db.ctex",
+      "offset": 42463024,
+      "size": 108,
+      "md5": "54bcebd837d9c63c31622cd64dbfa514",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_1.png-5e447411a1d21c59b567974d3331b6d4.ctex",
+      "offset": 42463344,
+      "size": 6758,
+      "md5": "903ebf835a6a586d72824fda41e02146",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_10.png-390de7fe75dfe6b96f3da2d03a7471e2.ctex",
+      "offset": 42549968,
+      "size": 14292,
+      "md5": "4d17de6bd1ce3039a1a7c046094040dd",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_100.png-02d2232e634a5771b153679ab73d4dad.ctex",
+      "offset": 45151296,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_101.png-49150a88be5a3399f49fb190e5397588.ctex",
+      "offset": 45153904,
+      "size": 3358,
+      "md5": "0afa4d87d0bff387ce4ad10401291292",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_102.png-8f27b24269d5a9f139c02d17fa469968.ctex",
+      "offset": 45157472,
+      "size": 3358,
+      "md5": "0afa4d87d0bff387ce4ad10401291292",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_103.png-24569b97602764b2dabf2f5625b33dc9.ctex",
+      "offset": 45161040,
+      "size": 2458,
+      "md5": "dd2abd7b15d002f3e6473b44e7618e35",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_104.png-e9731f64f3c2946c1cfb26f8b02e2682.ctex",
+      "offset": 45163712,
+      "size": 3050,
+      "md5": "2fa118575025a50cdad6252ae74ce4ef",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_105.png-2ae35e9fc21db1bc0a03040e25cec60a.ctex",
+      "offset": 45166976,
+      "size": 2022,
+      "md5": "3efc3c3bb9516716b0a4645363f81315",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_106.png-2fc32c11c2517e4f3674e08c99d75781.ctex",
+      "offset": 45169216,
+      "size": 3624,
+      "md5": "6e761b6cbb894c63a121c188717bd491",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_107.png-6dc9663c79b82d3070bd89895d18d3fd.ctex",
+      "offset": 45173056,
+      "size": 3688,
+      "md5": "86fe5d5b1d027004509af32be1e8ae37",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_108.png-b7b4dad0b7f5d4ca30d6e66e0f9c8067.ctex",
+      "offset": 45176960,
+      "size": 56282,
+      "md5": "91e53c33667c11f36b622f9c572a483b",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_109.png-72ef10110de1e451dc5b96d0817086da.ctex",
+      "offset": 45233456,
+      "size": 2290,
+      "md5": "6255ece9a168e336c968afeab78bfc3c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_11.png-bc921f85fb2d91c2b00a93d389c51d1b.ctex",
+      "offset": 42564480,
+      "size": 14356,
+      "md5": "b45256687fd7ef33f387e6fc20f60023",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_110.png-351baaced11bf94f0afbbfd32f243fb6.ctex",
+      "offset": 45235968,
+      "size": 2606,
+      "md5": "908358b6e8202c6d9f912c8a2d8b6907",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_111.png-3412754a18db0ad0ba5d9e3d8678b3fb.ctex",
+      "offset": 45238784,
+      "size": 2784,
+      "md5": "11ac587bfc915a6d5cd16549fc803120",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_112.png-96b931e51ea9d33973debfff7509d317.ctex",
+      "offset": 45241776,
+      "size": 2174,
+      "md5": "462a9d157c039332fc2f3040090fcdab",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_113.png-50e18c983dd344e980107bbac8bad683.ctex",
+      "offset": 45244160,
+      "size": 5438,
+      "md5": "d4ecb2eb686ebf1c21f2266174e68f9c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_114.png-82a6aee7a9bc6a3bf6d21a33292ee2c9.ctex",
+      "offset": 45249808,
+      "size": 670,
+      "md5": "383ba07a43b26112f22ef84e4af99289",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_115.png-038ed0f796ab86fba58887987a3e088c.ctex",
+      "offset": 45250688,
+      "size": 814,
+      "md5": "72b6c69f439bb92d106de1e63d126c98",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_116.png-0ce3c3921cf70f7ec05f99993cc49bfa.ctex",
+      "offset": 45251712,
+      "size": 2330,
+      "md5": "0b174bcd9539b6f6ae8cf9567b942877",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_117.png-15ec318b2b5d939fd863a95db7c95436.ctex",
+      "offset": 45254256,
+      "size": 2178,
+      "md5": "496a05645cd683887a2c51bec179393a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_118.png-e902a45aa5bfbbbf816a19a3e285676e.ctex",
+      "offset": 45256656,
+      "size": 2336,
+      "md5": "b2ba7f943e735540f3b830ddc2e1eb38",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_119.png-d87c5868a55cb9f0875075fbeb3d7800.ctex",
+      "offset": 45259200,
+      "size": 682,
+      "md5": "be89a686cdd7fa0ed1a509e028a4f0cd",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_12.png-28bb26fa74f2f0ebb62d465fae933f3d.ctex",
+      "offset": 42579056,
+      "size": 4980,
+      "md5": "6ccd420a372bceb27fcf13a9e4cae6b9",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_120.png-711067aa82c5b1f815478ec2ebd33d71.ctex",
+      "offset": 45260096,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_121.png-54221100ec7b187d2d44a589e0cd48c0.ctex",
+      "offset": 45260672,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_122.png-1bcc3c6f935146124a8169dc5b25955d.ctex",
+      "offset": 45261248,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_123.png-a2c0d78a65628ed1cea9dd8c199c2858.ctex",
+      "offset": 45261824,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_124.png-1ab4f935269202c4f4cd532b46290c3e.ctex",
+      "offset": 45262400,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_125.png-256cc42b245dcd8a04e35d428ffb6e6a.ctex",
+      "offset": 45262976,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_126.png-5bdf065a3e556d4cba5ee921455588cb.ctex",
+      "offset": 45263552,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_127.png-4e8efc9682b1a0e50a6000eb6e9685e0.ctex",
+      "offset": 45264128,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_128.png-95da390861e206e37cb6c860732c6b8f.ctex",
+      "offset": 45264704,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_129.png-dacc3d5aa1be13d44313a63a3010b20c.ctex",
+      "offset": 45265280,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_13.png-4e7ba37950169d5e6695f778cd659efb.ctex",
+      "offset": 42584256,
+      "size": 1774,
+      "md5": "8e9941fc30982b9a54d87ea3d0710e93",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_130.png-fb98b67631a33097e452d6a0d93b2d73.ctex",
+      "offset": 45265856,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_131.png-5f18bddd2b1c485feb8fee3de6fda676.ctex",
+      "offset": 45266432,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_132.png-c5af564f903bd42afde94d5ed21be32a.ctex",
+      "offset": 45267008,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_133.png-764bec683d2dcb6cc98f9cf638da5e04.ctex",
+      "offset": 45267584,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_134.png-9cf375f12deab633b6105c97b78f8cfd.ctex",
+      "offset": 45268160,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_135.png-8c154debcff6b574e4dee7d8c1505ac1.ctex",
+      "offset": 45268736,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_136.png-1eca3d37c98aab33e716d9c89a02dc3d.ctex",
+      "offset": 45269312,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_137.png-9ae872a7c0a7002013178fa8ca55b6ad.ctex",
+      "offset": 45269888,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_138.png-b52096beb6d3434076a8ce6bd85580b4.ctex",
+      "offset": 45270464,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_139.png-2ca6918e39f5172fa1d27c18976c6ea5.ctex",
+      "offset": 45271040,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_14.png-37683933a1ab96acf07d1fc4099a6555.ctex",
+      "offset": 42586240,
+      "size": 3296,
+      "md5": "18bbe1128f75ffce41037ef455edccc9",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_140.png-0e0134485e7dfcba579ae5d58a56102f.ctex",
+      "offset": 45271616,
+      "size": 362,
+      "md5": "8151d26bd3534912497bbd88a5fa95cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_141.png-3822c03993512750c753fccb04fe0a40.ctex",
+      "offset": 45272192,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_142.png-b17f6ed357d8885bdadb69dada3ebec7.ctex",
+      "offset": 45272576,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_143.png-cb97b75cbd48b5c4f19cd5e258c243a1.ctex",
+      "offset": 45272960,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_144.png-cf248959bd93ea3ee1507fe833f70c7f.ctex",
+      "offset": 45273344,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_145.png-5c8e6f7728950f570ca39a64c784b951.ctex",
+      "offset": 45273728,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_146.png-cdb9c5dd37fe24dc1b951d13e101846f.ctex",
+      "offset": 45274112,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_147.png-fa7fcbf4c23bf05b538696c6fe785511.ctex",
+      "offset": 45274496,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_148.png-9189127d15a5507bbb7ddc6ed88f2fed.ctex",
+      "offset": 45274880,
+      "size": 176,
+      "md5": "f3011871185ea4c748a24cb6beb830e1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_149.png-31ec16a477512810a0a1059145bd84e0.ctex",
+      "offset": 45275264,
+      "size": 90,
+      "md5": "4a4cc542fc732ad26cab3b21bf5d155e",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_15.png-bca5b580201074ca6ae5b34b706899f2.ctex",
+      "offset": 42589744,
+      "size": 1064,
+      "md5": "f8cbdf07722aab72787eedfd17c6aba0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_150.png-52101a32e3b827e3f82d76d5d98b9989.ctex",
+      "offset": 45275568,
+      "size": 90,
+      "md5": "4a4cc542fc732ad26cab3b21bf5d155e",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_16.png-76f1c08b09648dbc99624b3ba8043051.ctex",
+      "offset": 42591024,
+      "size": 2682,
+      "md5": "b1247323d5c4808b4df440b77e201fc2",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_17.png-d0fed2062a730e8221f74865c859028a.ctex",
+      "offset": 42593920,
+      "size": 1768,
+      "md5": "72be8c75cc33b99d6ed9b53c41e87aee",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_18.png-d1028637b4e2fd98047d5f66b9a23cff.ctex",
+      "offset": 42595904,
+      "size": 315522,
+      "md5": "9ded87e0561fe57fdc10c5bc9d75d310",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_19.png-3c8198fe02a78c0831d088f60930ff17.ctex",
+      "offset": 42911648,
+      "size": 1416,
+      "md5": "d82c525eb03e7dd1f7298e2b69e5de39",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_2.png-7f7682ab1dee8c2205717ec02b1918c8.ctex",
+      "offset": 42470320,
+      "size": 9622,
+      "md5": "7ce2d72d0278409405678630b400966c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_20.png-d8df5ba34cdd61573a9e2f4778efcb08.ctex",
+      "offset": 42913280,
+      "size": 1214,
+      "md5": "31ea25ac54b47caa6296390d603dd839",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_21.png-75eead2f3888752df7317e22ebd976c3.ctex",
+      "offset": 42914704,
+      "size": 103062,
+      "md5": "41ab896dd8b1ea61cf9a15bbd2a2fb46",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_22.png-74f3a181afb4bd2fd772c8ff549e6e7f.ctex",
+      "offset": 43017984,
+      "size": 112988,
+      "md5": "c8429bd683a82baf22a80ece40d949e2",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_23.png-7357225cc230c430e7349d6d61789e4b.ctex",
+      "offset": 43131184,
+      "size": 94,
+      "md5": "5dfe80bafb4634116bc02f8095bb8bdd",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_24.png-17144d443a41a0262c640de8f0f10d5c.ctex",
+      "offset": 43131488,
+      "size": 2338,
+      "md5": "f208591d153cc4759b3de070c42aacd0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_25.png-d9b37f14e1c9c52482b6e59986b9c3a9.ctex",
+      "offset": 43134048,
+      "size": 2056,
+      "md5": "19f29cabae7075d12810d11166020b49",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_26.png-cc278e55ed84f6102012a838054eb072.ctex",
+      "offset": 43136320,
+      "size": 2868,
+      "md5": "8782509b4cb89c737aad01faf042c958",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_27.png-426486d7daea38e17b2f32be5e40d9f3.ctex",
+      "offset": 43139408,
+      "size": 3160,
+      "md5": "87059cc5837b777da008ef0657567a3a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_28.png-6988f286d0dd182b1c72d568ea4fb67f.ctex",
+      "offset": 43142784,
+      "size": 1662,
+      "md5": "925585548dd45bd51831e5cabe6670e3",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_29.png-b45e597a40c98834afe57be1bd8cf3d7.ctex",
+      "offset": 43144656,
+      "size": 2708,
+      "md5": "73ef0d09e61df8fb5adc99de5ca80338",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_3.png-762929450fba8b60c1b71d34346517a2.ctex",
+      "offset": 42480160,
+      "size": 1226,
+      "md5": "3228a5116484e44cdf7fecbba7f4c7c7",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_30.png-76349be1b6dd54b2964fbe535a737a77.ctex",
+      "offset": 43147584,
+      "size": 2274,
+      "md5": "fd9afba98a750d923cdff3377df26e6b",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_31.png-bf3c8a41877cfc2f079b3d687a790335.ctex",
+      "offset": 43150080,
+      "size": 1324,
+      "md5": "ac983a370916ed726b7dbb25ec09430c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_32.png-5aa3f049f7825611f9e05b3fdb91771c.ctex",
+      "offset": 43151616,
+      "size": 2868,
+      "md5": "8782509b4cb89c737aad01faf042c958",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_33.png-d5b9cf79737817339b1b7e4f3f2df597.ctex",
+      "offset": 43154704,
+      "size": 2124,
+      "md5": "0cbece8ba37e55128686f3ebe2820714",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_34.png-10cbc2463868f4804182e3a2de0b7ddd.ctex",
+      "offset": 43157040,
+      "size": 2056,
+      "md5": "19f29cabae7075d12810d11166020b49",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_35.png-f512eec2eb482cc17b31b6f38f7d9f40.ctex",
+      "offset": 43159312,
+      "size": 1334,
+      "md5": "bbe692b93b3d2511c1e22bcc6342f711",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_36.png-e79c6348cd84b31a1c5e2fe61e8d8aea.ctex",
+      "offset": 43160864,
+      "size": 1800,
+      "md5": "8d17b4e5ee0911813a4192f7917fd404",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_37.png-b01e65c0056ab92cecb3acc470297422.ctex",
+      "offset": 43162880,
+      "size": 2790,
+      "md5": "3fdba061cf3c7faf7e25433a53ec2f65",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_38.png-b28c77786d672e98633de682a7173bd6.ctex",
+      "offset": 43165888,
+      "size": 1894,
+      "md5": "5f519d33e98f292fd1e8d25efc783bfa",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_39.png-3fd2b6acb23fbc125a0b5d9b4f7c5da9.ctex",
+      "offset": 43168000,
+      "size": 2094,
+      "md5": "1e04c19bc529decf5890becfe1368b01",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_4.png-fac07b3d7d1fcede7876b18a493be949.ctex",
+      "offset": 42481600,
+      "size": 18960,
+      "md5": "0db041ce1902bd422779e3fab98798c2",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_40.png-6936c02f08ff47379226634f6e14a471.ctex",
+      "offset": 43170304,
+      "size": 1750,
+      "md5": "c7523bd9a5e4c4f7203d198bbbcfd45a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_41.png-613e2cd8a45778b475f6b127a0133810.ctex",
+      "offset": 43172272,
+      "size": 3184,
+      "md5": "3df6e465114c0aca241a9bcc57d2b26f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_42.png-f0a21d9fa3fb757ff5afe3f470d29e7a.ctex",
+      "offset": 43175664,
+      "size": 3184,
+      "md5": "3df6e465114c0aca241a9bcc57d2b26f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_43.png-a92e9119bb25da72415deb63ab7e7f5b.ctex",
+      "offset": 43179056,
+      "size": 290,
+      "md5": "b33952beb5c3a8653159e02c5be3d290",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_44.png-5133e3997d131c2482c5c9110836df84.ctex",
+      "offset": 43179568,
+      "size": 368,
+      "md5": "307e1d11068b2e91843828e43c8c6a7e",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_45.png-65229536d15715f5ce8fdf68b1f15713.ctex",
+      "offset": 43180144,
+      "size": 378,
+      "md5": "918e79e2abd8cab4f93577ca5b40d1ab",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_46.png-c93f03da3ea2a24c1f6f7a81576a4c72.ctex",
+      "offset": 43180736,
+      "size": 2788,
+      "md5": "71eaf221d254f27b6d223e2f5924adc6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_47.png-9a1ce75f68dab0e99bf9738aaff8f1f9.ctex",
+      "offset": 43183744,
+      "size": 3142,
+      "md5": "2032ac32fe54289ccd74df965d026d1e",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_48.png-84e858852ca25b671be2e96c0657c1a6.ctex",
+      "offset": 43187104,
+      "size": 2888,
+      "md5": "7b02fb7ef594a20081a24ca3dd2d9f02",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_49.png-53e3ec041def137377170b2ff6235de2.ctex",
+      "offset": 43190208,
+      "size": 1514,
+      "md5": "115d504f7447e7366f7eea878567dfc3",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_5.png-19bfc748c96217e532868edfb1c92a0a.ctex",
+      "offset": 42500768,
+      "size": 2680,
+      "md5": "4f5942eb13562736be84b101cfc34056",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_50.png-78db2d91ac00d01255eb75775bb3ba8f.ctex",
+      "offset": 43191936,
+      "size": 1546,
+      "md5": "1b5d97e628cfad3b39c453ab8951cee5",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_51.png-090acc1c035e9fc51d36efdbe8c82104.ctex",
+      "offset": 43193696,
+      "size": 210236,
+      "md5": "d0340e0efc50513eb7101dc6a3c5747e",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_52.png-c591db72f3173677e481aa73d4556b86.ctex",
+      "offset": 43404144,
+      "size": 1058276,
+      "md5": "9c9e7917417d68c72aaf75c881a417eb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_53.png-661745552a1ea252f01477677153284c.ctex",
+      "offset": 44462640,
+      "size": 565136,
+      "md5": "6abe4681eaa842b0444ff5dd871a499f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_54.png-1cfb494f4d8144807defbb1539a694d7.ctex",
+      "offset": 45027984,
+      "size": 4240,
+      "md5": "7373285a69eab0198cbdca1fe538c819",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_55.png-1730854868fd4aff539aca57ba4b1eba.ctex",
+      "offset": 45032432,
+      "size": 2002,
+      "md5": "264d939ebc3d113e0e2a6ce425cd0dfe",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_56.png-1a33382c896cf7d43af3228a210eba47.ctex",
+      "offset": 45034656,
+      "size": 6754,
+      "md5": "2db3064b8516acf210c7263c690f26e3",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_57.png-6ebfa5089ee7c1db6d716e26d3d11a1c.ctex",
+      "offset": 45041632,
+      "size": 2546,
+      "md5": "f4d65ac703ced6a0693e10351b6333be",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_58.png-fecc4b6885caffb080a2fcd5e2eec55c.ctex",
+      "offset": 45044400,
+      "size": 1482,
+      "md5": "4b00b4115ff32f8236ebb58b1c50469d",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_59.png-2da9c817a8212ec56899a63d305dac5f.ctex",
+      "offset": 45046096,
+      "size": 304,
+      "md5": "94fde5c696c0c5757f81058567e1dca8",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_6.png-c126fb157c155b5adf1c8e7dd2fb9304.ctex",
+      "offset": 42503664,
+      "size": 25750,
+      "md5": "b1615c8f3a401a029893cc65042368c7",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_60.png-e1520a387a0b238760cef41056a1e737.ctex",
+      "offset": 45046608,
+      "size": 390,
+      "md5": "42cae60d3a92e86f21299921088e6012",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_61.png-2ca0664617814960752a95ff33a55408.ctex",
+      "offset": 45047216,
+      "size": 400,
+      "md5": "9ef3a6f4b489dde6dc50ed483d52b84c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_62.png-46fc6b9dda2acd2b159c94afa4b7eb60.ctex",
+      "offset": 45047824,
+      "size": 2424,
+      "md5": "9e1f2fbaea745213776f6080e3b7695d",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_63.png-0618eeb581b8ff2e78fe5056ba0ff3c4.ctex",
+      "offset": 45050464,
+      "size": 3056,
+      "md5": "06207f778cb777a7a68698942b234266",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_64.png-bff5d3d96120d9146847bd5ed5afa6da.ctex",
+      "offset": 45053728,
+      "size": 3330,
+      "md5": "575e9c890987e74fcf0a0ac1e2484926",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_65.png-7d217e3d8dd36172f0523c3c5793b305.ctex",
+      "offset": 45057280,
+      "size": 3086,
+      "md5": "b936dd903460c9133bd8c17971ebed3a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_66.png-e60e448c27479534445c643144bf5074.ctex",
+      "offset": 45060576,
+      "size": 3750,
+      "md5": "7034cb463c64655c5f675861f0368fca",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_67.png-f68fddd60b083d244c8cf4fd1cc61ae1.ctex",
+      "offset": 45064544,
+      "size": 3218,
+      "md5": "7691d21b581812d69b77f549b03bd60c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_68.png-f1c1d1c92777eb04de2811caa31e14bc.ctex",
+      "offset": 45067984,
+      "size": 3792,
+      "md5": "8d4cca9bd3048b95a8ce1cedbc2fc60c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_69.png-d088075bc7e97ed7cfad5c9897c5999d.ctex",
+      "offset": 45071984,
+      "size": 2872,
+      "md5": "f35f8e1e9d03b4ab5a0cea33e3528a9a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_7.png-1e2d3d1ac81ee010db47fc955f9759c6.ctex",
+      "offset": 42529632,
+      "size": 1608,
+      "md5": "b9408fb2b847bddba829fe44f235c952",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_70.png-0ff2dc91254093f922a27988b2a7667c.ctex",
+      "offset": 45075072,
+      "size": 2524,
+      "md5": "3259d6596f5807c937919f4871a0fd05",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_71.png-22634bc8c5dc63010751aea4a878a7bc.ctex",
+      "offset": 45077808,
+      "size": 2124,
+      "md5": "1c7d5779aec69819ccaa93c0b2a33e36",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_72.png-4648bf1d664d271f965c156d4333421d.ctex",
+      "offset": 45080144,
+      "size": 2124,
+      "md5": "1c7d5779aec69819ccaa93c0b2a33e36",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_73.png-e9606f40b9e86b84d49967dcd6318e18.ctex",
+      "offset": 45082480,
+      "size": 2360,
+      "md5": "0fdd59c81e9dfb48b635110b9bc744ae",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_74.png-060ff7dd3b1e2236eaab2e65aa4e6890.ctex",
+      "offset": 45085056,
+      "size": 2360,
+      "md5": "0fdd59c81e9dfb48b635110b9bc744ae",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_75.png-0ee1482af1abdde21a3f8e9fbb559e7f.ctex",
+      "offset": 45087632,
+      "size": 1774,
+      "md5": "faf71c275162276496a93fc5ee27f184",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_76.png-89700e3c4a21e7743f0dc4008f80aceb.ctex",
+      "offset": 45089616,
+      "size": 1774,
+      "md5": "faf71c275162276496a93fc5ee27f184",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_77.png-b27591889d25a6c8f07c3511c632164e.ctex",
+      "offset": 45091600,
+      "size": 1768,
+      "md5": "3f3608bd68887d70e6dfb1c5a53edc5f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_78.png-633bb7264ca86cdca809fb7de4ca81cf.ctex",
+      "offset": 45093584,
+      "size": 1768,
+      "md5": "3f3608bd68887d70e6dfb1c5a53edc5f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_79.png-684e2fed280172a30c93bc0fe2344ff8.ctex",
+      "offset": 45095568,
+      "size": 2212,
+      "md5": "306bb8e3940e31aa4c21246e5a8f6487",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_8.png-79767fef1bd64cafb21d513a3cc1b0f5.ctex",
+      "offset": 42531456,
+      "size": 1488,
+      "md5": "90aa08c821d75b9a37b455e8b2554b26",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_80.png-72f72324b973e4a0def975e8ae66b7a4.ctex",
+      "offset": 45098000,
+      "size": 2212,
+      "md5": "306bb8e3940e31aa4c21246e5a8f6487",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_81.png-ae20157d2c9b8f111dc77030a31e7f12.ctex",
+      "offset": 45100432,
+      "size": 2766,
+      "md5": "020ee2a62a7df664b33e5c809a33bc20",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_82.png-401ed9e3cdaecce09015926b8da1378a.ctex",
+      "offset": 45103408,
+      "size": 2766,
+      "md5": "020ee2a62a7df664b33e5c809a33bc20",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_83.png-91434c778ab0b17d72b959edaad84cbf.ctex",
+      "offset": 45106384,
+      "size": 2594,
+      "md5": "6da82eafa3f0cb97679085b2a7ffd5da",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_84.png-3fe7a7fad4b45b16a49983a4a47477b8.ctex",
+      "offset": 45109200,
+      "size": 2594,
+      "md5": "6da82eafa3f0cb97679085b2a7ffd5da",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_85.png-a68f59fd82784218bdcfb29f1405fe49.ctex",
+      "offset": 45112016,
+      "size": 2060,
+      "md5": "9b5ef0734f6e3030c4dd340f0c4b9bc0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_86.png-91b92b5be7223758cd928aba451c41e6.ctex",
+      "offset": 45114288,
+      "size": 2060,
+      "md5": "9b5ef0734f6e3030c4dd340f0c4b9bc0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_87.png-fbe5a2cbd503e4df54e32e552a4364d0.ctex",
+      "offset": 45116560,
+      "size": 2172,
+      "md5": "13e60b596c94d690f60ca2db1596eb78",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_88.png-20257a8cdc120de05ebdb33d5e37261a.ctex",
+      "offset": 45118944,
+      "size": 2092,
+      "md5": "1fd967ca5ab0b34d7dfbf817b089f12c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_89.png-384e981f0b3de3480364cd18413eaf29.ctex",
+      "offset": 45121248,
+      "size": 2136,
+      "md5": "f19f3138efeab22c3f2d5d5d5e3a3512",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_9.png-4b82178656d9a35cd040e1b15c32a8ff.ctex",
+      "offset": 42533152,
+      "size": 16596,
+      "md5": "395250998c3be334f80f7e76bb29c457",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_90.png-6fe971f34574543a682bf294ec7b4371.ctex",
+      "offset": 45123600,
+      "size": 1990,
+      "md5": "e8085353ed7e4a379c7a5f5b71847063",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_91.png-1cddb11c7852d3756a9dbc15c209c57a.ctex",
+      "offset": 45125808,
+      "size": 348,
+      "md5": "30779b7f37c9aae4184a61a1a4db0699",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_92.png-09d958a7cf2d38c4c662fcb48853edea.ctex",
+      "offset": 45126368,
+      "size": 476,
+      "md5": "996a9c96a73f9a323b5ba2c8642c8bcc",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_93.png-b667a7ff7e4487f1b4ef413ec63ac8b9.ctex",
+      "offset": 45127056,
+      "size": 488,
+      "md5": "87c74d817d4d7d56d63faef4d8a442a3",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_94.png-9d5868c48b322853acefa0c72578dcb3.ctex",
+      "offset": 45127760,
+      "size": 10274,
+      "md5": "eb39e0e2edb673ca7ee7e3f2e7ca6225",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_95.png-fbae50cce357cd76566746730c2f561a.ctex",
+      "offset": 45138256,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_96.png-95a4d71e5797a6b42c7da50f4e13fee5.ctex",
+      "offset": 45140864,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_97.png-8c45a727475710c645e80bfa97176440.ctex",
+      "offset": 45143472,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_98.png-ca1d32f38afd84b6c6649d212585c5c5.ctex",
+      "offset": 45146080,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/canvas_99.png-59ab32023f320bd4bf20a2cc9b9f3f79.ctex",
+      "offset": 45148688,
+      "size": 2394,
+      "md5": "fff366b6f1346b553213ddb7ed52f1d6",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/corridor.glb-69a941883769c7402c42a91f502345ff.scn",
+      "offset": 25552752,
+      "size": 309180,
+      "md5": "f846fd061ea2b1daf983133eb58c4455",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/daisy.glb-163ef40e8514706aa00b662242b76851.scn",
+      "offset": 25862112,
+      "size": 1172856,
+      "md5": "8e1a8cd5905817dde862ba2d40dc4a6b",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_000.ttf-f18b6ec58ed319103209a1eabc6f7a44.fontdata",
+      "offset": 17124832,
+      "size": 30613,
+      "md5": "5d844743504a0b430748c73718a3ba47",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_001.ttf-4a3f51c149c5cc71a6f7176c2da647c8.fontdata",
+      "offset": 17155632,
+      "size": 96752,
+      "md5": "9b5d9662fbe7293ea5931a9b05c6846c",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_002.png-c0e346e4bb83869f40c13befb5f7d721.ctex",
+      "offset": 45275872,
+      "size": 407094,
+      "md5": "6fbdf4a617bc5a950d23a13280cc473d",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_003.png-a0c8b3950fbd8a3839017758e3acfcb9.ctex",
+      "offset": 45683184,
+      "size": 419150,
+      "md5": "dabdf5a07b2d3c57b8547d90487f646a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_004.png-a31f6602a05bdfef5ba3f65b77e0f0f7.ctex",
+      "offset": 46102544,
+      "size": 405728,
+      "md5": "c6cb7cd038876f73e8a698dbb9affdb7",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_005.png-58eddb4f5dbd87d67b557edb095a0340.ctex",
+      "offset": 46508480,
+      "size": 422420,
+      "md5": "c41fab3ec8a78b88d4b2a8666e02dd1f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_006.jpg-3f3797582a94a20f9794a5b9d8541d64.ctex",
+      "offset": 46931120,
+      "size": 1095708,
+      "md5": "9f6d43ef8eb17df32dd0ac2bb1af7fd9",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_007.png-83c7738525752398efcbf847099168a2.ctex",
+      "offset": 48027040,
+      "size": 865948,
+      "md5": "9f87d83d201f3970596093e201909ada",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_008.jpg-438504a711569d14248dcd1ba3ede2b0.ctex",
+      "offset": 48893200,
+      "size": 1140180,
+      "md5": "97637268076eba4b0ac707eb9dde7bad",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_009.webp-e80a3668d7902a8b5280e625d764e957.ctex",
+      "offset": 50033600,
+      "size": 1311282,
+      "md5": "3c487baa1cccdc1071ce67e9e19ad5e0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_010.webp-e1d63d970a786420ed7d2417c17fb1c4.ctex",
+      "offset": 51345104,
+      "size": 64234,
+      "md5": "40ae06d504f67f78def0eb1e9cdfcd35",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_011.jpg-5b9cf3ebc24e8b26a3c4a34175db316a.ctex",
+      "offset": 51409552,
+      "size": 1527548,
+      "md5": "6b0ff834eb542acd5b0bc9c59b1033b4",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_012.webp-97b55457aca670da4ba29757913a77c0.ctex",
+      "offset": 52937312,
+      "size": 1761436,
+      "md5": "389f3285f18c52feaf619f4bc6cbe971",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_013.webp-2619fe1b6c84c1cbb7bccae2c1a24576.ctex",
+      "offset": 54698960,
+      "size": 115720,
+      "md5": "b692736ab2fcd96a061719448c43d553",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_014.jpg-a72e171f0c1607ea7ef2cb9163515e81.ctex",
+      "offset": 54814896,
+      "size": 1251972,
+      "md5": "259a2bcf2a4eed48b0780dfb6b26e05f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_015.webp-c84d7f934f946a8034020b87423157c6.ctex",
+      "offset": 56067088,
+      "size": 1279420,
+      "md5": "8ce6098fce3bfb54131b39aaed7c44ea",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_016.webp-4deae125a2fa3c684542fbeb45b7dbc5.ctex",
+      "offset": 57346720,
+      "size": 46012,
+      "md5": "e252a22d48b8d3c083b4d55386e9cbe8",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_017.jpg-1fc6a3a8142deb099f46590cc08967d6.ctex",
+      "offset": 57392944,
+      "size": 903994,
+      "md5": "13fef6e4ec6dc55588bb63484c9ba5b1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_018.webp-e44b509312f2acdc053a1ddc0117863a.ctex",
+      "offset": 58297152,
+      "size": 596682,
+      "md5": "8e43dbc3c12bf73d0568b3160e413692",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_019.webp-0b5a3d1b1d80f3f5d0722a8b71a1b8d0.ctex",
+      "offset": 58894048,
+      "size": 18280,
+      "md5": "3a140580c2fe9fd37fe63a0e5c56fe9f",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_020.jpg-50af89f5b382224ada7891d1207624ff.ctex",
+      "offset": 58912544,
+      "size": 1454252,
+      "md5": "8550b8cc424630a2a0a41983b2fa0e2d",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_021.webp-f4e2f84daf1e04c8f20479c93030a7b4.ctex",
+      "offset": 60367008,
+      "size": 1687274,
+      "md5": "aa63d9483888b6583b2966bccb773526",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_022.webp-e484face77b9298216987588d7cc6d62.ctex",
+      "offset": 62054496,
+      "size": 119344,
+      "md5": "b8dbd57216bac32ebc9e122ab42dcae9",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_023.jpg-57f57f6ecb2f36c37f462346c5e772f6.ctex",
+      "offset": 62174048,
+      "size": 819810,
+      "md5": "a85a9b8838cc02748a496bbc52390986",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_024.webp-d04b7b9cb076b90af9801f8dcfa30631.ctex",
+      "offset": 62994080,
+      "size": 1625196,
+      "md5": "fad5d3737a8f120229241716d472ba11",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_025.webp-3c75f5e74d4dae5aceab00f2820d626f.ctex",
+      "offset": 64619488,
+      "size": 47042,
+      "md5": "53bef7673c19c840901525a7caabdecc",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_026.jpg-1401992a611453a7ab0f09377104880c.ctex",
+      "offset": 64666752,
+      "size": 1527746,
+      "md5": "b8ef5278a793d69a88dfa11dbc1ea828",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_027.webp-c7385ce827039c5a9aa21e49eb01892e.ctex",
+      "offset": 66194720,
+      "size": 1503670,
+      "md5": "9a60cf7c4afa8d005b7d53ea383fe344",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_028.webp-cbd260240cb561dc46db2e828b5731c4.ctex",
+      "offset": 67698608,
+      "size": 108458,
+      "md5": "ad6e61fec0f22e5d8048149bf60f01c4",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_029.jpg-fdb4e5391d2ec0918dbb34820890f3cb.ctex",
+      "offset": 67807280,
+      "size": 1451450,
+      "md5": "ba5bad1baf48ad9795081068fb929bd4",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_030.webp-89229ee25c484b7bad555ba18fbf4809.ctex",
+      "offset": 69258944,
+      "size": 1591142,
+      "md5": "9f5026b04cb43de4a24905f57f044bdd",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_031.webp-260e36426ada748e5b5165c353f77f60.ctex",
+      "offset": 70850304,
+      "size": 129634,
+      "md5": "15daf0338e78bfb55be60a06ea4073ed",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_040.mp3-84a5984ac2c58677c4e44b234968f9b9.mp3str",
+      "offset": 21296,
+      "size": 4440991,
+      "md5": "7b4745844cd8672931db50b803bcc3a5",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/embedded_042.jpg-666532d3e2493c125e972be832be83bb.ctex",
+      "offset": 70980160,
+      "size": 561296,
+      "md5": "22f82c70d3a36f6a36bb11dc3288a462",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/flashlight.glb-e1050aa96116bc32f040ae01332e1b69.scn",
+      "offset": 27035152,
+      "size": 17669,
+      "md5": "87a87de97db62184060ea20a29e313a9",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/hands.glb-34d6bcd0bbf5e653c0b3c99f769aadcc.scn",
+      "offset": 27053008,
+      "size": 3973350,
+      "md5": "de67084977e26588730c0366bfed3416",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "offset": 0,
+      "size": 3426,
+      "md5": "02daa5cff5f2ea0b7af8ea1e9903d5b7",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/lentera.glb-c9e91f001e573032775b9419e6de7702.scn",
+      "offset": 31026544,
+      "size": 289212,
+      "md5": "bc7d26fa20aaf93a926277859638e9cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/loading.glb-d02df037813cd5d3a33485a53516cbe7.scn",
+      "offset": 31315936,
+      "size": 682831,
+      "md5": "41ad20a64b956d9850ec285d30477caa",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/music_036.ogg-c3744b464ff75bc5a3e8a86c40cdbc6b.oggvorbisstr",
+      "offset": 4462448,
+      "size": 2135966,
+      "md5": "bbe03ad31c5653aeccb616522c6138b7",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/music_037.ogg-f8187e7748e5a464f568f282db7680d2.oggvorbisstr",
+      "offset": 6598608,
+      "size": 2489474,
+      "md5": "1d78c1e9ab0da211a4f0c8b63ad50ea0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/music_038.ogg-8913081d03852775c07724a97ce07f28.oggvorbisstr",
+      "offset": 9088272,
+      "size": 5532886,
+      "md5": "256d6855bbe1aba2a70e86f06406d969",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/music_039.ogg-85c22fc4c8e716cb27caf6e1983343a4.oggvorbisstr",
+      "offset": 14621344,
+      "size": 2503286,
+      "md5": "1de5d6410b7f28279b75ce682e80b2f0",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/npc_Adit.glb-a61eb2f6a687d3e202e0ecc95d304d5b.scn",
+      "offset": 31998944,
+      "size": 227937,
+      "md5": "d30961264370f4921dc25c38fe333900",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/npc_Danu.glb-aa1a51957013a885600ed04495134637.scn",
+      "offset": 32227072,
+      "size": 204830,
+      "md5": "fa741865c35be61b48a37bc324f6af25",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/npc_Raka.glb-8a9c74e77c4a21f19cb1bad4f2c0ab7b.scn",
+      "offset": 32432080,
+      "size": 228418,
+      "md5": "aaea2d9cd759de9760aac7e5449d5ad5",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/npc_Sari.glb-f767879edbb5c7bb479df960562f7ff0.scn",
+      "offset": 32660688,
+      "size": 239834,
+      "md5": "5d70fffd8e482d16e4666422424b6cd1",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/office.glb-51f5cf39f54d8a48f8c6179a7846778f.scn",
+      "offset": 32900704,
+      "size": 536357,
+      "md5": "62075c5bde6cd3cd94682c783329b9cb",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/overseer.glb-1f50ebc71b7ced6bbcbf16b198ebc669.scn",
+      "offset": 33437248,
+      "size": 2291458,
+      "md5": "2039cc3eb13deaca7a2f378539177598",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/production.glb-a8e2e9697e7cb86d84d123d339748ca9.scn",
+      "offset": 35728896,
+      "size": 671942,
+      "md5": "b4e7af6236e6c0c9f59529e37c457b22",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/pursuit.glb-9e4d7d5b0b24e339168ac1ad4673ec78.scn",
+      "offset": 36401024,
+      "size": 769323,
+      "md5": "d9c0c1bd8321d5b0f20d5121251d66bc",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/relay.glb-9bdd055ab9df8ab6a9f5a0a873be65b9.scn",
+      "offset": 37170528,
+      "size": 1240101,
+      "md5": "32afbc0cef6ecf3a4f5d1ed5660a11bd",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/ritual.glb-1ff79bad70308bedfec204acd3de144f.scn",
+      "offset": 38410816,
+      "size": 293470,
+      "md5": "12b5402cd52554a8bfb7d6b57bfbd72a",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/school.glb-1b938b50ffa59d514e6806966ef1eb4d.scn",
+      "offset": 38704464,
+      "size": 865401,
+      "md5": "bd8e67bbd99ff33909096386de42b1dc",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/street.glb-e07ed79110f6ffff964e5f757c9f41b2.scn",
+      "offset": 39570048,
+      "size": 128955,
+      "md5": "699d4fd3efb262a70fd4f8731e0fbfbf",
+      "flags": 0
+    },
+    {
+      "path": ".godot/imported/tumbal.glb-2d6f432863401969f3eeb62c8d632d0b.scn",
+      "offset": 39699184,
+      "size": 2763649,
+      "md5": "33af4ab2f704c49368f15a78baa1716d",
+      "flags": 0
+    },
+    {
+      "path": ".godot/uid_cache.bin",
+      "offset": 119612800,
+      "size": 13570,
+      "md5": "7f8030607fbff9c6aa6ccf29b7ed33a8",
+      "flags": 0
+    },
+    {
+      "path": "assets/audio/embedded_040.mp3.import",
+      "offset": 4462288,
+      "size": 159,
+      "md5": "251599e3dd7bdce6d5da95bab50299eb",
+      "flags": 0
+    },
+    {
+      "path": "assets/audio/music_036.ogg.import",
+      "offset": 6598416,
+      "size": 177,
+      "md5": "910ab8f7f84fb6a110968a174e679092",
+      "flags": 0
+    },
+    {
+      "path": "assets/audio/music_037.ogg.import",
+      "offset": 9088096,
+      "size": 176,
+      "md5": "a058ffc11893dc62846764662a2998e5",
+      "flags": 0
+    },
+    {
+      "path": "assets/audio/music_038.ogg.import",
+      "offset": 14621168,
+      "size": 176,
+      "md5": "7ec72046428c32d748eed84852b2aa98",
+      "flags": 0
+    },
+    {
+      "path": "assets/audio/music_039.ogg.import",
+      "offset": 17124640,
+      "size": 177,
+      "md5": "1c52ef9958bb04a7846ca637dc0ef346",
+      "flags": 0
+    },
+    {
+      "path": "assets/cinematics.json",
+      "offset": 71541664,
+      "size": 5121,
+      "md5": "61c97930eba7b4a0c409f8c261db1d32",
+      "flags": 0
+    },
+    {
+      "path": "assets/fonts/embedded_000.ttf.import",
+      "offset": 17155456,
+      "size": 169,
+      "md5": "63eb66e7e4fc90eddd1e7d50fe1f7b0e",
+      "flags": 0
+    },
+    {
+      "path": "assets/fonts/embedded_001.ttf.import",
+      "offset": 17252384,
+      "size": 167,
+      "md5": "f9afca3b1a0e4e499afa8b022750544c",
+      "flags": 0
+    },
+    {
+      "path": "assets/materials/aged_wall.gdshader",
+      "offset": 17252560,
+      "size": 2043,
+      "md5": "7ea47df768c4da17301c2701d6220a66",
+      "flags": 0
+    },
+    {
+      "path": "assets/materials/film.gdshader",
+      "offset": 17254608,
+      "size": 383,
+      "md5": "81fc057aa270b9042de34428775084fa",
+      "flags": 0
+    },
+    {
+      "path": "assets/materials/light_shaft.gdshader",
+      "offset": 17254992,
+      "size": 617,
+      "md5": "2684b8047d3b350ead52e4b8302835b6",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/actor_daisy.glb.import",
+      "offset": 25552576,
+      "size": 173,
+      "md5": "8b79dfd6a9de6412fe58dfbaf561fc45",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/corridor.glb.import",
+      "offset": 25861936,
+      "size": 169,
+      "md5": "7fd866837bdc666c600d3a72444cb99b",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/daisy.glb.import",
+      "offset": 27034976,
+      "size": 167,
+      "md5": "e30478becf94734310778ed1d4995df9",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/flashlight.glb.import",
+      "offset": 27052832,
+      "size": 172,
+      "md5": "dc59eff9454ca7a7763896cb682c3788",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/hands.glb.import",
+      "offset": 31026368,
+      "size": 167,
+      "md5": "23fda237efabdfa77d28b673f9cafd5d",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/lentera.glb.import",
+      "offset": 31315760,
+      "size": 169,
+      "md5": "61f9707b1b58156362147615a0e3edd9",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/loading.glb.import",
+      "offset": 31998768,
+      "size": 169,
+      "md5": "aac030cdd7c436baa56f8617c90d94c4",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/npc_Adit.glb.import",
+      "offset": 32226896,
+      "size": 170,
+      "md5": "6332f35c6b41b4d17102130ebba748d4",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/npc_Danu.glb.import",
+      "offset": 32431904,
+      "size": 170,
+      "md5": "cae93c0899ce0b8415a1a85c7b0630c3",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/npc_Raka.glb.import",
+      "offset": 32660512,
+      "size": 169,
+      "md5": "a7c53555c3173052673448ef4b7dacce",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/npc_Sari.glb.import",
+      "offset": 32900528,
+      "size": 170,
+      "md5": "2588e3aa5f1153474a7e4093da0c320c",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/office.glb.import",
+      "offset": 33437072,
+      "size": 167,
+      "md5": "7ed98bb969dc08951b6171cd90fe6e43",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/overseer.glb.import",
+      "offset": 35728720,
+      "size": 170,
+      "md5": "c35f12658dc950b6e7503cb6c584031f",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/production.glb.import",
+      "offset": 36400848,
+      "size": 172,
+      "md5": "971a37ccbf963fe27060b8b19aff930d",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/pursuit.glb.import",
+      "offset": 37170352,
+      "size": 169,
+      "md5": "0243aba6403d9a69dc42362ff5ac36c9",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/relay.glb.import",
+      "offset": 38410640,
+      "size": 167,
+      "md5": "1525aa56e620d9bc484e0e3db252f27b",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/ritual.glb.import",
+      "offset": 38704288,
+      "size": 168,
+      "md5": "f2daa0357f9fc249dceda52e4e6bf9c8",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/school.glb.import",
+      "offset": 39569872,
+      "size": 168,
+      "md5": "773bb478ab90705404669f912cd07947",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/street.glb.import",
+      "offset": 39699008,
+      "size": 168,
+      "md5": "4166437623ac858d022013e7ec3aaef7",
+      "flags": 0
+    },
+    {
+      "path": "assets/models/source/tumbal.glb.import",
+      "offset": 42462848,
+      "size": 168,
+      "md5": "4c060fe0fd376a186139aea418e3db03",
+      "flags": 0
+    },
+    {
+      "path": "assets/source_layout.json",
+      "offset": 71546800,
+      "size": 32572,
+      "md5": "99887fe4ce31ade0ad5207e8f298a2b2",
+      "flags": 0
+    },
+    {
+      "path": "assets/source_presentation.json",
+      "offset": 71579376,
+      "size": 21098,
+      "md5": "357b20409f5d0f56cc0ea0842f32d8dd",
+      "flags": 0
+    },
+    {
+      "path": "assets/story.json",
+      "offset": 71600480,
+      "size": 16273,
+      "md5": "72f98cc1c6cb0dc19513d804f1e3b577",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_002.png.import",
+      "offset": 45682976,
+      "size": 201,
+      "md5": "bfecdd1b28d48dc9dd4577942e47f67f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_003.png.import",
+      "offset": 46102336,
+      "size": 201,
+      "md5": "e67a18fb05f5198c5e4226b2fa190981",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_004.png.import",
+      "offset": 46508272,
+      "size": 200,
+      "md5": "721010881ccb1d71c0236263b2cca031",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_005.png.import",
+      "offset": 46930912,
+      "size": 200,
+      "md5": "da1e1c9a6e142c013c4c6ab8f5f00b80",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_006.jpg.import",
+      "offset": 48026832,
+      "size": 201,
+      "md5": "6ed8e7928552483c0f3c53c6fbd323a8",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_007.png.import",
+      "offset": 48892992,
+      "size": 200,
+      "md5": "719a7a7e118f4d3f701c231cd6a2612c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_008.jpg.import",
+      "offset": 50033392,
+      "size": 201,
+      "md5": "68738ec56c4886e5a3292369d4b5ddba",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_009.webp.import",
+      "offset": 51344896,
+      "size": 201,
+      "md5": "c676db9c8d14864fb9a61b3ae5484f29",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_010.webp.import",
+      "offset": 51409344,
+      "size": 202,
+      "md5": "953ce77e920cfe7a35682c999a8677d8",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_011.jpg.import",
+      "offset": 52937104,
+      "size": 201,
+      "md5": "2daa2d86e55f25cd73512a394e71d0e5",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_012.webp.import",
+      "offset": 54698752,
+      "size": 201,
+      "md5": "2be3f2d6a875f97656792fd00ece515e",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_013.webp.import",
+      "offset": 54814688,
+      "size": 202,
+      "md5": "bf65c17fdec03e539c00b74226d3e48a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_014.jpg.import",
+      "offset": 56066880,
+      "size": 201,
+      "md5": "fbe611b2b2e8b1bba50247dec059b5ba",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_015.webp.import",
+      "offset": 57346512,
+      "size": 202,
+      "md5": "24032d517a46bba455d8c4dfab313159",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_016.webp.import",
+      "offset": 57392736,
+      "size": 202,
+      "md5": "990d0dd3df0fa2cdac3334fe7d9b3fb3",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_017.jpg.import",
+      "offset": 58296944,
+      "size": 200,
+      "md5": "099f78e89e9875f39549f65b05b27838",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_018.webp.import",
+      "offset": 58893840,
+      "size": 202,
+      "md5": "2d69f589e23405d86e7709453b0c82b8",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_019.webp.import",
+      "offset": 58912336,
+      "size": 201,
+      "md5": "f5fb42c97dff806ab13075d4eacba8c5",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_020.jpg.import",
+      "offset": 60366800,
+      "size": 201,
+      "md5": "508fc42187a6b50be84c20949933db50",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_021.webp.import",
+      "offset": 62054288,
+      "size": 202,
+      "md5": "54bc37ccda10fc2be20a5bb7da6f288c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_022.webp.import",
+      "offset": 62173840,
+      "size": 201,
+      "md5": "4ad337a4d395fe23efc5b339952fae12",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_023.jpg.import",
+      "offset": 62993872,
+      "size": 201,
+      "md5": "91ba2567307832a7da54d37164dbdd8a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_024.webp.import",
+      "offset": 64619280,
+      "size": 202,
+      "md5": "c2d31a6a7673328f81c2dc169dbf796d",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_025.webp.import",
+      "offset": 64666544,
+      "size": 201,
+      "md5": "44153692ae3b93eeee904056cb2a1869",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_026.jpg.import",
+      "offset": 66194512,
+      "size": 201,
+      "md5": "138cd8cc6ed5379c569b157659c718e5",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_027.webp.import",
+      "offset": 67698400,
+      "size": 202,
+      "md5": "67e35ec55b0908838dc59719f2ff7007",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_028.webp.import",
+      "offset": 67807072,
+      "size": 202,
+      "md5": "eeb644735f6368c6f66f31ea97261c35",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_029.jpg.import",
+      "offset": 69258736,
+      "size": 201,
+      "md5": "dc3f45480b0a1a928c5fb0dfb763ccfb",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_030.webp.import",
+      "offset": 70850096,
+      "size": 202,
+      "md5": "1e762edee5d2fe0512223d2c93dcd148",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_031.webp.import",
+      "offset": 70979952,
+      "size": 202,
+      "md5": "95a8976bf1c436b1f8a6694bb34d7cb7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/embedded_042.jpg.import",
+      "offset": 71541456,
+      "size": 200,
+      "md5": "84595284e9c1f02d26f1a1ffce7b95c6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_0.png.import",
+      "offset": 42463136,
+      "size": 196,
+      "md5": "b73ef7b04ee127f610017209799e6365",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_1.png.import",
+      "offset": 42470112,
+      "size": 197,
+      "md5": "82247cf0b1245242adf788a7ab970894",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_10.png.import",
+      "offset": 42564272,
+      "size": 198,
+      "md5": "b5ae551b70eada085420b88c459e3589",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_100.png.import",
+      "offset": 45153696,
+      "size": 198,
+      "md5": "2dafa7daacce28a3629cd9c19fc94346",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_101.png.import",
+      "offset": 45157264,
+      "size": 199,
+      "md5": "bbf4252936239b9db2bf2a15383a4d13",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_102.png.import",
+      "offset": 45160832,
+      "size": 199,
+      "md5": "b6b263ba56b77237c2205a8ebcc974f5",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_103.png.import",
+      "offset": 45163504,
+      "size": 199,
+      "md5": "4506660983c41fbfe3c50b6c8f070104",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_104.png.import",
+      "offset": 45166768,
+      "size": 199,
+      "md5": "0cb4dd42a1d7e6b1a3510f83dbad309c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_105.png.import",
+      "offset": 45169008,
+      "size": 199,
+      "md5": "119bf68d26324b0175e0791041a6d4cc",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_106.png.import",
+      "offset": 45172848,
+      "size": 199,
+      "md5": "cab8deea1cefe49172346a5fd2836435",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_107.png.import",
+      "offset": 45176752,
+      "size": 199,
+      "md5": "d40999d99f43faa49b57c5f64eed7fe2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_108.png.import",
+      "offset": 45233248,
+      "size": 198,
+      "md5": "ef14b1758f83de1ec99af0f870a7750b",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_109.png.import",
+      "offset": 45235760,
+      "size": 199,
+      "md5": "b74165f1f7f7f6e0eee388bbdbb42df9",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_11.png.import",
+      "offset": 42578848,
+      "size": 197,
+      "md5": "f57030644c7fbc2b688287ad608e180b",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_110.png.import",
+      "offset": 45238576,
+      "size": 199,
+      "md5": "a9b6ae77e8b037aa6fd28ce775c5c408",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_111.png.import",
+      "offset": 45241568,
+      "size": 199,
+      "md5": "72d34699a1f8ce482f3ae285b46097ae",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_112.png.import",
+      "offset": 45243952,
+      "size": 199,
+      "md5": "8cb589f9a96eb10e0da0af332fc0b60f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_113.png.import",
+      "offset": 45249600,
+      "size": 198,
+      "md5": "c847ec60e94ecdc82f2d148362772392",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_114.png.import",
+      "offset": 45250480,
+      "size": 199,
+      "md5": "d2265573db0d6e01c66f47105b205eee",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_115.png.import",
+      "offset": 45251504,
+      "size": 199,
+      "md5": "f0fc8b603b15f94a7da8157ecf9c7bbe",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_116.png.import",
+      "offset": 45254048,
+      "size": 198,
+      "md5": "beebfb56cdb97ed94bd1536103dc6930",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_117.png.import",
+      "offset": 45256448,
+      "size": 199,
+      "md5": "e1b18572e0c1c8b85925cdbb1c30c181",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_118.png.import",
+      "offset": 45258992,
+      "size": 199,
+      "md5": "bcb68759c1d32453d468ad5660e7eea6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_119.png.import",
+      "offset": 45259888,
+      "size": 199,
+      "md5": "1254b3cd5dde457c6eb553257e38c68c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_12.png.import",
+      "offset": 42584048,
+      "size": 197,
+      "md5": "a61721d9d59fa877c47d42a01527a015",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_120.png.import",
+      "offset": 45260464,
+      "size": 199,
+      "md5": "288de520c22ed50e64f4576e4c6b253f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_121.png.import",
+      "offset": 45261040,
+      "size": 199,
+      "md5": "b0fe8054414a5a6dbb0671696cf05ff6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_122.png.import",
+      "offset": 45261616,
+      "size": 199,
+      "md5": "9a425a1aa359d01579a8939757c48e94",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_123.png.import",
+      "offset": 45262192,
+      "size": 199,
+      "md5": "dae68f66e5d816d4509b848c35c5378c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_124.png.import",
+      "offset": 45262768,
+      "size": 198,
+      "md5": "13d34b123ba4b213494e1273edd86aa5",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_125.png.import",
+      "offset": 45263344,
+      "size": 198,
+      "md5": "0c4cadb73d28e560c93ee3f463a84637",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_126.png.import",
+      "offset": 45263920,
+      "size": 199,
+      "md5": "84564a1395211565f57e7cb5e00719ea",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_127.png.import",
+      "offset": 45264496,
+      "size": 199,
+      "md5": "365ae8c75702102ce5844374174a0f09",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_128.png.import",
+      "offset": 45265072,
+      "size": 199,
+      "md5": "979ec506ef1cdaea9dbdf089270e8397",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_129.png.import",
+      "offset": 45265648,
+      "size": 199,
+      "md5": "bf7fe7dddf93afcc90398588534fc8cb",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_13.png.import",
+      "offset": 42586032,
+      "size": 197,
+      "md5": "7ef93da2ce8476f52ea57dc0173d0f57",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_130.png.import",
+      "offset": 45266224,
+      "size": 199,
+      "md5": "332c4aef44cd0eb77246afddcec4b2ba",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_131.png.import",
+      "offset": 45266800,
+      "size": 199,
+      "md5": "b3aa492752112dc161a72935b53bf200",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_132.png.import",
+      "offset": 45267376,
+      "size": 198,
+      "md5": "ed61ae00238328be687389015e507e30",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_133.png.import",
+      "offset": 45267952,
+      "size": 198,
+      "md5": "60bfb6605ec65b887b142336e51d3301",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_134.png.import",
+      "offset": 45268528,
+      "size": 198,
+      "md5": "35e211718d6945287215fc42b81756bd",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_135.png.import",
+      "offset": 45269104,
+      "size": 199,
+      "md5": "88bf5a927684e57271402177f3e1e34d",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_136.png.import",
+      "offset": 45269680,
+      "size": 199,
+      "md5": "149d20fc979c609c508b76ad01a1af58",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_137.png.import",
+      "offset": 45270256,
+      "size": 199,
+      "md5": "bd17aeb29ad7e0b62694a8496d7c9417",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_138.png.import",
+      "offset": 45270832,
+      "size": 198,
+      "md5": "79a1ce026e4bc9daa5862ec511908323",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_139.png.import",
+      "offset": 45271408,
+      "size": 198,
+      "md5": "fe6e209b1157bcdc13a26525d187ceb6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_14.png.import",
+      "offset": 42589536,
+      "size": 198,
+      "md5": "83a634d7a2c4bc4ed852ad2e3a5e6b25",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_140.png.import",
+      "offset": 45271984,
+      "size": 199,
+      "md5": "9440a98c30d1c7e2118e80586fefc00b",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_141.png.import",
+      "offset": 45272368,
+      "size": 199,
+      "md5": "5a4e2da26b0eb9cc59afad1a47ef81cf",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_142.png.import",
+      "offset": 45272752,
+      "size": 199,
+      "md5": "84563307925174bb5c7d231ce5cac6ed",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_143.png.import",
+      "offset": 45273136,
+      "size": 199,
+      "md5": "1440cd2e08c7b878f9a13cec0a2d580a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_144.png.import",
+      "offset": 45273520,
+      "size": 198,
+      "md5": "bdbdd4dd85063a617209d0281ad7f182",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_145.png.import",
+      "offset": 45273904,
+      "size": 198,
+      "md5": "5abe7482927691b865b4de07037769cc",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_146.png.import",
+      "offset": 45274288,
+      "size": 199,
+      "md5": "40207761d5cb41e1a31c3069ca7da0f9",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_147.png.import",
+      "offset": 45274672,
+      "size": 199,
+      "md5": "5a85051bbfc3729fba2a1f7b03c32f5f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_148.png.import",
+      "offset": 45275056,
+      "size": 199,
+      "md5": "98ad70fd5639a62400b49cc511c01142",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_149.png.import",
+      "offset": 45275360,
+      "size": 199,
+      "md5": "6ac13534e2bb694ba5c436b3d792e343",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_15.png.import",
+      "offset": 42590816,
+      "size": 198,
+      "md5": "da8bacee4389f44b80a4fc0397100773",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_150.png.import",
+      "offset": 45275664,
+      "size": 199,
+      "md5": "7359d0c7767fda73cd85b6adeeeedbed",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_16.png.import",
+      "offset": 42593712,
+      "size": 198,
+      "md5": "8dea3ca6954fde4cec49640ab3104856",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_17.png.import",
+      "offset": 42595696,
+      "size": 198,
+      "md5": "bd27d5a7b3aecaa001807edfb470866d",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_18.png.import",
+      "offset": 42911440,
+      "size": 198,
+      "md5": "5775e2ebb19b70919cd9f21e9a453267",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_19.png.import",
+      "offset": 42913072,
+      "size": 197,
+      "md5": "ba18a71e22769afc3062a3e99b7cf953",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_2.png.import",
+      "offset": 42479952,
+      "size": 196,
+      "md5": "13ecad20196cef898cc616ba13e95d19",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_20.png.import",
+      "offset": 42914496,
+      "size": 198,
+      "md5": "2471f86a0c2450b3f684a46c114a26fc",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_21.png.import",
+      "offset": 43017776,
+      "size": 198,
+      "md5": "db9e2fb167999614798d6776a4f03593",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_22.png.import",
+      "offset": 43130976,
+      "size": 198,
+      "md5": "1ab9d23137342f4003cb79bade3c00d2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_23.png.import",
+      "offset": 43131280,
+      "size": 197,
+      "md5": "b645ee647f4cecab59bf19dec9cd0b4b",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_24.png.import",
+      "offset": 43133840,
+      "size": 197,
+      "md5": "98f9bd96a632d0a500ee8e0ade15d0c6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_25.png.import",
+      "offset": 43136112,
+      "size": 197,
+      "md5": "a827e7d5407dd7f56ea46d3811476073",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_26.png.import",
+      "offset": 43139200,
+      "size": 198,
+      "md5": "e84ef2c9046dc312041eb659187973db",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_27.png.import",
+      "offset": 43142576,
+      "size": 198,
+      "md5": "99e72dbdbb58bc0f4ea50c2219dc0746",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_28.png.import",
+      "offset": 43144448,
+      "size": 197,
+      "md5": "2f810c437f986eaa57b7848241926c3c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_29.png.import",
+      "offset": 43147376,
+      "size": 197,
+      "md5": "bb23405368aba8df98a10f57c6c02d4a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_3.png.import",
+      "offset": 42481392,
+      "size": 197,
+      "md5": "3be02d16ab627581ad36fe9cda554131",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_30.png.import",
+      "offset": 43149872,
+      "size": 198,
+      "md5": "0090102f292f2f238157654ef1b8c0d2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_31.png.import",
+      "offset": 43151408,
+      "size": 198,
+      "md5": "dcf80b74f88e858ca9c8040a175a4967",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_32.png.import",
+      "offset": 43154496,
+      "size": 198,
+      "md5": "e251a8d2d37b4b9bce5d2d0c2bce8371",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_33.png.import",
+      "offset": 43156832,
+      "size": 198,
+      "md5": "4a3d41eca6edd2d918dccbc6aefda859",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_34.png.import",
+      "offset": 43159104,
+      "size": 198,
+      "md5": "3b0d55df89063149b08a457942de3e39",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_35.png.import",
+      "offset": 43160656,
+      "size": 198,
+      "md5": "5c2802f7550f357c3fa264aa5822b401",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_36.png.import",
+      "offset": 43162672,
+      "size": 197,
+      "md5": "d842d0a43858bbc02159dfff55b8c6e2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_37.png.import",
+      "offset": 43165680,
+      "size": 198,
+      "md5": "feda55f01b0da1c32b790de06e706b40",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_38.png.import",
+      "offset": 43167792,
+      "size": 198,
+      "md5": "9226ff4a09ca01afbe2d61a775dd7f2f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_39.png.import",
+      "offset": 43170096,
+      "size": 198,
+      "md5": "6dd86e7017a86583f75d17855d302da6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_4.png.import",
+      "offset": 42500560,
+      "size": 197,
+      "md5": "03e9effdf80dc41833e45b6e0684ba69",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_40.png.import",
+      "offset": 43172064,
+      "size": 198,
+      "md5": "2cdd3c858424ec5d824497d3b0cd8a21",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_41.png.import",
+      "offset": 43175456,
+      "size": 198,
+      "md5": "b36e94589df6765b447f8e4c0237ba46",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_42.png.import",
+      "offset": 43178848,
+      "size": 198,
+      "md5": "2d424064d242e70e676f300f07be8433",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_43.png.import",
+      "offset": 43179360,
+      "size": 198,
+      "md5": "4cd9fa05099a73ddc8fc89883fc66d61",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_44.png.import",
+      "offset": 43179936,
+      "size": 198,
+      "md5": "95bf2e6054186fe7ace8a40e27f1dd9c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_45.png.import",
+      "offset": 43180528,
+      "size": 198,
+      "md5": "333bae1eac3fe41974d388bb4b56b58f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_46.png.import",
+      "offset": 43183536,
+      "size": 198,
+      "md5": "920df4c6c9935d479aa3694dbc776865",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_47.png.import",
+      "offset": 43186896,
+      "size": 198,
+      "md5": "a5c7cf0a59d86cc11ff36e3a5d10beeb",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_48.png.import",
+      "offset": 43190000,
+      "size": 198,
+      "md5": "4011e19e2a43a966e05875541edfbdaa",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_49.png.import",
+      "offset": 43191728,
+      "size": 198,
+      "md5": "f9ec06c849adb50b68a5b0c0b4eafcec",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_5.png.import",
+      "offset": 42503456,
+      "size": 197,
+      "md5": "74194d65aa95550a5e0661bbaad0d7a2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_50.png.import",
+      "offset": 43193488,
+      "size": 197,
+      "md5": "dbe50748b9ee6c72ffd74b082215c432",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_51.png.import",
+      "offset": 43403936,
+      "size": 198,
+      "md5": "76dc5222a3bcb2586b1679c1dc5edfad",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_52.png.import",
+      "offset": 44462432,
+      "size": 198,
+      "md5": "353b240b13a46de09f6f1baa4f25f95e",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_53.png.import",
+      "offset": 45027776,
+      "size": 198,
+      "md5": "f1b1d17351485f884133cf2d61b880c2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_54.png.import",
+      "offset": 45032224,
+      "size": 198,
+      "md5": "6a4e5558db9f7a06790f1d08205d77fa",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_55.png.import",
+      "offset": 45034448,
+      "size": 198,
+      "md5": "f350baa12b957427ed53e56a84cd9ca7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_56.png.import",
+      "offset": 45041424,
+      "size": 198,
+      "md5": "e9ea8255b25b516502f0cc2f97b33733",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_57.png.import",
+      "offset": 45044192,
+      "size": 198,
+      "md5": "2dcf669bef63fec7a97eaa33ab33ced7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_58.png.import",
+      "offset": 45045888,
+      "size": 198,
+      "md5": "0f3111958e71f6a5ccde7bfeaed837fb",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_59.png.import",
+      "offset": 45046400,
+      "size": 197,
+      "md5": "63c7a75468500100c1079da55e99d21f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_6.png.import",
+      "offset": 42529424,
+      "size": 197,
+      "md5": "fe63228e9cdcd3482ed361eef7b8b4b0",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_60.png.import",
+      "offset": 45047008,
+      "size": 198,
+      "md5": "bb2ea79ff30738afe8681a6af8e0d550",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_61.png.import",
+      "offset": 45047616,
+      "size": 198,
+      "md5": "a21a6646582d6dddf64f1296dd41970c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_62.png.import",
+      "offset": 45050256,
+      "size": 198,
+      "md5": "68864e861a4a1c61c5e404d2c1e9a168",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_63.png.import",
+      "offset": 45053520,
+      "size": 198,
+      "md5": "2efcfc98909d1518cd5ed4b4976c390e",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_64.png.import",
+      "offset": 45057072,
+      "size": 198,
+      "md5": "32fab0afcd88f76ebd012b01aa626dc2",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_65.png.import",
+      "offset": 45060368,
+      "size": 198,
+      "md5": "eba68ba47fd3162745c23ab3b818765f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_66.png.import",
+      "offset": 45064336,
+      "size": 198,
+      "md5": "7bc88f04bf36f2caa419385bab8695f0",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_67.png.import",
+      "offset": 45067776,
+      "size": 198,
+      "md5": "8910ed7140d69b03ca7cb50259cf9e3c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_68.png.import",
+      "offset": 45071776,
+      "size": 196,
+      "md5": "61e37e0d2608ec01d02b4779637bfc83",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_69.png.import",
+      "offset": 45074864,
+      "size": 198,
+      "md5": "13aaeb2badc22c348dffff658d460f6f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_7.png.import",
+      "offset": 42531248,
+      "size": 196,
+      "md5": "48f95ae818c29b2d3ee9ca9d8621fdce",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_70.png.import",
+      "offset": 45077600,
+      "size": 197,
+      "md5": "a961b64701e2b40e2455f746103b62d7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_71.png.import",
+      "offset": 45079936,
+      "size": 197,
+      "md5": "51eb93bc3b74ec982093b90f074e3abb",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_72.png.import",
+      "offset": 45082272,
+      "size": 198,
+      "md5": "5e8e436b96c2e0be1fa56ac438165274",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_73.png.import",
+      "offset": 45084848,
+      "size": 197,
+      "md5": "5109c646f4950c02bf51954946230971",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_74.png.import",
+      "offset": 45087424,
+      "size": 197,
+      "md5": "facfe459400a60308e64b1d7e01cce21",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_75.png.import",
+      "offset": 45089408,
+      "size": 198,
+      "md5": "ea1a20ee788261b66213e06e2fbd32c7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_76.png.import",
+      "offset": 45091392,
+      "size": 198,
+      "md5": "12aa8fb4055cdfa2b05512fd58876bbc",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_77.png.import",
+      "offset": 45093376,
+      "size": 198,
+      "md5": "f9e06119562ef7e982c3c62ba59be86a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_78.png.import",
+      "offset": 45095360,
+      "size": 198,
+      "md5": "1c3f42e6ce172c1b4ea159b993b8519f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_79.png.import",
+      "offset": 45097792,
+      "size": 197,
+      "md5": "4b542a019689659ccfec5b40cf5bbaea",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_8.png.import",
+      "offset": 42532944,
+      "size": 196,
+      "md5": "2267808471911072edd76de1bc785318",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_80.png.import",
+      "offset": 45100224,
+      "size": 198,
+      "md5": "afc7efd3fb136dc936b67e83effc7ac6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_81.png.import",
+      "offset": 45103200,
+      "size": 198,
+      "md5": "41647e4945affd068ed646c490354fed",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_82.png.import",
+      "offset": 45106176,
+      "size": 197,
+      "md5": "52540f49d058d5313263e788b23c7217",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_83.png.import",
+      "offset": 45108992,
+      "size": 198,
+      "md5": "4b8f21fe97d874f9c176e7a07b0f21b6",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_84.png.import",
+      "offset": 45111808,
+      "size": 198,
+      "md5": "96a4302c49fc7c3565129ecf9eb20cef",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_85.png.import",
+      "offset": 45114080,
+      "size": 198,
+      "md5": "278ef8bad3fd5e3362e0e725ccf9f6d9",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_86.png.import",
+      "offset": 45116352,
+      "size": 198,
+      "md5": "7890c46268a69f6e1d0c33f44a3b0f5c",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_87.png.import",
+      "offset": 45118736,
+      "size": 197,
+      "md5": "772d4a14d3f6aabf25a863b3a7041ac3",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_88.png.import",
+      "offset": 45121040,
+      "size": 198,
+      "md5": "208e9f2d71943b3fc6f5f0c38493efae",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_89.png.import",
+      "offset": 45123392,
+      "size": 198,
+      "md5": "1fbc66d6a03bdf63c5bc25b3f7fe9b90",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_9.png.import",
+      "offset": 42549760,
+      "size": 197,
+      "md5": "7f6f5bba296039b877d1bc3705be7d52",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_90.png.import",
+      "offset": 45125600,
+      "size": 198,
+      "md5": "8908a2b90d692395b24f7785fb3046ab",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_91.png.import",
+      "offset": 45126160,
+      "size": 198,
+      "md5": "30bb53299612044d000ea3a7f5e42089",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_92.png.import",
+      "offset": 45126848,
+      "size": 198,
+      "md5": "1075cd80bd03911a92b8efe7e73375b8",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_93.png.import",
+      "offset": 45127552,
+      "size": 198,
+      "md5": "ae91362e104f434c81cdda4dc5bf7b06",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_94.png.import",
+      "offset": 45138048,
+      "size": 198,
+      "md5": "37ad673060411005993dc63d16bcba2f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_95.png.import",
+      "offset": 45140656,
+      "size": 197,
+      "md5": "adbde9724418663838c615f395b9606f",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_96.png.import",
+      "offset": 45143264,
+      "size": 197,
+      "md5": "e51022217fbd5fcf3505293d39158d0a",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_97.png.import",
+      "offset": 45145872,
+      "size": 198,
+      "md5": "0c73e72e106f11b982c9d7861bf5a956",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_98.png.import",
+      "offset": 45148480,
+      "size": 198,
+      "md5": "6b0bed8963765c3f2c88e7ebec5915e7",
+      "flags": 0
+    },
+    {
+      "path": "assets/textures/source_generated/canvas_99.png.import",
+      "offset": 45151088,
+      "size": 198,
+      "md5": "2bbc327b233298d99d7931ae5f9a6b0a",
+      "flags": 0
+    },
+    {
+      "path": "assets/walkable_bounds.json",
+      "offset": 71616768,
+      "size": 5934,
+      "md5": "44dbe2da44a027484af958ef6476e178",
+      "flags": 0
+    },
+    {
+      "path": "icon.svg",
+      "offset": 119611792,
+      "size": 995,
+      "md5": "a16f2eed1b4496c4abf03d329708ba09",
+      "flags": 0
+    },
+    {
+      "path": "icon.svg.import",
+      "offset": 3440,
+      "size": 193,
+      "md5": "3bf24b26cd1e6d12eef2837b417ee9fa",
+      "flags": 0
+    },
+    {
+      "path": "project.binary",
+      "offset": 119626384,
+      "size": 989,
+      "md5": "caae59df5876979ce54bc4ef94216d37",
+      "flags": 0
+    },
+    {
+      "path": "scenes/enemies/enemy.tscn.remap",
+      "offset": 119608096,
+      "size": 98,
+      "md5": "fb50bf48b7d2730c3e864661fe697729",
+      "flags": 0
+    },
+    {
+      "path": "scenes/interactables/interactable.tscn.remap",
+      "offset": 119608208,
+      "size": 105,
+      "md5": "2f190710c1bec8bdfce61d79d34d8ea2",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/corridor.tscn.remap",
+      "offset": 119608320,
+      "size": 101,
+      "md5": "3fff16efb0906ae062191a8fd7eaceb6",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/daisy.tscn.remap",
+      "offset": 119608432,
+      "size": 98,
+      "md5": "4cba875a9ac460719daee3a9b26b90a6",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/loading.tscn.remap",
+      "offset": 119608544,
+      "size": 100,
+      "md5": "49ba5cf4f17e2cfbcaebdc13552f99df",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/office.tscn.remap",
+      "offset": 119608656,
+      "size": 99,
+      "md5": "66a5ad41cd1daed2470575af91d99e41",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/production.tscn.remap",
+      "offset": 119608768,
+      "size": 103,
+      "md5": "8c07eef1c7d121262e38f8ec1f564a9c",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/pursuit.tscn.remap",
+      "offset": 119608880,
+      "size": 100,
+      "md5": "e54520b6ba16986e494b52cde8637c73",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/relay.tscn.remap",
+      "offset": 119608992,
+      "size": 98,
+      "md5": "564e9d5de1837a5d175a950f8b8f75f2",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/ritual.tscn.remap",
+      "offset": 119609104,
+      "size": 99,
+      "md5": "c5560b11d8096bff6dfebc9e6c6f2fc0",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/school.tscn.remap",
+      "offset": 119609216,
+      "size": 99,
+      "md5": "4fa4c1921865f423c8bbf378e2886e0d",
+      "flags": 0
+    },
+    {
+      "path": "scenes/levels/street.tscn.remap",
+      "offset": 119609328,
+      "size": 99,
+      "md5": "f83ae4905b97041f9837e660c6df6700",
+      "flags": 0
+    },
+    {
+      "path": "scenes/main/main.tscn.remap",
+      "offset": 119609440,
+      "size": 97,
+      "md5": "3eaa2ffa65a77073c97b8edcaed630ae",
+      "flags": 0
+    },
+    {
+      "path": "scenes/player/player.tscn.remap",
+      "offset": 119609552,
+      "size": 99,
+      "md5": "b31fb330090efbbdd31c09d53771eed4",
+      "flags": 0
+    },
+    {
+      "path": "scenes/ui/hud.tscn.remap",
+      "offset": 119609664,
+      "size": 96,
+      "md5": "0b02f30563b3915e65061ae0a16ddc28",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/enemy.gd.remap",
+      "offset": 119609760,
+      "size": 48,
+      "md5": "603ca24c549e181443f85d2c5ba57df6",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/enemy.gdc",
+      "offset": 119501312,
+      "size": 8318,
+      "md5": "2705c30b98d5163b76fa8cc2078ef2cd",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/hands_rig.gd.remap",
+      "offset": 119609808,
+      "size": 52,
+      "md5": "13a4f137c77dc68e2010cb11a9c34803",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/hands_rig.gdc",
+      "offset": 119509632,
+      "size": 2272,
+      "md5": "f7a4268a79338285b23737dac164568f",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/relay_watcher.gd.remap",
+      "offset": 119609872,
+      "size": 56,
+      "md5": "9c6e35a138ac842247f32ae416564416",
+      "flags": 0
+    },
+    {
+      "path": "scripts/enemies/relay_watcher.gdc",
+      "offset": 119511904,
+      "size": 3496,
+      "md5": "dd3f33c34e7892d70183d8487051c9e0",
+      "flags": 0
+    },
+    {
+      "path": "scripts/interaction/escape_puzzle.gd.remap",
+      "offset": 119609936,
+      "size": 60,
+      "md5": "3fb2a46c45e4920167fbe06ffaa258d8",
+      "flags": 0
+    },
+    {
+      "path": "scripts/interaction/escape_puzzle.gdc",
+      "offset": 119515408,
+      "size": 5054,
+      "md5": "ae6805e316b7f7fcdebbeffded4f2524",
+      "flags": 0
+    },
+    {
+      "path": "scripts/interaction/interactable.gd.remap",
+      "offset": 119610000,
+      "size": 59,
+      "md5": "b72c8cd858b657598c4c844b22bfc85b",
+      "flags": 0
+    },
+    {
+      "path": "scripts/interaction/interactable.gdc",
+      "offset": 119520464,
+      "size": 943,
+      "md5": "cc3eca49bb607d3082c56a4e71813627",
+      "flags": 0
+    },
+    {
+      "path": "scripts/player/player.gd.remap",
+      "offset": 119610064,
+      "size": 48,
+      "md5": "e479edd21e50098aaae2b9f859d87b9f",
+      "flags": 0
+    },
+    {
+      "path": "scripts/player/player.gdc",
+      "offset": 119521408,
+      "size": 7618,
+      "md5": "ad9c7424764d25a2282c507107dfdd2c",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/audio.gd.remap",
+      "offset": 119610112,
+      "size": 48,
+      "md5": "bee0c0a78ed1bd85d113b55f889d22c2",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/audio.gdc",
+      "offset": 119529040,
+      "size": 3253,
+      "md5": "fd4125570d7a5fd72a3796366d9f6f7d",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/expansion_cinematics.gd.remap",
+      "offset": 119610160,
+      "size": 63,
+      "md5": "eba4265bdf17a18222e0c906e4e47f1e",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/expansion_cinematics.gdc",
+      "offset": 119532304,
+      "size": 8168,
+      "md5": "47245311252728083619f2502d9e5cb7",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/game_state.gd.remap",
+      "offset": 119610224,
+      "size": 53,
+      "md5": "2df0d44dc0381645169bcfc316034dd8",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/game_state.gdc",
+      "offset": 119540480,
+      "size": 5461,
+      "md5": "edeb44c80cd258d31c97b034a79c8df7",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/geometry.gd.remap",
+      "offset": 119610288,
+      "size": 51,
+      "md5": "b70df9118357f57a22a335f77ba617d4",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/geometry.gdc",
+      "offset": 119545952,
+      "size": 3738,
+      "md5": "0dbdf808bd608b6109cf1ebf3f265e3a",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/level.gd.remap",
+      "offset": 119610352,
+      "size": 48,
+      "md5": "3ecbe0a581abc15b4234a6df85451638",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/level.gdc",
+      "offset": 119549696,
+      "size": 16586,
+      "md5": "441abbfb6f443b741a245b098dde1a0d",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/main.gd.remap",
+      "offset": 119610400,
+      "size": 47,
+      "md5": "1afeac40f0d276a523f783b7ed832e05",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/main.gdc",
+      "offset": 119566288,
+      "size": 29720,
+      "md5": "0da6038448e95efcf2dd9e35494a8b82",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/narrative.gd.remap",
+      "offset": 119610448,
+      "size": 52,
+      "md5": "c58bd823e2ccd14d08372f71b4b5c3d4",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/narrative.gdc",
+      "offset": 119596016,
+      "size": 8281,
+      "md5": "7d4dc6c3443956eb32840043399c0dc6",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/room_presentation.gd.remap",
+      "offset": 119610512,
+      "size": 60,
+      "md5": "a11949dd46874a3ad57b78e6bd0bcf44",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/room_presentation.gdc",
+      "offset": 119604304,
+      "size": 3612,
+      "md5": "db90015199d8e13d5a499a1d2055bf27",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/room_safety.gd.remap",
+      "offset": 119608032,
+      "size": 54,
+      "md5": "4aad80794ad5d2d413301a14777cb2cd",
+      "flags": 0
+    },
+    {
+      "path": "scripts/systems/room_safety.gdc",
+      "offset": 18112,
+      "size": 3171,
+      "md5": "c726341a023de220d5a1ea282828d4b6",
+      "flags": 0
+    },
+    {
+      "path": "scripts/ui/hud.gd.remap",
+      "offset": 119607984,
+      "size": 41,
+      "md5": "6f6b6c322ae010bd7ef9c916d34a4a83",
+      "flags": 0
+    },
+    {
+      "path": "scripts/ui/hud.gdc",
+      "offset": 7776,
+      "size": 10325,
+      "md5": "16c210cfc289b24c3fb26b2f4a34d3dd",
+      "flags": 0
+    },
+    {
+      "path": "scripts/ui/photo_inspector.gd.remap",
+      "offset": 119607920,
+      "size": 53,
+      "md5": "f8646cf38c54adf6723b809d0dfc4829",
+      "flags": 0
+    },
+    {
+      "path": "scripts/ui/photo_inspector.gdc",
+      "offset": 3648,
+      "size": 4113,
+      "md5": "920d84df435e40a9d8fa9bee935a09ad",
+      "flags": 0
+    }
+  ]
+}

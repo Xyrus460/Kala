@@ -1,0 +1,85 @@
+{
+  "revision": "0.9.0",
+  "date": "2026-10-27",
+  "engine": "Godot 4.7.2",
+  "suites": [
+    {
+      "suite": "integration",
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    {
+      "suite": "layout",
+      "checks": 118,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    {
+      "suite": "story",
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    {
+      "suite": "claw",
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    {
+      "suite": "revision04",
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    {
+      "suite": "revision05",
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    {
+      "suite": "revision06",
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_09_console.log"
+    },
+    {
+      "suite": "revision07",
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_09_final_console.log"
+    },
+    {
+      "suite": "revision08",
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision08_09_final_console.log"
+    },
+    {
+      "suite": "revision09",
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision09_09_final_console.log"
+    }
+  ],
+  "checks": 589,
+  "failures": 0,
+  "visual": {
+    "renderer": "Forward+ / Vulkan, NVIDIA RTX 3050",
+    "captures": 24,
+    "log": "docs/capture09_verified_console.log",
+    "radio_orientation_check": "docs/capture09_props_console.log"
+  },
+  "packaged": {
+    "rooms_loaded": 14,
+    "smoke_exit_code": 0,
+    "forward_plus_exit_code": 0,
+    "logs": [
+      "docs/build09_console.log",
+      "docs/exe09_smoke.log",
+      "docs/exe09_render.log"
+    ]
+  }
+}

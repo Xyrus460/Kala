@@ -1,0 +1,35 @@
+{
+  "version": "0.9.0",
+  "date": "2026-10-27",
+  "engine": "Godot 4.7.2",
+  "files": [
+    {
+      "path": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "path": "KALA.pck",
+      "bytes": 165794092,
+      "sha256": "3a1d7a4baed64282a27af91afa5ccaaebb00e03afa4b70801574d648e2b31226"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 7294,
+      "sha256": "89aee8059ce0bc486abc10b13bd296e2fb0ac8735851280590aa59f9f1b9ca9a"
+    }
+  ],
+  "source_checks": 589,
+  "source_failures": 0,
+  "render_captures": 24,
+  "packaged_room_smoke": 14,
+  "packaged_smoke_exit_code": 0,
+  "packaged_forward_plus_exit_code": 0,
+  "logs": [
+    "docs/build09_console.log",
+    "docs/exe09_smoke.log",
+    "docs/exe09_render.log"
+  ],
+  "validation": "docs/validation_09.json",
+  "previous_build": "backups/revision09_before/build"
+}

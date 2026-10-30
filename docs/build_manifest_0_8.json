@@ -1,0 +1,16 @@
+{
+  "version": "0.8.0",
+  "date": "2026-10-26",
+  "artifacts": [
+    {
+      "path": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "path": "KALA.pck",
+      "bytes": 161956096,
+      "sha256": "bebc34fb3f735b44af070daab36ade6fa8272e38058a88ab80e5b3d5f58d1457"
+    }
+  ]
+}

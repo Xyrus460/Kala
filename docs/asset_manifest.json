@@ -1,0 +1,346 @@
+﻿[
+    {
+        "index":  0,
+        "mime":  "font/ttf",
+        "path":  "assets/fonts/embedded_000.ttf",
+        "bytes":  41252,
+        "sha256":  "2b802cc8869e1567ac23bf639a19ca244592ade82621c9c6ede035a50593617d",
+        "context":  "an Kartini\u003c/title\u003e\n\u003cstyle\u003e@font-face {\n  font-family: \u0027Nosifer\u0027;\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url("
+    },
+    {
+        "index":  1,
+        "mime":  "font/ttf",
+        "path":  "assets/fonts/embedded_001.ttf",
+        "bytes":  150524,
+        "sha256":  "9f59e3a0e1c0008f2ef97b1c94e5d96c43748bbc92993570d1133454a484254c",
+        "context":  "rmat(\u0027truetype\u0027);\n}\n@font-face {\n  font-family: \u0027Special Elite\u0027;\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url("
+    },
+    {
+        "index":  2,
+        "mime":  "image/png",
+        "path":  "assets/textures/embedded_002.png",
+        "bytes":  595319,
+        "sha256":  "c69c2398c292b0895d75d288e1cf7cb517c5bf632a70df606852ebcea993c68c",
+        "context":  "ht)}addEventListener(\"resize\",()=\u003e{ct.aspect=innerWidth/innerHeight,ct.updateProjectionMatrix(),Hu()});\nconst EXPAND_TEXTURES={\"concrete\": \""
+    },
+    {
+        "index":  3,
+        "mime":  "image/png",
+        "path":  "assets/textures/embedded_003.png",
+        "bytes":  594768,
+        "sha256":  "11f6e441d031f7295643f4682e5885f754ecf4a6d23bf0287a2f9cccbb2d0ae4",
+        "context":  "CgJgEQ30er82IIiP517fRqhjvsd5YvZ7yMRYa0pfgUV0VRmdCbAdH86rj5UXTELK/nh8iqL0fh9TCrt6s/9soRr6XugxpWXPcf8BNmhodfN/omYAAAAASUVORK5CYII=\", \"rust\": \""
+    },
+    {
+        "index":  4,
+        "mime":  "image/png",
+        "path":  "assets/textures/embedded_004.png",
+        "bytes":  590058,
+        "sha256":  "937b041561b0dd586c04abffb04d8e2939bb65be634b546363f400fb13758b2a",
+        "context":  "7M6Z7dRc6wf7+8cYXrEv6nvVUeoi/zQ8yGNoyROnMUbcd3LkQIIIbglnDtU2LQtBQQb7LelGvRoZt+/2JQ7QhlQSxCr5oBEh6H4Bz3KWR9jdBpHAAAAAElFTkSuQmCC\", \"floor\": \""
+    },
+    {
+        "index":  5,
+        "mime":  "image/png",
+        "path":  "assets/textures/embedded_005.png",
+        "bytes":  596622,
+        "sha256":  "85aeab7c791be09619d21d08d6078ef702c8cd7496375aa9d215875ecb38a0d5",
+        "context":  "DyFNAAAARUlEQVT7fpz4ACD8fyNlJIEEWgE4Tb1ne5xPCijLsPqhV0oJKSEEBmUQ4b5tqfn/j52VmZmBkYGFmYWJkfHr928/f/wEAKTdTu7+op47AAAAAElFTkSuQmCC\", \"wood\": \""
+    },
+    {
+        "index":  6,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_006.jpg",
+        "bytes":  218687,
+        "sha256":  "3c373f0ec19c9bf7f84e56e1bec9e11b6095a0c6e24e9df08a797a3f398cf686",
+        "context":  "embedded.\n(()=\u003e{\n\u0027use strict\u0027;\nconst $=id=\u003edocument.getElementById(id), clamp=(v,a,b)=\u003eMath.max(a,Math.min(b,v));\nconst EVIDENCE_PHOTO_URL=\""
+    },
+    {
+        "index":  7,
+        "mime":  "image/png",
+        "path":  "assets/textures/embedded_007.png",
+        "bytes":  1263110,
+        "sha256":  "f19fe0ac16a82c8fa977775ecfb137ef7a2eda20631aa4c06740d9bce50e0826",
+        "context":  "eAC6aMHABNDdMlO27AqV3ZXtQJgGfNEkzE21aaqbm3E0F0BBdWx0qRvaUKrcgcV5U2sWPNMlysm5TjHaqWxNitCzHapr1S9Ot/zMpLNjbXqQWf/9k=\";\nconst DAISY_MURAL_URL=\""
+    },
+    {
+        "index":  8,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_008.jpg",
+        "bytes":  393916,
+        "sha256":  "e471178bbc8a5345e4e0e502ad6e62e8544996aead40ae95a26e6bcfef63a799",
+        "context":  "ness separation.\n// The two offline albedo atlases are baked assets; each material gets its own UV tile.\nconst HD_URLS={\"plaster\": {\"map\": \""
+    },
+    {
+        "index":  9,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_009.webp",
+        "bytes":  312746,
+        "sha256":  "661cb761466c2a92d43eddaf907ecec52d16f10c0a6e62f9046fac4402cfac1d",
+        "context":  "hNN9Yl1rTMsUmCh1ClRrk0FNKIJUg96RX/AOD4o0LgKo63FvErjrwVIRznFW/oksk2pTrdtVO8cRtk7V70FW4e1PlC4bGkaM5fwpKEpe27SElPCvvTJdgNqJ//2Q==\", \"normal\": \""
+    },
+    {
+        "index":  10,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_010.webp",
+        "bytes":  13046,
+        "sha256":  "e129cf1572e454a0e0ae3499e27c739063a71b3614838574d4e9d861266f5d1b",
+        "context":  "lqZLlnuUx6vElSj6diDO23JWSPifkp/PNqiXa8PXxx3pfh/uwMZnt9tQQB9wMPi/8fr40Q/l2AhX/HglRqGslwm4dbN0hYOhM1CHtEVLLBDuWc1gszfcUbvqki4AAA=\", \"rough\": \""
+    },
+    {
+        "index":  11,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_011.jpg",
+        "bytes":  549427,
+        "sha256":  "fdaee9d9d34e1750020ec41f14207e24017f9077b33c247d3c876d3ec54f75d4",
+        "context":  "KGVS+qhAessgX7gtJejK7C5qqeYZL+DV/ESWZS8xlPrn+C/I/ntOUAFC8XJsOutxg1BauwzRLX3My4I22qRvKjBBoQH3iryk18ZdQOV7lptItEiAAA=\"}, \"concrete\": {\"map\": \""
+    },
+    {
+        "index":  12,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_012.webp",
+        "bytes":  521362,
+        "sha256":  "b2e6c7bee9f25a5d228913916385ac538e76308c516dfab075474c400daffcfb",
+        "context":  "OWq3FC49TnZkOI47JEaquIQ4vqYQ8kgtfb00zKFAuKOSzsTXd1AVSKS2fynqatP94cCB1dR549dTVQdHuGz0J3i2XSKTKYkTZyizLSgRo2Oc4HJGmrWu5sjVT/2Q==\", \"normal\": \""
+    },
+    {
+        "index":  13,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_013.webp",
+        "bytes":  34428,
+        "sha256":  "23115ec763b96a23f6cb1ad5ad422f0c0b501799ae32faa2ac83c55c15ce5072",
+        "context":  "mEKzsIcJFuYUk0hGJS2si0dntE0ewnFu+38Ou6XZA1ybUPSq3w3PBQsAiAr0Va77f5hTH2G8tySUR/D45FOPaAhF1MmmswXxNmB2zWlxbiHNWyh0M4BPUkSFYAAAA==\", \"rough\": \""
+    },
+    {
+        "index":  14,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_014.jpg",
+        "bytes":  419298,
+        "sha256":  "4c25777e11c4992496f668e291db8149d9001e59445f5731788a8d4d244d83d4",
+        "context":  "wn1DfjI8J5A/C0jYR5mlI/QNLe9Z4vLR9+AoqWtxVKMGcmCkDp6zQea9s6JwAEUGaaj28a9srqClq378EK4JrA4EV2nXB9FQp9rOkedzQYfF/rjsO5oAAA\"}, \"steel\": {\"map\": \""
+    },
+    {
+        "index":  15,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_015.webp",
+        "bytes":  304312,
+        "sha256":  "a907848af673562c55d0591f740b9dffe347bc72ec0f103291eabc05507ad20b",
+        "context":  "76+/b0zg1hlkf8H2j0EcSfyMaggOPCVL6RTMiv4kKUjG3j/mhlS7fYyO5aPk3+VMEVlQQsqR43EpyVJz2pUYJmh5HHo+ukyIzc3USR02GQOE/UT+VXGNKkBKTns//Z\", \"normal\": \""
+    },
+    {
+        "index":  16,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_016.webp",
+        "bytes":  10596,
+        "sha256":  "d423aa9225573c8960340af4a1a2c0adbab511f76c15290e2689b086fe5106bd",
+        "context":  "q64FFVfA235Ypjl8HWt4/QfdkRTCM7o+RXMNpPOKxPTGfGdWPX3bO0wgtdSn40J8pJKWoiWUDwE2teNuQf00SAkndd1EMAYQFsLdNkrFL2xfCvOr7dOT+rRqAAAAA==\", \"rough\": \""
+    },
+    {
+        "index":  17,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_017.jpg",
+        "bytes":  281334,
+        "sha256":  "7059a90be8d5a906c6805a18aa6949b3e2fa1c3b584555f564292557f57421d8",
+        "context":  "82DqprbkNMuA3LjtALghp9aU6cwCetDzFEjzk41Ox7EtGrnWqpMQVAo2hlx+rrJOiIUFZuIgBDuqgO5xmqwQuyaK1ZlAM8AZuI9HWMykBWBeDupKcAAA\"}, \"ceramic\": {\"map\": \""
+    },
+    {
+        "index":  18,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_018.webp",
+        "bytes":  85226,
+        "sha256":  "78efb50c9853894795fc349df801f6969f0bbcd4f66b5d37ba1d7070141b936f",
+        "context":  "S0Fjo7QxMRgZwMjHWsb0T22ik3bMzl5piSoP5B6UiVsZvBzaYttHhV2jHm461VpJCWJhsxNIWQ5KnnjoKm+xqG3ObeH8PhscZFZsMUgre7YRB5QQPXGc0IybBKJ//Z\", \"normal\": \""
+    },
+    {
+        "index":  19,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_019.webp",
+        "bytes":  4022,
+        "sha256":  "eb596a752f133285f1f620941f0e0d24fbd6f369e23035aae6bcc9ca2a5939b4",
+        "context":  "BjbuOqyD4KXKdxIRZ2wcEtG+dP4Fr6ZEUITiuK2JzDXISKdbWfS2wbuA1O2dMkImuQAhi5MMCC5pqmWG/sDepsJ4P/eXI/ey2TPK8IGqDHAEmUIcBYg9oorYwzgAAA=\", \"rough\": \""
+    },
+    {
+        "index":  20,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_020.jpg",
+        "bytes":  574727,
+        "sha256":  "849b3fad9d5701b712555b48d0bb40bbae103dd05690654740da588889c52afb",
+        "context":  "oiT+2SODR8hWazYJR8kGpeLQu0V0nMPK2Gi2LlkMFnSNWGR7MjR/DDCKtkN2U5s4AAhjpNLweX6lAmhiC8evBW0+MP20/bFq2oIfhqC3mnw+4YBrIAAA=\"}, \"burlap\": {\"map\": \""
+    },
+    {
+        "index":  21,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_021.webp",
+        "bytes":  469438,
+        "sha256":  "6ac94e4f846281b7bfeac1fed486ee8c54f61e762568437d670cc634a20a863c",
+        "context":  "lGVpydRKQ9vlLGUqmYq9sLhfq98rQ6p7+86FtrRkE476rsUBZLWxY4ML59kQYYc6JTLbzZLiyOlWT7a4rkiGygHMt3q8xcNPxGT0MpKUuEgDgDkjSdm04jBgif/9k=\", \"normal\": \""
+    },
+    {
+        "index":  22,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_022.webp",
+        "bytes":  37620,
+        "sha256":  "1613830846b0c47abc20f0071a72fdd072be81f5ad1f9fad3ee25a234e4b530b",
+        "context":  "YLt525tQrUqMtitpzLKaAbWmv51SnQFJQDYwa2G8fj6NcOrDC+rdtCxGFx6NhrXxeA0ti0wQAtIHq2xKZWu4VOKX6/iweqE/Beiv675uLRlWVmK7r7xzB0RIiAAAA==\", \"rough\": \""
+    },
+    {
+        "index":  23,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_023.jpg",
+        "bytes":  314032,
+        "sha256":  "3d880f54d59814103c1d9462cf5d336be0f120611f9e7f7b94f57884e762cce7",
+        "context":  "onxojpr91KIn7TOKPH/6pthnYLb4hhQ2EI9MyHkdZ/i14NenhIpSR736bsmuqfgo9p6ufMfOz1KNrjfu7JNEmb5An4DP4UcVj2nJijWvJTONXNIi+gAAAA\"}, \"sinew\": {\"map\": \""
+    },
+    {
+        "index":  24,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_024.webp",
+        "bytes":  300514,
+        "sha256":  "0ee02ef0630c70c09a11c048c03fa4195dc0b2b78e2614234dd404c9362d266c",
+        "context":  "3rXjTqxudndNybUk5K2du0j6VEvirPUsy30YMlp5KVIYWfuynjNWDaz2hbum1T3fugHMhAHCk0W+6PzZRNt6DelIb3YUknaR3+tKQs512LGivoJGxZCuPrSz//2Q==\", \"normal\": \""
+    },
+    {
+        "index":  25,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_025.webp",
+        "bytes":  9956,
+        "sha256":  "1df14423a7bb38dca55e969266fa901ab9038d3676e904208596fa9932b4a091",
+        "context":  "BByyYeBzU+r+reGy5W51HFAROC8sLPIxt5YA+vHlUg/lF8Y0LojAfscjTsk7dfR/vW0SwK0LScwSMtUM/6jcgw32trqsqAnGfMrUZy0gpCa7xFV9orvgEJyEtQgAA==\", \"rough\": \""
+    },
+    {
+        "index":  26,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_026.jpg",
+        "bytes":  597727,
+        "sha256":  "742cd5d1ad050c56232f1e518ddbda278cd71aaedad838b2dec39b51bb59bad0",
+        "context":  "qb8XomLgVOT/qZ4X/GTSohSFMK9wSlhmB2GrACQ0xzPoHapAVw52/PvcW5Tq0yqqLQj/Mps70yw4q4wCJ8Dp+A+/IDEYdxFfIBaLvKbO6Z9NM0CqtAAAA=\"}, \"brass\": {\"map\": \""
+    },
+    {
+        "index":  27,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_027.webp",
+        "bytes":  403380,
+        "sha256":  "c82d6a8defa743d52e0ffa38904d1124fcbf0958a9ad965f68c0baeae15f5bb5",
+        "context":  "EM0SnHp7cV+AhptDnc+tOD6vHj66CxQvdmGnd6mi7c2c3uLYzjippecLpSzXdvKUe6hjXNuYpYD4+8rQAjEpJ2rHor6U2mS6GWQhQaLfb2nHI550xbi6iKZMT/2Q==\", \"normal\": \""
+    },
+    {
+        "index":  28,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_028.webp",
+        "bytes":  28312,
+        "sha256":  "69c1029f83656e8a48c7c3c812ff7bece64e25207361f1886c4dd0c57a22d083",
+        "context":  "ryuyAG9vDQ8c1rros1/kOnFvXXhTUUbndZOJQjqtK3QwFrCfm5utsBL/qlnlBygyfS/oCW9LIXazbx0CxxctZProQnElXcfQJ0cE5aIEVzLXUnRMtFv95Bxm+sThAAA\", \"rough\": \""
+    },
+    {
+        "index":  29,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_029.jpg",
+        "bytes":  561054,
+        "sha256":  "43e3f4a391dd110a5fb08a8bafdf17631c5afec4c031d94cdb03b4bc4a7e3106",
+        "context":  "Gbaho3YaUkvv6GzVTvTcDGRLQGs7Et5N8SKFLX3RnZl9DvGb9uNxYQYps1Sc34Ecp2iaJ8tbdIhklbrd28avb/pxbOCDq3vMGeBhoLIA4bwjvewAAAA==\"}, \"cotton\": {\"map\": \""
+    },
+    {
+        "index":  30,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_030.webp",
+        "bytes":  443440,
+        "sha256":  "afde2c1f8cd83dc775a6cf3b4e4f27ce68b91e8329b746d3aeafd3e9e3ade058",
+        "context":  "9h50zM3G4AK3OUqaSf/iCDlyoJOqIEIJw8oY799KfGOFucK20bzUGgwRkifFCQSoKGHAFD9eO+kNnfqY2sLRNNtKQjyOJlBE5mKW0g78iuOMZwH10QfSnuYKTsz//Z\", \"normal\": \""
+    },
+    {
+        "index":  31,
+        "mime":  "image/webp",
+        "path":  "assets/textures/embedded_031.webp",
+        "bytes":  43396,
+        "sha256":  "e7a4850ffbc544f76916f689b8bd763915d060e42cb7f3f78973f8a3f1870308",
+        "context":  "iGRrVeQdyQtKrmA/y9Kiie9ZEQ0kGVFjnXQnt/yfj6U5dLv+oNZIrS3BscBLy4VP4nZdGlDxHdloFJkd1Gw+qINn5C7dr0+skXDu4Df0p03RMrwHVQeTBKhdqgAAA==\", \"rough\": \""
+    },
+    {
+        "index":  32,
+        "mime":  "audio/mpeg",
+        "path":  "assets/audio/embedded_032.mp3",
+        "bytes":  55633,
+        "sha256":  "7aef2fa69003046f450ec5cfb39ec6046be01a0bee9bd2c08c2af37df8688915",
+        "context":  ");Bu.groundColor.set(factory?(KALA_HORROR_LIGHTING?horrorLight.ground:0x6b5140):LIGHTING_V6.ground);\n}\nconst voiceAssets={\"danu01\":{\"data\":\""
+    },
+    {
+        "index":  33,
+        "mime":  "audio/mpeg",
+        "path":  "assets/audio/embedded_033.mp3",
+        "bytes":  179610,
+        "sha256":  "e7e4dfc4310b424f28aa8e02dc9bfce3d51852df0fe6692cebed05ff605cfa79",
+        "context":  "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==\",\"preset\":\"school\",\"duration\":3.898231},\"danu02\":{\"data\":\""
+    },
+    {
+        "index":  34,
+        "mime":  "audio/mpeg",
+        "path":  "assets/audio/embedded_034.mp3",
+        "bytes":  255313,
+        "sha256":  "59a4ce69044195fe8d93256f29596d6d3e0cdec09a7f59bfd19667cc5a889225",
+        "context":  "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\",\"preset\":\"school\",\"duration\":12.754308},\"danu03\":{\"data\":\""
+    },
+    {
+        "index":  35,
+        "mime":  "audio/mpeg",
+        "path":  "assets/audio/embedded_035.mp3",
+        "bytes":  65507,
+        "sha256":  "e43a9db46bb426ecc41505c454ffffd30f97b74e7135e2ce131fa67cac501bd5",
+        "context":  "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqg==\",\"preset\":\"school\",\"duration\":18.166757},\"ratna01\":{\"data\":\""
+    },
+    {
+        "index":  36,
+        "mime":  "audio/mpeg",
+        "path":  "assets/reference/audio_original/embedded_036.mp4",
+        "bytes":  1810447,
+        "sha256":  "4e0fe32b9e27dafb2dbc99c11c9b4768e22000f9710c167d4995e02120461935",
+        "context":  "eaking:()=\u003e!!current};\n})();\nassetPromises.push(Voice.preload());\nconst MUSIC_ASSETS={\"overseer\":{\"label\":\"Si Pengawas Boss Battle\",\"data\":\""
+    },
+    {
+        "index":  37,
+        "mime":  "audio/mpeg",
+        "path":  "assets/reference/audio_original/embedded_037.mp4",
+        "bytes":  2172880,
+        "sha256":  "37216fb79b796c98ba2b7dc1aa25fbfe51e1bc299696deb94b3d4d68d4eb0e73",
+        "context":  "kogDg==\",\"duration\":111.804082,\"entry\":0,\"loopStart\":0.5,\"loopEnd\":103.2,\"gain\":0.406},\"hands\":{\"label\":\"Tangan Tangan Boss Battle\",\"data\":\""
+    },
+    {
+        "index":  38,
+        "mime":  "audio/mpeg",
+        "path":  "assets/reference/audio_original/embedded_038.mp4",
+        "bytes":  4989676,
+        "sha256":  "a3ed7c35d6991228356777a72d45295c15576e24a9ac2fa915bfbbb642e1a403",
+        "context":  "AAAAAAAAAAAAAAAAOA==\",\"duration\":134.211338,\"entry\":0,\"loopStart\":1,\"loopEnd\":132,\"gain\":1.257},\"final\":{\"label\":\"Final Boss Theme\",\"data\":\""
+    },
+    {
+        "index":  39,
+        "mime":  "audio/mpeg",
+        "path":  "assets/reference/audio_original/embedded_039.mp4",
+        "bytes":  2073592,
+        "sha256":  "e239111e22fa2791307f839087beaa61bbffc45e36d4d29664b1af399512d567",
+        "context":  "CXW4XN5WJ1A==\",\"duration\":308.244898,\"entry\":100,\"loopStart\":100,\"loopEnd\":306,\"gain\":0.521},\"chase\":{\"label\":\"Tangan Tangan Chase\",\"data\":\""
+    },
+    {
+        "index":  40,
+        "mime":  "audio/mpeg",
+        "path":  "assets/audio/embedded_040.mp3",
+        "bytes":  4440654,
+        "sha256":  "fd83eeaea21c6634cbc2cbf051a1976da8f2ae5174973683ebdf65021f90f0e8",
+        "context":  "T/qjdzvcovlPPRQ8wAfg==\",\"duration\":128.05805,\"entry\":0,\"loopStart\":0.15,\"loopEnd\":104.5,\"gain\":0.46},\"daisy\":{\"label\":\"Daisy Theme\",\"data\":\""
+    },
+    {
+        "index":  41,
+        "mime":  "video/webm",
+        "path":  "assets/reference/embedded_041.webm",
+        "bytes":  505065,
+        "sha256":  "d21391975c4543266ce5ab173d588de7880ec0fd19b54821e63f62f3934bbf94",
+        "context":  "claw:\u0027KeyR\u0027,journal:\u0027KeyJ\u0027};\nconst bindingLabel=action=\u003e(INPUT_BINDINGS[action]||action).replace(/^Key|^Digit/,\u0027\u0027);\nconst tutorialVideoURL=\""
+    },
+    {
+        "index":  42,
+        "mime":  "image/jpeg",
+        "path":  "assets/textures/embedded_042.jpg",
+        "bytes":  174363,
+        "sha256":  "bc3a5be1840d05e5c153381d3db9c9df291e77c4be3f1153fe88016bcd56fd3d",
+        "context":  "AAAAAAEasTAAAAAAARqxMAAAAAABGrEwABqxMAAHFO7a7e7j7OBALeK94EB8YIBrfCBA7uRs4IQq7eL94EB8YMDmt7wgQS7kbOCIVW3i/eBAfGDB6458IEE\",tutorialPosterURL=\""
+    }
+]

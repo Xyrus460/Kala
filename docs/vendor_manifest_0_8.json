@@ -1,0 +1,1171 @@
+{
+  "version": "0.8.0",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "path": "assets/vendor/innerscene/crib.glb",
+      "bytes": 597764,
+      "sha256": "f91498df682ab818aa2c6c86abd359d1a3b59a85f2f50197f73f3b3e70ae5339"
+    },
+    {
+      "path": "assets/vendor/innerscene/crib_285ba442dad0aa41.png",
+      "bytes": 239,
+      "sha256": "b458e26b0e165886e2b60013678dba93cf78e5cc54a6b0ae7d592cb9eeca2037"
+    },
+    {
+      "path": "assets/vendor/innerscene/crib_9589c5294431e89c.png",
+      "bytes": 240,
+      "sha256": "8d774ec143ae5ab6e150952b20b795b7a0d72c9a7202c6e3f7d3c842a454837b"
+    },
+    {
+      "path": "assets/vendor/innerscene/crib_fabric_normal.png",
+      "bytes": 25340,
+      "sha256": "5a6bb782464c425654a459149fa08d181a5aae45852afb0770b86ccaaef20c4f"
+    },
+    {
+      "path": "assets/vendor/innerscene/crib_fc12fd3b4e99e027.png",
+      "bytes": 238,
+      "sha256": "4c0cd9f0a7be2629f9b549e150e8d20ec93bf3c4f0161cc7626f91413bdd4330"
+    },
+    {
+      "path": "assets/vendor/innerscene/crib_oak_basecolor.png",
+      "bytes": 182165,
+      "sha256": "f3737752b84d6875ef51a17d6169037518568ac9c007a17fd68e25cfd2a8a768"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle.glb",
+      "bytes": 7555808,
+      "sha256": "e071631f1934b3a949baff85e245ca6a96be6123f382de8dfba7d38cee84a5e9"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_aluminium_motorcycle_2k.png",
+      "bytes": 179591,
+      "sha256": "fd844bf4662d78bb132ddc3dcf2862f7c48acd9996b2d632040feb4f6a08b97e"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_black_iron_motorcycle_2k.png",
+      "bytes": 256518,
+      "sha256": "d318402747c036331d5d2ec3cf0f68db840cb0e918f7630b973b8474761ffde6"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_glass_motorcycle_2k.png",
+      "bytes": 16915,
+      "sha256": "8161cfc07ecff3d81690e0b9290ac3e1e07fe388e33f96c511414119dc77f0cd"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_lamp_amber_motorcycle_2k.png",
+      "bytes": 16917,
+      "sha256": "b08a4b0126f248f03f9f73dec1a433b12c2ded43d18a2960cfdbba6aa69f3cc8"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_lamp_clear_motorcycle_2k.png",
+      "bytes": 16915,
+      "sha256": "10543fbedfe8c20e1a6b61b0586396c7eda53247f9f06c42036e2fca62abfe39"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_lamp_red_motorcycle_2k.png",
+      "bytes": 16918,
+      "sha256": "b2fa88c6fac650a5935dcac52b015b15642ad17837445799c4908f41a7edfc0b"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_leather_black_motorcycle_2k.png",
+      "bytes": 1367075,
+      "sha256": "dd5a3f3ee61caa68db1b8c56592500a7c21363c3a1af78a6b8d7a067b0226bda"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_polished_steel_motorcycle_2k.png",
+      "bytes": 254386,
+      "sha256": "37ba21a5ca35de279802242ea9b690e544cf86047e5965ba2571f10bc3021b31"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_red_paint_motorcycle_2k.png",
+      "bytes": 187413,
+      "sha256": "136d7bfeb93b64405c424e8c5068b1404992e97d8fa4056a2091432b77965e39"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_teal_paint_motorcycle_2k.png",
+      "bytes": 278628,
+      "sha256": "58ff8d83c3b7115e7abae30f1ee680cd537108814ffea6b1ccd137d940a8c340"
+    },
+    {
+      "path": "assets/vendor/innerscene/motorcycle_tyre_rubber_motorcycle_2k.png",
+      "bytes": 816138,
+      "sha256": "302da556e88600e398f7b2e69de3fe34fe90aa860ba1e70ec5739c853147651a"
+    },
+    {
+      "path": "assets/vendor/kenney_building/door-rotate-square-a.glb",
+      "bytes": 25616,
+      "sha256": "12675fba53441fb556772f8dadbfcb88bb2deb8c6d0e3d47f0c86bc364721918"
+    },
+    {
+      "path": "assets/vendor/kenney_building/door-rotate-square-b.glb",
+      "bytes": 24452,
+      "sha256": "9c43202aa52df169a12e7141de732bcbe5d5a918ebcda30d2b46ec097b9e126f"
+    },
+    {
+      "path": "assets/vendor/kenney_building/door-rotate-square-c.glb",
+      "bytes": 29032,
+      "sha256": "473c4fa9686ec4130da14a5a9b2edb93e62360abe28c02794a84a88bf6771362"
+    },
+    {
+      "path": "assets/vendor/kenney_building/door-rotate-square-d.glb",
+      "bytes": 30932,
+      "sha256": "8bf778f0f30313714b489d7d337a64ba82a58383817608b55654b7b4d204a49b"
+    },
+    {
+      "path": "assets/vendor/kenney_building/LICENSE.txt",
+      "bytes": 715,
+      "sha256": "60a07f9108f5a3fc5f9429fd1faa5b168c05cc085354f78ed48180ef32ec6209"
+    },
+    {
+      "path": "assets/vendor/kenney_building/Textures/colormap.png",
+      "bytes": 10051,
+      "sha256": "01741a46a279bef667de3143ee653d0073ed7cae925d88341281391d9220092b"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathroomCabinet.glb",
+      "bytes": 7216,
+      "sha256": "9db540227acaaedbbadc6a085f4a00460b73944e608afaad4770e53238a3b7f8"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathroomCabinetDrawer.glb",
+      "bytes": 34744,
+      "sha256": "f32d09c6dab20fe823d238310f75ce81f24e893a91c2078b12efd3f7fe6c6b10"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathroomMirror.glb",
+      "bytes": 6792,
+      "sha256": "940b986894101ea59b50541554b6dc608a22b133057975849259009012984175"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathroomSink.glb",
+      "bytes": 22536,
+      "sha256": "39d4f19608cab7e0fed52303b2c689f5f51fae1bad9b6913cb53d838875e797e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathroomSinkSquare.glb",
+      "bytes": 15108,
+      "sha256": "360853c822f268e7267c62ef20cf646f170a13d76254cc0804a1d397a4a3ea67"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bathtub.glb",
+      "bytes": 35500,
+      "sha256": "54c405c7035aab63dc41e709dc3c50fc5bcfbc4cddc91ffc54188075a6d25d01"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bear.glb",
+      "bytes": 11884,
+      "sha256": "fd87c08f81dcd652b1f7f61afae9d1f040fa1322ac4ddda6f543ed423b954aed"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bedBunk.glb",
+      "bytes": 40784,
+      "sha256": "a3eccbc4a04340dd84878d959e15eede76f517fb8d4de6862ca46877c88d764e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bedDouble.glb",
+      "bytes": 23368,
+      "sha256": "c49b33e7d797d2ba1111895587dba7ff63b17a712eb9b4ceeb40a598f73e476c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bedSingle.glb",
+      "bytes": 18636,
+      "sha256": "ca00c63f9a12da3138d902b2f5f18e0360fb6e8a5ac42ccb4bc3f185724b65d1"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bench.glb",
+      "bytes": 10756,
+      "sha256": "ba05a6d23a5a5a44da016757632070e47ff7587ce10e2f6d6d52328b4cf5489b"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/benchCushion.glb",
+      "bytes": 12500,
+      "sha256": "5186ad938f8b9eff255361fd1fdc48a81f08c318161cde27c93753ab95a2d354"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/benchCushionLow.glb",
+      "bytes": 10268,
+      "sha256": "d1fac209eae2ea7393beefa4932dacb54d500e8f9932a1b17d2a842527df1b2c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bookcaseClosed.glb",
+      "bytes": 23132,
+      "sha256": "9d210448de5e1179541da895450bbc7a39f4cd673d677654cd6b134e4ea0e047"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bookcaseClosedDoors.glb",
+      "bytes": 22644,
+      "sha256": "ff33f535acdb1825c0e958a293642b39665adcae0b1317b650e83d2bb687f4e2"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bookcaseClosedWide.glb",
+      "bytes": 23140,
+      "sha256": "55b9903e9646dc407ed5237a1c41c1f0a14f9edc22e3392bdb9a4804d846af6a"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bookcaseOpen.glb",
+      "bytes": 18020,
+      "sha256": "750702218d68c062b15dfef6ab06a4014d1cfa8bd05f02e57c53b7e13bec157c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/bookcaseOpenLow.glb",
+      "bytes": 11520,
+      "sha256": "6d4d625faf977a2dbf155f1313cd32c6310e463114a1cd4c08cb9f80a5fb1d75"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/books.glb",
+      "bytes": 6864,
+      "sha256": "b8dc56e5d29f6fc1f4727fccb1b9642627fee9942c48060a00034e98df02701c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cabinetBed.glb",
+      "bytes": 7496,
+      "sha256": "b651fafb9e2c8e4adcb8cad3d10dc94404b46fe039b26e66b2c9020df4e5301d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cabinetBedDrawer.glb",
+      "bytes": 16088,
+      "sha256": "e3dfd2e120af3d4d29b66509e317452cd15bd3f57ac8945575462c582adc6de8"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cabinetBedDrawerTable.glb",
+      "bytes": 12200,
+      "sha256": "fec6271639df5aff9f8ac75d6679385eab2abb7c8d2f51abeba3ed689ddb6f0d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cabinetTelevision.glb",
+      "bytes": 10524,
+      "sha256": "811719593d676ff76f7b5904d52c845ce0396af2bc9a6a2636c4818ead320b99"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cabinetTelevisionDoors.glb",
+      "bytes": 16876,
+      "sha256": "8959347bfe26b1ac7e44c476f05789466bb84bcd2ad8b0fb40286005399bfcfc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cardboardBoxClosed.glb",
+      "bytes": 5400,
+      "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/cardboardBoxOpen.glb",
+      "bytes": 5404,
+      "sha256": "960da412564774c75e7b32f9af0100895e1edb877fc1e70dd34ee2422a2196d4"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/ceilingFan.glb",
+      "bytes": 15284,
+      "sha256": "5fdf7b3c4328875462c9887c6b1f2fad08126ea42e758cf86534639b9ea72044"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chair.glb",
+      "bytes": 10756,
+      "sha256": "c8a11eec93e89e31250ba91afc1b8d56c3bec7ae86640fd1239f595ff4180883"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chairCushion.glb",
+      "bytes": 12588,
+      "sha256": "33544228984857f2cb502b58452fed72157335f9b1caf29e96da5c9094c53fdc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chairDesk.glb",
+      "bytes": 39016,
+      "sha256": "46406619186034cbe92b19b79a5f1a8e3f442a17a70a7524ef2c0ad0f35095c6"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chairModernCushion.glb",
+      "bytes": 7376,
+      "sha256": "245132697e633e907e2b48c86d56f6c8543604a3440a055d1c71c06ce11d2858"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chairModernFrameCushion.glb",
+      "bytes": 18592,
+      "sha256": "fd3351b077cafbd54224e20fa7a3a1b4a4304019cf44c25a6e7709ad71b852b8"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/chairRounded.glb",
+      "bytes": 17156,
+      "sha256": "53f4933ec547179c499f04dbda1231cf44b83ec82c7f4ab981cdf680aee5c973"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/coatRack.glb",
+      "bytes": 9948,
+      "sha256": "0f56540d57367ea6fea6b9aedf305d4fc58abeec8ff3b039dbff44360d819c76"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/coatRackStanding.glb",
+      "bytes": 13288,
+      "sha256": "d8231c22dab63ceb9fc8678f6c8ceafc62afa8726b51a73b4ce349043d3cdc91"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/computerKeyboard.glb",
+      "bytes": 3476,
+      "sha256": "9d9135789de2120e9f41ce3f0a56dd1b15f40adcc7888739bb842a2d820da322"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/computerMouse.glb",
+      "bytes": 5868,
+      "sha256": "d3ad1a923f0f7707ef367bb969eb94c9076e211c98c830ba52e133fadc5cdfc0"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/computerScreen.glb",
+      "bytes": 6404,
+      "sha256": "5942cbad29a2d2b956619569926e81d50a4174403d592fece6556e57632dc643"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/desk.glb",
+      "bytes": 15048,
+      "sha256": "0164fe828f028b321730fb8c74502e353583f751be74da1682d42fff7d3c5a42"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/deskCorner.glb",
+      "bytes": 17984,
+      "sha256": "a6a77ba0083d5ecd34ad50f738867b03ed7b7f469429bb1acc78f423bcc3f034"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/doorway.glb",
+      "bytes": 14532,
+      "sha256": "08983e299822140d580eb55d4b4e4e4552c37bb6e88571e41d2b7b5d2eef987e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/doorwayFront.glb",
+      "bytes": 13016,
+      "sha256": "b5b8e4c14ee1f2ffa10ef5c69badc995ae6fbcc868abac240221c61b8c593b0e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/doorwayOpen.glb",
+      "bytes": 3256,
+      "sha256": "cf05e165ea26dbbeaab4dc6296c143ef5f5a001e2ab5af9cd4fd65739408317e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/dryer.glb",
+      "bytes": 17760,
+      "sha256": "d8b727612fdfc141c0b56360f75b897f1b71d3420c8c0942b5ec626bd3c8303c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/floorCorner.glb",
+      "bytes": 2524,
+      "sha256": "7a3ed4473bd7dc71a7fac74a77c548412ed01caf9fd21be605bc8bbda824f8ff"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/floorCornerRound.glb",
+      "bytes": 5168,
+      "sha256": "d9d5392ecff520a263dd7e5b77e733da125f866002311ea65572731d90fb8990"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/floorFull.glb",
+      "bytes": 2260,
+      "sha256": "99fc5df646d8dc605d6fe35001fe5b15bb7b269cc5c65f4f7793fbc76ff3d822"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/floorHalf.glb",
+      "bytes": 2264,
+      "sha256": "8cf16d67b8185f6c28f957458da92a337f0949d2e127df9a50b53ea5e8894673"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/hoodLarge.glb",
+      "bytes": 4652,
+      "sha256": "e9b60fa02bba74d99103e8ba9d7ca99fbd99299bc57c4f5f84b2add2a6a3afcc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/hoodModern.glb",
+      "bytes": 3968,
+      "sha256": "f5ac7dbadd1d98813c48315e56fa6ab2e8783870b1fb7be30825177bbf2b2afe"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenBar.glb",
+      "bytes": 6004,
+      "sha256": "792c3d31e60c8a8d8c7a28cf7d1efe004c5a601adc1b163a8799dde32c1b559d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenBarEnd.glb",
+      "bytes": 11084,
+      "sha256": "410c6d83defe4ed248a8ec32f81553b56c8b610372d02ecf0e547e3f52cdc0a1"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenBlender.glb",
+      "bytes": 18728,
+      "sha256": "f471defb5b2b1cf3b949a1a8aaef0a8b727afe662b0815068cf4e963325a3c1f"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinet.glb",
+      "bytes": 10444,
+      "sha256": "7238c57778935ae25db5e57e9f7af3ba7068c71b005ff7cfbff3b6f3b1a13200"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetCornerInner.glb",
+      "bytes": 5184,
+      "sha256": "8d1b69e63048424a0559d1e5c77427fab9021def7dea74cf1c4d3d8ce16e6e69"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetCornerRound.glb",
+      "bytes": 13656,
+      "sha256": "333ab73202cb87b76d4ff94939038dcaf315eda55285bdbeba20d255da488e97"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetDrawer.glb",
+      "bytes": 15384,
+      "sha256": "6f784807e3cadb15b4d2d3db726d93357ea5e6c4f2b6e4c9c064048a2d1d9cfc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetUpper.glb",
+      "bytes": 8168,
+      "sha256": "8f2496feed85a745ffb6e554075b8450d647f8f68b01d6a010fcac1510fc173a"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetUpperCorner.glb",
+      "bytes": 13712,
+      "sha256": "b23551ff585b5b804cf3ec0fe046b7bc1e84a387021e3cdb01c93add56444e8d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetUpperDouble.glb",
+      "bytes": 18184,
+      "sha256": "7b2abd976f2e8f1727d6ba23490aaf5fe18db9c5ac66e729ef6fe8de835c039e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCabinetUpperLow.glb",
+      "bytes": 7216,
+      "sha256": "c25293d38ad3d4338142f5bfb6832a2f7e8a069a552fc4a6730231b1b382d33e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenCoffeeMachine.glb",
+      "bytes": 13332,
+      "sha256": "063f582c6fa0f00a9f24e3393dac2295491c4becdaf5513c893ab1a2826b6ec3"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenFridge.glb",
+      "bytes": 20116,
+      "sha256": "8af4f4bbb1b5525ad8226e97926a5af60fa8fb20a3cb74dbda5328a9d320dbab"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenFridgeBuiltIn.glb",
+      "bytes": 22616,
+      "sha256": "eedcfbca0a9e565424d941b8cf82ddc0c3c4dfc63911a420bfae058e9a18044c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenFridgeLarge.glb",
+      "bytes": 30632,
+      "sha256": "5851cc59c7e12f6f34a01a2ea93d5b9540be4078c1b703f517239fcede98fb32"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenFridgeSmall.glb",
+      "bytes": 12988,
+      "sha256": "35dab7f63711623be321bfd82072f4ab29fe8006aac9371c6e6b78df2e02f5ed"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenMicrowave.glb",
+      "bytes": 11248,
+      "sha256": "dd6a6c919f4bebc6e2080fe419262cf97a0d6461ead3f3998aa3c9edf4d2bd27"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenSink.glb",
+      "bytes": 23480,
+      "sha256": "7b9610277d71f00dcf1bba49cf4d98d77ce5177e84bf76c7da2f8893e542f743"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenStove.glb",
+      "bytes": 54324,
+      "sha256": "3239edb36295dfca9530a9b9a6ad0aff98ce62e7cf8d13ca2a5a1a6b2a904656"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/kitchenStoveElectric.glb",
+      "bytes": 18604,
+      "sha256": "cf646b960d7dfed1fac27898ff6de1f0671cfa33beecbed06ead7d0684517392"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampRoundFloor.glb",
+      "bytes": 6600,
+      "sha256": "50fe1b5b588edf15bfa9cc880f71a02a4fda6036350b24733d0ef4de5cc5e908"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampRoundTable.glb",
+      "bytes": 6604,
+      "sha256": "75bb644caaa3da003b4fcad7a931722dd61cd2858aab70cf660021d5061fa1b2"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampSquareCeiling.glb",
+      "bytes": 5628,
+      "sha256": "57066be51583d83ae60071e8179af275189cb2911ecb9fc24953bb930c8bf118"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampSquareFloor.glb",
+      "bytes": 5624,
+      "sha256": "6466993748d8e184de9ec5b6b0af613867c50c0ce320d1898b1db9e4c27c2561"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampSquareTable.glb",
+      "bytes": 5624,
+      "sha256": "70ec9211af336b1ef3b4da32590b8737b4facf219348c22e6533a1e898cdb13d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/lampWall.glb",
+      "bytes": 4828,
+      "sha256": "a9679ecd3be05731846f22ade97c37069598ca7a06dd9319f50230e63a1ea83c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/laptop.glb",
+      "bytes": 5540,
+      "sha256": "5fa8a1f4a71ab8d82ef64da77a6973ffd350c6d4557516069a4ffd4bb8d808af"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/LICENSE.txt",
+      "bytes": 614,
+      "sha256": "bc0de1a0742cb490f9ed4bae0bd284286ebb27e23149b9917c7d8c0d590b8b29"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeChair.glb",
+      "bytes": 9648,
+      "sha256": "ddfe6bc4b3451bca61666d7b614552d6ed2a03d82fc76244b72ae3155874dc6c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeChairRelax.glb",
+      "bytes": 13904,
+      "sha256": "def698179e44de6cd17f4cfc2730273da54dd25458a29b079fbf4468abe5d98e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeDesignChair.glb",
+      "bytes": 9136,
+      "sha256": "f0766a7d5698974b711adac18a2108f0e74e3a036fa4e4e0ccf91195b0ee5abf"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeDesignSofa.glb",
+      "bytes": 9128,
+      "sha256": "b4f4e6850118e409da301df678228c703b6ac02e94fbb9dbde61543af817fa53"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeDesignSofaCorner.glb",
+      "bytes": 13744,
+      "sha256": "fe665d07d53fdc6bc96e9fed453874ba4202b008194e1e24100b067081c62be1"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeSofa.glb",
+      "bytes": 9644,
+      "sha256": "1886b811c0d3ad0d8525a4fd43adf4112c497c8e0ed906f06877ca3517f4c7dd"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeSofaCorner.glb",
+      "bytes": 13412,
+      "sha256": "bbdd91791e621ac71321eaf38a2432c53279792ef946707f23b216123bd52655"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeSofaLong.glb",
+      "bytes": 13112,
+      "sha256": "452df1c862f97781615e2c1c832913b48cf6c6f011d3260dc023ff3f117cc9d1"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/loungeSofaOttoman.glb",
+      "bytes": 6960,
+      "sha256": "79087654136d7d69653fdc3b52a02d7833fe13e6a0a56b8dcdf652c611dbd959"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/paneling.glb",
+      "bytes": 3960,
+      "sha256": "69234bb71f54b0241ef6b78c3c7aa8aa855aae745475645f9adec4895296a96c"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/pillow.glb",
+      "bytes": 5044,
+      "sha256": "6fae7c190d0b676ef3efd35e5178cef21dffb5c80e1257d8b537ad424da0e5f6"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/pillowBlue.glb",
+      "bytes": 5056,
+      "sha256": "8326e018c09cb00c19c2c9b745f521cd7eba1169b755322b04f88440dbfef319"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/pillowBlueLong.glb",
+      "bytes": 5088,
+      "sha256": "b643f81a863595071b7907d3d0dcf5b1b0e3bb6ad8521db37778b2242ba46bbc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/pillowLong.glb",
+      "bytes": 5072,
+      "sha256": "d8490ae920413fd04c85a2164ef384d67a1ca257f761dec1cc7f06fa2c027283"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/plantSmall1.glb",
+      "bytes": 8224,
+      "sha256": "2b9c022feb47be857b2c4fdc29f36522766ba9b70c578c31d7c05d71b4377d15"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/plantSmall2.glb",
+      "bytes": 12996,
+      "sha256": "d7c8ff42c66dd4f9238a73570549813d1ca6c5f6f661d7af9cb764c4fce314b9"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/plantSmall3.glb",
+      "bytes": 8424,
+      "sha256": "1aa38b1b22bd19fa4f9f3abd8c4cbf50da2d6fa721cf1f9aa4d80bb89b1bef94"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/pottedPlant.glb",
+      "bytes": 7576,
+      "sha256": "5b760eda2766f75fda36b2c5df652a1662f82981ef64cd8fa7fe7bcd386b3a15"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/radio.glb",
+      "bytes": 25020,
+      "sha256": "1ba93d6ba6f049750853b4652b92f286f2898e527695a0705b75cc7615897fed"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/rugDoormat.glb",
+      "bytes": 13812,
+      "sha256": "bd888e41853342cdc0d34d3f09b99cedc50a144f47b514943b65cdb9a2cfd802"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/rugRectangle.glb",
+      "bytes": 3188,
+      "sha256": "a989d2d59c04e3071e0c90388b113a9a8f339ce1814ef984c51cb6dcd7c8e0eb"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/rugRound.glb",
+      "bytes": 10164,
+      "sha256": "c4cdc8f51ed2dbfb853b147521ed40e995307392fd3b19045b2203ea50f376db"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/rugRounded.glb",
+      "bytes": 10876,
+      "sha256": "2ef5cc634bb1060a1a5774cfcaf6e11c235791c99d6b59da5fdbc09edfb95a68"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/rugSquare.glb",
+      "bytes": 3180,
+      "sha256": "18a63634e9bbdde0b309c008f4cd41df8455f7f2ffdb8fe8985fdf8c2cd06b3d"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/shower.glb",
+      "bytes": 52020,
+      "sha256": "25c1cebad681fe369dc04839a8f08f5da2ccbd99b3a70aa83fe2e4d1590c6951"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/showerRound.glb",
+      "bytes": 72048,
+      "sha256": "1723208eaba3fb215089e02c8cdd3d7201d0980ad0c7b275319eb539f6094bfb"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/sideTable.glb",
+      "bytes": 8800,
+      "sha256": "8227810584f7d37582e4e9ec821c56f1dc54b99c88a8dc74242ea3b7402bc472"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/sideTableDrawers.glb",
+      "bytes": 19072,
+      "sha256": "911145653c11b103b2c2e84f3d019205d1886186015c3b52aceddc3801ae8fdf"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/speaker.glb",
+      "bytes": 15744,
+      "sha256": "78230b9fb382a937cb19e4bf7556ee9402d33ac80b1baaee2d2eb89493cfa1fc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/speakerSmall.glb",
+      "bytes": 15244,
+      "sha256": "34db09984703282822f3f57fc9a31bfdfa6a8f6bf8251893d0c907e7ee6601b2"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stairs.glb",
+      "bytes": 21616,
+      "sha256": "b442f997583e417fcb32ec89470ecc441b0556f416d3afe00e3f18c806e556a0"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stairsCorner.glb",
+      "bytes": 21576,
+      "sha256": "250d3c51e10fa250c30954b8a3d6bb0d011362be34ba85a50f5bebdd4184e0dc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stairsOpen.glb",
+      "bytes": 39924,
+      "sha256": "cbfe1dc9fd66f1375f9c79ccff7069923655238fdf49c7c366653d17632453a5"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stairsOpenSingle.glb",
+      "bytes": 24600,
+      "sha256": "97172c18eff61b844cfa871da32b6c639230adf20901188f378926861e7610de"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stoolBar.glb",
+      "bytes": 11816,
+      "sha256": "a86167a9f92401a61fec7e509ad089ecc552d0f299743add3aeb919acb24e341"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/stoolBarSquare.glb",
+      "bytes": 9784,
+      "sha256": "a7e1099d64eb35416d4d8c9b16921ef12ae7c1c1e6fff5ea75f3ae19cc934a8b"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/table.glb",
+      "bytes": 8196,
+      "sha256": "ff1a94498d023957f4bc3ff6f55a7a82977d336dbf01a573b3364f03afe5ff61"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCloth.glb",
+      "bytes": 9920,
+      "sha256": "64de52b5c4370724c29feefd68a65b157c55c88592e2096987bbce007ae80bcb"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCoffee.glb",
+      "bytes": 8256,
+      "sha256": "e38bea760fbd514efbb75528d09b4752c91af44677bbb97e6d4386c263525179"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCoffeeGlass.glb",
+      "bytes": 9428,
+      "sha256": "05bf257a086a540b3b79b0c1c7dae35b036ed4d520686aed74ea94ea701c447e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCoffeeGlassSquare.glb",
+      "bytes": 9448,
+      "sha256": "e4a7ebef6ad0dbafee629df78b0edd88433a1059c4dd5fb3d70304ba2f71b945"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCoffeeSquare.glb",
+      "bytes": 8276,
+      "sha256": "bcc81d8919a3af9141c9c93b4520106dd0a90a7144346cd87928014018aac816"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCross.glb",
+      "bytes": 12140,
+      "sha256": "f0d83392aff5df82f6c9585cadff694643dbd30a4ff2b8bb01a00a7a161338a3"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableCrossCloth.glb",
+      "bytes": 13852,
+      "sha256": "3c16b86cdf9a9a82b80b97611030a1da2ed2e9e977ac76457e09a1547b0cebbc"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableGlass.glb",
+      "bytes": 9848,
+      "sha256": "a5ed516d18b51cf5db3cc78f1403451f853a81db45510543d3ed56c1dd9c412b"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/tableRound.glb",
+      "bytes": 6444,
+      "sha256": "f8daea9124a542a00b7bdacfddac82dc468573d43e44d7b54dd6316e9695754b"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/televisionAntenna.glb",
+      "bytes": 4500,
+      "sha256": "00eea4123b3efc7f8050fd3eaac0a83de3053c9e6cead18dc739260a429b2bb7"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/televisionModern.glb",
+      "bytes": 6368,
+      "sha256": "d89519ad0a5f28b5b0dccb0d83209dccf610cda959578238dd21bbf9e219cfc6"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/televisionVintage.glb",
+      "bytes": 19392,
+      "sha256": "eb144cc8fb1e7f761e3665226e4266c8868679421d21d6548f24d2abad7c67cf"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/toaster.glb",
+      "bytes": 14924,
+      "sha256": "38c1fb7b122be9997758c8ee855d87f28014cf282f24d66d39f4e8d8b236d2af"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/toilet.glb",
+      "bytes": 18112,
+      "sha256": "16165cfd03c56c2cb443b800570810a22ef770f65e7a468f6761d9dc14eaaeae"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/toiletSquare.glb",
+      "bytes": 17548,
+      "sha256": "f241e26a22b0d9512d8455f3e868124f8032710c83c5265a546c19c67ecdd4b9"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/trashcan.glb",
+      "bytes": 6452,
+      "sha256": "e0ccc1fe50cbd05386477fdff527171d1cf7c0de2ba7ff3233f8d9561feb2561"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wall.glb",
+      "bytes": 3340,
+      "sha256": "69273d5d623bddfce41d12d4e5eeb5621ea04f1edcbd8f35c00a60c2fd3258b7"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallCorner.glb",
+      "bytes": 4460,
+      "sha256": "0e6521caee1f9282784c52e0f651084e49f575b091ad97bf25540b8049757aef"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallCornerRond.glb",
+      "bytes": 10448,
+      "sha256": "33e87dd846335dca5fce8a0e242225bb97d4a7b47c3ae84df33ba97fe1da33bf"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallDoorway.glb",
+      "bytes": 6444,
+      "sha256": "a55be1da05aa80c74749d0c38bd093fa5e2b1eaf21cbc9a7c3a0e6fbcfbe38e2"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallDoorwayWide.glb",
+      "bytes": 6468,
+      "sha256": "877af5b239f31f12027e3cec92aa26e97d511e1ae8673a8e3d7d13302d33edf3"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallHalf.glb",
+      "bytes": 3348,
+      "sha256": "24db9f126891b48b443dcfa9f80d79e4321c8780aede83fb6d8f384b3d4eb35f"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallWindow.glb",
+      "bytes": 10744,
+      "sha256": "166a10fddb8a78d942bc2791186913f7015dfee8501d20efd7a7b8f196fc5c3e"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/wallWindowSlide.glb",
+      "bytes": 14564,
+      "sha256": "33e51d7ee74f13de318e419b0ebfb31fe7f6e9fd37050f13aa9347641b49376a"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/washer.glb",
+      "bytes": 48104,
+      "sha256": "0c9704df1817d2699b72305b96cde097c9558bacabaef2fd5ab1ff4c03b81abf"
+    },
+    {
+      "path": "assets/vendor/kenney_furniture/washerDryerStacked.glb",
+      "bytes": 64060,
+      "sha256": "efcc2155ef170092dc2602a98179380de3442c2500998a6ca37cc5554d275676"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-a.glb",
+      "bytes": 98604,
+      "sha256": "49f32e20b9dcd24b1c8f6d6488807b8c8cb684cbb595bfb0bb36ad903e470faa"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-b.glb",
+      "bytes": 146720,
+      "sha256": "a964a10c51bb334be677657fd8fa483531974dd15b4243575990192818e2300e"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-c.glb",
+      "bytes": 99592,
+      "sha256": "86a69f30f1a09461283e158514945ae5cc9d56357b0ddc83a9a3f0eecd113591"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-d.glb",
+      "bytes": 147368,
+      "sha256": "a41cd28265b2b224e700373c3a8356562619699998b7fa4d70ed41de629a6731"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-e.glb",
+      "bytes": 145512,
+      "sha256": "9ec43994c8c332b1ae5b058d8b9646255831fd91047c1a35b1fc1ecae4c082fc"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-f.glb",
+      "bytes": 138536,
+      "sha256": "6f778f50d7f03c86f9a018e428cf8ffdd9e918df09954c0651d1c9559584a22b"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-g.glb",
+      "bytes": 93596,
+      "sha256": "f497a7bc3a8e6b6273ba99f090042d1cfb3141da57d3c51998c57a479a0ece11"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-h.glb",
+      "bytes": 65364,
+      "sha256": "b8b8eb7a50f85fa20b4862723e133157f553d69a0daad39b850ddbd2099ebb84"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-i.glb",
+      "bytes": 69772,
+      "sha256": "798bb0f1eb644b64a19584e6765da23750f04a86c3703704ce56bc63e5512b39"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-j.glb",
+      "bytes": 99512,
+      "sha256": "fbdce9cb6bb6cf60a861bab36a896403aff604afbf2cb2b86676ae6f49fa2de3"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-k.glb",
+      "bytes": 89152,
+      "sha256": "c1b819a526bbcf9663bc40c98e22337cded7fff7c50c14679132d5d98d75f583"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-l.glb",
+      "bytes": 109232,
+      "sha256": "5f03bf2e65a3a795afc18f7e56a5da891908d59d937e660be8478b66905d2cee"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-m.glb",
+      "bytes": 96996,
+      "sha256": "36d31f4e45498f6229805b6a7a1577ef00230daeea4c6a4469481e9d5a0fdb7c"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-n.glb",
+      "bytes": 139464,
+      "sha256": "f2a29ececcca4a27bbef187caba0e7bb0e35de7a0de9742a8b8440ce6874c48c"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-o.glb",
+      "bytes": 114424,
+      "sha256": "aa256fa55613bb4c5fbdf379123454e4f98cde4d07a68bc826bb143d287ae0c1"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-p.glb",
+      "bytes": 109260,
+      "sha256": "561b2eff15bd2bfe2799a8a049cafc70a1c7bfb6e35f3b2a4d95c8f4f376458c"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-q.glb",
+      "bytes": 98632,
+      "sha256": "9b56037cab0de804e308766cc5e69b95b3576ffb444084c9016a0748cbcaca04"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-r.glb",
+      "bytes": 88544,
+      "sha256": "9b76ee3b9061b680ca14fd8cc838d1d5ca91b959e02833254f15d9236b8b20b7"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-s.glb",
+      "bytes": 103172,
+      "sha256": "56dfd278f10bea2546cb0946f48659dde5876bc9ce100ea1fbe37c0cc94bf9e6"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-t.glb",
+      "bytes": 167512,
+      "sha256": "3b729b473fc995a632ebc4d96cc8f18ef9d43bdc1a6c26010a02ec0b298c34e7"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/building-type-u.glb",
+      "bytes": 117912,
+      "sha256": "fb259246fc73bdce626eed8b7167d5e97bd63651890551661ec4507311eba279"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/driveway-long.glb",
+      "bytes": 2952,
+      "sha256": "d6fc46e8a5363c87b616eaa65c5dbcffa9026b8af47f979dc6c38cfa91f53459"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/driveway-short.glb",
+      "bytes": 2956,
+      "sha256": "7c7e81602cd6b1024fc98f3f32803db2e21222a3e30cfc838fb7f2282f593823"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-1x2.glb",
+      "bytes": 16492,
+      "sha256": "54dd8d87f4ee0fd4d945b694a10a74eb7b20b1bd7468e09fd21fc32fb2b78397"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-1x3.glb",
+      "bytes": 21032,
+      "sha256": "b4f1b79a844381c29199df417dc4fe17c2eaa1b8aa719aaaa24a7f61687a3ca9"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-1x4.glb",
+      "bytes": 25544,
+      "sha256": "f63d17e1bb8f83416cffefdc0a90615ddd5b2cb69d8ea721cebdd663f9b2c4fc"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-2x2.glb",
+      "bytes": 23872,
+      "sha256": "91862d7ee50b70763b45498fc61401cd3a7f150d337b0815d50b9ce2e2dc3612"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-2x3.glb",
+      "bytes": 28412,
+      "sha256": "1a8270c40f650c9a2e58785945aad457fd58d42cc979b862b347e05a5f0a2f6f"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-3x2.glb",
+      "bytes": 31280,
+      "sha256": "a14090e53a25bc55bede6197edd39983519d995aa831ff2f640d4d636d090a2b"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-3x3.glb",
+      "bytes": 35820,
+      "sha256": "8b4f5c808ea8fdea656bb79171cf489bf469a295cdb737c449ed8d387b5242e4"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence-low.glb",
+      "bytes": 18552,
+      "sha256": "fe0272d73820bb4c8db3bed408a28cbd5c042da1373142bd13122a1ac9d1a168"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/fence.glb",
+      "bytes": 9672,
+      "sha256": "073bd2000ac51879516d49f835d5156dac4d5038085380b1232858fc3f562d02"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/LICENSE.txt",
+      "bytes": 706,
+      "sha256": "d778fa769a89a7d9f167bc337fdf8fc2144e47d9abb0c35eb6ad897c0ee24d0a"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/path-long.glb",
+      "bytes": 2940,
+      "sha256": "af6869e19f9922e84df23a48795618f03565587dc2c397bd84cf1f066cfa39d5"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/path-short.glb",
+      "bytes": 2944,
+      "sha256": "0f657ebadf8c56adcd54335b8da2e54120f539918ea50509812731790ef99c2b"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/path-stones-long.glb",
+      "bytes": 6664,
+      "sha256": "cbd73ca5746f2290f44a2e1fc6f0759076c2c5fcdb3cb3f1e3acd74d5751d114"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/path-stones-messy.glb",
+      "bytes": 5476,
+      "sha256": "5493589dfac443ecbc0ad5563d9bb98edcefdaa972a0dc65fa65575609fbcd92"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/path-stones-short.glb",
+      "bytes": 4284,
+      "sha256": "63148e02c35d4ad249ee1dcbb0c5ee921cd719f501b25eb8b66bc0e1b20ce28c"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/planter.glb",
+      "bytes": 20368,
+      "sha256": "a876e87d908f0397dcaf94b7705835447825c4c5b39195319535415386542c17"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/Textures/colormap.png",
+      "bytes": 11784,
+      "sha256": "9b5de86078c25ef02351a80d35ff3c978693a1044565b73eedd9ae9b5b80665d"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/tree-large.glb",
+      "bytes": 5812,
+      "sha256": "16d1f95c149bc727a953a473cf20bf21de9bf1a88747c4f9d2eeb4ac7d43e291"
+    },
+    {
+      "path": "assets/vendor/kenney_suburban/tree-small.glb",
+      "bytes": 5812,
+      "sha256": "5f63359e5f392609d7617cc98070855ca1ffd4f4b4bc3978a5ff56ece88a58d6"
+    },
+    {
+      "path": "assets/vendor/licenses.json",
+      "bytes": 1942,
+      "sha256": "2ff58e35bae082076063c7851f7bdef519ed134f4973e35f77f73b23b1ff037f"
+    },
+    {
+      "path": "assets/vendor/school/1195_allwin.png",
+      "bytes": 17009,
+      "sha256": "40d0dbb6dc6f54ce4448ffbdade4cc25217128b9fe70bb8d0b4acb33016f3ddd"
+    },
+    {
+      "path": "assets/vendor/school/1195_clearwall.png",
+      "bytes": 435478,
+      "sha256": "6fed2f24feb2aa8e804e546557593586d4ef8e2b6a154049a8ec561513e2c7a4"
+    },
+    {
+      "path": "assets/vendor/school/1195_extdoor.png",
+      "bytes": 58203,
+      "sha256": "7a635e41b5c7ff7df3f29783a03cea0872e97f9156b72026058fedd816409500"
+    },
+    {
+      "path": "assets/vendor/school/1195_extdoor2.png",
+      "bytes": 58155,
+      "sha256": "a3391ce32f6cea4dc76cdec36817380752ddd0be0b7a7bee0cf9bee8c7252a71"
+    },
+    {
+      "path": "assets/vendor/school/1195_floor.png",
+      "bytes": 309001,
+      "sha256": "9a9998a0d365eb1d91b6e1fa29c956ec5b3b97101581ac00631967d6495ad330"
+    },
+    {
+      "path": "assets/vendor/school/1195_hallsmallwin.png",
+      "bytes": 25136,
+      "sha256": "a0c97861b32706c664fa0460f6b783c51ae0f1cce4155c0ef97d54e814dd39cf"
+    },
+    {
+      "path": "assets/vendor/school/1195_hallwin.png",
+      "bytes": 13654,
+      "sha256": "a8bc36b3e6f103d2f79e6699e59194530baec19c810064fbedb25d99be6477a1"
+    },
+    {
+      "path": "assets/vendor/school/1195_logo_flush.png",
+      "bytes": 104213,
+      "sha256": "ea620785120189087b25b66a4b644ca4f7fc43b71da662c2b026c88213ffd184"
+    },
+    {
+      "path": "assets/vendor/school/1195_rooffloor.png",
+      "bytes": 453166,
+      "sha256": "c12715f1a65ac1a04a7d7421eaf1a08424e114e654f771c6a32350abce6fa49e"
+    },
+    {
+      "path": "assets/vendor/school/1195_roofmetall.png",
+      "bytes": 25530,
+      "sha256": "1ca2fff8a729c930578ed0bb15d6bb0e944e399560c771b6f02cdad9e94bfcba"
+    },
+    {
+      "path": "assets/vendor/school/1195_sportwall.png",
+      "bytes": 751266,
+      "sha256": "630fe89f53c76f1709f3b91acfeb63aec842179da4169229b806997dd33714aa"
+    },
+    {
+      "path": "assets/vendor/school/1195_sportwallback.png",
+      "bytes": 611198,
+      "sha256": "47dcbe765bd032b2ea2d5dc6711fa8c62469766c921914f21e206bd97bf62c7f"
+    },
+    {
+      "path": "assets/vendor/school/1195_sportwin.png",
+      "bytes": 26635,
+      "sha256": "44d25394a3295de985509e4dbd04b77478b2a43c9257beb84116b8d2ba5f3726"
+    },
+    {
+      "path": "assets/vendor/school/1195_steps.png",
+      "bytes": 102213,
+      "sha256": "3c031fa09cba5c7407357ab383cc550707391f406466c3db11d313464f10c505"
+    },
+    {
+      "path": "assets/vendor/school/1195_subroofmetall.png",
+      "bytes": 114596,
+      "sha256": "5314209081f7abb53d39e5399b4bc2174a5bc54708fdf651e8b3e5112b6421cd"
+    },
+    {
+      "path": "assets/vendor/school/1195_wallbig.png",
+      "bytes": 185473,
+      "sha256": "5fd1ed50945c0c304b5623fe5c88c08e3542fc83e0835927d714b53ab5503eba"
+    },
+    {
+      "path": "assets/vendor/school/1195_wallbigclear.png",
+      "bytes": 231623,
+      "sha256": "8de464555f0164e47186a5abbc1de825c0a0ccdcb5695dfc69078a9295d6c146"
+    },
+    {
+      "path": "assets/vendor/school/1195_walldown.png",
+      "bytes": 242622,
+      "sha256": "c611f352754be6a05165ed2c08e1fbe547da2671de9ea1a93d6b4357990c2ac5"
+    },
+    {
+      "path": "assets/vendor/school/1195_wallyellow.png",
+      "bytes": 122639,
+      "sha256": "eace2f0a93a8c77f273a42a9ed949ce79d7671c7d0036754e69d4ca2927555f7"
+    },
+    {
+      "path": "assets/vendor/school/school_1195.mtl",
+      "bytes": 2000,
+      "sha256": "78726784e8e075e0791995e3269a1f85cdc9dc4a4910eda1e7c5026722d33d71"
+    },
+    {
+      "path": "assets/vendor/school/school_1195.obj",
+      "bytes": 1327483,
+      "sha256": "07ff5535baedbf7633168920f94a7dc787ab780984e8ef0ae4f7bd6fcb044e0d"
+    },
+    {
+      "path": "assets/vendor/school_furniture/MesaEscuela - School Table.obj",
+      "bytes": 170149,
+      "sha256": "16ae14a62cd45340af4bebc2af9161dea930388b13258032a1bf7666e76a5286"
+    },
+    {
+      "path": "assets/vendor/school_furniture/MesaEscuela.mtl",
+      "bytes": 74,
+      "sha256": "6eeab215fe0df71159ad8abbef498621ceaacb7445287750566504b00e14b9fe"
+    },
+    {
+      "path": "assets/vendor/school_furniture/SillaEscuela - School Chair.obj",
+      "bytes": 193005,
+      "sha256": "8194b4f0240e1b720ebe41b2b5aeeb0145b98bf36a67e2a0c780ee47951220db"
+    },
+    {
+      "path": "assets/vendor/school_furniture/SillaEscuela.mtl",
+      "bytes": 74,
+      "sha256": "6eeab215fe0df71159ad8abbef498621ceaacb7445287750566504b00e14b9fe"
+    }
+  ]
+}

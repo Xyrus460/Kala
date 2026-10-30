@@ -1,0 +1,21 @@
+
+KALA 0.10 additions (27 October 2026)
+All assets below are CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Bedroom and Living Room Furniture — 3DAssets.dev.
+https://3dassets.dev/packs/bedroom-and-living-room-furniture
+Source declares AI-assisted geometry: Muse Spark via T3 Code.
+Adaptations: expanded quantized attributes to float32 for Godot compatibility,
+rescaled/repositioned furniture, additional wood and fabric shaders.
+
+ClassicNightstand 01 — Kirill Sannikov / Poly Haven, via Innerscene.
+https://www.innerscene.com/tools/library/3d-parts/victorian-nightstand-28fb8e24
+Original PBR textures retained; scale adjusted.
+
+Cartridge fuse 10 x 38 mm gG 16 A — Innerscene, original unbranded model.
+https://www.innerscene.com/tools/library/3d-parts/cartridge-fuse-10-x-38-mm-gg-16-a-32915eb2
+Scale and orientation adjusted for the operator fuse pickup.
+
+Keypad geometry, grille framing, additional surface shaders and animation code
+were authored for KALA; no model/texture from the reference keypad game was copied.

@@ -1,0 +1,338 @@
+{
+  "intro": {
+    "room": "school",
+    "flag": "introSeen",
+    "steps": [
+      [
+        "Pensil masih berserakan ketika keributan pindah ke koridor.",
+        3
+      ],
+      [
+        "RAKA: “Kau bilang kemarin yang terakhir.”",
+        4
+      ],
+      [
+        "SARI: “Rak, tangannya lepas dulu. Kita bisa bicara.”",
+        4
+      ],
+      [
+        "ADIT: “Aku nggak lihat awalnya. Ada yang mau jelasin?”",
+        5
+      ],
+      [
+        "Danu melihat ke kelas. Pandangannya berhenti padamu.",
+        4
+      ],
+      [
+        "SARI: “Ada surat di lokernya. Baca sebelum menyimpulkan.”",
+        5
+      ],
+      [
+        "DANU: “Aku baik-baik saja.” Ia merapikan kerah yang tidak robek.",
+        4
+      ]
+    ]
+  },
+  "warehouse": {
+    "room": "street",
+    "flag": "warehouseEntrySeen",
+    "steps": [
+      [
+        "Satu per satu lampu gang berdengung. Danu berdiri di bawah nomor gudang.",
+        2.5
+      ],
+      [
+        "DANU: “Di dalam ada jawaban yang tidak bisa kubawa ke sekolah.”",
+        3
+      ],
+      [
+        "Engsel berderit. Danu membuka kedua daun pintu, lalu menoleh memastikan kau mengikuti.",
+        4.5
+      ],
+      [
+        "Suara langkahnya tertelan tumpukan peti. Pintu tetap terbuka.",
+        2
+      ]
+    ]
+  },
+  "office": {
+    "room": "office",
+    "flag": "officeExitSeen",
+    "steps": [
+      [
+        "Sepatu berhenti di ambang. Danu memandang album yang terbuka.",
+        4
+      ],
+      [
+        "DANU: “Aku cuma perlu satu orang yang percaya. Kenapa kau membaca sisanya?”",
+        5
+      ],
+      [
+        "Ia mundur menuju ruang ritual. Di baliknya terdengar rantai ditarik.",
+        3
+      ]
+    ]
+  },
+  "corridor": {
+    "room": "corridor",
+    "flag": "danuChaseSeen",
+    "steps": [
+      [
+        "Danu melewati pintu servis. Kau mengejar bunyi langkahnya.",
+        2.3
+      ],
+      [
+        "AKU: “Danu, tunggu. Siapa yang ada di album itu?”",
+        3
+      ],
+      [
+        "Ia menoleh, melihat jarak kalian, lalu berlari lebih cepat.",
+        2.9
+      ],
+      [
+        "Cahaya luar tinggal selebar daun pintu. Danu sudah di seberang.",
+        1.6
+      ],
+      [
+        "DANU: “Jangan bawa dia pulang.” Kunci berputar sebelum kau sempat menjawab.",
+        3.2
+      ]
+    ]
+  },
+  "discovery": {
+    "room": "relay",
+    "flag": "lenteraDiscoverySeen",
+    "steps": [
+      [
+        "Cahaya jatuh dari atap yang runtuh, tepat di atas meja inspeksi.",
+        2.5
+      ],
+      [
+        "Di bawah debu terbaca LENTERA-G. Kabelnya masih tergulung rapat.",
+        2.5
+      ]
+    ]
+  },
+  "pickup": {
+    "room": "relay",
+    "flag": "lenteraPickupSeen",
+    "steps": [
+      [
+        "Gagangnya berat. Di sisi gulungan tertulis: INSPEKSI • TARIK • EVAKUASI.",
+        1.1
+      ]
+    ]
+  },
+  "flash_break": {
+    "room": "loading",
+    "flag": "flashBreakComplete",
+    "steps": [
+      [
+        "Pengawas ambruk. Kartu di balik seragam kosong itu memuat tanggal lahir Danu.",
+        4
+      ],
+      [
+        "Tabung senter terasa panas. Retak putih merambat dari kacanya; kau menjatuhkannya.",
+        1.7
+      ],
+      [
+        "Kaca pecah di lantai. Dari ruang relai terdengar kabel ditarik pelan.",
+        3.5
+      ],
+      [
+        "DANU, dari pengeras suara: “Dulu dia menjaga pintuku. Sekarang kau berdiri di tempatku.”",
+        4
+      ]
+    ]
+  },
+  "ambush": {
+    "room": "relay",
+    "flag": "handsAmbushRunSeen",
+    "steps": [
+      [
+        "Bunyi gulungan berhenti. Sesuatu membuka enam telapak di belakangmu.",
+        1.75
+      ],
+      [
+        "Rak besi melengkung ketika kau menunduk dan berbalik lari.",
+        0.85
+      ],
+      [
+        "Pintu servis terbuka. Kau menerobos, menuruni anak tangga, dan mendengar benturan yang sama di belakang.",
+        5.4
+      ]
+    ]
+  },
+  "rescue": {
+    "room": "pursuit",
+    "flag": "daisyShadowRescueSeen",
+    "steps": [
+      [
+        "Lututmu menghantam lantai. Langkah pengejar berhenti tepat di belakang.",
+        3
+      ],
+      [
+        "Sesuatu mencengkeram dan menarikmu. Ujung jarimu gagal meraih ambang.",
+        2.3
+      ],
+      [
+        "Bayangan kecil muncul pada dinding. Ia bergerak berlawanan dengan cahaya.",
+        2.3
+      ],
+      [
+        "Satu tangan terangkat. Tombol pengaman tenggelam ke rumahnya.",
+        2.6
+      ],
+      [
+        "Shutter jatuh memutus cengkeraman. Bunyi besinya terus menggema saat pandanganmu gelap.",
+        4.4
+      ]
+    ]
+  },
+  "reversion": {
+    "room": "ritual",
+    "flag": "danuDescended",
+    "steps": [
+      [
+        "Besi Pemegang merekah dari dalam. Bayangannya menyusut di sela debu.",
+        3.3
+      ],
+      [
+        "Danu terjatuh dengan kedua tangan menutupi telinga. Seragam sekolahnya masih sama.",
+        3
+      ],
+      [
+        "DANU: “Sudah kuganti namanya. Kenapa dia tetap tahu namaku?” Ia menatap tangga servis.",
+        4.9
+      ],
+      [
+        "Danu bangkit dan turun. Kali ini langkahnya terdengar seperti langkah anak biasa.",
+        2.5
+      ]
+    ]
+  },
+  "wake_home": {
+    "room": "home",
+    "flag": "homeAwake",
+    "steps": [
+      [
+        "06.12. Suara radio mendahului alarm. Bau teh datang dari bawah.",
+        4
+      ],
+      [
+        "IBU: “Airnya masih hangat. Tasmu jangan ketinggalan.”",
+        4
+      ],
+      [
+        "Daisy baru ada di meja. Tanah di pot masih gelap setelah disiram.",
+        4
+      ],
+      [
+        "Ada suara cangkir diletakkan. Kau bangkit menuju kamar mandi di bawah.",
+        4
+      ]
+    ]
+  },
+  "lesson": {
+    "room": "school",
+    "flag": "lessonSeen",
+    "steps": [
+      [
+        "BU RATNA: “Tulis dua kolom: yang kalian lihat, dan yang kalian duga.”",
+        5
+      ],
+      [
+        "BU RATNA: “Foto menyimpan satu detik. Siapa yang menceritakan detik sebelum dan sesudahnya?”",
+        5
+      ],
+      [
+        "PAK ARIF: “Bu, kepala sekolah menunggu di telepon.”",
+        4
+      ],
+      [
+        "BU RATNA: “Kerjakan nomor dua. Saya kembali sebentar lagi.” Pintu menutup.",
+        4
+      ],
+      [
+        "RAKA: “Kembalikan itu. Adikku tidak ada urusannya.” Ia mencengkeram kerah Danu.",
+        5
+      ],
+      [
+        "SARI: “Raka, lepas! Tangannya dulu!”",
+        4
+      ],
+      [
+        "ADIT: “Mundur, Rak. Kita dengarkan satu-satu.”",
+        4
+      ],
+      [
+        "Kursi berdecit. Danu melihatmu di antara bahu teman-teman yang duduk.",
+        5
+      ],
+      [
+        "DANU: “Dia yang berjanji.” Tangan Raka mengendur sebelum Danu selesai bicara.",
+        4
+      ],
+      [
+        "Kertas tugasmu masih memuat dua kolom kosong. Kau belum tahu apa yang harus ditulis.",
+        4
+      ],
+      [
+        "Bel istirahat. Ada surat, foto, dan orang-orang yang belum selesai bicara.",
+        6
+      ]
+    ]
+  },
+  "return_class": {
+    "room": "school",
+    "flag": "schoolDismissed",
+    "steps": [
+      [
+        "Danu sudah kembali duduk. Kursi Raka dibiarkan menjorok dari mejanya.",
+        4
+      ],
+      [
+        "BU RATNA: “Besok kita lanjutkan. Jawaban yang baik boleh dimulai dengan ‘saya belum tahu’.”",
+        5
+      ],
+      [
+        "13.40. Bel pulang memotong bunyi kipas. Hujan yang disebut radio belum datang.",
+        4
+      ],
+      [
+        "SARI: “Kalau jadi ke Kartini, kabari aku.” Ia menyelipkan nomor di agendamu.",
+        5
+      ],
+      [
+        "DANU: “Keluar gerbang, kanan. Ada gang sebelum deretan rumah. Aku tunggu di gudang.”",
+        5
+      ],
+      [
+        "Di luar, jalan ke rumah membelok ke kiri. Kau memeriksa lagi alamat di foto.",
+        4
+      ]
+    ]
+  },
+  "wash": {
+    "room": "home",
+    "flag": "homeReady",
+    "steps": [
+      [
+        "Kau memutar keran. Air dingin mulai menetes dari shower.",
+        4
+      ],
+      [
+        "Air membasahi tangan dan wajah. Suara radio tenggelam di balik guyuran air.",
+        6
+      ],
+      [
+        "Sesaat terdengar kata “Kartini” dari luar. Kau mematikan keran.",
+        4
+      ],
+      [
+        "Kau mengeringkan badan dan mengenakan seragam. Buku dan agenda masuk tas.",
+        4
+      ]
+    ]
+  }
+}

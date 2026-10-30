@@ -1,0 +1,115 @@
+{
+  "version": "0.11.0",
+  "verified_utc": "2026-10-28T07:15:54.937Z",
+  "checks": 721,
+  "gameplay_failures": 0,
+  "suites": {
+    "integration": {
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    "layout": {
+      "checks": 130,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    "story": {
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    "claw": {
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    "revision04": {
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    "revision05": {
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    "revision06": {
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_latest_console.log"
+    },
+    "revision07": {
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_latest_console.log"
+    },
+    "revision08": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision08_latest_console.log"
+    },
+    "revision09": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision09_latest_console.log"
+    },
+    "revision10": {
+      "checks": 22,
+      "failures": 0,
+      "log": "docs/revision10_latest_console.log"
+    },
+    "revision11": {
+      "checks": 98,
+      "failures": 0,
+      "log": "docs/revision11_latest_console.log"
+    }
+  },
+  "standalone_rooms": 14,
+  "standalone_exits": [
+    {
+      "kind": "smoke",
+      "exit_code": 0
+    },
+    {
+      "kind": "render",
+      "exit_code": 0
+    },
+    {
+      "kind": "compatibility",
+      "exit_code": 0
+    }
+  ],
+  "renderers": [
+    "Forward+ / Vulkan",
+    "Compatibility / OpenGL"
+  ],
+  "known_diagnostics": [
+    {
+      "renderer": "Compatibility",
+      "stage": "process exit after traversing 14 rooms",
+      "textures": 2,
+      "bytes": 699048,
+      "log": "docs/exe_compatibility_11_stderr.log",
+      "status": "unresolved shutdown diagnostic; 14 rooms loaded, process exit 0"
+    }
+  ],
+  "packed_files": 2067,
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 176941512,
+      "sha256": "02a6f4c2db50418f836defd63af5f028f5991011e250861e453dbdda00f0b25e"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 8344,
+      "sha256": "5ea63f955bc67b851a187eb87139c7312cd532b21c9e52cc7b201158ed354b3e"
+    }
+  ]
+}

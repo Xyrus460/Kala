@@ -1,0 +1,680 @@
+[
+  {
+    "i": 0,
+    "room": "relay",
+    "label": "ambil LENTERA-G",
+    "x": 1603,
+    "z": 12,
+    "y": 1.25,
+    "fn": "function pickupLentera(){if(state.flags.lenteraOwned||lenteraTake)return;state.flags.lenteraOwned=true;flashlight=false;lenteraTake={t:0,origin:lenteraPickup.root.position.clone()};discoverySun.shadow.needsUpdate=true;\n if(!state.seen.lentera_inscription){state.seen.lentera_inscription=true;state.notes.push({id:'lentera_inscription',title:TOOL_NAME+' / NOMOR INVENTARIS',body:'Gulungan inspeksi dan penyelamatan. Ada inisial R. di bawah nomor inventaris yang dihapus.'});}\n resetLampPose();saveProgress();\n}",
+    "available": "()=>!state.flags.lenteraOwned"
+  },
+  {
+    "i": 1,
+    "room": "school",
+    "label": "loker Raka · kunci 4 digit",
+    "x": -1.34,
+    "z": -7.28,
+    "fn": "()=>state.puzzles.locker.solved?collectEvidence('A'):openPuzzle('locker')",
+    "available": "()=>!state.evidence.A"
+  },
+  {
+    "i": 2,
+    "room": "school",
+    "label": "ambil dan periksa foto",
+    "x": -5.457373268996695,
+    "z": 11.569432018880345,
+    "y": 0.84,
+    "fn": "()=>collectEvidence('op1')",
+    "available": "()=>!state.evidence.op1"
+  },
+  {
+    "i": 3,
+    "room": "school",
+    "label": "baca BUKU CATATAN DANU",
+    "x": -7.6,
+    "z": 7.6,
+    "y": 0.9,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 4,
+    "room": "school",
+    "label": "baca LAPORAN LABORATORIUM",
+    "x": 7.1,
+    "z": -13.8,
+    "y": 0.95,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 5,
+    "room": "school",
+    "label": "bicara dengan Danu",
+    "x": -1.28,
+    "z": -11.5,
+    "fn": "()=>npcDialogue(name)",
+    "available": "()=>npc.visible"
+  },
+  {
+    "i": 6,
+    "room": "school",
+    "label": "bicara dengan Raka",
+    "x": 0.5,
+    "z": -19,
+    "fn": "()=>npcDialogue(name)",
+    "available": "()=>npc.visible"
+  },
+  {
+    "i": 7,
+    "room": "school",
+    "label": "bicara dengan Adit",
+    "x": 0.85,
+    "z": -10.4,
+    "fn": "()=>npcDialogue(name)",
+    "available": "()=>npc.visible"
+  },
+  {
+    "i": 8,
+    "room": "school",
+    "label": "bicara dengan Sari",
+    "x": 0.5,
+    "z": -12.1,
+    "fn": "()=>npcDialogue(name)",
+    "available": "()=>npc.visible"
+  },
+  {
+    "i": 9,
+    "room": "school",
+    "label": "Ruang BK · bicara dengan Bu Ratna",
+    "x": 1.7,
+    "z": -8,
+    "fn": "()=>openChoice('BU RATNA','Kau ingin melaporkan kejadian di koridor. Kesaksianmu akan berdampak pada orang lain.',[{text:'Laporkan Raka berdasarkan yang kulihat',action:()=>ending('bad')},{text:'Kumpulkan bukti lebih dahulu',action:()=>{subtitle('BU RATNA: “Catat waktunya. Bawa bukti yang bisa kita periksa bersama.”',5)}}])",
+    "available": "()=>true"
+  },
+  {
+    "i": 10,
+    "room": "school",
+    "label": "gerbang selatan · Jalan Kartini",
+    "x": 0,
+    "z": -28.5,
+    "fn": "()=>{\n if(!state.evidence.A){subtitle('Periksa loker Raka.',5);return}\n if(!state.flags.invited){subtitle('Temui Danu lebih dulu.',4);return}\n openChoice('BEL PULANG','Bukti di sekolah yang belum diperiksa dapat tertinggal. Lanjutkan penyelidikan ke Jalan Kartini?', [{text:'Ikuti undangan Danu',action:()=>{He.bell();enterRoom('street')}},{text:'Lanjutkan menyelidiki sekolah',action:()=>{}}]);\n}",
+    "available": "()=>true"
+  },
+  {
+    "i": 11,
+    "room": "street",
+    "label": "kotak sekering · pulihkan lampu",
+    "x": 196,
+    "z": 15,
+    "fn": "()=>openPuzzle('fuse')",
+    "available": "()=>!state.puzzles.fuse.solved"
+  },
+  {
+    "i": 12,
+    "room": "street",
+    "label": "agenda Sari",
+    "x": 205.6,
+    "z": 2.6,
+    "y": 0.6,
+    "fn": "()=>collectEvidence('op2')",
+    "available": "()=>!state.evidence.op2"
+  },
+  {
+    "i": 13,
+    "room": "street",
+    "label": "baca PAPAN PERBAIKAN LISTRIK",
+    "x": 195.8,
+    "z": -5,
+    "y": 1.3,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 14,
+    "room": "street",
+    "label": "masuk Gudang Kartini",
+    "x": 201,
+    "z": 28.6,
+    "fn": "()=>{if(!state.puzzles.fuse.solved){subtitle('Pengunci belum mendapat daya.',5);return}enterRoom('loading')}",
+    "available": "()=>true"
+  },
+  {
+    "i": 15,
+    "room": "loading",
+    "label": "pintu masuk · terkunci dari luar",
+    "x": 400,
+    "z": 20.1,
+    "fn": "()=>subtitle('Terkunci dari luar.',5)",
+    "available": "()=>true"
+  },
+  {
+    "i": 16,
+    "room": "loading",
+    "label": "baca MEMO A — SHIFT",
+    "x": 376.2,
+    "z": 9.3,
+    "y": 1.3,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 17,
+    "room": "loading",
+    "label": "baca MEMO B — TRUK",
+    "x": 425.8,
+    "z": -10.2,
+    "y": 1.3,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 18,
+    "room": "loading",
+    "label": "baca MEMO C — GUDANG",
+    "x": 390.8,
+    "z": -17.8,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 19,
+    "room": "loading",
+    "label": "panel kontrol · empat digit",
+    "x": 413,
+    "z": -15,
+    "fn": "()=>openPuzzle('panel')",
+    "available": "()=>!state.puzzles.panel.solved"
+  },
+  {
+    "i": 20,
+    "room": "loading",
+    "label": "pintu utara · rumah relai",
+    "x": 400,
+    "z": -20,
+    "fn": "()=>{if(!state.puzzles.panel.solved)subtitle('Terkunci.',4);else if(!state.flags.overseerDefeated)subtitle('Jalan masih dijaga.',5);else if(!state.flags.flashBreakComplete)flashBreakSequence();else stairsPrompt('loading')}",
+    "available": "()=>true"
+  },
+  {
+    "i": 21,
+    "room": "relay",
+    "label": "pintu arsip · produksi",
+    "x": 1600,
+    "z": -15.1,
+    "fn": "()=>{if(state.flags.relaySolved)stairsPrompt('relay');else He.click(.12)}",
+    "available": "()=>true"
+  },
+  {
+    "i": 22,
+    "room": "production",
+    "label": "baca PROSEDUR KATUP",
+    "x": 573.1,
+    "z": 7.4,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 23,
+    "room": "relay",
+    "label": "baca KARTU PEGAWAI / R.",
+    "x": 1591,
+    "z": 13,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 24,
+    "room": "relay",
+    "label": "baca TRANSKRIP YANG DIPOTONG",
+    "x": 1611,
+    "z": -7,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 25,
+    "room": "office",
+    "label": "baca LAMPIRAN NOL / PEMEGANG",
+    "x": 805,
+    "z": 5,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 26,
+    "room": "production",
+    "label": "tiga katup tekanan",
+    "x": 589,
+    "z": -17,
+    "fn": "()=>{if(!state.flags.lenteraOwned)return;openPuzzle('valve')}",
+    "available": "()=>!state.puzzles.valve.solved"
+  },
+  {
+    "i": 27,
+    "room": "production",
+    "label": "pintu kantor",
+    "x": 600,
+    "z": -18.8,
+    "fn": "()=>{if(!state.puzzles.valve.solved)subtitle('Tekanan belum aman.',4);else if(!state.flags.handsDefeated)subtitle('Jalan masih dijaga.',4);else stairsPrompt('production')}",
+    "available": "()=>true"
+  },
+  {
+    "i": 28,
+    "room": "production",
+    "label": "baca CATATAN TEKNISI",
+    "x": 617.5,
+    "z": -3,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 29,
+    "room": "office",
+    "label": "album dan perjanjian Danu",
+    "x": 800,
+    "z": -4.3,
+    "y": 1.8,
+    "fn": "()=>collectEvidence('B')",
+    "available": "()=>!state.evidence.B"
+  },
+  {
+    "i": 30,
+    "room": "office",
+    "label": "panel saklar ruang ritual",
+    "x": 808.8,
+    "z": 2,
+    "fn": "()=>{if(!state.evidence.B){subtitle('Periksa album Danu.',4);return}openPuzzle('breaker')}",
+    "available": "()=>!state.puzzles.breaker.solved"
+  },
+  {
+    "i": 31,
+    "room": "office",
+    "label": "baca SURAT PEMELIHARAAN",
+    "x": 785.4,
+    "z": 0.8,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 32,
+    "room": "office",
+    "label": "pintu ruang ritual",
+    "x": 800,
+    "z": -8.2,
+    "fn": "()=>{if(!state.puzzles.breaker.solved){subtitle('Panel belum aktif.',4);return}openChoice('RUANG RITUAL','Cahaya berdenyut dari balik pintu. Danu telah masuk lebih dahulu.',[{text:'Masuk dan putuskan perjanjian',action:()=>stairsPrompt('office')},{text:'Tetap di kantor',action:()=>{}}])}",
+    "available": "()=>true"
+  },
+  {
+    "i": 33,
+    "room": "office",
+    "label": "jalur servis · kembali ke sekolah",
+    "x": 800,
+    "z": 8.2,
+    "fn": "()=>{if(!state.evidence.B){subtitle('Album Danu belum diambil.',4);return}openChoice('JALUR SERVIS',`Kau memiliki ${countEvidence()}/4 bukti. Bu Ratna memerlukan album serta sedikitnya dua bukti lain untuk memeriksa perkara ini.`,[{text:countEvidence()>=3?'Bawa bukti ke BK · akhir alternatif':'Bukti belum cukup untuk laporan lengkap',disabled:countEvidence()<3,action:()=>ending('good')},{text:'Tetap mencari Danu',action:()=>{}}])}",
+    "available": "()=>true"
+  },
+  {
+    "i": 34,
+    "room": "ritual",
+    "label": "pintu lorong pemeliharaan",
+    "x": 1000,
+    "z": -13,
+    "fn": "()=>state.flags.tumbalDefeated?stairsPrompt('ritual'):subtitle('Terkunci.',4)",
+    "available": "()=>true"
+  },
+  {
+    "i": 35,
+    "room": "corridor",
+    "label": "periksa pintu keluar",
+    "x": 1200,
+    "z": -18.5,
+    "fn": "()=>{if(!state.flags.exitLocked)startDanuChase();else{He.click(.2);subtitle('Terkunci dari luar.',4)}}",
+    "available": "()=>true"
+  },
+  {
+    "i": 36,
+    "room": "corridor",
+    "label": "celah pintu logam · D–08",
+    "x": 1202.2,
+    "z": 8,
+    "fn": "()=>{if(!state.flags.exitLocked){subtitle('Terkunci.',4);return}He.creak();enterRoom('daisy')}",
+    "available": "()=>true"
+  },
+  {
+    "i": 37,
+    "room": "corridor",
+    "label": "baca DENAH SERVIS",
+    "x": 1197.5,
+    "z": -4,
+    "y": 1.4,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 38,
+    "room": "daisy",
+    "label": "buka lemari kaca DAISY",
+    "x": 1400,
+    "z": 1.2,
+    "fn": "function openDaisy(){\n if(daisyAnimation)return;clearKeys();target=null;$('prompt').style.opacity=0;He.setDrone(0);He.setBreath(0);He.creak();doll.visible=true;doll.position.y=.62;ct.position.set(1400,1.70,3.15);ct.lookAt(1400,1.66,-.35);\n daisyAnimation={t:0,start:ct.position.clone(),rotation:ct.quaternion.clone(),yaw:ct.rotation.y,pitch:ct.rotation.x,blink:false,stairCue:false};subtitle('',3);lock();\n}",
+    "available": "()=>true"
+  },
+  {
+    "i": 39,
+    "room": "loading",
+    "label": "RUANG JAGA",
+    "x": 385,
+    "z": 12,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 40,
+    "room": "loading",
+    "label": "SUKU CADANG",
+    "x": 415,
+    "z": -10,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 41,
+    "room": "relay",
+    "label": "ARSIP RELAI",
+    "x": 1586,
+    "z": -2,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 42,
+    "room": "relay",
+    "label": "GENERATOR",
+    "x": 1614,
+    "z": 8,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 43,
+    "room": "production",
+    "label": "BENGKEL TEKANAN",
+    "x": 580,
+    "z": 4,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 44,
+    "room": "production",
+    "label": "PERAWATAN PEKERJA",
+    "x": 620,
+    "z": 5,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 45,
+    "room": "office",
+    "label": "ARSIP PERSONALIA",
+    "x": 790,
+    "z": 3,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 46,
+    "room": "office",
+    "label": "PEMANTAUAN",
+    "x": 810,
+    "z": 5.5,
+    "y": 1.4,
+    "fn": "()=>{if(!d.actorReserved)useAnnexDoor(a);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 47,
+    "room": "loading",
+    "label": "ambil Kunci suku cadang",
+    "x": 378.5,
+    "z": 16.63,
+    "y": 1.4,
+    "fn": "()=>giveItem(id)",
+    "available": "()=>!ownsItem(id)"
+  },
+  {
+    "i": 48,
+    "room": "loading",
+    "label": "baca BUKU JAGA / 017",
+    "x": 381,
+    "z": 9.8,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 49,
+    "room": "loading",
+    "label": "baca KUNCI CADANGAN",
+    "x": 376.4,
+    "z": 14.1,
+    "y": 1.27,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 50,
+    "room": "loading",
+    "label": "ambil Sekering operator",
+    "x": 423.3,
+    "z": -13.1,
+    "y": 0.98,
+    "fn": "()=>giveItem(id)",
+    "available": "()=>!ownsItem(id)"
+  },
+  {
+    "i": 51,
+    "room": "loading",
+    "label": "baca CATATAN SERVIS / CATU OPERATOR",
+    "x": 421.5,
+    "z": -13.1,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 52,
+    "room": "relay",
+    "label": "ambil Kontak generator",
+    "x": 1579.2,
+    "z": -5.6,
+    "y": 0.98,
+    "fn": "()=>giveItem(id)",
+    "available": "()=>!ownsItem(id)"
+  },
+  {
+    "i": 53,
+    "room": "relay",
+    "label": "baca BERKAS R / TANGGAL PENERIMAAN",
+    "x": 1581.6,
+    "z": -5.6,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 54,
+    "room": "relay",
+    "label": "baca JANJI YANG TIDAK DIHAPUS",
+    "x": 1577.2,
+    "z": 1.3,
+    "y": 1.25,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 55,
+    "room": "relay",
+    "label": "baca CATATAN PUTARAN MESIN",
+    "x": 1617.7,
+    "z": 12.4,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 56,
+    "room": "relay",
+    "label": "periksa catu generator",
+    "x": 1622,
+    "z": 11.2,
+    "y": 1.3,
+    "fn": "()=>{if(exploration().installed.generatorContact){He.click(.1);return;}if(installItem('generatorContact')){toast('Kontak terpasang');He.creak();}else subtitle('Kontak generator belum dipasang.',3);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 57,
+    "room": "production",
+    "label": "baca TEKNISI / LENTERA-G",
+    "x": 574.6,
+    "z": 7.4,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 58,
+    "room": "production",
+    "label": "baca CATATAN BENGKEL / KATUP II",
+    "x": 569.1,
+    "z": 6.6,
+    "y": 1.25,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 59,
+    "room": "production",
+    "label": "ambil Kunci bengkel",
+    "x": 622.9,
+    "z": 10.469999999999999,
+    "y": 1.45,
+    "fn": "()=>giveItem(id)",
+    "available": "()=>!ownsItem(id)"
+  },
+  {
+    "i": 60,
+    "room": "production",
+    "label": "baca LEMBAR PERAWATAN",
+    "x": 627.7,
+    "z": 2.5,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 61,
+    "room": "production",
+    "label": "baca PESAN RAKA",
+    "x": 628.2,
+    "z": 7.8,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 62,
+    "room": "office",
+    "label": "ambil Pita audit",
+    "x": 785.2,
+    "z": 6.6,
+    "y": 1.06,
+    "fn": "()=>giveItem(id)",
+    "available": "()=>!ownsItem(id)"
+  },
+  {
+    "i": 63,
+    "room": "office",
+    "label": "baca PEMINDAHAN TANGGUNGAN",
+    "x": 786.6,
+    "z": 0.8,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 64,
+    "room": "office",
+    "label": "pemutar pita audit",
+    "x": 815.3,
+    "z": 7.1,
+    "y": 1.15,
+    "fn": "()=>{\n if(exploration().auditVerified){openNote('ARSIP SUARA / 17 MARET',auditTranscript,'audit_recording');return;}\n if(!installItem('tapeReel')){subtitle('Pemutar pita masih kosong.',3);return;}\n runSequence([{text:'Pita bergerak. Dari speaker terdengar suara seorang perempuan: “Aku tidak akan menulis nama anak lain.”',duration:5,action:()=>He.click(.2)},{text:'SUARA ANAK: “Kalau kolom itu kosong, Ibu tidak akan keluar?” Gulungan tersendat. Suara yang lebih baru menimpa rekaman lama.',duration:6},{text:'DANU: “Raka percaya padaku. Ia akan datang kalau kubilang aku membutuhkan bantuan. Aku tahu itu salah.”',duration:6},{text:'DANU: “Aku cuma tidak mau mendengar mesin memanggil namaku lagi.”',duration:5}],finishAuditPlayback);\n}",
+    "available": "()=>true"
+  },
+  {
+    "i": 65,
+    "room": "office",
+    "label": "baca CATATAN KAMERA",
+    "x": 819,
+    "z": 3.5,
+    "y": 0.94,
+    "fn": "()=>openNote(title,body,id)",
+    "available": "()=>!opts.once||!state.seen[id]"
+  },
+  {
+    "i": 66,
+    "room": "pursuit",
+    "label": "rem konveyor",
+    "x": 1810.3,
+    "z": 30,
+    "fn": "()=>activatePursuitBrake(id)",
+    "available": "()=>!!handsPursuit&&!handsPursuit.used[id]&&player.z<limitZ"
+  },
+  {
+    "i": 67,
+    "room": "pursuit",
+    "label": "rem saluran",
+    "x": 1790,
+    "z": -27,
+    "fn": "()=>activatePursuitBrake(id)",
+    "available": "()=>!!handsPursuit&&!handsPursuit.used[id]&&player.z<limitZ"
+  },
+  {
+    "i": 68,
+    "room": "daisy",
+    "label": "amati mural di bawah tangga",
+    "x": 1400,
+    "z": -4.8,
+    "fn": "()=>{subtitle('“'+daisyMuralWords+'”',7);He.whisper(0,.10);}",
+    "available": "()=>true"
+  },
+  {
+    "i": 69,
+    "room": "pursuit",
+    "label": "tarik pengunci ventilasi",
+    "x": 1840,
+    "z": -77.2,
+    "fn": "function openVentGrate(){if(!handsPursuit?.extended||handsPursuit.grateOpen)return;handsPursuit.grateOpen=true;state.flags.extendedGrateOpen=true;handsPursuit.pause=Math.max(3.4,handsPursuit.pause);He.slam();subtitle('',3);saveProgress();}",
+    "available": "()=>!!handsPursuit?.extended&&!handsPursuit.grateOpen"
+  },
+  {
+    "i": 70,
+    "room": "pursuit",
+    "label": "tahan rem kipas",
+    "x": 1873,
+    "z": -107,
+    "fn": "function stopChaseFan(){if(!handsPursuit?.extended)return;chaseFan.stop=6.5;handsPursuit.pause=Math.max(handsPursuit.pause,2.5);He.slam();toast('');}",
+    "available": "()=>!!handsPursuit?.extended"
+  }
+]

@@ -1,0 +1,160 @@
+{
+  "verified_date": "2026-10-27",
+  "assets": [
+    {
+      "title": "Furniture Kit",
+      "author": "Kenney",
+      "directory": "kenney_furniture",
+      "source": "https://kenney.nl/assets/furniture-kit",
+      "use": "Home furniture, sanitary ware, mirror frames, school furniture and plants",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "Building Kit",
+      "author": "Kenney",
+      "directory": "kenney_building",
+      "source": "https://kenney.nl/assets/building-kit",
+      "use": "Modeled hinged house doors and school entrance leaves; house door materials adapted",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "City Kit (Suburban)",
+      "author": "Kenney",
+      "directory": "kenney_suburban",
+      "source": "https://kenney.nl/assets/city-kit-suburban",
+      "use": "Repeated background neighborhood around the entire campus and street",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "Crib - Original Interior Furnishing",
+      "author": "Innerscene",
+      "directory": "innerscene/crib.glb",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/crib-original-interior-furnishing-94d2ac4c",
+      "use": "Nursery cot, mattress, blanket and rails",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "Adventure motorcycle",
+      "author": "Innerscene",
+      "directory": "innerscene/motorcycle.glb",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/adventure-motorcycle-3de675e4",
+      "use": "Three parked motorcycles outside school",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "School from Moscow (lowpoly building)",
+      "author": "Mixazzz / M. Khludeev",
+      "directory": "school",
+      "source": "https://opengameart.org/content/school-from-moscow-lowpoly-building",
+      "use": "School exterior, rescaled and combined with an accessible entrance porch; material brightness adapted",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "Banco Escuela - School table",
+      "author": "DREAM_SEARCH_REPEAT",
+      "directory": "school_furniture",
+      "source": "https://opengameart.org/content/banco-escuela-school-table",
+      "use": "Classroom desks and chairs; missing source texture references replaced with local material colors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "Nature Kit",
+      "author": "Kenney",
+      "directory": "kenney_nature",
+      "source": "https://kenney.nl/assets/nature-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modified": "Rescaled and oriented for KALA; factory materials aged in-engine."
+    },
+    {
+      "title": "Factory Kit",
+      "author": "Kenney",
+      "directory": "kenney_factory",
+      "source": "https://kenney.nl/assets/factory-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modified": "Rescaled and oriented for KALA; factory materials aged in-engine."
+    },
+    {
+      "title": "Radio",
+      "author": "Quaternius",
+      "directory": "poly/radio.glb",
+      "source": "https://poly.pizza/m/TPqvwkyWdV",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modified": "Rescaled and oriented for KALA; factory materials aged in-engine.",
+      "sha256": "9e5c7934f44ee538446e6f54cbe9c09d4e49a7e78ee2e7f16d4cc7483c43e710"
+    },
+    {
+      "title": "Animated Woman",
+      "author": "Quaternius",
+      "directory": "poly/mother.glb",
+      "source": "https://poly.pizza/m/qJ2gsTUBHL",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modified": "Rescaled and oriented for KALA; factory materials aged in-engine.",
+      "sha256": "a2212729826b718e59e698211ed3951c22459b48733b1ee6a24fac0abf74dca8"
+    },
+    {
+      "title": "Daisy",
+      "author": "Zsky",
+      "directory": "poly/daisy.glb",
+      "source": "https://poly.pizza/m/4r0WBz3RZz",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "modified": "Rescaled and oriented for KALA; factory materials aged in-engine.",
+      "sha256": "8f1b08204d73d87c3706d714b7760ab18d7598e427a109a272a84eb90248e3fa"
+    },
+    {
+      "title": "Flower Pot",
+      "author": "Zsky",
+      "directory": "poly/flower_pot_base.glb",
+      "source": "https://poly.pizza/m/u0CrZnpykb",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "modified": "Original plant and flower surfaces removed; pot and soil retained, rescaled, recolored and positioned in KALA.",
+      "sha256": "f895ad32478482949296d02484f347efccdeeb0eecf38e657b878d90d542617e"
+    },
+    {
+      "title": "Caveat",
+      "author": "The Caveat Project Authors / Impallari Type",
+      "directory": "../fonts/Caveat.ttf",
+      "source": "https://github.com/google/fonts/tree/main/ofl/caveat",
+      "license": "OFL-1.1",
+      "license_url": "https://openfontlicense.org/",
+      "modified": "Unmodified font, used to render original Indonesian note text."
+    },
+    {
+      "title": "Bedroom and Living Room Furniture",
+      "author": "3DAssets.dev",
+      "directory": "revision10",
+      "source": "https://3dassets.dev/packs/bedroom-and-living-room-furniture",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "use": "Bedroom and nursery furniture, linen curtains, woven rugs; source declares AI-assisted geometry, expanded to float32 for Godot"
+    },
+    {
+      "title": "Cartridge fuse 10 x 38 mm gG 16 A",
+      "author": "Innerscene",
+      "directory": "revision10/cartridge_fuse.glb",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/cartridge-fuse-10-x-38-mm-gg-16-a-32915eb2",
+      "license": "CC0-1.0",
+      "use": "Operator fuse pickup"
+    },
+    {
+      "title": "ClassicNightstand 01",
+      "author": "Kirill Sannikov / Poly Haven",
+      "directory": "revision10/nightstand.glb",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/victorian-nightstand-28fb8e24",
+      "license": "CC0-1.0",
+      "use": "Bedroom nightstand, original PBR maps retained"
+    }
+  ]
+}

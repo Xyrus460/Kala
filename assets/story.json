@@ -1,0 +1,183 @@
+{
+  "evidence": {
+    "op1": {
+      "body": "Foto ini ditemukan terlipat di bawah kertas piket dekat gerbang. Danu dan Raka berdiri berdampingan di depan Gudang Kartini. Raka memegang kotak kecil; tangan Danu berada di bahunya. Keduanya tampak akrab. Tanggal di sudut foto: kemarin.\n\nKalau mereka sudah lama bermusuhan, mengapa mereka datang bersama? Seseorang sengaja membuang bagian yang memuat wajah anak ketiga. Balik kertasnya; ada dua angka yang ditulis terburu-buru.",
+      "title": "FOTO DARI TONG SAMPAH / SEHARI SEBELUM KEJADIAN"
+    },
+    "B": {
+      "body": "Album bersampul kulit memuat foto insiden di sekolah. Setiap halaman mencantumkan tanggal, saksi, posisi kamera, serta nama yang harus disalahkan.\n\nBukan catatan korban. Ini rancangan kejadian. Raka dipaksa memainkan peran di depan saksi yang berbeda. Surat di lokernya adalah ancaman agar ia terus patuh.\n\nSebuah perjanjian di bawah album berbunyi:\n«Selama seorang lain menanggung salahku, namaku akan tetap bersih. Saksi yang melihat di luar peran harus menggantikan penanggung.»\n\nNama Raka tertulis di kolom PENANGGUNG. Nama Danu ada di kolom PEMEGANG. Di kolom SAKSI, tinta baru mulai membentuk namamu.\n\nFoto terakhir memperlihatkan Danu kecil di sebelah kotak kayu. Nama pada kotak itu: DAISY. Wajah sesuatu di dalamnya dicoret sampai kertas berlubang.",
+      "title": "ALBUM DAN PERJANJIAN"
+    },
+    "A": {
+      "body": "Secarik kertas berbau besi, diselipkan di belakang foto keluarga.\n\n«Satu kali lagi. Gudang Kartini setelah bel. Kau tahu siapa yang menanggung akibatnya kalau kau tidak datang. — D.»\n\nRaka menyimpan surat ancaman untuk dirinya sendiri. Tulisan D itu mirip lengkungan huruf di buku Danu, tetapi kesamaan tulisan saja belum membuktikan pelakunya.\n\nDi balik kertas ada denah bangsal muat. Sebuah pintu utara dilingkari. Kau menyalinnya ke jurnal.",
+      "title": "SURAT DI LOKER RAKA"
+    },
+    "op2": {
+      "body": "07.05 — Danu sudah di sekolah. Meminta izin meminjam kamera kelas.\n07.20 — Raka datang dari arah Kartini, bukan arah rumahnya. Seragamnya berdebu.\n07.24 — Danu bilang ia baru pertama kali melihat Raka hari itu.\n\nSari menggarisbawahi dua waktu itu: “Aku ingin percaya Danu. Tapi aku juga ingin dia pulang dengan selamat. Dua hal itu seharusnya tidak bertentangan.”",
+      "title": "AGENDA SARI / DUA WAKTU YANG BERBEDA"
+    }
+  },
+  "dialogues": {
+    "Adit": {
+      "before": "Aku lihat Raka menarik kerahnya. Sebelumnya aku membelakangi mereka; aku nggak tahu siapa yang mulai.\n\nFoto yang kutaruh di kelas sudah hilang. Sari sempat melihat Danu dekat tong sampah timur halaman. Coba periksa setelah bel istirahat.\n\nKalau ketemu Raka, tanya soal loker dekat lab. Dia memeriksanya berkali-kali sejak pagi.",
+      "after": "Foto kemarin itu? Mereka datang bersama?\n\nAdit mengusap bekas pensil di telapak tangannya. “Berarti ada bagian yang belum kita lihat. Aku tadi keburu ikut teriak.”\n\nAku akan tetap di sini kalau Raka kembali. Kamu boleh bilang aku mau mendengar penjelasannya."
+    },
+    "Sari": {
+      "before": "Aku berdiri paling dekat. Raka bilang “jangan sebut adikku”, baru menarik kerah Danu. Aku takut dia memukul, jadi aku menyela.\n\nAgendaku ada di meja belakang kelas XI A. Aku mencatat jam mereka datang. Yang mereka bilang tadi tidak cocok dengan catatanku.\n\nKode loker? Raka pernah menitipkan dua angka: 2 sama 9. Dua angka awalnya ada di belakang foto. Putar kertasnya.",
+      "after": "07.05 Danu sudah meminjam kamera. Tapi dia bilang baru datang setelah Raka.\n\n“Aku masih ingin dia aman,” kata Sari. “Aku juga ingin tahu kenapa dia berbohong. Kamu bisa menginginkan keduanya.”\n\nSetelah bicara dengannya, kembali ke kelas. Kalau dia mengajak ke Kartini sepulang sekolah, kabari aku."
+    },
+    "Danu": {
+      "before": "Kamu lihat sendiri tadi, kan?\n\nDanu menyentuh kerahnya. Ketika kau bertanya soal janji, tangannya berhenti. “Ada hal yang Raka simpan. Aku tidak bisa menjelaskannya sendirian.”\n\nCari fotonya. Mungkin masih di dekat gerbang. Setelah itu kita bicara lagi.",
+      "after": "Kamu sudah menemukan foto itu. Dan suratnya.\n\nDanu menatap pintu kelas, kemudian merendahkan suara. “Aku tahu tempat yang ada di belakang foto. Aku mau kamu melihatnya sendiri.”\n\nKembali ke XI A sekarang. Sepulang sekolah, keluar gerbang lalu belok kanan. Masuk gang sempit menuju Gudang Kartini. Aku tunggu di sana."
+    },
+    "Raka": {
+      "before": "Aku tahu kelihatannya seperti apa. Aku yang memegang kerahnya.\n\nRaka menarik napas, lalu melirik Danu di ujung koridor. “Tapi tanyakan apa yang dia bawa kemarin. Tanyakan kenapa ada nama adikku.”\n\nAda surat di lokerku. Kalau dia bilang aku membuat semuanya sendiri, baca surat itu dulu.",
+      "after": "Itu tulisan D. Aku menyimpannya karena takut suatu hari aku sendiri lupa siapa yang memulai.\n\n“Kemarin aku menurut. Hari ini dia meminta satu kali lagi.” Raka tidak menjelaskan permintaan itu.\n\nKalau dia mengajakmu ke gudang, jangan percaya pintu yang dibiarkan terbuka. Cari jalan pulang sebelum masuk terlalu jauh."
+    }
+  },
+  "notes": {
+    "fuse_note": {
+      "body": "Rangkaian lama hanya menerima satu jalur dalam satu waktu.\n\nIkuti pita warna di atas gerbang Gudang Kartini. Hubungkan tiga kabel sesuai urutannya. Jika salah, lepaskan semua dan mulai lagi.\n\nHuruf pada kabel: M = merah, K = kuning, B = biru. Lampu gang dan pengunci pintu menggunakan rangkaian yang sama.",
+      "title": "PAPAN PERBAIKAN LISTRIK"
+    },
+    "infirmary_record": {
+      "body": "Pasien mengatakan ada seseorang memegang kakinya dari bawah ranjang. Pemeriksaan tidak menemukan luka pada kulit, tetapi sidik jari muncul pada permukaan dalam sepatunya.\n\nTiga pasien menyebut nama yang sama. Nama itu milik pekerja yang dilaporkan hilang pada tiga tahun berbeda.",
+      "title": "LEMBAR PERAWATAN"
+    },
+    "corridor_map": {
+      "body": "Denah pabrik sudah berubah berkali-kali. Ada sebuah ruang penyimpanan yang tidak tercantum pada daftar barang.\n\nKodenya D–08. Pintu logamnya berada di dinding timur, dekat pipa yang kembali ke bangsal muat.\n\nSebuah tulisan dicoret dengan pensil: «Jika ia memanggilmu dengan nama yang benar, jangan menjawab.»",
+      "title": "DENAH SERVIS"
+    },
+    "generator_log": {
+      "body": "Satu putaran seharusnya menggerakkan poros. Mesin ini menggerakkan tanggal pada buku kehadiran.\n\nSaat semua kontak dicabut, bunyi mesin masih terdengar dari bawah lantai. Kami berhenti menyebutnya gangguan listrik.",
+      "title": "CATATAN PUTARAN MESIN"
+    },
+    "archive_names": {
+      "body": "Foto Raka ditempel di atas foto orang lain. Bekas lem di tepinya lebih tua daripada kertas identitas di bawahnya.\n\nAda dua kolom yang tidak pernah diisi bersamaan: PEKERJA YANG HILANG dan NAMA YANG DIPULIHKAN.\n\nPetugas arsip menulis: “Nama dapat dipindahkan. Orangnya tidak selalu ikut pulang.”",
+      "title": "BERKAS R / TANGGAL PENERIMAAN"
+    },
+    "breaker_note": {
+      "body": "AUDIT 17 MARET / daftar ini disusun menurut nomor terminal, bukan waktu.\n\nTerminal 1 — 01.40 / pemindahan\nTerminal 2 — 03.15 / pengesahan\nTerminal 3 — 00.20 / pemeriksaan\nTerminal 4 — 02.10 / penutupan\n\nRangkaian menyimpan urutan kejadian. Panel tidak menerima percobaan serentak. Saklar salah akan mengulang rangkaian dari awal.\n\nPintu kecil di bagian selatan mengarah ke jalan servis dan sekolah. Bila bukti sudah cukup, saksi boleh meninggalkan bangunan sebelum pintu ritual dibuka.\n\nCatatan tangan: «Aku memanggilnya Tumbal. Itu nama untuk hal yang kita serahkan, bukan untuk yang menerima.»",
+      "title": "SURAT PEMELIHARAAN"
+    },
+    "valve_note": {
+      "body": "Sistem tekanan memiliki tiga katup, ditandai I, II, III.\n\nSemua panah harus mengarah ke atas. Setiap putaran menggeser katup 90 derajat searah jarum jam. Katup I sudah benar; katup II macet pada 90 derajat, katup III pada 180 derajat.\n\nBuka panel gabungan dekat pipa utara. Posisi tersimpan ketika panel ditutup.\n\nPeringatan: saluran yang aktif dapat membangunkan sesuatu di bawah konveyor.",
+      "title": "PROSEDUR KATUP"
+    },
+    "hands_note": {
+      "body": "Pengawas tidak boleh masuk ruang produksi. Makhluk dengan lengan-lengan itu tidak mengenali seragam.\n\nCahaya senter menipiskan bayangannya. Gerakkan tubuh saat ia membungkuk: itu tanda ia akan menerjang.\n\nKetika lapisan pelindungnya runtuh, lengan dari bawah lantai mengunci pergelangan kaki. Penjepit inspeksi dapat merobek cengkeramannya. Jangan biarkan tangan-tangan itu mengepungmu.",
+      "title": "CATATAN TEKNISI"
+    },
+    "guard_log": {
+      "body": "Petugas yang datang sebelum bel harus menulis jamnya sendiri. Hari ini tiga orang menulis jam yang sama, meskipun pintu tidak pernah terbuka bersamaan.\n\nNama penjaga tetap tercetak pada daftar gaji setelah ia meninggal. Kolom pemberhentian tidak menerima tanda tangan orang lain.\n\nCatatan terakhir: “Kalau seragam itu berjalan lagi, jangan panggil dengan nama yang tercetak di kartu.”",
+      "title": "BUKU JAGA / 017"
+    },
+    "memo_a": {
+      "body": "BUKU SHIFT / 01\n\nShift pertama dimulai pukul 3 pagi. Angka awal panel adalah nomor jam mulai.\n\nLanjutkan dengan identitas truk dan jam kedatangan yang tertulis pada Memo B. Angka terakhir disimpan pada Memo C.\n\nOperator diminta membaca catatan sesuai label A, B, C.",
+      "title": "MEMO A — SHIFT"
+    },
+    "guard_keynote": {
+      "body": "Kunci ruang suku cadang dipinjamkan ke ruang jaga sejak operator terakhir tidak kembali dari shift malam. Semua penggantian sekering wajib ditulis di buku muat.",
+      "title": "KUNCI CADANGAN"
+    },
+    "raka_message": {
+      "body": "Danu pernah menungguku sampai aku bisa berjalan pulang. Waktu itu aku pikir ia temanku.\n\nSekarang ia selalu bilang hanya aku yang bisa membantunya. Setiap kali aku menolak, ada orang lain yang terluka dan ia tahu persis siapa yang akan menyalahkanku.\n\nKalau kau menemukan ini, jangan datang untuk membalasnya. Bawa surat itu keluar. Aku ingin orang tuaku mendengar ceritaku dari mulutku sendiri.",
+      "title": "PESAN RAKA"
+    },
+    "diary": {
+      "body": "Halaman-halaman awal berisi daftar tugas dan gambar koridor. Halaman terakhir ditulis berulang sampai menembus kertas:\n\n«Kalau semua percaya Raka yang salah, aku aman selamanya.»\n\nDi bawahnya, dengan tinta berbeda:\n«Kalau mereka bertanya, katakan ini cerita untuk majalah sekolah.»\n\nSesuatu disobek dari bagian tengah. Ada bekas gambar mata biru pada halaman di belakangnya.",
+      "title": "BUKU CATATAN DANU"
+    },
+    "relay_tape": {
+      "body": "SUARA A: Aku tidak mengizinkan anak itu masuk.\nSUARA B: Izin tidak diperlukan bila semua saksi mengingat hal yang sama.\nSUARA A: Dan kalau mereka ingat urutan yang berbeda?\n[sebelas detik dihapus]\nSUARA B: Maka kita mulai dengan seorang yang mereka percaya.\n\nDi bawah transkrip, Danu menulis: «Ini suara ibuku. Ia meninggal sebelum rekaman ini dibuat.»",
+      "title": "TRANSKRIP YANG DIPOTONG"
+    },
+    "mother_promise": {
+      "body": "Aku berjanji akan kembali setelah mesin berhenti. Anak itu menungguku di pintu servis dengan kotak di kedua tangannya.\n\nAku tidak menulis nama pengganti. Itu satu-satunya hal yang masih bisa kupilih.\n\nTanda tangan di bawah surat menyerupai tanda tangan ibu Danu pada album, tetapi tintanya sudah jauh lebih tua.",
+      "title": "JANJI YANG TIDAK DIHAPUS"
+    },
+    "lab": {
+      "body": "Raka tercatat membantu inventaris laboratorium pada jam yang sama dengan satu insiden yang diceritakan Danu. Kolom pengesahan belum ditandatangani.\n\nCatatan penjaga: «Jangan jadikan satu kesaksian sebagai seluruh kebenaran. Periksa waktu, tempat, dan saksi lain.»\n\nAda denah gerbang sekolah. Gerbang selatan berada di ujung koridor, berlawanan arah dengan UKS.",
+      "title": "LAPORAN LABORATORIUM"
+    },
+    "monitor_log": {
+      "body": "Sudut kamera disesuaikan sebelum setiap kejadian di sekolah. Seseorang memberi tanda di lantai untuk posisi Raka, posisi Danu, dan arah datang saksi.\n\nSatu kamera dibiarkan menghadap dinding. Di layar itu, kotak DAISY tetap terlihat.",
+      "title": "CATATAN KAMERA"
+    },
+    "maintenance_log": {
+      "body": "Panel bangsal dimatikan setelah pintunya bergerak tanpa arus. Sekering yang terbakar disimpan terpisah dari komponen pengganti.\n\nPengawas meminta panel dinyalakan kembali. Ia menunjuk kolom saksi tanpa mengatakan satu kata pun.",
+      "title": "CATATAN SERVIS / CATU OPERATOR"
+    },
+    "contract_zero": {
+      "body": "Danu tidak tercatat sebagai pemegang pertama. Nama itu menutup tujuh nama lain dengan tulisan tangan yang serupa. Semua foto memperlihatkan anak yang sama pada umur berbeda.\n\nPada halaman kosong ada catatan: «Yang menerima salah tidak boleh menyaksikan pengalihan. Yang menyaksikan tidak boleh mengingat awalnya.»\n\nTanggal pada agenda Sari benar. Tahun pada setiap halaman telah diganti. Satu baris di album menyebut kotak DAISY sebagai PENGARSIP, bukan barang simpanan.",
+      "title": "LAMPIRAN NOL / PEMEGANG"
+    },
+    "relay_employee": {
+      "body": "Nomor pegawai: 017. Tanggal penerimaan: 1976.\n\nFoto di sisi kiri memperlihatkan Raka dengan seragam yang belum pernah ia kenakan. Umurnya sama seperti sekarang. Di sisi kanan tercetak ulang nama yang berbeda, tetapi kedua tanda tangannya identik.\n\nCap pembatalan bertanggal besok.",
+      "title": "KARTU PEGAWAI / R."
+    },
+    "tool_origin": {
+      "body": "Alat ini dibuat untuk mengambil tangan pekerja yang terjepit tanpa memasukkan tangan penyelamat ke dalam mesin.\n\nSatu alat kembali ke bengkel dengan kabel masih menegang. Tidak ada pekerja di ujungnya, hanya sarung tangan berisi potongan kartu identitas yang berbeda-beda.",
+      "title": "TEKNISI / LENTERA-G"
+    },
+    "wheel_log": {
+      "body": "Poros katup kedua selamat, tetapi roda penggeraknya dilepas ketika tekanan berbalik arah. Nomor pesanan tidak dihapus: orang yang melepasnya masih berharap dapat memasangnya kembali.",
+      "title": "CATATAN BENGKEL / KATUP II"
+    },
+    "memo_b": {
+      "body": "BUKU MUAT / 02\n\nTruk 2 tiba pukul 6.\n\nDua angka ini menyusul angka shift: nomor truk terlebih dahulu, jam kedatangan kemudian. Jangan gunakan nomor registrasi forklift.\n\nSatu angka terakhir ada pada memo gudang di sisi utara.",
+      "title": "MEMO B — TRUK"
+    },
+    "memo_c": {
+      "body": "BUKU KUNCI / 03\n\nGudang 8 dikunci setelah muatan selesai. Nomor gudang adalah angka terakhir pada panel.\n\nRingkasan urutan: JAM SHIFT → TRUK → JAM DATANG → GUDANG.\n\nLampu sorot petugas dilarang diarahkan ke wajah pengawas. Ia hanya membuka matanya ketika berdiri menghadap sumber cahaya.",
+      "title": "MEMO C — GUDANG"
+    },
+    "liability_form": {
+      "body": "Nama Raka ditulis pada formulir yang disiapkan jauh sebelum ia lahir. Bagian tujuan selalu dikosongkan sampai seorang saksi membenarkan cerita pemegang.\n\nPetugas tidak diminta memeriksa kebenaran. Petugas diminta menjaga agar urutannya tampak masuk akal.",
+      "title": "PEMINDAHAN TANGGUNGAN"
+    },
+    "gate_log": {
+      "title": "PIKET GERBANG / 07.20",
+      "body": "Raka datang tanpa tas. Danu sudah berada di dalam sejak 07.05. Penjaga melihat sebuah mobil bak tua berhenti di seberang jalan sebelum bel pertama. Di pintunya masih terbaca bekas tulisan: KARTINI.\n\nAda bekas sobekan foto tersangkut di bibir tong sampah sebelah timur halaman."
+    },
+    "home_radio": {
+      "title": "RADIO PAGI / PENGUMUMAN",
+      "body": "“...keluarga diminta melapor bila menerima surat atas nama bekas Pabrik Kartini. Kompleks itu ditutup sejak insiden kebakaran...”\n\nIbu mematikan suara dari bawah. “Berita lama. Sarapanmu di meja.”"
+    },
+    "home_daisy": {
+      "title": "BUNGA DI MEJA",
+      "body": "Ibu pernah bilang daisy tumbuh menghadap cahaya, bukan menghindari gelap. Pada kartu kecil tertulis: “Kalau takut, lihat baik-baik. Jangan biarkan orang lain memilih apa yang kamu lihat.”\n\nTulisan tangan Ibu berbeda dari tulisan pada kartu. Kau baru menyadarinya sekarang."
+    },
+    "nursery": {
+      "title": "KAMAR YANG BELUM DIPAKAI",
+      "body": "Cat baru, kardus pakaian kecil, ranjang bayi masih terbungkus. Di daftar belanja Ibu, sebuah nama dicoret sampai tak terbaca. Di bawahnya: “Jangan pilih nama sebelum semuanya aman.”\n\nMungkin ia cuma khawatir. Itulah penjelasan yang paling mudah."
+    },
+    "service_clue": {
+      "title": "CATATAN TEKNISI / TIGA SHIFT",
+      "body": "SUN: mulainya shift, tempat operator menyimpan kuitansi.\nMOON: istirahat malam, di balik pintu loker yang penyok.\nSTAR: ketika lampu mati, simpan di lemari perkakas terakhir.\n\nBuka furniturnya dengan E. Jongkok dengan Ctrl untuk melihat bagian bawah. Rem bisa dipakai kembali setelah pulih. Makhluk mengikuti bunyi langkah; putus pandang dan jangan berlari saat bersembunyi."
+    },
+    "warung_log": {
+      "title": "BUKU UTANG / WARUNG BU TINI",
+      "body": "Senin, 16 Maret\nDua kopi. Danu membayar, Raka tidak menyentuh gelasnya.\n\nSelasa, 17 Maret\nSeorang anak menitipkan agenda. Sudah kukembalikan ke sekolah lewat petugas piket.\n\nLampu gang putus lagi. Pak RT meninggalkan tiga kabel baru: MERAH, KUNING, BIRU. Matikan catu sebelum memasang. Kotak itu khusus rangkaian lampu; jangan sentuh jalur utama.\n\nDi bawahnya ada tulisan kecil:\nKalau gudang sudah tutup, kenapa meterannya terus berjalan?"
+    }
+  },
+  "endings": {
+    "devoured": null,
+    "bad": [
+      "KAMBING HITAM",
+      "Bu Ratna menerima laporan tentang Raka. Kau membawa apa yang tampak sebagai jawaban, tetapi belum memeriksa hal yang luput dari pandangan.\n\nKeesokan harinya, kursi Raka kosong. Danu mengucapkan terima kasih. Senyumnya bertahan terlalu lama.\n\nDi Jalan Kartini, seseorang menulis nama baru di kolom penanggung.\n\nAKHIR ALTERNATIF · cari bukti sebelum memutuskan."
+    ],
+    "good": [
+      "TERUNGKAP",
+      "Kau meninggalkan gudang melalui jalan servis dan menyerahkan album, surat, serta bukti pendukung kepada Bu Ratna.\n\nSari mengonfirmasi tanggal-tanggalnya. Adit menjelaskan foto itu. Raka akhirnya dapat bercerita tanpa Danu di sampingnya. Namanya dipulihkan setelah perkara diperiksa.\n\nGudang ditutup. Danu menghilang sebelum petugas datang. Satu kotak pada daftar penyimpanan tidak ditemukan.\n\nAKHIR ALTERNATIF · kebenaran tentang Raka terungkap.\nCerita di dalam pabrik masih menyimpan pintu lain."
+    ],
+    "broken": [
+      "AKALMU RUNTUH",
+      "Bisikan itu tidak lagi datang dari ruangan. Ia menggunakan suaramu sendiri.\n\nKau membuka mata di depan pintu yang sama. Ingatan terakhir terasa seperti mimpi orang lain.\n\nCheckpoint tersedia. Coba bergerak menyamping ketika makhluk merunduk. Arahkan senter dengan tepat dan beri waktu agar panasnya turun."
+    ],
+    "cliffhanger": [
+      "DAISY",
+      "Tiga ketukan. Daisy menatap sesuatu di belakangmu.\n\nSebelum kau sempat menoleh, lampunya padam.\n\nCHAPTER 1 — END\nTo be continued…"
+    ]
+  }
+}

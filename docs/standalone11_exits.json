@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "smoke",
+    "exit_code": 0
+  },
+  {
+    "kind": "render",
+    "exit_code": 0
+  },
+  {
+    "kind": "compatibility",
+    "exit_code": 0
+  }
+]

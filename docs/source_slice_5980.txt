@@ -1,0 +1,100 @@
+box(daisyRoom.group,1400,3.7,-6,5.4,.6,.3,daisyWhiteWall);
+const chapterTwoStairs=new It();chapterTwoStairs.name='TanggaChapter2';daisyRoom.group.add(chapterTwoStairs);
+const lowerStairPaint=new Xe({color:0xf0efe7,roughness:.85}),lowerStairTreads=[daisyWhiteFloor,new Xe({color:0xdbdfd8,roughness:.95})];
+box(chapterTwoStairs,1400,-.12,-6.65,5,.24,1.5,daisyWhiteFloor);
+for(let i=0;i<18;i++){const y=-(i+1)*.2,z=-7.4-(i+.5)*.64;box(chapterTwoStairs,1400,y-.12,z,4.8,.24,.65,lowerStairTreads[i%2]);box(chapterTwoStairs,1400,y-.10,-7.38-i*.64,4.8,.19,.025,daisyWhiteTrim);box(chapterTwoStairs,1400,y+.012,-7.4-i*.64,4.65,.025,.08,lowerStairPaint);if(i%3===0)for(const side of [-1,1])box(chapterTwoStairs,1400+side*2.44,y+.27,z,.08,.10,.22,new Cn({color:0xdfe6df}));}
+box(chapterTwoStairs,1400,-3.73,-20.4,5,.26,3.6,daisyWhiteFloor);
+for(const side of [-1,1]){box(chapterTwoStairs,1400+side*2.58,-1,-14.2,.22,9.3,17,daisyWhiteWall);limb(chapterTwoStairs,[1400+side*2.15,.95,-7.2],[1400+side*2.15,-2.65,-19.1],.04,.04,daisyWhiteTrim,10);for(let i=0;i<9;i++)cylinder(chapterTwoStairs,1400+side*2.15,.45-i*.4,-7.3-i*1.3,.035,1,daisyWhiteTrim);}
+box(chapterTwoStairs,1400,3.3,-14.1,5.5,.2,17.2,daisyWhiteCeiling);box(chapterTwoStairs,1400,-.2,-22.3,5.5,6.8,.3,daisyWhiteWall);
+const chapterTwoDoor=hingedDoor(chapterTwoStairs,1398.6,-22.1,2.8,2.9,0xe2e5df);chapterTwoDoor.root.position.y=-3.6;chapterTwoDoor.root.traverse(m=>{if(m.isMesh)m.material=m===chapterTwoDoor.leaf?daisyWhiteWall:daisyWhiteTrim;});
+sign(chapterTwoStairs,1400,-.2,-21.9,'BLOK 02 / ARSIP BAWAH',3.7,.40,0,'#e9e8da','#59645d');
+light(daisyRoom,1400,1.9,-9.5,0xe1dbc7,32,17);light(daisyRoom,1400,-.5,-13.6,0xd1d7cc,24,10);light(daisyRoom,1400,-.9,-18.7,0xc4d2d7,28,13);
+// The prologue still ends before the lower level; the existing guardrail remains.
+for(const x of [1397.7,1402.3])cylinder(chapterTwoStairs,x,.48,-6.15,.05,.96,daisyWhiteTrim);
+box(chapterTwoStairs,1400,.93,-6.15,4.7,.08,.08,daisyWhiteTrim);
+// A hinge must stay outside the static batch so its leaf remains independently movable.
+chapterTwoStairs.remove(chapterTwoDoor.root);batchDollPieces(chapterTwoStairs);chapterTwoStairs.add(chapterTwoDoor.root);
+
+// Project asset: faded hand-painted Daisy, generated with the built-in imagegen
+// tool from the game's own doll and the user's peeling-mural reference.
+// Prompt: blonde two-braid Daisy in blue dress, chipped vintage mascot paint,
+// full length, transparent pigment gaps, no text/background/frame/shadow.
+const daisyMuralImage=new Image(),daisyMuralTexture=new Ms(daisyMuralImage);daisyMuralTexture.colorSpace=vt;daisyMuralTexture.anisotropy=Math.min(4,lt.capabilities.getMaxAnisotropy());
+assetPromises.push(new Promise(resolve=>{daisyMuralImage.onload=()=>{daisyMuralTexture.needsUpdate=true;resolve();};daisyMuralImage.onerror=resolve;daisyMuralImage.src=DAISY_MURAL_URL;}));
+const daisyMural=new It();daisyMural.name='Daisy_Faded_Stairwell_Mural';daisyMural.userData.noGrip=true;chapterTwoStairs.add(daisyMural);
+const daisyMuralPaint=new ae(new _t(2.4,2.4),new Xe({map:daisyMuralTexture,transparent:true,opacity:.73,roughness:1,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1}));daisyMuralPaint.position.set(1398.8,1.5,-22.135);daisyMuralPaint.rotation.y=0;daisyMural.add(daisyMuralPaint);
+const daisyMuralWords='kita seharusnya tidak bertemu secepat ini, ayo bermain!';
+const muralWordsCanvas=document.createElement('canvas');muralWordsCanvas.width=1536;muralWordsCanvas.height=768;const mw=muralWordsCanvas.getContext('2d');mw.fillStyle='#5e615b';mw.textAlign='center';mw.textBaseline='middle';mw.font='600 112px Georgia,serif';['kita seharusnya','tidak bertemu','secepat ini,','ayo bermain!'].forEach((line,i)=>mw.fillText(line,768,112+i*170));
+// Small gaps in the painted letters reveal the existing plaster underneath.
+mw.globalCompositeOperation='destination-out';let wordSeed=9021;for(let i=0;i<1200;i++){wordSeed=(Math.imul(wordSeed,1664525)+1013904223)>>>0;const x=wordSeed%1536;wordSeed=(Math.imul(wordSeed,1664525)+1013904223)>>>0;mw.fillStyle=i%4?'rgba(0,0,0,.20)':'rgba(0,0,0,.5)';mw.fillRect(x,wordSeed%768,1+i%5,1+i%3);}const muralWordsTexture=new Ms(muralWordsCanvas);muralWordsTexture.colorSpace=vt;muralWordsTexture.needsUpdate=true;
+const daisyMuralText=new ae(new _t(2.65,1.7),new Xe({map:muralWordsTexture,transparent:true,opacity:.77,roughness:1,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1}));daisyMuralText.position.set(1401.05,1.5,-22.134);daisyMuralText.rotation.y=0;daisyMural.add(daisyMuralText);
+
+interact('daisy',1400,-4.8,'amati mural di bawah tangga',()=>{subtitle('“'+daisyMuralWords+'”',7);He.whisper(0,.10);},{marker:false,radius:2.2});
+
+// Continuation after the existing service stairs: two descending vents and a machine bay.
+const extendedChase=new It();extendedChase.name='Jalur_Ventilasi_Bawah';pursuitRoom.group.add(extendedChase);
+const chasePassages=[],chaseBlockers=[];
+const chaseMetal=new Xe({color:0x69726d,map:textures.rust,roughness:.93,metalness:.15}),chaseFloor=new Xe({color:0x969b8b,map:textures.floor,roughness:.96});
+function chasePassage(a,b,width,height,vent=false){chasePassages.push({a,b,width,height,vent});}
+// Coordinates are new authored geometry, joined to the actual old landing (1820,-68.4,-2.4).
+chasePassage([1820,-68.4,-2.4],[1820,-76,-2.4],3.2,3.5);
+chasePassage([1820,-76,-2.4],[1840,-76,-2.4],3.2,3.5);
+chasePassage([1840,-76,-2.4],[1840,-80,-2.4],3.2,2.1);
+chasePassage([1840,-80,-2.4],[1840,-102,-5.8],2.8,1.55,true);
+chasePassage([1840,-102,-5.8],[1840,-105,-5.8],3.2,2.4);
+const machineBay={minX:1838,maxX:1866,minZ:-117,maxZ:-99,y:-5.8};
+// Passage shells share one footprint with collision. Junctions are sealed at
+// their outside corners; openings are cut only where another space joins.
+const chaseFootprints=[];
+function buildChaseShell(){
+ const same=(a,b)=>Math.abs(a[0]-b[0])<.01&&Math.abs(a[1]-b[1])<.01&&Math.abs(a[2]-b[2])<.01;
+ for(const s of chasePassages){
+  const dx=s.b[0]-s.a[0],dz=s.b[1]-s.a[1],alongX=Math.abs(dx)>Math.abs(dz);
+  const cap=p=>{let n=0;for(const other of chasePassages)if(other!==s&&(same(p,other.a)||same(p,other.b))&&alongX!==(Math.abs(other.b[0]-other.a[0])>Math.abs(other.b[1]-other.a[1])))n=Math.max(n,s.width/2,other.width/2);return n;};
+  const ca=cap(s.a),cb=cap(s.b),low=alongX?Math.min(s.a[0],s.b[0]):Math.min(s.a[1],s.b[1]),high=alongX?Math.max(s.a[0],s.b[0]):Math.max(s.a[1],s.b[1]);
+  const start=(alongX?s.a[0]:s.a[1])===low?ca:cb,end=(alongX?s.b[0]:s.b[1])===high?cb:ca;
+  chaseFootprints.push({minX:alongX?low-start:s.a[0]-s.width/2,maxX:alongX?high+end:s.a[0]+s.width/2,minZ:alongX?s.a[1]-s.width/2:low-start,maxZ:alongX?s.a[1]+s.width/2:high+end,vent:s.vent,height:s.height,source:s,
+   floor:(x,z)=>s.a[2]+(s.b[2]-s.a[2])*clamp(((x-s.a[0])*dx+(z-s.a[1])*dz)/(dx*dx+dz*dz),0,1)});
+ }
+ for(const bay of [machineBay,rescueBay])chaseFootprints.push({...bay,height:bay===machineBay?6:4,vent:false,floor:()=>bay.y});
+ const inside=(r,x,z)=>x>=r.minX-.00001&&x<=r.maxX+.00001&&z>=r.minZ-.00001&&z<=r.maxZ+.00001;
+ const sorted=a=>[...new Set(a.map(n=>+n.toFixed(5)))].sort((a,b)=>a-b),xs=sorted([...chaseFootprints.flatMap(r=>[r.minX,r.maxX]),...chasePassages.flatMap(s=>[s.a[0],s.b[0]])]),zs=sorted([...chaseFootprints.flatMap(r=>[r.minZ,r.maxZ]),...chasePassages.flatMap(s=>[s.a[1],s.b[1]])]);
+ const cells=new Map(),batches=new Map();
+ function quad(a,b,c,d,mat){
+  let out=batches.get(mat);if(!out){out={positions:[],uvs:[]};batches.set(mat,out);}
+  const floor=Math.abs(a[0]-c[0])>.001&&Math.abs(a[2]-c[2])>.001;
+  for(const p of [a,b,c,a,c,d]){out.positions.push(...p);out.uvs.push((floor?p[0]:p[0]+p[2])*.24,(floor?p[2]:p[1])*.24);}
+ }
+ const at=(i,j)=>cells.get(i+','+j);
+ for(let i=0;i<xs.length-1;i++)for(let j=0;j<zs.length-1;j++){
+  const x0=xs[i],x1=xs[i+1],z0=zs[j],z1=zs[j+1],cover=chaseFootprints.filter(r=>inside(r,(x0+x1)/2,(z0+z1)/2));if(!cover.length)continue;
+  const cell={i,j,x0,x1,z0,z1,cover,floor:(x,z)=>Math.max(...cover.map(r=>r.floor(x,z))),ceiling:(x,z)=>Math.min(...cover.map(r=>r.floor(x,z)+r.height))};cells.set(i+','+j,cell);
+  const f=(x,z)=>[x,cell.floor(x,z),z],c=(x,z)=>[x,cell.ceiling(x,z),z],floorMat=cover.some(r=>r.vent)?chaseMetal:chaseFloor;
+  quad(f(x0,z0),f(x0,z1),f(x1,z1),f(x1,z0),floorMat);
+  quad(c(x0,z0),c(x1,z0),c(x1,z1),c(x0,z1),cover.some(r=>r.vent)?chaseMetal:mats.black);
+ }
+ function edge(cell,neighbor,a,b){
+  const [ax,az]=a,[bx,bz]=b;
+  if(!neighbor){
+   // The first segment joins the existing stair landing, rather than a wall.
+   if(Math.abs(az+68.4)<.001&&Math.abs(bz+68.4)<.001&&ax>=1818.39&&bx>=1818.39&&ax<=1821.61&&bx<=1821.61)return;
+   quad([ax,cell.floor(ax,az),az],[ax,cell.ceiling(ax,az),az],[bx,cell.ceiling(bx,bz),bz],[bx,cell.floor(bx,bz),bz],cell.cover.some(r=>r.vent)?chaseMetal:mats.wall);return;
+  }
+  if(cell.i>neighbor.i||(cell.i===neighbor.i&&cell.j>neighbor.j))return;
+  // Headers seal changes in ceiling height while leaving the passage below open.
+  for(const height of ['ceiling','floor']){
+   const a0=cell[height](ax,az),b0=cell[height](bx,bz),a1=neighbor[height](ax,az),b1=neighbor[height](bx,bz);
+   if(Math.abs(a0-a1)<.015&&Math.abs(b0-b1)<.015)continue;
+   const p=[ax,Math.min(a0,a1),az],q=[ax,Math.max(a0,a1),az],r=[bx,Math.max(b0,b1),bz],s=[bx,Math.min(b0,b1),bz];
+   quad(p,q,r,s,chaseMetal);quad(s,r,q,p,chaseMetal);
+  }
+ }
+ for(const cell of cells.values()){
+  const {i,j,x0,x1,z0,z1}=cell;
+  edge(cell,at(i-1,j),[x0,z0],[x0,z1]);edge(cell,at(i+1,j),[x1,z1],[x1,z0]);
+  edge(cell,at(i,j-1),[x1,z0],[x0,z0]);edge(cell,at(i,j+1),[x0,z1],[x1,z1]);
+ }
+ for(const [mat,data]of batches){const geo=new rn();geo.setAttribute('position',new sn(new Float32Array(data.positions),3));geo.setAttribute('uv',new sn(new Float32Array(data.uvs),2));geo.computeVertexNormals();geo.computeBoundingSphere();const mesh=new ae(geo,mat);mesh.name='Chase_Connected_Shell';extendedChase.add(mesh);}
+ extendedChase.userData.shellRevision=1;
+}
+

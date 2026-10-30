@@ -1,0 +1,7 @@
+newmtl Metal
+Kd 0.30 0.36 0.35
+Ns 80
+
+newmtl Wood
+Kd 0.58 0.39 0.23
+Ns 35

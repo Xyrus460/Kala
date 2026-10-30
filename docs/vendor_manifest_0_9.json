@@ -1,0 +1,2411 @@
+{
+  "revision": "0.9.0",
+  "sources_verified": "2026-10-26",
+  "files": [
+    {
+      "path": "assets/vendor/kenney_nature/bed.glb",
+      "size": 19108,
+      "sha256": "ed064d4d9e6cf0c87f9146cb38a652d0df5427b60d0486fed190ab74d9510df4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bed_floor.glb",
+      "size": 10688,
+      "sha256": "a59c8878186ab180f43e55249184b5c8e6af7d6501f908898202ac14c474a05f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_center_stone.glb",
+      "size": 5076,
+      "sha256": "f3681603a3d6523f8298da7d4c8d00e653c6028136c3427af07952fa3ca10519"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_center_stoneRound.glb",
+      "size": 5080,
+      "sha256": "ec0e73f593a3230b9f10bfe69dec5e95c8c031f1a1a81e1a308501ef3a70e68c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_center_wood.glb",
+      "size": 5480,
+      "sha256": "ed9ede934d5be5737863713f4648d8ffaca48038d299442a2ae2c3a2b6b79984"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_center_woodRound.glb",
+      "size": 6280,
+      "sha256": "382c95860d1805457a77e43ae1e47cc77d7a05cb5b1921e5e0f44f6627d0e11f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_side_stone.glb",
+      "size": 11408,
+      "sha256": "2da6236082152f843a29393225be8bbbd28abacf597acc35704c0bb393bc4127"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_side_stoneRound.glb",
+      "size": 13540,
+      "sha256": "26554af65f17af00b12246aa950f267fd940cd0b3973314ee767f6a458687005"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_side_wood.glb",
+      "size": 10604,
+      "sha256": "3857c2a286d236375dbae209897884eebc379d18e4af39ee8414f2d9511e2c49"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_side_woodRound.glb",
+      "size": 13460,
+      "sha256": "29a2bd3dc9cf5bf3c9354323a3551ad98a279ad785faa8e22152a313cc4f65cd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_stone.glb",
+      "size": 17708,
+      "sha256": "b8b311f525ad616fcdebb6463db8b0c7710af58eb45308b54c08bcb290a2315e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_stoneNarrow.glb",
+      "size": 17724,
+      "sha256": "ea011dbaa2926013456c001ac93d24be07c2b1bed98fe5b24aae372f68c5ff24"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_stoneRound.glb",
+      "size": 22552,
+      "sha256": "0b2254c5eb59a5fac2c7185cdc9af8efb941a31f0c0fb5a3fabaeb60c0108b41"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_stoneRoundNarrow.glb",
+      "size": 22564,
+      "sha256": "b29d3c2a235861651296e5fb4be6bde4f17b3206d452a83cdafe6e4d90dcffda"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_wood.glb",
+      "size": 15692,
+      "sha256": "3da4c208b0f72b7f2ba42db521b62ec4b0278050c75256a6982c40d21aab5701"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_woodNarrow.glb",
+      "size": 15708,
+      "sha256": "df46d1ba2ae557f3c69850c4faf03bcd16786fff305bce772f5b260e50def351"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_woodRound.glb",
+      "size": 21192,
+      "sha256": "3b8593e6f50ae78f0f3f5d51ef5ac4751808fd5cbd462f35d09bbde5388f1034"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/bridge_woodRoundNarrow.glb",
+      "size": 21204,
+      "sha256": "fbd1bfc4601b7b195861ca85cc9d1e7a36f87d6178cdefb0aa887b1d2fe41c24"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cactus_short.glb",
+      "size": 8844,
+      "sha256": "81ac9fc4c66eacceaf4aebcb6df3468ea450a2f5081151bb11400282efbc51bd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cactus_tall.glb",
+      "size": 9668,
+      "sha256": "d43a1aca5952e1f8a104d64a0edfec09c39f15102ca6bdc531460dd5a2c53d25"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/campfire_bricks.glb",
+      "size": 10220,
+      "sha256": "ecdca761c6c07ee417261140d5449872b7f51f3671df2d536e2a03b65480563f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/campfire_logs.glb",
+      "size": 9284,
+      "sha256": "98d87cdcf9095b94fd348d0946e911dd4ca6c0956bac3318cfd2b0030b86055a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/campfire_planks.glb",
+      "size": 8148,
+      "sha256": "0d26e842f7f5cb607ad37205e930822656b7c6ba570f9d0ba6b039cea90f8ab7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/campfire_stones.glb",
+      "size": 17344,
+      "sha256": "54869db23243a3f4905bc00bd4cd93b1037b28556ab3ef93e7a893a093791e35"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/canoe.glb",
+      "size": 15780,
+      "sha256": "ad9c7a315f55accbce8d1ee3dc853f919f01f97ab4e3096bb235d1815aed6941"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/canoe_paddle.glb",
+      "size": 3952,
+      "sha256": "7f8e0bc5beacfa1e4ae12f942ab045b1f7a13a04b497859f749bf7999b99d0bd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_block_rock.glb",
+      "size": 2776,
+      "sha256": "2f31de8502288d6adcdae4d5605cfe65d4bcd4369dd0decd116c2615b9d3d01f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_block_stone.glb",
+      "size": 2780,
+      "sha256": "5c73f45e20848747b38695ba155882f8645630fb47f7d4f80ab565786fcf65a3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockCave_rock.glb",
+      "size": 5432,
+      "sha256": "2c373a596840a4f3bffa1aba7a93d7da9d2aa1dded54f7a9966e4e4b3fce7d43"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockCave_stone.glb",
+      "size": 5436,
+      "sha256": "f02a4190d8428722f00583dc751168c84fb1227bac35c517f2dcad58cb327c7a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockDiagonal_rock.glb",
+      "size": 2564,
+      "sha256": "32b61e963ba99695624f213e4d893c5d2ac028dd831ba65bcd220ee5a6006114"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockDiagonal_stone.glb",
+      "size": 2568,
+      "sha256": "62835e048b252fc2283352ef301b671e3f77f5ca511ffc5b6c90a5eac6869c54"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockHalf_rock.glb",
+      "size": 2788,
+      "sha256": "a3d29368524dd6968d5920f1aba2bdf6e6d189ccc60123f5d036c56653c31c5e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockHalf_stone.glb",
+      "size": 2792,
+      "sha256": "fa932c3107dcabebafb005f1aeefea5bddb585909320ac7b2781a35caa0b187c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockQuarter_rock.glb",
+      "size": 2796,
+      "sha256": "748f3f4c8695e46567819f3ae73ba53bbc7db827254bc68f9fca27f01f481666"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockQuarter_stone.glb",
+      "size": 2800,
+      "sha256": "991afa18fbfce25d4b1b758b7266c74e14793351a7875f00be01874b00bc7abb"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlope_rock.glb",
+      "size": 6720,
+      "sha256": "82fe2e0477c7ce2c5994435f44074022cb2a36f56ff40bd34598cbfc87286885"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlope_stone.glb",
+      "size": 6724,
+      "sha256": "88fbc6e54df6bff3793dd4b296471173220e0f88800c7cb744ce9747150a4c5b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlopeHalfWalls_rock.glb",
+      "size": 8880,
+      "sha256": "95a25398990b978071d461998c442c034feb517ecea6538e88ed2ee957a2c3e6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlopeHalfWalls_stone.glb",
+      "size": 8884,
+      "sha256": "afc1db3ed3cde8d7bb5669f220ea4e6998b59414208bc046e6356829fac581a0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlopeWalls_rock.glb",
+      "size": 8900,
+      "sha256": "055776add47ad3a13c53900a728ace7533c02f7afa27fdb57557ca117d44a55d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_blockSlopeWalls_stone.glb",
+      "size": 8904,
+      "sha256": "cd2c3d5ce44db2705146b0992ba494ab5d625136ff4e10dab6b94f67f600e3a6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cave_rock.glb",
+      "size": 5480,
+      "sha256": "2d83296b0166ad0e980152ad4f45b4e45349e932a6b6c2adbe7eb606a6472d8d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cave_stone.glb",
+      "size": 5484,
+      "sha256": "8795c3d3bf3311d30403c10a8d1225d1e2075535554dab8a5235146668168c5c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_corner_rock.glb",
+      "size": 2360,
+      "sha256": "4a22b80e18ac1798035867b7ff6e4d78161fa25b507112c903ad6f80765cf181"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_corner_stone.glb",
+      "size": 2364,
+      "sha256": "3cd59838e68f195f42b107935f7930e5bf74affe2b9d8d7e525b62188191a921"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInner_rock.glb",
+      "size": 5008,
+      "sha256": "fd04f7428e961511dc3fba4ee5127f1a048b89dcbd65f88578579c2b134ac44c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInner_stone.glb",
+      "size": 8568,
+      "sha256": "6b4cbd2f5d1de770ba862f9d7a405ea6ef382628da5593ea6fbf9ec3b8216f3d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInnerLarge_rock.glb",
+      "size": 4296,
+      "sha256": "03b7038dfc6449f646e789819014f3a26548a64ef42d028979c00df949c5d49f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInnerLarge_stone.glb",
+      "size": 4300,
+      "sha256": "3f8956c7c3c9cad4a93d54f9fed1aac138e32767b3d1811ca0056331007237bf"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInnerTop_rock.glb",
+      "size": 7608,
+      "sha256": "2eab4f506d45ee35da03da6ab222d90108c96b267edc8d969262a4c7a42008f9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerInnerTop_stone.glb",
+      "size": 7612,
+      "sha256": "fc18f8195c2850731bec89b99b0102f625bab539ef4fdd9dee6d618986125abf"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerLarge_rock.glb",
+      "size": 2376,
+      "sha256": "05a24065218db62977cc66032348213f6ab8e00ab6b7e359600f8c261e33704c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerLarge_stone.glb",
+      "size": 3296,
+      "sha256": "14f4277abed51493896bbf223fbc9cda9d1813a6b34a6e6ccb859e00ac1dd38a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerTop_rock.glb",
+      "size": 3108,
+      "sha256": "1cebec53101f64332d911dfffb752b9d465224e7a2f91a25f8532fa749fee1b6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_cornerTop_stone.glb",
+      "size": 3112,
+      "sha256": "cb008d764f7196fa6240942413d894cb19deee0d38dfe343e5d7984b16df8522"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_diagonal_rock.glb",
+      "size": 4296,
+      "sha256": "648bdb3118cda8900bad55e281f56c245a1a0252cc1c0e1bf4fa085d8ef75a0b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_diagonal_stone.glb",
+      "size": 4236,
+      "sha256": "6c6f93c685053d2dc50e2befa45fc45e3c5beac1c35b693f277056a990e8850c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_half_rock.glb",
+      "size": 5316,
+      "sha256": "ceeb985b16171ac5b30794239de27779ad0b39f389f8b8a8b1e03f1f89961995"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_half_stone.glb",
+      "size": 5320,
+      "sha256": "b78e96f149d349b11cea4d8cba50b8e1fd8a9e45d459d2c6cd3f3138b465772f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_halfCorner_rock.glb",
+      "size": 3128,
+      "sha256": "66bf0d002431f55e99aad464862c133420b3e4b78cf878091c7b5d94ed371ec9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_halfCorner_stone.glb",
+      "size": 3132,
+      "sha256": "0f0b76f0e219eecc81f0f27b8ce46c22502e8c66fb766f68d4b0b2d1991cb76f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_halfCornerInner_rock.glb",
+      "size": 8016,
+      "sha256": "aaa3e59a48e56547199c212037d0ee06fa5de3a58a9ac25355c8932bc7b096fe"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_halfCornerInner_stone.glb",
+      "size": 8020,
+      "sha256": "5fb3e4e213d082d829eb12486f5d28f373086fec74dce65056d4863f846c7fcf"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_large_rock.glb",
+      "size": 3560,
+      "sha256": "f9bf79cd3a76bbe11f4887053655585e467e14f2528678215a820896669e4e8e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_large_stone.glb",
+      "size": 3564,
+      "sha256": "d63595d0a8727a7a339dd315117fbb85e000224c0add26b6cc907054df046dac"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_rock.glb",
+      "size": 3556,
+      "sha256": "64b555b394b4312938ccd389862d5c01beb3fc417100aa41bb1e5e96a9889de0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_steps_rock.glb",
+      "size": 15952,
+      "sha256": "f290e67a836ec459efcedb013f67258c2043fec128f07d6a16454e8505b7530f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_steps_stone.glb",
+      "size": 15956,
+      "sha256": "38dd9531a716738f5204e6f523d1bc2711b618daf3b34b02e6a39ff1db787793"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_stepsCorner_rock.glb",
+      "size": 17544,
+      "sha256": "5a44b8d6be16b43e007818bb55e9558aac980caae30b6b3dfb20a24c6cc7d5d3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_stepsCorner_stone.glb",
+      "size": 17548,
+      "sha256": "df0fe800aa10384ddf961896dc07e17f7ece73783a728708e458656b793e9ee2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_stepsCornerInner_rock.glb",
+      "size": 15632,
+      "sha256": "e076973baeedd79dc24fe90610978cde5805d04bc629b9034b4bb34d80ded6af"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_stepsCornerInner_stone.glb",
+      "size": 15636,
+      "sha256": "ff81f319fc30783eced2f60bf1022389d51212de251bb7f4667bf0520e60fa3b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_stone.glb",
+      "size": 3560,
+      "sha256": "226a8da66da4908835bcf1b6d8c51ed84ce2e546401def685ba491c65c7c71f7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_top_rock.glb",
+      "size": 5312,
+      "sha256": "8c3b4d37fad0bacf39d0315a51850dfe9c55eea03de74854e3d92ce4157bbebb"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_top_stone.glb",
+      "size": 5316,
+      "sha256": "0327759fe95f6be7e263a2f07bf72f212a8df3e16ef1240643f5641a76ec0ec7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_topDiagonal_rock.glb",
+      "size": 6220,
+      "sha256": "005c3bf817333dc2e5e6e1bc08439641a8340ebb93f637208b6c1b00878f3b2e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_topDiagonal_stone.glb",
+      "size": 10540,
+      "sha256": "866d18b509592e88cba8b0e9414727e17c3d615f1a8731a241258a70fde417f4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_waterfall_rock.glb",
+      "size": 4488,
+      "sha256": "08063b24498cae385c204e9038a72f0dd438fdfa29ecf106a0df5e656b7edff6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_waterfall_stone.glb",
+      "size": 6100,
+      "sha256": "a246a52a974b25cd530909c4a512693515aad5f3493983a4c1050050ce4a0093"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_waterfallTop_rock.glb",
+      "size": 7076,
+      "sha256": "c5f7b299f3a8ec16c138bd962eace461f06a882f3614c396d3ba8020f1a8bbe6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/cliff_waterfallTop_stone.glb",
+      "size": 7508,
+      "sha256": "92ea675e7d42f81f1b4e185e8caf3518e33a7ef5044198d6a02641a4bf19fad7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crop_carrot.glb",
+      "size": 12664,
+      "sha256": "2a3641c609dd837a4feebb4f5c95d4cd43c3046e800acd416f4f6a3b923ba9d8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crop_melon.glb",
+      "size": 13328,
+      "sha256": "4296c5fc07c4d0707ab11b9d97d2978132f4bf525a00ccd20e463fdcf04a5e5f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crop_pumpkin.glb",
+      "size": 10840,
+      "sha256": "5b4878c5996033629419c26ac32153ce8ac06bbbdac98e4fa8a5cbab98f78077"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crop_turnip.glb",
+      "size": 14308,
+      "sha256": "5e121c6042742497ed02081a7c62fc80aec2191f04e22a57d81d02130689f71d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_bambooStageA.glb",
+      "size": 22092,
+      "sha256": "7bafbd69c78b1f6b92fe72e8fd6d1b6ea4b25d6af141c0baa85c27b60aa34e41"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_bambooStageB.glb",
+      "size": 40144,
+      "sha256": "238c4cbeedf747dea96d579cf63301d35bb8709310f0405596c8f988dcc366e6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_cornStageA.glb",
+      "size": 9076,
+      "sha256": "085e2f0501f0f39acc10762cf46449fd962d9ac0630e7fd128cf9aa4a1edcfb5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_cornStageB.glb",
+      "size": 9780,
+      "sha256": "509cec80fa70356fd65cac01eaf227bc775261ed6f3af426c64eea9b20e7d05c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_cornStageC.glb",
+      "size": 11960,
+      "sha256": "deb8b4b74247fd8dc8834cf0a954c818c76c5da9564b244a6354ec4ab65da059"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_cornStageD.glb",
+      "size": 29316,
+      "sha256": "d90d9cbba85e99526b254adee638495f914480831ab41d00807378c004c112c3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtDoubleRow.glb",
+      "size": 7560,
+      "sha256": "b5c330d81a4efe0944caf5f1d1dd0c0d50227c93f2a4a57ec2425d2c9b7a2d84"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtDoubleRowCorner.glb",
+      "size": 5396,
+      "sha256": "2262ded26251bba82bd056e83dec3c66931d6f90cc677fce2b8f8f50048a5591"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtDoubleRowEnd.glb",
+      "size": 6248,
+      "sha256": "997b8cc31495742e1ab278bcbf4f49afb4167c2aa5d5cc18422bb044f9d3b27e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtRow.glb",
+      "size": 4712,
+      "sha256": "a36752160e42703c0539386bf07260984796dd07674d322ae18c1fc5201b59b2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtRowCorner.glb",
+      "size": 3248,
+      "sha256": "e1fbad7df11b2e4120df8f4859c4a2278965451dc01bc91b4efd40d3c8c2f99b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtRowEnd.glb",
+      "size": 4064,
+      "sha256": "9c65aac1b350fa3bb7a05d651ef1e21961cda0b71706f4d6882c03ba892eb62d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_dirtSingle.glb",
+      "size": 4196,
+      "sha256": "6d9df48fa8b691a949c053f56977e1134cd917ec7c8a936612d7fa1978dcce1d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_leafsStageA.glb",
+      "size": 7144,
+      "sha256": "f30d55780aa6668316a272eac8ea908e981d16fea7dc4fd1de4e68aa8170cee2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_leafsStageB.glb",
+      "size": 7768,
+      "sha256": "aea4fe9a7943e7b2b7df99dc4fa00b85e34d00ea9b8e1b144504cef25d77b98c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_wheatStageA.glb",
+      "size": 56228,
+      "sha256": "d8c690d473a230741cf4d03fa6a69a405f0ae6a246847a2a72e7f50dd5bebc08"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/crops_wheatStageB.glb",
+      "size": 30040,
+      "sha256": "589db4d6fe0bd7616c1f1c2f10a335704b2dad5d24638dc08a5b2e5334c68852"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_bend.glb",
+      "size": 16276,
+      "sha256": "3f46171bdfbc8878b59216102bf4ac67f7ca35e9b66420604199b3e305321fef"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_bendCenter.glb",
+      "size": 20016,
+      "sha256": "07963bccfd2f69aafdeb5165cfb0b20937cb390b9770a38c9b469ffd0f0dd745"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_corner.glb",
+      "size": 8644,
+      "sha256": "f37060de68c5680e518183d44e7ac498e0bfe7b04f3fe71e355d8a4670ef83f1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_gate.glb",
+      "size": 27652,
+      "sha256": "34d10d5620179b8a211a01eea837caa828c0782422f0b408e1a5838788888436"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_planks.glb",
+      "size": 7720,
+      "sha256": "2db68f60d24443dbeab05dedd92fcc665d0e21bd261c6a668ea9022a732a06a9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_planksDouble.glb",
+      "size": 11160,
+      "sha256": "0bbc8fe43f7a1d20de8ff2d687b5b08675beacb431e43ebbb0b1705b9c684f55"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simple.glb",
+      "size": 5712,
+      "sha256": "ecaf6c29532aa9fd305a8ef71df769d60748bd797f2eb1c63bdefc4edb8062a7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simpleCenter.glb",
+      "size": 8660,
+      "sha256": "dd2eba4993ee8f3777685ce09a2652a7af4e592604002188f2440da4217c85b5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simpleDiagonal.glb",
+      "size": 6688,
+      "sha256": "47529aa3517e4d785e7e5635c1347ab551273a70d094656ebcfbda4fe5167c8a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simpleDiagonalCenter.glb",
+      "size": 11064,
+      "sha256": "9b5cfd500250b7310f3cf94e1a395f6730d18bfa9239edc07ee44e12ef792ead"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simpleHigh.glb",
+      "size": 4300,
+      "sha256": "12fec55c302bdcfc7d67946e8c4bed8d96bcb2a8d42817c3021cc94b7272891e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/fence_simpleLow.glb",
+      "size": 4312,
+      "sha256": "f48ce73576b4976da6416f4b4c1e221cb4b617dba6f9f52affda283910f75755"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_purpleA.glb",
+      "size": 7112,
+      "sha256": "f6fc34c96a03420a74fe36d4c2d0ec88f15204fcad99cd1416c3c4ecb22e48c4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_purpleB.glb",
+      "size": 8084,
+      "sha256": "2afb10cd68a9a7b185fc46110be0da550ea2aef86ef9ac6b7339f217eb4b636a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_purpleC.glb",
+      "size": 7600,
+      "sha256": "beb85b66766c9943a89a5ee27114d3befe22569db9a6f0b5f8366b687f9c1e42"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_redA.glb",
+      "size": 7104,
+      "sha256": "171930b7789ddbf735af3745576b5393750beb9133b9ff4a444bb6bb2986c020"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_redB.glb",
+      "size": 8080,
+      "sha256": "1ed430a4ee2be9e86649e1ce22ec23162814a3f8c2ad133117315db19293fc16"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_redC.glb",
+      "size": 7600,
+      "sha256": "5a5c9c8572e8f56287ee1f5f836f98ac08e275f31325b4bc91d2832bc142ceb7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_yellowA.glb",
+      "size": 7120,
+      "sha256": "8a3b08cd2ca411c21f9c581d5bda651d78b13c50cba45ad8fa0389398ead6d1d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_yellowB.glb",
+      "size": 11256,
+      "sha256": "aaa8707779a5de59f881f80185bc507b35ec3fd5f23a39d6447ef61141dcd4f5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/flower_yellowC.glb",
+      "size": 7616,
+      "sha256": "4115c017390b3e157466a8719e9e2af6c5385505135e7012982b9410760ba9f3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/grass.glb",
+      "size": 11496,
+      "sha256": "260e41d3e5f2472492ed7b475c5b92a30b13ce2bad408535b5ff50574d4575e7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/grass_large.glb",
+      "size": 18504,
+      "sha256": "af49a595624abca7249824eeefb944d4baf974abeeb5b16110d175da3563d6cd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/grass_leafs.glb",
+      "size": 4608,
+      "sha256": "8bc4c0b17c2e64c34e1acbf7c4a2fd8c04cfcd7155328e61767887b2ced112c7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/grass_leafsLarge.glb",
+      "size": 13988,
+      "sha256": "a68b9b3d9639afaeb4ace840d5a8e3f21ffc4e8afc1eab15566500fbb2bee3e3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_grass.glb",
+      "size": 1576,
+      "sha256": "da741e8ab34ca70c0c85ccda21538558a798188db2f1e265885bcdd226a5cca2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathBend.glb",
+      "size": 4132,
+      "sha256": "9a0009dc7a8389f12a76ba6f3b793d3fe21d31148d6b8ffde7c10b85a73a7a62"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathBendBank.glb",
+      "size": 4308,
+      "sha256": "9455bde3c36450d5b9cca2e7e9958c83d70c3f20f058e88ec13757d2624d9667"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathCorner.glb",
+      "size": 3532,
+      "sha256": "704324699e7151e72d4d06bb782fbc4017c418a1c0d562c5d9bdc96c95e9c081"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathCornerSmall.glb",
+      "size": 3632,
+      "sha256": "d48127637fb555a2af23ef60928952de10c2adc67796dd8263c3a7e86a04706b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathCross.glb",
+      "size": 6404,
+      "sha256": "6638d277b1fa06912d7fe2617f25507c14dfa7a39b16211d73bf4ae6ca79bb2f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathEnd.glb",
+      "size": 5044,
+      "sha256": "2682ba6e407dd86227550fe1c4f5f4940d033e532140787a5d5838c4e5eca610"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathEndClosed.glb",
+      "size": 5824,
+      "sha256": "d260528d7bf288792f6e2dcb63be5eb25957cd92edd5dcb53e12295ea5e22358"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathOpen.glb",
+      "size": 1856,
+      "sha256": "bfa52db11cb99d784e47f144816b8ded6ad0c083790e8dd781de14790ff5fb22"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathRocks.glb",
+      "size": 8036,
+      "sha256": "2447aca8c95d4d3583111e696056b024cb42c43290f8b0e7731b6486fc85f234"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathSide.glb",
+      "size": 4124,
+      "sha256": "b2b71d110214958231ad3691ee491643b101b3329f83add48ce7c48d90be16d5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathSideOpen.glb",
+      "size": 4524,
+      "sha256": "4ae5f19361e3e8cacfe0940bd37802a85e46383a8f758ecae93e93b6542f67c1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathSplit.glb",
+      "size": 6012,
+      "sha256": "0b0aae1c5a4666f0dab57846349d5ff145d5c944ab4b2f4fbf44f232084d58c0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathStraight.glb",
+      "size": 5620,
+      "sha256": "86a1e88aaa028ccdfb98b6653c282c6aadb0fbccf9c4de00a834516b9bf79d37"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_pathTile.glb",
+      "size": 6624,
+      "sha256": "b169d96d4143d8dd00ef074b8beb5395d8743b73bbafb88506512c1270075b42"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverBend.glb",
+      "size": 5684,
+      "sha256": "26bc9c6cc1a9f6c0e9e6a430a92b655e53150dd6dea0085e76a3828d0fd92f86"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverBendBank.glb",
+      "size": 5692,
+      "sha256": "fe9a92785a74bf4c3b716a83b5bdddc2a28e4ca9266db8922d4d3f24ee3eaef1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverCorner.glb",
+      "size": 4844,
+      "sha256": "e6e1eece775ad0fd23bc60fe5d7094a792bef53de71e68790afac692f511edb9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverCornerSmall.glb",
+      "size": 4236,
+      "sha256": "fcf19878a611b57364e9dd4e9fd8b9f55bd6f9dd6334ccbf9dc437b70c3dc6ee"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverCross.glb",
+      "size": 7560,
+      "sha256": "dcea9a91eb3117162ea70dd7f8718c1df7490d2eb27ed0a94e0f8f0d27f14033"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverEnd.glb",
+      "size": 5464,
+      "sha256": "b04a26243915db0feb3037b3777396dcefc8377bf6fe7989277c4e278ec32d23"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverEndClosed.glb",
+      "size": 6920,
+      "sha256": "402150e81fa7b0a8b92baa7bce5bab48518e4b34a9aa07c542d17e9e912a8862"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverOpen.glb",
+      "size": 1852,
+      "sha256": "ee0965c137af0a584fd594e0b9b3692d268608fc476860bb4e89f83a818b19f7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverRocks.glb",
+      "size": 8884,
+      "sha256": "06e40c741da37f02070a9aca75e3ecb1051b3726dda4d5d4d1e3618abb4600de"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverSide.glb",
+      "size": 4544,
+      "sha256": "99d5d9f3d12fde4e34b7b341507dcb332bfc054351d4d01ccf35d8e9d0197155"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverSideOpen.glb",
+      "size": 5312,
+      "sha256": "3ed902b9f4c9c82049fb9fc7965fc0b7e42cf477b183845eab18da4208879e62"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverSplit.glb",
+      "size": 6804,
+      "sha256": "d91fdbc71e3ea97d33a011c36dc0e922319744041ea88e62504c736ac93e4e9c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverStraight.glb",
+      "size": 6044,
+      "sha256": "d1061c7ab8d883fb26177e7cc36b2564b0a437620465c24f1a29629423cda096"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/ground_riverTile.glb",
+      "size": 9120,
+      "sha256": "371ea7754e2869a9d1ae57261ef52aebf54ae8bd49f9b9f05dd006bfba6a758c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/hanging_moss.glb",
+      "size": 4776,
+      "sha256": "2124c2d038054f1ea89d470a6095d35c2fbdb2674916db93400ea6ed5f499cb0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/License.txt",
+      "size": 611,
+      "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/lily_large.glb",
+      "size": 8044,
+      "sha256": "c8f7080df0ae3166e9d33f523b66360c2ac7556dff36cc9c8ee78b6a676c7db2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/lily_small.glb",
+      "size": 5664,
+      "sha256": "38184c9eeb560acabd4d7f1d16852422df056edf0b318c97854c250e048cad3c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/log.glb",
+      "size": 14288,
+      "sha256": "8c8fe8f6adfc03a3c0cd6cb24961ff74be96c2da284d70322f05797d049972d6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/log_large.glb",
+      "size": 7924,
+      "sha256": "e7a92369062d491e5a31a163d390e07db04ee573605bbfa84c00660d18896b4c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/log_stack.glb",
+      "size": 10896,
+      "sha256": "90eaae4a01ba1f25c2f0c6d83087e4a7a8fac684f2452615245333968d118d68"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/log_stackLarge.glb",
+      "size": 17604,
+      "sha256": "58dc0ce3321b3b57f7b8c5aea47e1a212a5f462822af57a26f9ba5c4d48e65ab"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_red.glb",
+      "size": 6364,
+      "sha256": "843e2de43dce78920a5675a67bac4b72f500e6220315e713fe08381642cfc571"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_redGroup.glb",
+      "size": 14960,
+      "sha256": "29f02df0589dd2b09e8d2aff6a4662394dac5cfcf1fec701640dcbd6127e0802"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_redTall.glb",
+      "size": 6504,
+      "sha256": "d982f6c5dce9ca870132448034eced9e84573aeed87e9158e18a3a033124f810"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_tan.glb",
+      "size": 5804,
+      "sha256": "455cbacdcdac82cc20420c3f21eaba3ff2fbceadb2e13d35a39d52130dba5a80"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_tanGroup.glb",
+      "size": 14956,
+      "sha256": "2dc979485f164d7dce34329096271f44e0c9ea329c104251d94bcfbc8f8fe05e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/mushroom_tanTall.glb",
+      "size": 6500,
+      "sha256": "58d0078e531d6118c0cb39110c77fe3d564398379bb7f2e3f5f572321c0fc4ff"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_stone.glb",
+      "size": 12392,
+      "sha256": "06f2eb4f914df4dd419b7fb33e81059bc0b1a5b941a193b7c9f8ffd8851146c5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_stoneCircle.glb",
+      "size": 13100,
+      "sha256": "d3f2044acdaeb7100d82aca702207e9c2f198aa0f03b9aef79a714e3a4a563f5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_stoneCorner.glb",
+      "size": 10772,
+      "sha256": "50f977934adfc20bb70dc647a618a9227516391ac40bfa26e07b4207c5ae222e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_stoneEnd.glb",
+      "size": 8996,
+      "sha256": "0b07fd6ca7e5af705fa3c2e47e4a0453d8a8bdd8ca1d92ccbee8ccc9f5bfb22b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_wood.glb",
+      "size": 6448,
+      "sha256": "395f1d5972484f0ba96ef27446cc986b02245b1166c8681e566a3697f6a97688"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_woodCorner.glb",
+      "size": 6444,
+      "sha256": "0eeda5d33db00f64bab2f192379a5feaac116f9e9ced1b8e3c88a773f393e8c3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/path_woodEnd.glb",
+      "size": 5164,
+      "sha256": "eeab39b94ee4f25f20abeb3932493e9a44eb6e5c10b77121cb97d90b8a028325"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bush.glb",
+      "size": 4396,
+      "sha256": "ae7b1beb39e242b13f5f29e3ec23ef21034b814f82297b8aa00a9bf4e1b09590"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bushDetailed.glb",
+      "size": 10172,
+      "sha256": "2e0487020d68ccf664435db9d829c78ae00e6d2785ee3ec10b9f89cc70a10406"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bushLarge.glb",
+      "size": 6436,
+      "sha256": "10e1d9fbf29d96d1d1a56fb2ce25ae66537505101759229afe01ae22c6c45e02"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bushLargeTriangle.glb",
+      "size": 4564,
+      "sha256": "098af3618e20e5a2cb5f6e24a7c67c0a80663f989137d86430bc9e2b1b2d52e4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bushSmall.glb",
+      "size": 3212,
+      "sha256": "a9620a7d1fb165ae68d323676f80dbb2a9e3aafb21110d18d18d90b07026b91d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_bushTriangle.glb",
+      "size": 3956,
+      "sha256": "e944e19adda28436fdc63d77019aa490e6591358659a14abea8aa654181fc417"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_flatShort.glb",
+      "size": 3936,
+      "sha256": "5885f6bb6ce004eb7ccc887fd30b7671492a94be76ffeb1e64c07c47d6b7bae1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/plant_flatTall.glb",
+      "size": 3480,
+      "sha256": "b192523736f32754788de4dc7a5dcf30a58322b260ec8969120c91432a10b633"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/platform_beach.glb",
+      "size": 13204,
+      "sha256": "4fa4a12535983be876098841c2114bfd755a590b0db84251f44a96cbd224bfe5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/platform_grass.glb",
+      "size": 12568,
+      "sha256": "74105fc9912c97e7809264dd69621863e0ddfd6ab92136f05918eda436ee898b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/platform_stone.glb",
+      "size": 13632,
+      "sha256": "bfa5a35bbdc94d5719c3e98b1c7688fa8777e2cb6599a3df579d428f4973dc70"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/pot_large.glb",
+      "size": 6168,
+      "sha256": "57e60214bc6ab1dc3764c9ffe80091ff45f2bfd49fbc313c1b68dcaab1537aef"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/pot_small.glb",
+      "size": 7004,
+      "sha256": "1141d9e16099c2103f1a177de0cae4ea979a3246439e33074923e4cfe3098df8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeA.glb",
+      "size": 7552,
+      "sha256": "6dd15390fd96501dcd1454765a17ba61dbbd8d47705dfe5149c8dd92b353ce25"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeB.glb",
+      "size": 8560,
+      "sha256": "caa8b025833d4dabf6d98fe2e96cf2fbd886693ac990df0db75f9d827194374b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeC.glb",
+      "size": 7004,
+      "sha256": "23aee8b727adeaf260207af3e0615dc69aa766c6d87de1d44cbc8c2711d74dd1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeD.glb",
+      "size": 7992,
+      "sha256": "e4fefd8d8d7deab42be61bd222bcd088330012f0025789146b81f25a46095ffd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeE.glb",
+      "size": 6464,
+      "sha256": "8207ce8100b7c756e55e67bee030edadeb332d7d72220027b5818f1987039def"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_largeF.glb",
+      "size": 7516,
+      "sha256": "4222107db4a47471494bdbf1eb2ad0ff297628afbcb7c392618e5742d831e0d4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallA.glb",
+      "size": 3044,
+      "sha256": "df9fff9d711e61370e8df0caa2514c89b8f8a8dc6c6fafaf4eb2ec79c5ae07c1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallB.glb",
+      "size": 3528,
+      "sha256": "11b26bc0a12e971a3b69df1401e530e24432d528c262df94b99c412e7f372763"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallC.glb",
+      "size": 3044,
+      "sha256": "5cbc0a805f275771baf19165c7132288e4834ba97ec0fb16ce9cc37e1c2522e2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallD.glb",
+      "size": 4012,
+      "sha256": "d5a09ec917231fbaf5a0d6868e1c0320fd4cb139851dcefbe9e3794eec73ee6c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallE.glb",
+      "size": 5932,
+      "sha256": "e6e03586ca03316bab707ced869f5d4fa50dccc67dd056e94b667fc1e929c05c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallF.glb",
+      "size": 5700,
+      "sha256": "51099549e8dd6a68db2afe2e5c514a8601ee59e11766d5975c540314f9b7deb8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallFlatA.glb",
+      "size": 3300,
+      "sha256": "40ceafacfaabb0f04f93688fd8696c1464c65512bef219e1459c1f238cbbbe21"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallFlatB.glb",
+      "size": 3056,
+      "sha256": "83e4af8ef8050974de45e255cb7a6959116d77174d6931fd95b219b74e23fb8d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallFlatC.glb",
+      "size": 4508,
+      "sha256": "dc889263e79ab77a147d6b413e1d099de00c4dab10eb8fbe284e3c95ce715120"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallG.glb",
+      "size": 4204,
+      "sha256": "d7135a8763b685dcc8c6c839c668d8e9efbfd25b203d878d66e0198dc28fa30f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallH.glb",
+      "size": 6200,
+      "sha256": "c798f7445350e8d79710a1d3e344b9ce4d4bcff5416a50268781d5121a353a7f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallI.glb",
+      "size": 5120,
+      "sha256": "f7bbf2f4efbfe63977c4c6520762143ede95c63bff6484b9719db5e666a618e4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallTopA.glb",
+      "size": 5220,
+      "sha256": "758063d1f535da58c6a0d40416b011b268e5f9f888bbb7eddef0a31ba37e30b5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_smallTopB.glb",
+      "size": 6660,
+      "sha256": "134e2a324190f6093b80c05fb3e1b6c46681d6462953de99bb54bf4c8a7665c6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallA.glb",
+      "size": 12072,
+      "sha256": "88250f236a3b75f8b55c1d8afb6af020f8a91b1e81f9fb51f7ef513420d45a2d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallB.glb",
+      "size": 14060,
+      "sha256": "b3fb7899c317a3b026fa6ced0e1eaaa596d9dd0d95efeacfb5e05d25322f19b9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallC.glb",
+      "size": 5184,
+      "sha256": "87943b8b0d244ec9832d5dca9bf3cee2ab62aaa81797749f21a972f85c1f3be4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallD.glb",
+      "size": 5132,
+      "sha256": "c0c6965e87e81cda1524110243f158aba8fbd0218af74432fb352fe4f647cb78"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallE.glb",
+      "size": 5192,
+      "sha256": "21f135fa85c5fde5f1136ceefe7f9c9103f292109a5b1d77a6675e97d7a782fb"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallF.glb",
+      "size": 5608,
+      "sha256": "823cecdfa45e9b23c608a4b3ade9e699e0dea0e0141dde4e757fe97ad5850c10"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallG.glb",
+      "size": 6772,
+      "sha256": "831683e6f920d0d6156132f73a1078ed4d0470bc3e862eff4436763898c68a96"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallH.glb",
+      "size": 7792,
+      "sha256": "bc1db23172176726c4f9fac55c1114a7619fb414e4ca62f242bc48a89d7a9300"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallI.glb",
+      "size": 5584,
+      "sha256": "653ac732b440346ad7addd65e92caa54e34e150d78f0ea6fec8863a07cdb9e4c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/rock_tallJ.glb",
+      "size": 5424,
+      "sha256": "3ddaae3745f5f99b335c7888bc9ee9a8fc4da28ddb206ec61a518d90e618a051"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/sign.glb",
+      "size": 5040,
+      "sha256": "c658c21672ecd63c5d3e53f06f875d68e6509edb1ab7e3b75374df7c61e7dd0c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_block.glb",
+      "size": 11252,
+      "sha256": "5caa9f4d0ede962d36f78355b73e59c88e4c978ba4ef44e6df6e52d484c60bac"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_column.glb",
+      "size": 10472,
+      "sha256": "5d7f6c8bce8d1dc7ee62b1841376cda331c4359acfa2b9a11dd7e78c14ea9dbb"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_columnDamaged.glb",
+      "size": 8824,
+      "sha256": "ce8f21c31ec16ad67759dd171860bd85fd57fc3857963610c4ed8a39c8d91b95"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_head.glb",
+      "size": 14704,
+      "sha256": "02a0c58e713176004f9054f6a6181b965e2cc25ff7c77f5d17458b00c270b60e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_obelisk.glb",
+      "size": 4416,
+      "sha256": "e18013044ad6453a1850226be29f63c37d67e0002141f5f6a4d14a46bde69e00"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/statue_ring.glb",
+      "size": 6568,
+      "sha256": "5c62e4165f7a76436faa0b20e98b47d0a9e5021dcbf2a0eef0cdf0912180f02c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeA.glb",
+      "size": 7124,
+      "sha256": "fe486a13775e833b1aca99413a89e013f300841de80f42ecd44ceaf43720f17b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeB.glb",
+      "size": 8132,
+      "sha256": "2b6b96b701b42d96efaa92ad4aba0cc8d23417f1bc07f0e996ee1a5acd52b4b8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeC.glb",
+      "size": 6580,
+      "sha256": "f78e984f04f2c9d3a242d42b1c8f65b8a095b9ccf9f74ac55a97b7cdd1c4668c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeD.glb",
+      "size": 7564,
+      "sha256": "db945df5cc1fb3113777dc208bac3f46d3fb970aaf39f2c517612f99fbf3532b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeE.glb",
+      "size": 6036,
+      "sha256": "392cf28f85aa4b7b7c5e12b1a3b87fe2b3a7c5ec1797d5d1d0d58edca6da9de8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_largeF.glb",
+      "size": 7092,
+      "sha256": "6fd7761da24e492b9e763cfc8ebb5f3c2bb33aa68fb0f320a8769ab71fcc6c9e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallA.glb",
+      "size": 2620,
+      "sha256": "b48e731e6c4b453e8e5e8caace6edc18da40bc09874d831b7914e840fc853ae4"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallB.glb",
+      "size": 3100,
+      "sha256": "27765cdf708ff130be161eeee22eb56c014cb23b6b0c657e2a7659d02dc25459"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallC.glb",
+      "size": 2620,
+      "sha256": "dfc8129bc9290155c524aeaf3b845aa68eb72580afccd5b969d598294d147136"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallD.glb",
+      "size": 3584,
+      "sha256": "0ef496ce0f17e18a12a66ba8ec69889fb5b5247fed04b58c0d417a0f5221f579"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallE.glb",
+      "size": 5504,
+      "sha256": "17cb3e6f6c58f5fdc0bf4080bbfb7c72c4fe1ddfc65682637f4b335ff98fa291"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallF.glb",
+      "size": 5272,
+      "sha256": "b845a25c9b92ede6aeb78c1c5d5264b721674be707576fe7b16a430af99b4bbc"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallFlatA.glb",
+      "size": 2872,
+      "sha256": "04f2d1bf9dba77426a5fa076a07d7b1319fb78021b7fe619a6ca3599d96d762a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallFlatB.glb",
+      "size": 2632,
+      "sha256": "1a0b6363f66a31372656e40f83c9d604325a8bb91a7de3697400b92b1cdf6fae"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallFlatC.glb",
+      "size": 4080,
+      "sha256": "8c7069b5c9b9fee5afa8bb7949df82f43935f7d4b513852b0846da5bb8337d91"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallG.glb",
+      "size": 3776,
+      "sha256": "07c24e47be85709a54beca6396c2252ce918039d8ef0ec7ffc2faa01e523b28d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallH.glb",
+      "size": 5772,
+      "sha256": "c13f8f724cb64f06df2fd7fa1b9964690f2f44f5f45c459874d6e9546c90613b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallI.glb",
+      "size": 4692,
+      "sha256": "f210ea4a4e60c3fa0b6d1601a33ef8efb6e1d0ea17121319c1c685ae72ac5a79"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallTopA.glb",
+      "size": 4792,
+      "sha256": "544faf6690361eaa291b20be0c31787440dabc35548d130b9fb56d086c9ca0dc"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_smallTopB.glb",
+      "size": 6232,
+      "sha256": "b9a2deeafdd2fa1e15cea0a9a37c5e1b70c74b58b21738202654aae5313a7fb0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallA.glb",
+      "size": 11644,
+      "sha256": "3070bd574104abce19f5e3c82c917cb7f52801720377beba7aad76058408d5db"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallB.glb",
+      "size": 13596,
+      "sha256": "4dc2798870b56fe4028f47418994c8b7c336baf7045bf034fe8117cb7e635ba1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallC.glb",
+      "size": 4788,
+      "sha256": "5fe5c30a5afe1aba91d998e295c1a95c26901cb8bb3f44b68b29eb052b7e019d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallD.glb",
+      "size": 4704,
+      "sha256": "51c9337a482cc2c00e7c2861d99a29c9116e61be814949c95510516c54505c1c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallE.glb",
+      "size": 4764,
+      "sha256": "626eb1f842d8bdfe4c2be86dc7b469ebceadaed2402871c21a90324a0231a318"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallF.glb",
+      "size": 5180,
+      "sha256": "2c7698f979742da434f0dd928706b7ee9fb1abd0e3ac13ca6651c624165f7992"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallG.glb",
+      "size": 6344,
+      "sha256": "a686a7bde391b49822ab299aac00c18fa3422c8099585be12fd594ecb0580137"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallH.glb",
+      "size": 7364,
+      "sha256": "e00d9e5219f8caed495eb1594fa6eb39c9c9df7d4950e5b1945a89e0375cda00"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallI.glb",
+      "size": 5160,
+      "sha256": "5667332535676fd95d23ea9be0da8b70af196fff7b648cddd26a3e8e4e9bee65"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stone_tallJ.glb",
+      "size": 4808,
+      "sha256": "b7f50a935be4e98da74d665658b31c0b7039416ccf0d6f330c0a3fe230e72ab6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_old.glb",
+      "size": 9564,
+      "sha256": "4c2d2da34804c1662c6a776a9d60fe4449e6f6fdd50914bfec7d5cca3e9ceddb"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_oldTall.glb",
+      "size": 9564,
+      "sha256": "8606cbd41c2a11143f083e796668cc413d58ab90cf5e53450fd93e6fcfde48e0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_round.glb",
+      "size": 5644,
+      "sha256": "e9b0f385f0ef98493ef716a055aa51e0b99efb8445279be7bb8bd83329a4c4af"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_roundDetailed.glb",
+      "size": 8188,
+      "sha256": "3017359bd0bdf84fa137f8aca33b31b1a54c3a3f11d36e1d0995868dedd53768"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_square.glb",
+      "size": 4584,
+      "sha256": "bf46b38e2899ee4f2046be166d1cedd157f021a771c4b3ef235aa7de4f56a873"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_squareDetailed.glb",
+      "size": 7544,
+      "sha256": "d84fa1d9c2e57d07669b9e0072f61fb12f83dc8a20786caf9e75818cd4dcbfcc"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/stump_squareDetailedWide.glb",
+      "size": 7536,
+      "sha256": "fee070370d60a2d6cf5868c3b994b002b2772c35602f6d6b2396b9049d6256c0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tent_detailedClosed.glb",
+      "size": 15460,
+      "sha256": "fe8a2f9033cc87f1ec01b6c18bae7c57b84e787b4b210328ed708a4a3f9bb994"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tent_detailedOpen.glb",
+      "size": 15324,
+      "sha256": "d54d9665d07e0ff9680e56731c9f5338fc25d93788504d63b8375f54e6444193"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tent_smallClosed.glb",
+      "size": 13200,
+      "sha256": "326bb7909d67a587149be7f048f39257daadc899d80b5f956090571881b096e0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tent_smallOpen.glb",
+      "size": 13604,
+      "sha256": "d32c3f7a5926de03521a012774316d38e09c27bd6dbae7cefdb01debe003ecdd"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_blocks.glb",
+      "size": 10128,
+      "sha256": "cb74bda3024bbe396c01b3d5b381a93e6d7c73241079868c19ac420ad52e475c"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_blocks_dark.glb",
+      "size": 10132,
+      "sha256": "fa47040f418e9985c237a670524d0b29e2c01380c76fe1204ad89665b69fa670"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_blocks_fall.glb",
+      "size": 18368,
+      "sha256": "0f79f7f11578cfb0e3669468f09c86f0953bceb1b2ced3cb8ed2a2bb4ff2021b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_cone.glb",
+      "size": 10924,
+      "sha256": "90be4d214ee2cbf79d317677cb87fc11dac9873b73e446b75e8c12825a374272"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_cone_dark.glb",
+      "size": 19940,
+      "sha256": "b5c22416b8b37cfa9af04b89657a95c10a1ca45ff8e84afff3a19ae5a01c1ade"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_cone_fall.glb",
+      "size": 10916,
+      "sha256": "bd1d2833ef7a838fc27224c6f4a7cb0bb0680e1896f1c1f122814a8424e4c694"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_default.glb",
+      "size": 9428,
+      "sha256": "562d29638c902de3c7bee465d3a53bb77117efbc392ae04ed894faf6b5dc691d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_default_dark.glb",
+      "size": 9436,
+      "sha256": "f2dc452b8fa98e68e3f892526b7d3f5e8d27d6acf4dd3c6f4b3795d64b879cce"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_default_fall.glb",
+      "size": 16940,
+      "sha256": "f8e90ed7f7771644998a7c361302213af04350150b3ea0631e8384d26506efa2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_detailed.glb",
+      "size": 31412,
+      "sha256": "c041daf2f0fb1d49e4325227cbcd58667adbe51e9b55e8c1f0a94b74cc521b3b"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_detailed_dark.glb",
+      "size": 31416,
+      "sha256": "1e2211dc6483b1d8a32130c3441afa108d4075f0d851825620fba85d2dc6e5d7"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_detailed_fall.glb",
+      "size": 31404,
+      "sha256": "eafa885b824c1ffcf7782e9d4084403130135b6b4ed82c90881b354ae9c987a8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_fat.glb",
+      "size": 5576,
+      "sha256": "84b262c5dda3a91ac6c95f9d8b23a0ebbb1951d678c0e1375d3e32623cc43ee2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_fat_darkh.glb",
+      "size": 5584,
+      "sha256": "92674861d2055abeef856c7d7d69f3efcf79b10c13d1a5f780df09d7a289cf39"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_fat_fall.glb",
+      "size": 5572,
+      "sha256": "02fffc9b631a5f5834ac39b600d42ace0c9352fdcd3ed31912b0f6e8e685b660"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_oak.glb",
+      "size": 14644,
+      "sha256": "d7fd8773674928c50c11b66d12c636d49bdcc15a8b1c7fbb98e6f63a3439a3f3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_oak_dark.glb",
+      "size": 14648,
+      "sha256": "f2c455bb433fe98522d1b9391d5b587e7324176ecaee29ceefe55350a7e3fd47"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_oak_fall.glb",
+      "size": 14640,
+      "sha256": "43a258d17b5428d8ef525a19e30e667caeeb330b6f3cb367a07da12093ff97a1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palm.glb",
+      "size": 13616,
+      "sha256": "27bbb23d26ed788d84de6df2f7fab0acc3fe0ff16c7d08cdcfa1fffcb11de324"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palmBend.glb",
+      "size": 14820,
+      "sha256": "8af9dae16ce3c03183f9457996ebdd135167199514e8f4f944ee2bd82828d5c9"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palmDetailedShort.glb",
+      "size": 28212,
+      "sha256": "bc1013aaacca3bdd116ad1cded4f9499f008fe3056e760f3238be05aa21ff9f2"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palmDetailedTall.glb",
+      "size": 28204,
+      "sha256": "2cbea0f9621cde884c63a7b4ad787bda1d051fa27ef3c66b9f2b65328dc53683"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palmShort.glb",
+      "size": 15596,
+      "sha256": "d2526ca31c144a238820aa5c0f6183c5b9cf37fd3cc037932e637cf7c473ba27"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_palmTall.glb",
+      "size": 15592,
+      "sha256": "cbd2c2ea7d0316be7514d44699527c566ce91e0542e8b6c6bf431a155e5655f6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineDefaultA.glb",
+      "size": 17220,
+      "sha256": "60d8f352fa3659ed275e06cbddfecf8f92c8effe2977c2f2d7b29b6c9b582e46"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineDefaultB.glb",
+      "size": 18180,
+      "sha256": "a752ea5775c6fb17513f764d57ead534f44dfdd85188b842995ac9ba0e7065c1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineGroundA.glb",
+      "size": 6704,
+      "sha256": "dfffda4e4f0796076c502561cbf9527245656b7384b67657edc2a45205bbce51"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineGroundB.glb",
+      "size": 6704,
+      "sha256": "7af6719bfde2236210093d915e4eceff1e36c4c997259cb3565f149b270a4bfc"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundA.glb",
+      "size": 14488,
+      "sha256": "7dc9711f31585eafdcb965d0649c30af5e19f2def1955f7a915081d30759ef8e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundB.glb",
+      "size": 18464,
+      "sha256": "d4b664a2ac27ffec4125d95dffebed23471595f3a86650a55bcb9ac6b7c54637"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundC.glb",
+      "size": 15332,
+      "sha256": "29080a4935bae6b4ab29066f22c99c58f88b23ce4e2f79b4dcbb5e76de73f69d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundD.glb",
+      "size": 13748,
+      "sha256": "a5051944fbfae7900cef8314c4a5d977b6b29bcd4e4ae5dea9d80980e65a411a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundE.glb",
+      "size": 15308,
+      "sha256": "39178f614e1b4b2340a5db89cde410e897027a67e28f39ba95359c522d114f23"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineRoundF.glb",
+      "size": 16264,
+      "sha256": "fbeacc85c719a9e23e0d42f3ceb1cf44cf2537389e3d2141cb0716eefc40317d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineSmallA.glb",
+      "size": 12820,
+      "sha256": "be1a438bbb2e157266c1fb093b775bff8ce3e29a4c8f04aaf9d44c7a4e1f1ff0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineSmallB.glb",
+      "size": 7816,
+      "sha256": "59392aa6604adb9dccd4fb76df5ed12ae8ac7d7391eb7e04bc84fffe9f9b36c8"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineSmallC.glb",
+      "size": 5376,
+      "sha256": "c334c78379b2968b0c198a92b4e429e433c89e1685792b5c6ed730216c8512e3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineSmallD.glb",
+      "size": 5368,
+      "sha256": "5128c47e7dc954b539245968d05fa518c9afa677d740fb11db0813aafadf17ef"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallA.glb",
+      "size": 7200,
+      "sha256": "e0a56eb196d8a64ba86c7304d607136e17e6f9ad748dffcf86bd53b18b91b196"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallA_detailed.glb",
+      "size": 10708,
+      "sha256": "9ba6337460e718b8baf165b23c02f39455e3d5757b1911505410c46bc88a86b5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallB.glb",
+      "size": 7204,
+      "sha256": "49b54146351e1e009e97ee592f997a90a16b10c5467baf734d352df1cddec5d1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallB_detailed.glb",
+      "size": 12632,
+      "sha256": "a26b4434e1592ec1a83f364a54688bb34c48d9521bfccbe63f0cc37b381c4696"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallC.glb",
+      "size": 8080,
+      "sha256": "e8b97fa086e1ac9b2a2c84eeb02382df371703c23cfa414571d06e42d4dfea3d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallC_detailed.glb",
+      "size": 11588,
+      "sha256": "b538e229a9fb8cbbb579fa2a0df784d5354c8a70faa115fa80f8190f2e6bef47"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallD.glb",
+      "size": 8080,
+      "sha256": "df5ffca50fc2e39a40bf8315077f6215b0b9fca0d9761b01945bfd59cca3bdd5"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_pineTallD_detailed.glb",
+      "size": 12548,
+      "sha256": "a2fac08d7cb337e7b02c7d7f0d6911aa6fcef97b721da9cffb432b8dc3949e2d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_plateau.glb",
+      "size": 16304,
+      "sha256": "7f19e347ff28703dd9e5fcce89b920156e291fbdb19331a57cb31a95c73e1322"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_plateau_dark.glb",
+      "size": 16308,
+      "sha256": "c598155374b71d2edd2cb8b1b63a0ba446b6bac1d2ed430dc3741087ba42d4c3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_plateau_fall.glb",
+      "size": 16296,
+      "sha256": "11b2a1b09c2f90c58b1572a2245e4861d6c0d674147a17d10ccdc12abe1f13ff"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_simple.glb",
+      "size": 6500,
+      "sha256": "93891ea740447634930de19c31a7c1c9f4add94122e6db03aca9f75aea32f9d6"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_simple_dark.glb",
+      "size": 6508,
+      "sha256": "57bee138b97a1fadd34d06772513f7c3f22fd5905375eae611141e7a49d81f9e"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_simple_fall.glb",
+      "size": 6496,
+      "sha256": "00e79a1c6bb936a7fecdeeff716ebca00f3914a931d2ec9389b07b0b6f8c3a2d"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_small.glb",
+      "size": 6500,
+      "sha256": "d26c0eeed65cc681667f50042ef23ec72ce47ae3b39837bfeec170b05ba6ab6a"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_small_dark.glb",
+      "size": 11092,
+      "sha256": "0b29837359378543e906a7d862ace523647c16083589abc120558f187412edca"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_small_fall.glb",
+      "size": 6492,
+      "sha256": "2203da5cdb52ed442760f96916a171628a70575a0a038531bfcaa12173241cb1"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_tall.glb",
+      "size": 7000,
+      "sha256": "3515a8826044d91e84e011186c86878f62024a487a079b4e32c9ac2e71994411"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_tall_dark.glb",
+      "size": 7008,
+      "sha256": "c764c0f497c752459b59df3bc637e7d595ef767c0a33614b1b2f928a4299629f"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_tall_fall.glb",
+      "size": 12088,
+      "sha256": "f6b975c90a0f7486aec70e683aa0dd180c070f94a9ccb8927066be26ea5774e0"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_thin.glb",
+      "size": 17200,
+      "sha256": "f0f1f6861fe0446963d3be216cc628324f538bb0841bc9a8e14140313f64e2f3"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_thin_dark.glb",
+      "size": 32488,
+      "sha256": "8f12bf461e38c43866ddfeaa56f77fadaa56425642bcb2e71dcf3c5c74abab47"
+    },
+    {
+      "path": "assets/vendor/kenney_nature/tree_thin_fall.glb",
+      "size": 17192,
+      "sha256": "0820f6823774030e1ea646e974ab63d532643d3cc24f70a0cfbf898f1ec3b574"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/arrow-basic-rounded.glb",
+      "size": 5120,
+      "sha256": "317b24b0852264ca12b2d278bde3d177ca02ff0e8f4da32c79fe95f0b9036259"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/arrow-basic.glb",
+      "size": 3596,
+      "sha256": "6fd6f4944a6e8a071eaac9eddbd5a8a4c428337c7425e30e211377dcbd09ed4d"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/arrow-rounded.glb",
+      "size": 5404,
+      "sha256": "9911e222d9df10a218c2ef8cca6148ae612237592ee45aafe18257d378b2fcde"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/arrow.glb",
+      "size": 3848,
+      "sha256": "17d119d6b14b3a9e3d01be8a4e055881a6395123abbb8abf83a946e5c9f65d58"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/box-large.glb",
+      "size": 7496,
+      "sha256": "f5c7a7b4d7ec48c2695dc5241d62a38dbb54b487e6be0f089548582c91bacdfd"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/box-long.glb",
+      "size": 7492,
+      "sha256": "6a6d7bfed3058809a9833606a6a3e78a156b6f3d898fba59fc054c62b5499c94"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/box-small.glb",
+      "size": 7500,
+      "sha256": "fd2ea1ac4f24a9515dc9c53a4a589a8897c824fa5865771799f965a252f684f0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/box-wide.glb",
+      "size": 7496,
+      "sha256": "41507d9e035b23e586cbf6bcc63427c810aefd428620264bebefc25c98922ff4"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/button-floor-round-small.glb",
+      "size": 14708,
+      "sha256": "1c44ded2a6cdb4085f4f5c473b795a4ec811c4789cd4cea32c7eaa8adc4d7e15"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/button-floor-round.glb",
+      "size": 14628,
+      "sha256": "154e93fa4613e5fcec4c0c4804ff3d0e4422b638385e1b9e08a6c39b9cd5fd5f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/button-floor-square-small.glb",
+      "size": 15984,
+      "sha256": "5406b26ea4f86c51ee20ee04849cee281d080c550c918e4d1aa535c923ffd18b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/button-floor-square.glb",
+      "size": 15960,
+      "sha256": "f32def1dd9a57939b096d64361fc5058a8ba240a0394951e8681fb7326ebdeb6"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-corner.glb",
+      "size": 49600,
+      "sha256": "aa797b48556a723f96c415c8608a2ededd0d1a4bdce735231047cde8762b7de1"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-cross.glb",
+      "size": 21080,
+      "sha256": "9d566e8de315a62ef66e5a86d0cd97e0f75eaaa380a0a57680e3a06b1506d996"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-junction.glb",
+      "size": 30332,
+      "sha256": "1297ee248729f9c72d93cb39224c61fbcc811a33d14de4935e1ce27c4f578b66"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-stairs-loop.glb",
+      "size": 33116,
+      "sha256": "c08595a1a06b1459411cfca6895911a57fe921aabffad17cdf8f991ff0328734"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-stairs.glb",
+      "size": 66256,
+      "sha256": "0356a040ebbf632cd20dfe384a13108270df26426ad1dd51a2c767c8f6a6960c"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/catwalk-straight.glb",
+      "size": 33492,
+      "sha256": "85797c6ce53e3f4373bc59ecd3ce951a3f6b707651def5e0bae46756051cd18d"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cog-a.glb",
+      "size": 13660,
+      "sha256": "71fac911b6f760a97af12fe81814186e84b8d8f8b380f211afe8175baba96a12"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cog-b.glb",
+      "size": 16640,
+      "sha256": "514b5c62592aab03d8ea566c76beb79d6568aa5b9775ba3b30d568fa8b0c482a"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cog-c.glb",
+      "size": 13660,
+      "sha256": "b70cb142382c89ac028d443005658dbc2e45a909740bf9f17672baf5ac323fca"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cog-d.glb",
+      "size": 13660,
+      "sha256": "37948fd02cead4ac77c11725f212f5c3a8b370061e45a2f775da79eecbcd08c8"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cog-e.glb",
+      "size": 19136,
+      "sha256": "24f9fb331e6547f21aae5cbc644f1be69f4cdff9fffc10b582b09d3c6c9d1692"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/cone.glb",
+      "size": 7028,
+      "sha256": "deb6ea20fe61bc094f0e64a3d6891b029ff552c5ab00bf57b763798624228e41"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-fence-slope.glb",
+      "size": 29328,
+      "sha256": "72a256a0536c9c22710e2b4aa75fd70148acb60103e4dd919b5b9e21ddfb93e9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-fence.glb",
+      "size": 29288,
+      "sha256": "a74427df45a69d714759bd76cd23014d3db8d8964e3222984078ea76cfcaadcb"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-high-slope.glb",
+      "size": 20500,
+      "sha256": "6693f9765f1c2d52bdd14bc74efe61f797657fcd320af4ae22467717b12b1d3f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-high.glb",
+      "size": 20464,
+      "sha256": "30c2f49b5c003e592337384d6fc469bea1b520f4cce6e32edf0e2eada22c3c3e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-sides.glb",
+      "size": 21564,
+      "sha256": "fe4f919e64c73b3808072ee2a6080b05c89435b581d4802eae33365a7874a9e9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe-fence-slope.glb",
+      "size": 45384,
+      "sha256": "7f6deb388d4a2d950291726958084905ea82079b6d7e6a65525cc9c17b0f2d17"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe-fence.glb",
+      "size": 45364,
+      "sha256": "0d846cacf5ece310bc8e413abdbc0c159c4327c96bc576616c0edb3579948878"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe-high-slope.glb",
+      "size": 36556,
+      "sha256": "ef043ac520572cea0ab570873ef891d9bd8f0c748a1caa4feea82f560cdc8c6f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe-high.glb",
+      "size": 36520,
+      "sha256": "01810aa5aa6e952d9c1bbd2c563a632680c9739f39bbda365215ebc484999a68"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe-side.glb",
+      "size": 34256,
+      "sha256": "410c0a725e46d208cd0ccd7941692cb56c47597020b6fc5cae6a755fdd242e45"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars-stripe.glb",
+      "size": 31152,
+      "sha256": "ea5420c3840ba843de6b2f98efe31552e87df6d189f2943c0ad30d48424a9750"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-bars.glb",
+      "size": 18476,
+      "sha256": "f6806054bfe03e1daa071edd460da96bd5c20a0a5bcd2a3665f7b9a5a2a0d144"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-corner.glb",
+      "size": 22088,
+      "sha256": "e1169e56b61e952350545664993d7d1662dc4b33fa301100f3bad4b0e07870e2"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-cross.glb",
+      "size": 6276,
+      "sha256": "27078c10013a9168e74a03900007c958f24a6fb4ebbc21a85b06849fc85c2b29"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-junction-t.glb",
+      "size": 12296,
+      "sha256": "a640c87707f17ddf49179f7dc00fc3621f84bb751bf0bfea90e537c153606ed3"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-part-end.glb",
+      "size": 12860,
+      "sha256": "b654c63cabffc16c6ba244e62dd6d07897fe60fd69e953f148f70d16bc5db24e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-part-middle.glb",
+      "size": 5284,
+      "sha256": "898962663e5501b19fed8fad671c472565b50ba2159dd52ccbde3907014efc6a"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-sides-part-end.glb",
+      "size": 17736,
+      "sha256": "6cc9e2866372f1d39bbdd1232a60b3f94677953619672d15b8116c1966cfb22e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-sides-part-middle.glb",
+      "size": 8288,
+      "sha256": "65e1a53ccc2292adbc519b7a9d55db5de1c94f0dc08dce59f325930979622b20"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-sides.glb",
+      "size": 22100,
+      "sha256": "511a8f3613c20ccf8039cdc63b7635b9e2fba928c2c9a8a13a63b3e33864b310"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-stripe-sides-part-end.glb",
+      "size": 22844,
+      "sha256": "ed1e936cd238bb40c836d22894d5c9840a908feac6a7bd403547f460820f1eeb"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-stripe-sides-part-middle.glb",
+      "size": 9912,
+      "sha256": "564607fb19572df074c84bb70dcc1826704570e946848ad72f52e89f2d352f8b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-stripe-sides.glb",
+      "size": 26632,
+      "sha256": "727a56dfae9a04d12437123b7b051ef76327887f02c837090178b9781fa56534"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long-stripe.glb",
+      "size": 23608,
+      "sha256": "d6a45a89299e48faf519667f0af33c334e50be068c2ba75bc690d7198bf67c13"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-long.glb",
+      "size": 18688,
+      "sha256": "9087ec11d9dcc85ada9d14a66910244bfbb5df57c64b2647956a32525935dee3"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-sides-cross.glb",
+      "size": 6292,
+      "sha256": "843693066b24fbf8d4a887ab381746074f6df6610c3f6fbb03fed1267f61ca8b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-sides-junction-t.glb",
+      "size": 13608,
+      "sha256": "4e61c06a9676c24b66080231de8a365b59b3212b0a7353fad987d283d4ea1a83"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-sides.glb",
+      "size": 22084,
+      "sha256": "ccd6c3d5afd23a4e4390d9a73c44c810b72fe8b611cb3508623a843d807a87aa"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-corner.glb",
+      "size": 23596,
+      "sha256": "28fbf8e539bb254063efbd5e089c7b6cec61720c41f66e0b256443e874224c6f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-cross.glb",
+      "size": 17844,
+      "sha256": "c8c8bb2606e4df330583b81c090b20bb3a3b7f9a10c886d78696d158a90ec631"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-junction-t.glb",
+      "size": 20808,
+      "sha256": "7438ac6977e8246719b614373eadf58fa6f4ba76fc21da31d721fe2f71c63054"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-part-end.glb",
+      "size": 16588,
+      "sha256": "e9ccda62b08d8b9156aac5aed54809681b8a3e788fcaf32849d4d3a214afa083"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-part-middle.glb",
+      "size": 6884,
+      "sha256": "142f84e8968faa035a235ba10b0363284ef5a6449a3f9ae9e9f7f33749c5beaa"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-sides-cross.glb",
+      "size": 17864,
+      "sha256": "9613effc74324592b6cd84b14bbb62d885bafb426938a5904bd9870d0de2a348"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-sides-junction-t.glb",
+      "size": 22180,
+      "sha256": "aef8dea3e46055b9212cfd081726bb116241ee257aa2175a08196d426b7b9e52"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe-sides.glb",
+      "size": 26620,
+      "sha256": "98e159bfdf5e4868010884f8d675466725eea1b45147f7f71a62760c545d471b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor-stripe.glb",
+      "size": 23592,
+      "sha256": "c120efb00c977c69322de43d5209d5ebc9318905042e3dc9f37e0475bbd24dc0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/conveyor.glb",
+      "size": 18676,
+      "sha256": "879c75a74fdf972326f3f177738d893bce79bafc2f0f557cc5e84adcfda6d6d5"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/crane-lift.glb",
+      "size": 31836,
+      "sha256": "060197cd67598ed4359ecbcb0af980d4505992213c1ab6cc9f56812dff7bbf07"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/crane-magnet.glb",
+      "size": 16912,
+      "sha256": "9ed1d4690e03fd4cafcd30d182b2319cc6c743794a50108332cab9d76a083f6e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/crane.glb",
+      "size": 53396,
+      "sha256": "ceaf20fb976ce0415d2b3d40e723b6ad377845818fa4fa68b55434108b1a6880"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/door-wide-closed.glb",
+      "size": 3572,
+      "sha256": "987837d7b45bca466c5f2268fa0193e014374cc0d2ef0784f6c37092856b71d0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/door-wide-half.glb",
+      "size": 3396,
+      "sha256": "14642cac23d48dc324ac9a520eae1267cc9c5e017c877d0474ef66ab018af479"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/door-wide-open.glb",
+      "size": 3000,
+      "sha256": "bc8cfb0d899c512d85241c41db4247be11cfe833cab56949f19e2903789133d9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/door.glb",
+      "size": 19124,
+      "sha256": "1995868d11013b5f00598cf2280ece883581162aabe2921f3fde0341d0628ddd"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/floor-large.glb",
+      "size": 1804,
+      "sha256": "6d4cf453bcacd653389a4a3071468ae1167b98c2b13f042aba55e8fe3de21db0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/floor.glb",
+      "size": 1788,
+      "sha256": "6fd1acd1b3fed85093fd000410cd9b010f4c169e4f10a53699993f0c5667b3a9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/hopper-high-round.glb",
+      "size": 16644,
+      "sha256": "b07d0f43ce8e2c007cc298abcefd577672625edd3323ef3a99c6d8dec6521975"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/hopper-high-square.glb",
+      "size": 11308,
+      "sha256": "ebb427e3ab2bc1fabca3a0deadca1f65164943630c073f61d1a01029edb37f01"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/hopper-round.glb",
+      "size": 13700,
+      "sha256": "8d4a49f1608b0cdb33d4506bed0ca0648df31437ae2b488a418fa15e5a65b278"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/hopper-square.glb",
+      "size": 10092,
+      "sha256": "1b88e30011629015cea65777c5157026088ea557163bee43596d5083f1df0f39"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/indicator-special-area.glb",
+      "size": 3036,
+      "sha256": "e25844c88fbda7565f672021540a98506ec66e63d7091b446c0b6e5a70953d00"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/indicator-special-arrow.glb",
+      "size": 2500,
+      "sha256": "3cd514de3e283705df2baccf7cea62a70ba64e87311252fe26788be4377c0d49"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/indicator-special-cross.glb",
+      "size": 2856,
+      "sha256": "327b218b7d1954dcc2e5f339ff01eda15e5f8b5c92696fd7956274115f547c09"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/indicator-special-lines.glb",
+      "size": 3128,
+      "sha256": "04d962d8cef0056fa60d37c4143230ec17d7c3ca187734cc41e53c9f6693225c"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/lever-double.glb",
+      "size": 18324,
+      "sha256": "b14d1fc30f29a8e8dc56dae7b20a8a988be5155bafcddc726cd8c8ebf0bbe5b9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/lever-single.glb",
+      "size": 17516,
+      "sha256": "d7056a698ecb46c972d51848a77c8a9aca86f085cc5800347fce1c19c6c59477"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/License.txt",
+      "size": 700,
+      "sha256": "61e86565dd297e143ad631594980eda0a17fc81a4cd7c6d71acf2f5e0cad30b6"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-bed.glb",
+      "size": 52136,
+      "sha256": "17dc8afaa1cd627d1cdb59691b5921ba85846a0b7aeb9c3c6d885fe27db77878"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-connection-hole.glb",
+      "size": 27936,
+      "sha256": "e49c9d701f802ca1b125c7ae55d8992e03710ea10838bf536bd4ddbb3da4bf9c"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-connection-pipe.glb",
+      "size": 32068,
+      "sha256": "b2893e5f6ae2484b8d5be0d4538bc90e50dba98715976ac8c82f55b413f8985f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-fortified.glb",
+      "size": 29828,
+      "sha256": "0907f6616f49bbdaa20241ac4b568b780f30352f204851c53568b8e7df59b528"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-window-bar.glb",
+      "size": 40456,
+      "sha256": "9b0b3e55a2679227c2bbe8164d65e3c98e756496c54a48b76ed1fcf785bea596"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine-window.glb",
+      "size": 38812,
+      "sha256": "1387bd337354fca7c7cb4163e6bd4bef8711373bbe23dae01ba9d42cd35681b7"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/machine.glb",
+      "size": 25620,
+      "sha256": "a39e3042bcb7789274428357383317d70e1c31906e5301c99e7d9e90ac584863"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/oopi.glb",
+      "size": 79380,
+      "sha256": "2d2ea42d02f0852cd21f566816d3b05b6dec2a0a8694c19777439ff97b9589c9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-bend.glb",
+      "size": 44544,
+      "sha256": "821d5ce62e358f19d3a2397d0023c4e7e3586184479ea76316b522f2d2da67cb"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-bump.glb",
+      "size": 25176,
+      "sha256": "a4b154d3d7a9d8cebd5f059acd6eaf419365d2b749f91fae44327e2e2044d70e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-cross.glb",
+      "size": 33936,
+      "sha256": "e374ad00e809b33dd7ba77dcb77432a1b67c20207616fdd558854f07a6a9ed7c"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-curve.glb",
+      "size": 28088,
+      "sha256": "d055d697d4e60fa977142e830571f9cb00c4f4ce5f8454c26a4d1811738ed11e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-junction.glb",
+      "size": 25332,
+      "sha256": "6455bb9205f590fa95c91e6da8a3d8a01ffaeaaa84a3ff89251412af835a61e4"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-long.glb",
+      "size": 14976,
+      "sha256": "f063ce07616575b9dd155a963327d883c11526ef680483ac0b0d6b1848771e92"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-side.glb",
+      "size": 24916,
+      "sha256": "93391765c8b2e2df5f09dccbae1d7fccca7cc322e62b4d96c186369df9ca0974"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large-valve.glb",
+      "size": 39712,
+      "sha256": "13d2c9d0b3b0253c2019556c1cb16eb85d045ac0f09b268df75dc7761f768da3"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-glass-large.glb",
+      "size": 14948,
+      "sha256": "85ba4f7f8cbcddf6fe4376a16622145a1aed0a59fefc8c1348ce039c63fab6fa"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-bend.glb",
+      "size": 44512,
+      "sha256": "e234cba2e29bd825b9acdab56c0ff36504a6ceea4c74b21dafbbd98e84bb793b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-bump.glb",
+      "size": 28068,
+      "sha256": "f83d9ac33597436be322c29c0aea5b6a927232e4937e5d693855650f0872dad6"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-cross.glb",
+      "size": 42016,
+      "sha256": "ef4b61ed5171edb416d56266f847a95bfeba73e17e12f239b28084446b55c948"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-curve.glb",
+      "size": 32156,
+      "sha256": "5da8bbe6f74293df2cc57e743eeea0aee3e831531af1841aad0a49d47d1e1638"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-junction.glb",
+      "size": 35796,
+      "sha256": "2bfd53a752b418c9307f9c171fbe1ddea41116521a7188eee0697353e29695ec"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-long.glb",
+      "size": 27288,
+      "sha256": "8e6650cc662695c28fffb1ffa10f190255f7d9c6c1d4a2a48d375e9bbb89b04f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-side.glb",
+      "size": 32948,
+      "sha256": "7a5352b54d511c5163de1127d74d783c6bfdc958c516b039604a686f46ad6753"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large-valve.glb",
+      "size": 42604,
+      "sha256": "57126374dce5b172e06d5d6f8cbaab97c9cffe3e5e726060eb14c50a5bd519b6"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/pipe-large.glb",
+      "size": 23156,
+      "sha256": "e30500f8ec6dc1fcc04c350ff9ecfd06470ec73e70d53b7b3b571031f30a3311"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/piston-round.glb",
+      "size": 37736,
+      "sha256": "cd67c755d4ea6f53b5a5583447f45e9abb5d87f344d9f053820d1b09d719fcdd"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/piston-square.glb",
+      "size": 29404,
+      "sha256": "21b5e5dd9bfe39ddc2e77ff432f89f4dc20cabf31bd37a630ce260dcb93280dc"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/piston-thin-round.glb",
+      "size": 37760,
+      "sha256": "6124285afe513d926f6a88d7a7993dcf5273c416f93b5a02b91d27c5ae79a491"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/piston-thin-square.glb",
+      "size": 29424,
+      "sha256": "546f8b9c1a54eeba10dcc9d3de31ff16c3d413fb35cb437be650fbc6c0f37b15"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/robot-arm-a.glb",
+      "size": 50592,
+      "sha256": "ad3f766791adadd1cfb5ccc27d2b2ac8787848282f2a15b3c407f350dc281b68"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/robot-arm-b.glb",
+      "size": 44524,
+      "sha256": "0563cb35d985d4de73b8f07f9e0c16bbac76784e09a5753e4f6d9b77bdc8e163"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/scanner-high.glb",
+      "size": 21656,
+      "sha256": "b71d8ab86fe1a12542eac14e4185e17babf15ac086c3343acf8600a080ed985a"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/scanner-low.glb",
+      "size": 22192,
+      "sha256": "0baa337bc3c653522ce01baa09cc02b8810640225e823fe735dc8e4167a7913b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-flat.glb",
+      "size": 11524,
+      "sha256": "5d4ff7eace6f6c1164f00e4d68d615e1e5b61b34b7e6d826537dd1968c8c2a88"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-hanging-small.glb",
+      "size": 8776,
+      "sha256": "64cec276939dfd7925a73d399e1b32a643fe65a937bc1aab86d98677eebff760"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-hanging-wide.glb",
+      "size": 9764,
+      "sha256": "69029512f8e13e06e6c60803e31b5b3c88f7884584440310fc254266eb64dd7f"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-panel-flat.glb",
+      "size": 13136,
+      "sha256": "6cd45b028859c216860b6436fb2660749038390b60cb3d1b5cc5e7d88072dd4b"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-panel-small.glb",
+      "size": 13956,
+      "sha256": "e3b43cfb99a49382de983f476bc19c0c76b79c199008f663d19b7faf9b8543a3"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-panel-wide.glb",
+      "size": 16000,
+      "sha256": "092066a198f1f81c857ceab23497dd3ea6066d261a91497cf0f83f7ba951c4d0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-small.glb",
+      "size": 12352,
+      "sha256": "8521b13d7e7a9327ce4afe15a89d4c80abbf373209f8fc9b4192d59127e758e6"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/screen-wide.glb",
+      "size": 13904,
+      "sha256": "220211ee38d51a521475caec06bb27aa231f5b1d43fd74cb93393cca47edfda3"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-corner-inner.glb",
+      "size": 6324,
+      "sha256": "24be86d7dcb0e70e2c8380624e2bfaa1f25f75957472eef08d2cac1a8b6bb341"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-corner-outer.glb",
+      "size": 6308,
+      "sha256": "caf69ffabcfcec460229b349689a2a870fb7d68e0b41871de5e1afc658da5faa"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-doorway-wide.glb",
+      "size": 5572,
+      "sha256": "588655c5594b55d6f715ca6251febb18f9636f6804e0e193e31d68643e7b2107"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-doorway.glb",
+      "size": 6464,
+      "sha256": "3d06e694412c47b85a85b9f15a60c532900f7bb1a95dba5dc9b942dcdbb4ce12"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-high.glb",
+      "size": 25860,
+      "sha256": "3893a7eac2e676d40283372754aba868d6cdc2bc0894f68f3d558f0878d242c2"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-medium.glb",
+      "size": 25852,
+      "sha256": "38366ce8ab3983848d3f9818889705c42f311a5c49ae3d49605927a4ba7ca053"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-short.glb",
+      "size": 25828,
+      "sha256": "7d5f736601a24d40196376fb113aabf9aed840249776c652e1c6a63e43b3612e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-tall.glb",
+      "size": 25828,
+      "sha256": "b019fde05396ab9474a36b8923fd014a88122cda3d0c2f7aa3d89ddf41745167"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-wall.glb",
+      "size": 4236,
+      "sha256": "3bdcb31d693b4e97a9fa198e9de1a47bfd14e829520da08ceaacadbdb258582c"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-window-wide.glb",
+      "size": 23340,
+      "sha256": "447f0e5a4eca379a02c3ade829e04b4df2fc517ab23f0b4f99fd31ae439ac19e"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-window.glb",
+      "size": 19104,
+      "sha256": "d0551b5784c24fde97cd42664daec955d79830b0cc967eddd5572ad3459fbaad"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-yellow-high.glb",
+      "size": 36804,
+      "sha256": "c80cba545977536bb68e0595372dd32f591047395484deee281cfadd0727cc16"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-yellow-medium.glb",
+      "size": 36796,
+      "sha256": "8f4b141c396036fd621e72e1065f8bc4f5027779d3cd7beaf5ac65cdadff6a06"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-yellow-short.glb",
+      "size": 25852,
+      "sha256": "7fb48f70c0dae895c4f2faed94e980648b50a9a878beec281191796af7aa9355"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/structure-yellow-tall.glb",
+      "size": 36768,
+      "sha256": "59c9a7cec6ebbaa523a720a4d65cf966180ab67d7bbc90fabe249b86753acc02"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/Textures/colormap.png",
+      "size": 11813,
+      "sha256": "35d7bd6900dde0208429eeaec87fa17fbf024ed59f3f4eab54bc92802eba9dd7"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/top-large-checkerboard.glb",
+      "size": 2444,
+      "sha256": "128d0adf75b59e55339b6dbb6ad09c20dd30595eec2eb17f6a43c40119d3b49a"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/top-large.glb",
+      "size": 1800,
+      "sha256": "50a6ce87367b8416417602c80cc0904b8c1c43a955fb8ef7d68e1005c0f964f9"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/top.glb",
+      "size": 1780,
+      "sha256": "2792d5ffc4ff32586844a6092b5a0e1284770babd03209ecea3d399c24017747"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/warning-orange.glb",
+      "size": 16136,
+      "sha256": "07974e9e78c2b2d2ed8198461a7fbac86d1744490ab687817543a07f163aa7d0"
+    },
+    {
+      "path": "assets/vendor/kenney_factory/warning-traffic.glb",
+      "size": 18192,
+      "sha256": "b231e97424839b252e80555bc97d7360d2f04006cb3919675725a297bae049cd"
+    },
+    {
+      "path": "assets/vendor/poly/ATTRIBUTION.txt",
+      "size": 664,
+      "sha256": "f56a398fb0abcd98babc128b79ad00f87c90242588a3fa3beb2021c195a7f22a"
+    },
+    {
+      "path": "assets/vendor/poly/daisy.glb",
+      "size": 66528,
+      "sha256": "8f1b08204d73d87c3706d714b7760ab18d7598e427a109a272a84eb90248e3fa"
+    },
+    {
+      "path": "assets/vendor/poly/flower_pot.glb",
+      "size": 213872,
+      "sha256": "f20de024fbe66de5592a4b1b41ff66479f5eb301ddb9e53771b7dda5856d46ab"
+    },
+    {
+      "path": "assets/vendor/poly/flower_pot_base.glb",
+      "size": 212992,
+      "sha256": "f895ad32478482949296d02484f347efccdeeb0eecf38e657b878d90d542617e"
+    },
+    {
+      "path": "assets/vendor/poly/mother.glb",
+      "size": 1530616,
+      "sha256": "a2212729826b718e59e698211ed3951c22459b48733b1ee6a24fac0abf74dca8"
+    },
+    {
+      "path": "assets/vendor/poly/radio.glb",
+      "size": 28996,
+      "sha256": "9e5c7934f44ee538446e6f54cbe9c09d4e49a7e78ee2e7f16d4cc7483c43e710"
+    }
+  ]
+}

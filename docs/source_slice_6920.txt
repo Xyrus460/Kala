@@ -1,0 +1,58 @@
+// Update only structural lit surfaces; posters, clues, characters and glass stay authored.
+let legacyHDSurfaces=0;
+for(const id of ['school','street']){const g=rooms[id].group;g.updateMatrixWorld(true);g.traverse(m=>{
+ if(!m.isMesh||!(m.material?.isMeshStandardMaterial||m.material?.isMeshBasicMaterial)||m.material.transparent||!m.geometry?.attributes.position)return;
+ const geo=m.geometry;if(!geo.boundingBox)geo.computeBoundingBox();const b=geo.boundingBox,min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+ for(const x of [b.min.x,b.max.x])for(const y of [b.min.y,b.max.y])for(const z of [b.min.z,b.max.z]){const p=new I(x,y,z).applyMatrix4(m.matrixWorld);for(let i=0;i<3;i++){min[i]=Math.min(min[i],p.getComponent(i));max[i]=Math.max(max[i],p.getComponent(i));}}
+ const size=max.map((v,i)=>v-min[i]),horizontal=size[1]<.45&&size[0]>3.5&&size[2]>3.5,wall=size[1]>1.05&&Math.max(size[0],size[2])>3.5&&Math.min(size[0],size[2])>.055&&Math.min(size[0],size[2])<.45,door=size[1]>2.2&&size[1]<3.4&&Math.max(size[0],size[2])>.7&&Math.max(size[0],size[2])<2.7&&Math.min(size[0],size[2])<.25;
+ if(!horizontal&&!wall&&!door)return;
+ const original=m.material,tint=original.color.clone();if(!horizontal&&original.map?.image){try{const c=document.createElement('canvas');c.width=c.height=16;const x=c.getContext('2d');x.drawImage(original.map.image,0,0,16,16);const a=x.getImageData(0,0,16,16).data,sum=[0,0,0];for(let i=0;i<a.length;i+=4)for(let k=0;k<3;k++)sum[k]+=a[i+k];const q=sum.map(v=>Math.round(v/256));tint.multiply(new be((q[0]<<16)|(q[1]<<8)|q[2]));}catch{}}
+ m.material=original.isMeshStandardMaterial?original.clone():new Xe({color:original.color,roughness:.92});useHDMaterial(m.material,horizontal?'concrete':door?'steel':'plaster',tint);m.material.normalScale.set(.35,.35);m.material.roughness=door?.76:.92;
+ if(id==='school'&&wall){
+  // Rebuild the authored green lower/ivory upper paint in world space instead
+  // of carrying over its coarse pixel atlas. Shared PBR maps retain the fine plaster.
+  m.material.color.set(0xffffff);m.material.onBeforeCompile=shader=>{
+   shader.uniforms.uKalaPaintLow={value:new be(0x547868)};shader.uniforms.uKalaPaintHigh={value:new be(0xf0eddd)};
+   shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying float vKalaWallY;').replace('#include <begin_vertex>','#include <begin_vertex>\nvKalaWallY=(modelMatrix*vec4(transformed,1.0)).y;');
+   shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vKalaWallY;uniform vec3 uKalaPaintLow;uniform vec3 uKalaPaintHigh;').replace('#include <map_fragment>','#include <map_fragment>\ndiffuseColor.rgb*=mix(uKalaPaintLow,uKalaPaintHigh,smoothstep(1.55,1.60,vKalaWallY));');
+  };m.material.customProgramCacheKey=()=> 'kala_aged_school_paint_v1';
+ }
+ m.geometry=geo.clone();const pos=m.geometry.attributes.position,norm=m.geometry.attributes.normal,uv=m.geometry.attributes.uv;
+ if(uv)for(let i=0;i<pos.count;i++){const p=new I().fromBufferAttribute(pos,i).applyMatrix4(m.matrixWorld),n=new I().fromBufferAttribute(norm,i).transformDirection(m.matrixWorld);uv.setXY(i,(Math.abs(n.x)>.5?p.z:p.x)/1.5,(Math.abs(n.y)>.5?p.z:p.y)/1.5);}if(uv)uv.needsUpdate=true;legacyHDSurfaces++;
+ });}
+for(const d of doorRecords){
+ const m=d.leaf.material;if(m!==daisyWhiteWall){useHDMaterial(m,'steel');m.color.lerp(new be(0xd3d4bf),.55);m.roughness=.72;m.metalness=.18;}applyWorldUV(d.leaf,1.0);
+ const details=new It();details.name='Door_recessed_panels';d.pivot.add(details);
+ for(const side of [-1,1]){
+  const inset=box(details,d.width/2,d.height*.57,side*.058,d.width-.22,d.height*.65,.018,m);applyWorldUV(inset,.95);
+  const trim=d.root.children.find(a=>a.isMesh)?.material||mats.metal;
+  for(const x of [.10,d.width-.10])box(details,x,d.height*.57,side*.072,.018,d.height*.66,.014,trim);
+  for(const y of [d.height*.25,d.height*.90])box(details,d.width/2,y,side*.072,d.width-.18,.018,.014,trim);
+  for(let i=0;i<5;i++)box(details,d.width*.5,d.height*.79-i*.042,side*.080,Math.min(.52,d.width*.45),.016,.014,trim);
+  metalBolt(details,d.width-.17,d.height*.48-.10,side*.099,.016,toolMats.rust);
+ }
+ batchDollPieces(details);details.traverse(m=>{if(m.isMesh){m.castShadow=true;m.receiveShadow=true;}});d.leaf.castShadow=true;d.leaf.receiveShadow=true;
+}
+const tileMats=[hdMaterial('ceramic',0xbd5044,.63,.025),hdMaterial('ceramic',0x3f7baa,.61,.025),hdMaterial('ceramic',0xfffdf2,.68,.015)];
+const tileGrout=new Xe({color:0x797d75,roughness:.99});daisyRoom.floor.material=tileGrout;
+const physicalDaisyTiles=new It();physicalDaisyTiles.name='Daisy_individual_bevelled_tiles';daisyRoom.group.add(physicalDaisyTiles);
+function addCeramicTile(group,x,y,z,w,d,colour,index){const g=hardSurfaceGeometry(w,.032,d,.010),m=new ae(g,tileMats[colour]);m.position.set(x,y,z);m.receiveShadow=true;
+ const uv=g.attributes.uv,angle=index%4*Math.PI/2,cs=Math.cos(angle),sn=Math.sin(angle);for(let i=0;i<uv.count;i++){const u=uv.getX(i)-.5,v=uv.getY(i)-.5;uv.setXY(i,u*cs-v*sn+.5,v*cs+u*sn+.5);}group.add(m);return m;}
+for(const [i,t]of daisyTileLayout.entries())addCeramicTile(physicalDaisyTiles,1394.5+t.x,.003,-5.5+t.z,.982,.982,t.colour,i);
+const physicalStairTiles=new It();physicalStairTiles.name='Daisy_ceramic_treads_and_landings';daisyRoom.group.add(physicalStairTiles);
+const stairTileColour=(row,col)=>{const n=((row*37+col*53+col*row*11)%17);return n<4?0:n<8?1:2;};
+for(let row=0;row<18;row++)for(let col=0;col<5;col++)addCeramicTile(physicalStairTiles,1398.08+col*.96,-(row+1)*.2+.012,-7.4-(row+.5)*.64,.943,.621,stairTileColour(row,col),row*5+col);
+for(const [start,y,rows,depth]of [[-6.31,.012,2,.64],[-19.2,-3.588,4,.71]])for(let row=0;row<rows;row++)for(let col=0;col<5;col++)addCeramicTile(physicalStairTiles,1398.08+col*.96,y,start-row*depth,.943,depth-.018,stairTileColour(row+19,col),row*5+col);
+batchDollPieces(physicalDaisyTiles);batchDollPieces(physicalStairTiles);for(const g of [physicalDaisyTiles,physicalStairTiles])g.traverse(m=>{if(m.isMesh)m.receiveShadow=true;});daisyContactShadow.position.y=.022;
+// Contact cues stay on the new tile surface, without inventing another light.
+const hdCharacterStats={};for(const [name,g]of [['Pengawas',MonsterVisual],['TanganTangan',HandsVisual],['Pemegang',FinalVisual],['Daisy',doll],['LENTERA_G',heldLentera.root]]){let triangles=0,meshes=0;g.traverse(m=>{if(m.isMesh){meshes++;triangles+=(m.geometry.index?.count||m.geometry.attributes.position.count)/3;m.castShadow=g!==heldLentera.root&&!m.material?.transparent;m.receiveShadow=g!==heldLentera.root;}});hdCharacterStats[name]={triangles,meshes};}
+// A camera-held device cannot occlude its own spotlight or receive world shadow maps.
+// The separate world pickup and deployed claw keep their original physical shadows.
+for(const root of [heldLentera.root,oldFlashVisual])root.traverse(m=>{if(m.isMesh){m.castShadow=false;m.receiveShadow=false;}});
+
+resetNpcs();baseNpcs.forEach(n=>n.visible=false);handGroup.visible=false;$t.visible=true;Rt.visible=false;At.visible=false;state.room='title';Gn('title');Eu(['SELAMAT BELAJAR','Piket kelas 2B: Adit & Melati']);wu();$('fader').style.opacity=0;$('pauseButton').style.display='none';settings();updateContinue();
+Promise.all(assetPromises).then(()=>{$('btnStart').disabled=false;$('btnStart').innerHTML='<span>01</span> PLAY GAME';$('loadStatus').textContent='Siap dimainkan offline · seluruh aset sudah tertanam';globalThis.__tumbalReady=true;globalThis.__kalaReady=true;requestAnimationFrame(tick)}).catch(()=>{$('btnStart').disabled=false;$('btnStart').innerHTML='<span>01</span> PLAY GAME';requestAnimationFrame(tick)});
+})();
+})();
+
+

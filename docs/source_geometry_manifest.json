@@ -1,0 +1,122 @@
+[
+  {
+    "name": "school",
+    "meshes": 579,
+    "nodes": 691,
+    "bytes": 3081260
+  },
+  {
+    "name": "street",
+    "meshes": 101,
+    "nodes": 116,
+    "bytes": 352300
+  },
+  {
+    "name": "relay",
+    "meshes": 335,
+    "nodes": 405,
+    "bytes": 3484864
+  },
+  {
+    "name": "loading",
+    "meshes": 212,
+    "nodes": 250,
+    "bytes": 1969584
+  },
+  {
+    "name": "production",
+    "meshes": 264,
+    "nodes": 301,
+    "bytes": 1918128
+  },
+  {
+    "name": "office",
+    "meshes": 205,
+    "nodes": 243,
+    "bytes": 1559272
+  },
+  {
+    "name": "ritual",
+    "meshes": 211,
+    "nodes": 223,
+    "bytes": 765276
+  },
+  {
+    "name": "corridor",
+    "meshes": 72,
+    "nodes": 81,
+    "bytes": 926760
+  },
+  {
+    "name": "daisy",
+    "meshes": 78,
+    "nodes": 108,
+    "bytes": 3829276
+  },
+  {
+    "name": "pursuit",
+    "meshes": 188,
+    "nodes": 214,
+    "bytes": 1985420
+  },
+  {
+    "name": "npc_Danu",
+    "meshes": 21,
+    "nodes": 30,
+    "bytes": 460572
+  },
+  {
+    "name": "npc_Raka",
+    "meshes": 17,
+    "nodes": 22,
+    "bytes": 616988
+  },
+  {
+    "name": "npc_Adit",
+    "meshes": 17,
+    "nodes": 22,
+    "bytes": 616988
+  },
+  {
+    "name": "npc_Sari",
+    "meshes": 19,
+    "nodes": 24,
+    "bytes": 636328
+  },
+  {
+    "name": "overseer",
+    "meshes": 38,
+    "nodes": 54,
+    "bytes": 6272772
+  },
+  {
+    "name": "hands",
+    "meshes": 23,
+    "nodes": 33,
+    "bytes": 4384524
+  },
+  {
+    "name": "tumbal",
+    "meshes": 41,
+    "nodes": 59,
+    "bytes": 7591076
+  },
+  {
+    "name": "actor_daisy",
+    "meshes": 22,
+    "nodes": 29,
+    "bytes": 22731764
+  },
+  {
+    "name": "lentera",
+    "meshes": 17,
+    "nodes": 24,
+    "bytes": 868912
+  },
+  {
+    "name": "flashlight",
+    "meshes": 4,
+    "nodes": 6,
+    "bytes": 69384
+  }
+]

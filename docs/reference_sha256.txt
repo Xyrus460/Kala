@@ -1,0 +1,9 @@
+
+
+Algorithm : SHA256
+Hash      : 81537AE67B55C893EB0C643CA5B6AB526FB92D431481C90A4F1D22EE8396A193
+Path      : C:\Users\alama\Downloads\Kala_Chapter_1_Tiga_Fase (6).html
+
+
+
+

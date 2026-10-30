@@ -1,0 +1,100 @@
+ constructor(color,intensity){super(color,intensity);this.isDirectionalLight=true;this.type='DirectionalLight';this.target=new Ut();this.shadow=new ma(new Ws(-24,24,24,-24,.5,70));this.shadow.isDirectionalLightShadow=true;}
+ dispose(){this.shadow.dispose();}
+}
+const discovery=new It();discovery.name='Lentera_Roof_Discovery';relayRoom.group.add(discovery);discovery.visible=KALA_LIGHTING_REVISION;
+const roofY=relayRoom.roof.position.y,roofHole={x:lenteraPickup.root.position.x-2,z:lenteraPickup.root.position.z-1.3,w:2.8,d:2.4};
+if(KALA_LIGHTING_REVISION)relayRoom.roof.visible=false;
+const left=relayRoom.cx-relayRoom.width/2,right=relayRoom.cx+relayRoom.width/2,near=-relayRoom.depth/2,far=relayRoom.depth/2;
+const hx0=roofHole.x-roofHole.w/2,hx1=roofHole.x+roofHole.w/2,hz0=roofHole.z-roofHole.d/2,hz1=roofHole.z+roofHole.d/2;
+for(const [x,z,w,d]of [[(left+hx0)/2,0,hx0-left,relayRoom.depth],[(hx1+right)/2,0,right-hx1,relayRoom.depth],[roofHole.x,(near+hz0)/2,roofHole.w,hz0-near],[roofHole.x,(hz1+far)/2,roofHole.w,far-hz1]])box(discovery,x,roofY,z,w,.2,d,relayRoom.roof.material);
+for(const [x,z,w,d]of [[hx0,roofHole.z,.16,roofHole.d+.3],[hx1,roofHole.z,.16,roofHole.d+.3],[roofHole.x,hz0,roofHole.w,.16],[roofHole.x,hz1,roofHole.w,.16]])box(discovery,x,roofY-.14,z,w,.28,d,mats.rust);
+// A few torn roof edges and exposed reinforcement retain the industrial shape.
+for(let i=0;i<5;i++){const edge=box(discovery,hx0+.22+i*.49,roofY-.09,hz0+.10,.29,.035,.24,mats.rust);edge.rotation.x=.12+i*.10;}
+const skyPatch=new ae(new _t(roofHole.w*1.06,roofHole.d*1.06),new Cn({color:0xc5d4d7,side:xn,fog:false}));skyPatch.rotation.x=-Math.PI/2;skyPatch.position.set(roofHole.x,roofY+.18,roofHole.z);skyPatch.userData.noGrip=true;discovery.add(skyPatch);
+const roofPoint=new I(roofHole.x,roofY,roofHole.z),benchPoint=new I(lenteraPickup.root.position.x,.88,lenteraPickup.root.position.z),sunRay=benchPoint.clone().sub(roofPoint);
+const discoverySun=new DirectionalLight(0xffe1ad,2.7);discoverySun.name='Roof_Sunlight';discoverySun.position.copy(roofPoint).addScaledVector(sunRay,-2);discoverySun.target.position.copy(benchPoint);discoverySun.castShadow=true;
+discoverySun.shadow.mapSize.set(1024,1024);discoverySun.shadow.bias=-.00012;discoverySun.shadow.normalBias=.018;discoverySun.shadow.radius=2;discoverySun.shadow.autoUpdate=false;discoverySun.shadow.needsUpdate=true;discovery.add(discoverySun,discoverySun.target);
+function fitDiscoverySunShadow(){
+ if(!KALA_LIGHTING_REVISION)return;
+ // Include the actual archive/generator roofs as well as the main hall.
+ relayRoom.group.updateMatrixWorld(true);discoverySun.shadow.updateMatrices(discoverySun);
+ const camera=discoverySun.shadow.camera,inv=camera.matrixWorldInverse;
+ let minX=Infinity,minY=Infinity,minZ=Infinity,maxX=-Infinity,maxY=-Infinity,maxZ=-Infinity;
+ relayRoom.group.traverse(mesh=>{if(!mesh.isMesh||!mesh.castShadow)return;for(let q=mesh;q&&q!==relayRoom.group;q=q.parent)if(!q.visible)return;
+  mesh.geometry.computeBoundingBox();const b=mesh.geometry.boundingBox;
+  for(const x of [b.min.x,b.max.x])for(const y of [b.min.y,b.max.y])for(const z of [b.min.z,b.max.z]){const v=new I(x,y,z).applyMatrix4(mesh.matrixWorld).applyMatrix4(inv);minX=Math.min(minX,v.x);maxX=Math.max(maxX,v.x);minY=Math.min(minY,v.y);maxY=Math.max(maxY,v.y);minZ=Math.min(minZ,v.z);maxZ=Math.max(maxZ,v.z);}
+ });
+ camera.left=minX-.5;camera.right=maxX+.5;camera.bottom=minY-.5;camera.top=maxY+.5;camera.near=Math.max(.1,-maxZ-.5);camera.far=-minZ+.5;camera.updateProjectionMatrix();discoverySun.shadow.needsUpdate=true;
+}
+// The visible shaft is a small tapered prism, never a full-screen fog pass.
+// Each section follows the same sun ray from the real aperture to the floor.
+const beamPositions=[],beamUvs=[];
+function beamCorner(i,y){const t=(roofY-y)/(-sunRay.y);return new I(roofHole.x+sunRay.x*t+(i===0||i===3?-1:1)*roofHole.w/2,y,roofHole.z+sunRay.z*t+(i<2?-1:1)*roofHole.d/2);}
+for(let i=0;i<4;i++){const j=(i+1)%4,a=beamCorner(i,roofY-.15),b=beamCorner(j,roofY-.15),c=beamCorner(j,.04),d=beamCorner(i,.04);for(const [v,uv]of [[a,[0,1]],[b,[1,1]],[c,[1,0]],[a,[0,1]],[c,[1,0]],[d,[0,0]]]){beamPositions.push(v.x,v.y,v.z);beamUvs.push(...uv);}}
+const beamGeometry=new rn();beamGeometry.setAttribute('position',new Dt(beamPositions,3));beamGeometry.setAttribute('uv',new Dt(beamUvs,2));
+const sunBeam=new ae(beamGeometry,new St({transparent:true,depthWrite:false,side:xn,uniforms:{color:{value:new be(0xffe2b3)}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',fragmentShader:'varying vec2 vUv;uniform vec3 color;void main(){float edge=smoothstep(0.0,.20,vUv.x)*smoothstep(0.0,.20,1.0-vUv.x);float fade=smoothstep(0.0,.22,vUv.y)*smoothstep(0.0,.12,1.0-vUv.y);gl_FragColor=vec4(color,.022*edge*fade);}'}));sunBeam.userData.noGrip=true;discovery.add(sunBeam);
+const sunDustCount=48,sunDustData=new Float32Array(sunDustCount*3),sunDustGeometry=new rn();sunDustGeometry.setAttribute('position',new Dt(sunDustData,3));
+const sunDust=new da(sunDustGeometry,new qs({color:0xffe6bd,size:.021,transparent:true,opacity:.47,depthWrite:false,map:y_,sizeAttenuation:true,fog:true}));sunDust.userData.noGrip=true;discovery.add(sunDust);
+// The unpowered pickup uses lit, non-emissive materials. Held-tool materials stay intact.
+const unpoweredLens=new Xe({color:0x5c716f,roughness:.35,metalness:.18,emissiveIntensity:0}),unpoweredTag=toolMats.tag.clone();unpoweredTag.emissiveIntensity=0;
+lenteraPickup.root.traverse(m=>{if(m.isMesh){if(m.material===toolMats.lens)m.material=unpoweredLens;if(m.material===toolMats.tag)m.material=unpoweredTag;m.castShadow=true;m.receiveShadow=true;}});
+let lenteraDiscovery=null,lenteraTake=null;
+function finishLenteraDiscovery(){if(!lenteraDiscovery)return;ct.position.copy(lenteraDiscovery.position);ct.quaternion.copy(lenteraDiscovery.rotation);player.yaw=ct.rotation.y;player.pitch=ct.rotation.x;lenteraDiscovery=null;state.flags.lenteraDiscoverySeen=true;saveProgress();}
+function beginLenteraDiscovery(){
+ if(!KALA_LIGHTING_REVISION||state.flags.lenteraDiscoverySeen||state.flags.lenteraOwned||sequence||overlay||fade)return;
+ lenteraDiscovery={t:0,position:ct.position.clone(),rotation:ct.quaternion.clone()};
+ runSequence([{text:'Atapnya jebol. Di antara debu yang turun, sesuatu tergeletak di meja kerja.',duration:2.5},{text:'LENTERA-G. Nomor inventarisnya dicoret. Alat itu belum menyala.',duration:2.5}],finishLenteraDiscovery,{cinematic:true});
+}
+function cancelLenteraCinema(){lenteraDiscovery=null;lenteraTake=null;lenteraPickup.root.position.set(1603,1.28,12);lenteraPickup.root.rotation.set(0,.4,.2);lenteraPickup.root.scale.setScalar(1.7);discoverySun.shadow.needsUpdate=true;}
+function updateLenteraDiscovery(dt){
+ const inRelay=state.room==='relay'&&KALA_LIGHTING_REVISION;discoverySun.visible=inRelay;discovery.visible=KALA_LIGHTING_REVISION;
+ // Even Low uses one cached 512px sunlight shadow: otherwise sun leaks through the roof.
+ lt.shadowMap.enabled=!!graphicsPresets[currentQuality].shadow||inRelay||(state.room==='daisy'&&currentQuality==='medium');
+ if(!inRelay)return;
+ const size=currentQuality==='low'?512:currentQuality==='high'?2048:1024;if(discoverySun.shadow.mapSize.x!==size){discoverySun.shadow.map?.dispose();discoverySun.shadow.map=null;discoverySun.shadow.mapSize.set(size,size);discoverySun.shadow.needsUpdate=true;}
+ for(let i=0;i<sunDustCount;i++){const y=.4+((i*.137+now*.055)%6.3),t=(roofY-y)/(-sunRay.y);sunDustData[i*3]=roofHole.x+sunRay.x*t+Math.sin(i*7.13+now*.12)*roofHole.w*.41;sunDustData[i*3+1]=y;sunDustData[i*3+2]=roofHole.z+sunRay.z*t+Math.sin(i*3.71+now*.09)*roofHole.d*.41;}sunDustGeometry.attributes.position.needsUpdate=true;sunDust.visible=currentQuality!=='low';
+ if(lenteraDiscovery&&sequence&&!overlay){const a=lenteraDiscovery;a.t+=dt;ct.position.copy(a.position);const target=a.t<2.1?new I(roofHole.x,roofY-.3,roofHole.z):lenteraPickup.root.position;const desired=ct.quaternion.clone();ct.lookAt(target);const next=ct.quaternion.clone();ct.quaternion.copy(desired).slerp(next,Math.min(1,dt*2.7));sequence.yaw=ct.rotation.y;sequence.pitch=ct.rotation.x;}
+ if(!state.flags.lenteraOwned&&!sequence&&!overlay&&!fade&&Math.hypot(player.x-1603,player.z-12)<6)beginLenteraDiscovery();
+ if(lenteraTake){const a=lenteraTake;a.t+=dt;const u=clamp(a.t/1.05,0,1),ease=u*u*(3-2*u),end=ct.localToWorld(new I(.32,-.255,-.66));lenteraPickup.root.position.lerpVectors(a.origin,end,ease);lenteraPickup.root.rotation.x=-ease*.35;lenteraPickup.root.rotation.z=.2-ease*.245;lenteraPickup.root.scale.setScalar(1.7-ease*.7);lenteraPickup.root.visible=u<1;heldLentera.root.visible=u>=1;flashlight=u>=1;if(u>=1){lenteraTake=null;discoverySun.shadow.needsUpdate=true;He.click(.24);saveProgress();MechanicTutorial.show('lentera');}}
+}
+
+function lampAvailable(){return !state.flags.oldFlashBroken||!!state.flags.lenteraOwned}
+function pickupLentera(){if(state.flags.lenteraOwned||lenteraTake)return;state.flags.lenteraOwned=true;flashlight=false;lenteraTake={t:0,origin:lenteraPickup.root.position.clone()};discoverySun.shadow.needsUpdate=true;
+ if(!state.seen.lentera_inscription){state.seen.lentera_inscription=true;state.notes.push({id:'lentera_inscription',title:TOOL_NAME+' / NOMOR INVENTARIS',body:'Gulungan inspeksi dan penyelamatan. Ada inisial R. di bawah nomor inventaris yang dihapus.'});}
+ resetLampPose();saveProgress();
+}
+interact('relay',1603,12,'ambil '+TOOL_NAME,pickupLentera,{radius:2.5,available:()=>!state.flags.lenteraOwned,y:1.25});
+function registerToolTarget(room,point,radius,label,onGrab,available=()=>true,extra={}){const target={room,point,radius,label,onGrab,available,...extra};toolTargets.push(target);return target}
+registerToolTarget('production',()=>new I(589,1.60,-17.65),.65,'PANEL KATUP',()=>{state.flags.lenteraTutorialDone=true;openPuzzle('valve')},()=>!state.puzzles.valve.solved);
+registerToolTarget('office',()=>new I(808.8,1.55,2),.60,'PANEL SAKLAR',()=>{if(state.evidence.B)openPuzzle('breaker')},()=>!state.puzzles.breaker.solved);
+registerToolTarget('loading',()=>new I(413,1.5,-15),.65,'PANEL KONTROL',()=>openPuzzle('panel'),()=>!state.puzzles.panel.solved);
+// The relay chamber is a physical puzzle. Its state and visual evidence persist;
+// it has no hint text, hint button, auto-solution, or tutorial objective.
+const relayRotors=[],relayMarks=[],relayPowerLamps=[],relayIndicatorMat=new Cn({color:0x5a4236}),relayPoweredMat=new Cn({color:0x88ad94}),relayCell=new It();relayCell.position.set(1590,1.28,7);relayRoom.group.add(relayCell);
+box(relayCell,0,0,0,.42,.52,.26,toolMats.steel);box(relayCell,0,.31,0,.22,.08,.15,toolMats.tag);box(relayCell,0,0,.145,.13,.29,.035,toolMats.tag);batchDollPieces(relayCell);const carriedCell=relayCell.clone(true);carriedCell.position.set(.14,-.13,.02);carriedCell.scale.setScalar(.5);heldLentera.root.add(carriedCell);carriedCell.visible=false;
+for(let i=0;i<10;i++)box(relayRoom.group,1587+i*.55,1.55,9,.045,3.1,.045,mats.metal);box(relayRoom.group,1589.5,3.1,9,5.5,.09,.09,mats.rust);
+const relayCage=new It();relayRoom.group.add(relayCage);
+for(const x of [1587,1592.2])for(let z=4;z<=9;z+=.5)box(relayCage,x,1.55,z,.045,3.1,.045,mats.metal);
+for(let x=1587;x<=1592.2;x+=.52)box(relayCage,x,1.55,4,.045,3.1,.045,mats.metal);
+for(const [minX,maxX,minZ,maxZ]of [[1586.9,1592.3,8.9,9.1],[1586.9,1587.1,3.9,9.1],[1592.1,1592.3,3.9,9.1],[1586.9,1592.3,3.9,4.1]])relayRoom.colliders.push({minX,maxX,minZ,maxZ});
+batchDollPieces(relayCage);
+const relaySocket=box(relayRoom.group,1608,1.45,-2,.9,1.1,.6,toolMats.dark);box(relayRoom.group,1608,1.45,-1.68,.48,.6,.035,toolMats.tag);
+box(relayRoom.group,1608,.45,-2,.83,.9,.56,toolMats.steel);
+relayRoom.colliders.push({minX:1607.5,maxX:1608.5,minZ:-2.4,maxZ:-1.6});
+const rotorTargets=[2,1,3];
+for(let i=0;i<3;i++){const x=1592+i*8;box(relayRoom.group,x,1.30,-10.2,.24,2.6,.35,mats.metal);box(relayRoom.group,x,.06,-10.2,1.2,.12,.8,mats.metal);box(relayRoom.group,x,3.65,-10.1,2.15,2.15,.55,mats.metal);const rotor=new It();rotor.position.set(x,3.65,-9.76);relayRoom.group.add(rotor);const disk=cylinder(rotor,0,0,0,.78,.16,toolMats.steel);disk.rotation.x=Math.PI/2;box(rotor,0,.34,.13,.11,.65,.12,toolMats.rust);const tip=new ae(new vi(.18,.30,3),toolMats.tag);tip.position.set(0,.70,.13);rotor.add(tip);batchDollPieces(rotor);relayRotors.push(rotor);
+ const marks=new It();marks.position.set(x,3.65,-9.63);marks.rotation.z=-rotorTargets[i]*Math.PI/2;relayRoom.group.add(marks);box(marks,0,.94,0,.16,.13,.025,new Cn({color:0x9bcaab}));box(marks,0,1.04,0,.05,.07,.025,new Cn({color:0x9bcaab}));relayMarks.push(marks);
+ sign(relayRoom.group,x,2.26,-9.72,['I','II','III'][i],.55,.27);const indicator=sphere(relayRoom.group,x,2.75,-9.68,.09,relayIndicatorMat);relayPowerLamps.push(indicator);
+ registerToolTarget('relay',()=>rotor.position.clone().add(new I(0,0,.2)),.83,'RELAI '+['I','II','III'][i],()=>turnRelay(i),()=>state.flags.relayPower&&!state.flags.relaySolved);
+ const next=i<2?x+8:x;box(relayRoom.group,(x+next)/2,5.2,-10.4,Math.max(.12,next-x),.10,.12,mats.rust);box(relayRoom.group,x,4.6,-10.4,.10,1.2,.12,mats.rust);
+}
+const relayLever=new It();relayLever.name='KonsolTuasArsip';relayLever.position.set(1603,0,-13.7);relayRoom.group.add(relayLever);
+box(relayLever,0,.08,0,1.22,.16,.90,toolMats.dark);box(relayLever,0,.59,0,.63,1.02,.53,toolMats.steel);
+for(const side of [-1,1])box(relayLever,side*.26,.59,.278,.055,.83,.035,toolMats.rust);
+const leverDeck=joint(relayLever,0,1.17,0);leverDeck.rotation.x=.28;
+box(leverDeck,0,0,0,1.15,.16,.80,toolMats.rust);box(leverDeck,0,.095,0,1.02,.035,.68,toolMats.dark);
+const relayHandle=joint(leverDeck,.20,.13,.04);cylinder(relayHandle,0,.18,0,.035,.36,toolMats.steel);box(relayHandle,0,.38,0,.34,.095,.10,toolMats.rust);
+box(leverDeck,-.26,.13,-.10,.28,.055,.25,toolMats.tag);sphere(leverDeck,-.26,.15,.18,.065,relayIndicatorMat);
+sign(relayRoom.group,1603,1.03,-13.21,'04 / ARSIP',.66,.17);
+light(relayRoom,1603,2.9,-12.8,0xd8c6a1,24,8);
+relayRoom.colliders.push({minX:1602.39,maxX:1603.61,minZ:-14.15,maxZ:-13.25});

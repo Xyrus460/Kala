@@ -1,0 +1,73 @@
+{
+  "version": "0.7.0",
+  "built_utc": "2026-10-26T06:26:47.213Z",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "architecture": "Windows x86_64",
+  "renderer": "Forward+ / Vulkan",
+  "separate_pck": true,
+  "custom_template": "Godot editor executable, native player runtime mode",
+  "checks_stable": 520,
+  "suites": {
+    "integration": {
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    "layout": {
+      "checks": 117,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    "story": {
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    "claw": {
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    "revision04": {
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    "revision05": {
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    "revision06": {
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_latest_console.log"
+    },
+    "revision07": {
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_latest_console.log"
+    }
+  },
+  "package_files": 558,
+  "packaged_web_runtime": false,
+  "packaged_danu_voice": false,
+  "native_smoke_rooms": 14,
+  "native_gpu_exit": 0,
+  "rendered_captures": 11,
+  "headless_nonverbose_shutdown_diagnostic_observed": false,
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "modified_utc": "2026-10-26T06:24:44.755Z",
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 149056660,
+      "modified_utc": "2026-10-26T06:24:47.233Z",
+      "sha256": "4f5c7ff124621fb2b89f1bf17fa120c8aab5d4f13a3c20cf0e33ecdd402a4a6c"
+    }
+  ]
+}
