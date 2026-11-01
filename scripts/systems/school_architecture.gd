@@ -16,7 +16,25 @@ func box(p: Vector3, size: Vector3, mat: Material, solid = true) -> MeshInstance
 func build(owner_level: Node3D) -> void:
 	level = owner_level; root = Node3D.new(); root.name = "ExplorableSchool"; level.add_child(root)
 	plaster = G.material("plain", Color("d2d7cb")); green = G.material("plain", Color("51796a"))
-	floor_mat = G.material("plain", Color("9aa99e"))
+	floor_mat = ShaderMaterial.new()
+	floor_mat.shader = preload("res://assets/materials/school_floor.gdshader")
+	# Remove entire obsolete assemblies, including the slats/handles which
+	# survived the old size-based filter after their slabs were hidden.
+	for title in ["Source_74","Source_75","Source_79","Source_80","Source_189","Source_190","Source_621", "Source_639", "Source_657", "Source_675", "DoorRoot_bk", "DoorRoot_schoolExit", "Source_759"]:
+		var old = level.find_child(title, true, false)
+		if old != null:
+			old.hide()
+			for body in old.find_children("*", "StaticBody3D", true, false): body.collision_layer = 0
+	for index in range(191,241):
+		var old = level.find_child("Source_%d" % index, true, false)
+		if old != null:
+			old.hide()
+			for body in old.find_children("*", "StaticBody3D", true, false): body.collision_layer = 0
+	# New ceiling fixtures replace the old spotlight array as well as its meshes.
+	for light in level.get_node("ContrastLighting").get_children():
+		if light is Light3D: light.light_energy=0
+	for light in level.get_children():
+		if light is OmniLight3D and str(light.name).begins_with("Practical_"):light.light_energy=0
 	# Replace architectural blockout as a unit, keeping story furniture/actors.
 	for mesh in level.get_node("SourceWorld").find_children("*", "MeshInstance3D", true, false):
 		var b: AABB = mesh.global_transform * mesh.get_aabb()
@@ -44,7 +62,8 @@ func build(owner_level: Node3D) -> void:
 	for child in level.get_node("MapBoundary").get_children():
 		if child is MeshInstance3D: child.hide()
 		if child is CollisionShape3D: child.disabled = true
-	box(Vector3(0,-0.17,-0.6), Vector3(28.4,0.34,61.2), G.material("concrete",Color("7b847a"))).name = "GroundedSchoolFoundation"
+	# Foundation ends below the single finished floor (no coplanar top faces).
+	box(Vector3(0,-0.39,-0.6), Vector3(28.4,0.34,61.2), G.material("concrete",Color("7b847a"))).name = "GroundedSchoolFoundation"
 	for storey in range(3):
 		var y = HEIGHT * storey
 		_floor(storey)
@@ -64,7 +83,7 @@ func build(owner_level: Node3D) -> void:
 				if z0 > -30: box(Vector3(side*8,y+1.58,z0),Vector3(12,3.16,0.16),plaster)
 				if title == "TANGGA": continue
 				var preserve = storey == 0 and ((side < 0 and idx in [1,4]) or (side > 0 and idx in [1,4]))
-				if not preserve: _furnish(side,y,middle,title,idx)
+				preload("res://scripts/systems/school_rooms.gd").new().furnish(root,side,y,z0,z1,title,preserve)
 				_lamp(Vector3(side*8,y+3.08,middle))
 		# End wall and entrance opening, then corridor practicals.
 		box(Vector3(0,y+1.58,30),Vector3(28.2,3.16,0.18),plaster)
@@ -77,7 +96,23 @@ func build(owner_level: Node3D) -> void:
 		var caption = G.sign_text(root,"LANTAI %d   /   TANGGA ←" % (storey+1),Vector3(0,y+2.4,-24.1),20)
 		caption.modulate = Color("344f43")
 	box(Vector3(0,10.16,-0.3),Vector3(28.4,0.24,60.6),plaster).name = "SchoolRoof"
+	if not State.flag("prologueVersion"):
+		_legacy_entrance()
+	preload("res://scripts/systems/school_rooms.gd").new().lockers(level, root)
 	preload("res://scripts/systems/school_puzzles.gd").new().build(level)
+
+func _legacy_entrance() -> void:
+	# Older saves end at this door. The current chapter instead connects
+	# the same opening to a second, resident schoolyard scene.
+	var hinge = Node3D.new()
+	hinge.name = "LegacyEntranceHinge"
+	root.add_child(hinge)
+	hinge.position = Vector3(-1.52, 0, -30.6)
+	var asset_path = "res://assets/vendor/kenney_building/door-rotate-square-c.glb"
+	var leaf_size = Vector3(1.51, 2.72, 0.12)
+	A.place(hinge, asset_path, Vector3(0.76, 0, 0), leaf_size, 0, true, "ActiveLeaf", PI/2)
+	A.place(root, asset_path, Vector3(0.76, 0, -30.6), leaf_size, PI, true, "FixedLeaf", PI/2)
+	level.all_doors["schoolExit"].node = hinge
 
 func _floor(storey: int) -> void:
 	var y = HEIGHT*storey - 0.11
@@ -104,7 +139,7 @@ func _stairs(storey: int) -> void:
 		box(Vector3(-6.9,y+HEIGHT+0.55,-27.3+side*1.13),Vector3(7.8,1.1,0.07),green,true).visible = false
 		box(Vector3(-6.9,y+HEIGHT+1.06,-27.3+side*1.13),Vector3(7.8,0.08,0.08),green,false)
 		for x in [-10.7,-9.4,-8.1,-6.8,-5.5,-4.2,-3.1]: box(Vector3(x,y+HEIGHT+0.52,-27.3+side*1.13),Vector3(0.05,1.04,0.05),green,false)
-	box(Vector3(-11.7,y+HEIGHT-0.11,-27.3),Vector3(1.8,0.22,2.2),floor_mat)
+	# The floor's west strip already supplies this landing.
 
 func _partition(side: int, y: float, z0: float, z1: float, door_z: float, title: String) -> void:
 	for end in [Vector2(z0,door_z-0.9),Vector2(door_z+0.9,z1)]:
@@ -113,6 +148,12 @@ func _partition(side: int, y: float, z0: float, z1: float, door_z: float, title:
 	for z in [door_z-0.92,door_z+0.92]: box(Vector3(side*2,y+1.2,z),Vector3(0.23,2.4,0.07),green)
 	var label = G.sign_text(root,title,Vector3(side*1.89,y+2.60,door_z),18,-side*PI/2)
 	label.modulate = Color("30483d"); label.outline_size = 0; label.pixel_size = 0.0045
+	if title != "TANGGA":
+		# Kenney's door has an X-normal slab. Rest it open along the room wall,
+		# beyond the 1.8 m opening, with its base at the finished floor.
+		var door=A.place(root,"res://assets/vendor/kenney_building/door-rotate-square-a.glb",Vector3(side*2.80,y,door_z+0.88),Vector3(0.16,2.30,1.30),PI/2,true,"SchoolDoor")
+		for mesh in door.find_children("*","MeshInstance3D",true,false):
+			mesh.material_override=G.material("plain",Color("adb3a5") if str(mesh.name)!="handle" else Color("586162"))
 
 func _window_wall(p: Vector3, yaw: float) -> void:
 	var wall = Node3D.new(); root.add_child(wall); wall.position=p; wall.rotation.y=yaw
@@ -123,22 +164,6 @@ func _window_wall(p: Vector3, yaw: float) -> void:
 	G.box(wall,Vector3(0,1.84,0),Vector3(3.32,1.8,0.055),glass,true)
 	for x in [-1.67,0,1.67]: G.box(wall,Vector3(x,1.84,0.02),Vector3(0.045,1.84,0.10),green)
 	G.box(wall,Vector3(0,2.2,0.02),Vector3(3.4,0.045,0.1),green)
-
-func _furnish(side: int, y: float, z: float, title: String, index: int) -> void:
-	if "UKS" in title:
-		for dx in [5,10]: A.furniture(root,"bedSingle",Vector3(side*dx,y,z),Vector3(1.3,0.75,2.1),0)
-	elif "ARSIP" in title or "BACA" in title:
-		for dz in [-2,0,2]: A.furniture(root,"bookcaseOpen",Vector3(side*12.7,y,z+dz),Vector3(1.7,2.15,0.5),side*PI/2)
-	elif "AULA" in title:
-		box(Vector3(side*9,y+0.13,z-3),Vector3(8,0.26,3),green)
-		for dz in [0,2,4]: A.furniture(root,"bench",Vector3(side*8,y,z+dz),Vector3(6,0.82,0.6),0)
-	else:
-		for dx in [5,9]:
-			A.furniture(root,"desk",Vector3(side*dx,y,z),Vector3(1.7,0.8,0.7),0)
-			A.furniture(root,"chair",Vector3(side*dx,y,z+0.85),Vector3(0.48,0.9,0.48),PI,false)
-			if "KOMPUTER" in title: A.furniture(root,"computerScreen",Vector3(side*dx,y+0.8,z),Vector3(0.6,0.4,0.2),0,false)
-		A.furniture(root,"bookcaseOpen",Vector3(side*12.8,y,z-2),Vector3(1.7,2.0,0.4),side*PI/2)
-	if index % 2 == 0: A.furniture(root,"pottedPlant",Vector3(side*3.3,y,z-2),Vector3(-1,1.1,-1),0,false)
 
 func _lamp(p: Vector3) -> void:
 	var mat = G.material("plain",Color("e5ead6")).duplicate(); mat.emission_enabled=true; mat.emission=Color("c8ddc9"); mat.emission_energy_multiplier=1.1

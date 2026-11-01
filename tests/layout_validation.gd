@@ -40,8 +40,8 @@ func _ready() -> void:
 			if not level.is_ancestor_of(object) or object.tool_only or not object.available(): continue
 			check(reachable(object), id + " aim access: " + object.caption)
 		if id == "school":
-			check(level.find_child("Sari_School_Skirt", true, false) != null, "Sari schoolgirl skirt")
-			check(level.find_child("Sari_Long_Hair", true, false) != null, "Sari authored face with long hair")
+			check(level.get_node("NPC_Sari").female and level.get_node("NPC_Sari").skeleton!=null, "Sari uses imported female character with a skirt")
+			check(level.get_node("NPC_Sari").find_child("SariHead",true,false)!=null, "Sari has the imported styled hair and face")
 		if id == "relay":
 			check(level.marks.size() == 3 and level.marks.all(func(node): return node.is_inside_tree()), "three relay marks are live native nodes")
 		if id == "pursuit":
@@ -65,6 +65,7 @@ func reachable(object: KalaInteractable) -> bool:
 		for step in range(24):
 			var angle = float(step) * TAU / 24
 			var eye_y = floorf(object.global_position.y / 3.4) * 3.4 + 1.62 if game.level.room_id == "school" else 1.62
+			if game.level.room_id == "relay" and object.global_position.y < -1: eye_y = -4.0 + 1.62
 			var origin = Vector3(object.global_position.x + cos(angle) * radius, eye_y, object.global_position.z + sin(angle) * radius)
 			var ray = PhysicsRayQueryParameters3D.create(origin, object.global_position, 3)
 			ray.collide_with_areas = true

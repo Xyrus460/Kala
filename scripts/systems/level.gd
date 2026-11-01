@@ -25,6 +25,9 @@ var fan_stop_time = 0.0
 var safety = preload("res://scripts/systems/room_safety.gd").new()
 var presentation = preload("res://scripts/systems/room_presentation.gd").new()
 var escape_puzzle: RefCounted
+var factory_route: RefCounted
+var relay_world: Node3D
+var refinement: Node3D
 var chapter_world: RefCounted
 var nav_extra: Array[Rect2] = []
 var brake_cooldowns: Dictionary = {}
@@ -72,10 +75,19 @@ func _ready() -> void:
 	safety.setup(self)
 	presentation.apply(self)
 	preload("res://scripts/systems/world_detail.gd").new().apply(self)
+	if room_id in ["loading","relay","production","office","ritual"]:
+		factory_route=preload("res://scripts/systems/factory_route.gd").new();factory_route.apply(self)
+	if room_id == "relay":
+		relay_world = preload("res://scripts/systems/relay_rebuild.gd").new()
+		relay_world.apply(self)
 	_setup_navigation()
 	if room_id == "pursuit":
 		escape_puzzle = preload("res://scripts/interaction/escape_puzzle.gd").new()
 		escape_puzzle.setup(self)
+	if room_id in ["pursuit", "production", "office"]:
+		refinement = preload("res://scripts/systems/factory_refinement.gd").new()
+		refinement.apply(self)
+		_setup_navigation()
 	if room_id == "relay" and not has_node("RelayWatcher"):
 		var watcher = preload("res://scripts/enemies/relay_watcher.gd").new()
 		watcher.name = "RelayWatcher"
@@ -399,7 +411,7 @@ func _process(delta: float) -> void:
 		"school": open_passage = State.flag("invited")
 		"street": open_passage = State.solved("fuse")
 		"loading": open_passage = State.flag("overseerDefeated")
-		"relay": open_passage = State.flag("relaySolved")
+		"relay": open_passage = State.flag("relaySolved") and State.flag("memorySolved")
 		"production": open_passage = State.flag("handsDefeated")
 		"office": open_passage = State.solved("breaker")
 		"ritual": open_passage = State.flag("tumbalDefeated")
@@ -421,7 +433,7 @@ func _process(delta: float) -> void:
 	var cell = find_child("RelayCell", true, false) as Node3D
 	if cell != null:
 		cell.visible = not State.flag("relayCellHeld")
-		if State.flag("relayPower"): cell.position = Vector3(definition.cx + 8, 1.45, -1.7)
+		if State.flag("relayPower"): cell.global_position = to_global(Vector3(8, 1.45, -1.7))
 	var player = get_tree().get_first_node_in_group("kala_player") as KalaPlayer
 	if room_id == "pursuit":
 		escape_puzzle.update(delta)
@@ -442,6 +454,6 @@ func _process(delta: float) -> void:
 			if mist != null: mist.visible = fmod(time + phase, 5.8) < 1.4
 		if player != null and player.position.x > 85 and player.position.z < -122 and State.flag("escapePuzzleSolved") and not State.flag("handsPursuitComplete"):
 			get_parent().get_parent()._rescue()
-	if player != null and room_id in ["loading", "relay", "production", "office", "ritual"] and open_passage and player.position.z < -depth / 2 - 8.8:
-		passage_entered.emit(State.ROOMS[State.ROOMS.find(room_id) + 1])
-		set_process(false)
+	if factory_route!=null:
+		factory_route.update()
+		if player!=null and open_passage:factory_route.check_transition(player)

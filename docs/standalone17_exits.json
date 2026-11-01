@@ -1,0 +1,14 @@
+[
+  {
+    "stderr": "C:\\Game\\kala\\docs\\exe_forward_17_stderr.log",
+    "stdout": "C:\\Game\\kala\\docs\\exe_forward_17_stdout.log",
+    "exit_code": 0,
+    "renderer": "forward"
+  },
+  {
+    "stderr": "C:\\Game\\kala\\docs\\exe_compatibility_17_stderr.log",
+    "stdout": "C:\\Game\\kala\\docs\\exe_compatibility_17_stdout.log",
+    "exit_code": 0,
+    "renderer": "compatibility"
+  }
+]

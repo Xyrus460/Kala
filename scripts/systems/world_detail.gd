@@ -39,8 +39,8 @@ func apply(level: Node3D) -> void:
 				preload("res://scripts/systems/free_assets.gd").place(root, "res://assets/vendor/school_furniture/SillaEscuela - School Chair.obj", center + Vector3(0, 0, 0.72), Vector3(0.45, 0.95, 0.43), PI, false, "SchoolChair")
 		# The old rectangular footprint allowed walking behind entire classrooms.
 		# A continuous floor under the actual room union also closes tiny source seams.
-		for r in level.safety.regions:
-			G.box(root, Vector3(r.x + r.w / 2, -0.12, r.z + r.d / 2), Vector3(r.w, 0.2, r.d), G.material("concrete", Color("8c9385")), true)
+		# SchoolArchitecture owns all floor slabs; a second safety floor here
+		# produced depth fighting at room joins and the entrance.
 		preload("res://scripts/systems/school_detail.gd").new().interior(level)
 		# The school exit now opens directly onto the resident outdoor campus.
 		if State.flag("prologueVersion"):
@@ -69,13 +69,13 @@ func apply(level: Node3D) -> void:
 		level.interact(Vector3(-1.65, 1.35, 9.7), "chapter", "Kembali ke kelas XI A", "return_class", false, Vector3(0.65, 1.8, 1.0))
 		var seats = [Vector3(-10.5, 0, 9.02), Vector3(-8, 0, 9.02), Vector3(-10.5, 0, 10.72), Vector3(-8, 0, 10.72), Vector3(-10.5, 0, 12.42)]
 		for i in range(seats.size()):
-			var model = preload("res://scripts/systems/model_factory.gd").make("npc_" + ["Adit", "Sari", "Raka"][i % 3]) as Node3D
+			var model = preload("res://scripts/systems/model_factory.gd").make("npc_" + ["Bima", "Nadia", "Fajar", "Intan", "Adit"][i]) as Node3D
 			model.name = "Classmate_%d" % i; model.position = seats[i]
 			model.rotation.y = PI; root.add_child(model)
 			# Bend hips and knees; soles stay on the floor.
 			model.sit()
 		var teacher = preload("res://scripts/systems/model_factory.gd").make("npc_Ratna") as Node3D
-		teacher.name = "Teacher"; teacher.position = Vector3(-8, 0, 6.9); teacher.scale *= 1.08; root.add_child(teacher)
+		teacher.name = "Teacher"; teacher.position = Vector3(-8, 0, 6.9); root.add_child(teacher)
 		G.sign_text(root, "BAHASA INDONESIA\nFAKTA  /  KESIMPULAN\nSiapa yang belum kita dengar?", Vector3(-8, 1.85, 6.2), 21)
 		var daylight = OmniLight3D.new(); daylight.position = Vector3(-9, 2.6, 10)
 		daylight.light_color = Color("d3ddd3"); daylight.light_energy = 1.0; daylight.omni_range = 9; root.add_child(daylight)

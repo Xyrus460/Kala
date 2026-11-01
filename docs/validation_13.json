@@ -1,0 +1,165 @@
+{
+  "version": "0.13.0",
+  "verified_utc": "2026-10-31T13:12:46.541Z",
+  "checks": 818,
+  "failures": 0,
+  "suites": {
+    "integration": {
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    "layout": {
+      "checks": 134,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    "story": {
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    "claw": {
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    "revision04": {
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    "revision05": {
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    "revision06": {
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_latest_console.log"
+    },
+    "revision07": {
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_latest_console.log"
+    },
+    "revision08": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision08_latest_console.log"
+    },
+    "revision09": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision09_latest_console.log"
+    },
+    "revision10": {
+      "checks": 22,
+      "failures": 0,
+      "log": "docs/revision10_latest_console.log"
+    },
+    "revision11": {
+      "checks": 98,
+      "failures": 0,
+      "log": "docs/revision11_latest_console.log"
+    },
+    "revision12": {
+      "checks": 49,
+      "failures": 0,
+      "log": "docs/revision12_latest_console.log"
+    },
+    "revision13": {
+      "checks": 44,
+      "failures": 0,
+      "log": "docs/revision13_latest_console.log"
+    }
+  },
+  "standalone": {
+    "forward": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_forward_13_stdout.log",
+      "stderr": "docs/exe_forward_13_stderr.log"
+    },
+    "compatibility": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_compatibility_13_stdout.log",
+      "stderr": "docs/exe_compatibility_13_stderr.log"
+    }
+  },
+  "packed_files": 2124,
+  "known_diagnostics": [
+    {
+      "renderer": "compatibility",
+      "stage": "process shutdown",
+      "textures": 2,
+      "bytes": 699048,
+      "log": "docs/exe_compatibility_13_stderr.log",
+      "status": "same shutdown diagnostic as versions 0.11 and 0.12; all 14 rooms loaded and process exited 0"
+    }
+  ],
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 192717508,
+      "sha256": "bde67e4010e9ee40989515406a425637f87ed8ea00db6657cbe6ec33263dc9e0"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 11131,
+      "sha256": "19478179f456cbb224ba68d8075175365dd84b0e3704f7f2510b5d878b5100f2"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/screenshots/characters_13.png",
+      "sha256": "241910755fc6b32a51135b4881ce7905f22d1cab9bf7db5b97c78446fd626222"
+    },
+    {
+      "file": "docs/screenshots/ratna_13.png",
+      "sha256": "1d26e5c52f5303b8fb80161e28c43b17c6cc8e097b31b15465e17eaa05a79c57"
+    },
+    {
+      "file": "docs/screenshots/mascot_13.png",
+      "sha256": "130bb5d850f6ea41fc3779b2ef219741c68b0dae4234e54f2171b3d2b7958910"
+    },
+    {
+      "file": "docs/screenshots/shower_13.png",
+      "sha256": "c307d92f443c05472023b8e0d9c75d4860d4774bcd3533fbc6327994564c2a5d"
+    },
+    {
+      "file": "docs/screenshots/classroom_13.png",
+      "sha256": "640800f27af12776d081f131c07557c0fbdd9b31c939890a517cd479e2318a4d"
+    },
+    {
+      "file": "docs/screenshots/route_entrance_13.png",
+      "sha256": "0f85f0437bf1c8ce130cebe93362c417099d6a7f12dcfab470eecfe5aec54d41"
+    },
+    {
+      "file": "docs/screenshots/gallery_13.png",
+      "sha256": "c73193ed3316fd3764ef17d42b4559fa6f3d0ee2d59ee8f179cc76d00357b6cc"
+    },
+    {
+      "file": "docs/screenshots/control_13.png",
+      "sha256": "4057d57dc780dae092f6a793ab2abaa1587d8b02e44b67361420cac55ea4eebf"
+    },
+    {
+      "file": "docs/screenshots/route_power_13.png",
+      "sha256": "de6001ae21b0ef9bf6076475b9c5a08275ba2968f0eaca6157e9b4d768523a80"
+    },
+    {
+      "file": "docs/screenshots/claw_13.png",
+      "sha256": "7e3310b619850edaf331d0858eb31e2a0cac5fe4001a4ca5b66ab97bbed9d6da"
+    }
+  ],
+  "limitations": [
+    "Automated gameplay routes and engine renders checked; a full manual playthrough to every ending was not performed."
+  ]
+}

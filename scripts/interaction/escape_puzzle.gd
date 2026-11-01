@@ -22,9 +22,11 @@ func setup(owner_level: Node3D) -> void:
 	# Baked 0.4 scenes contain the obsolete glowing pickup nodes. Migrate those
 	# nodes before building the searchable version, including old Area3D rays.
 	if root != null:
+		for object in level.get_tree().get_nodes_in_group("interactables"):
+			if level.is_ancestor_of(object) and (object.action_id in ["fragment", "escape_lock", "search"] or (object.action_id == "note" and object.parameter == "service_clue")): object.free()
+		var old_sockets=level.all_doors.pursuitEscape.node.get_node_or_null("Sockets")
+		if old_sockets!=null:old_sockets.free()
 		root.free(); root = null
-		for object in level.get_children():
-			if object is KalaInteractable and (object.action_id in ["fragment", "escape_lock", "search"] or (object.action_id == "note" and object.parameter == "service_clue")): object.free()
 	if root == null:
 		root = Node3D.new()
 		root.name = "EscapePuzzle"
@@ -44,7 +46,7 @@ func setup(owner_level: Node3D) -> void:
 		KalaGeometry.box(root, Vector3(1.2, 0.95, 55), Vector3(0.5, 0.08, 0.36), KalaGeometry.material("cotton", Color("bfb391")))
 		var panel = Node3D.new()
 		panel.name = "Sockets"
-		panel.position = Vector3(11.65, 1.3, -57)
+		panel.position = Vector3(11.89, 1.3, -57)
 		panel.rotation.y = -PI / 2
 		root.add_child(panel)
 		var backing = MeshInstance3D.new()
@@ -57,6 +59,9 @@ func setup(owner_level: Node3D) -> void:
 		metal.roughness = 0.7
 		backing.material_override = metal
 		panel.add_child(backing)
+		for x in [-0.47,0.47]:
+			for y in [-0.24,0.24]:
+				var screw=KalaGeometry.cylinder(panel,Vector3(x,y,0.056),0.018,0.022,KalaGeometry.material("steel",Color("8a8a72")));screw.rotation.x=PI/2
 		for i in range(3):
 			var socket = Node3D.new()
 			socket.name = PIECES[i]
@@ -64,7 +69,11 @@ func setup(owner_level: Node3D) -> void:
 			socket.scale = Vector3.ONE * 0.5
 			panel.add_child(socket)
 			_icon(socket, PIECES[i], COLORS[i] * 0.25)
-		level.interact(Vector3(10.9, 1.3, -57), "escape_lock", "Pasang Sun · Moon · Star", "", false, Vector3(0.9, 1.0, 1.3))
+		var lock_target = level.interact(Vector3(11.53, 1.3, -57), "escape_lock", "Pasang Sun · Moon · Star", "", false, Vector3(0.32, 0.75, 1.2))
+		# Both the visible lock and its interaction must inherit the real hinge.
+		var hinge: Node3D = level.all_doors.pursuitEscape.node
+		panel.reparent(hinge, true)
+		lock_target.reparent(hinge, true)
 		gate = StaticBody3D.new()
 		gate.name = "LockBarrier"
 		gate.position = Vector3(12.05, 1.55, -57)
@@ -105,6 +114,19 @@ func _container(record: Array) -> void:
 			var shelf_y = 0.94 if str(record[3]) == "moon" else 0.45
 			KalaGeometry.box(furniture, Vector3(0, shelf_y, 0), Vector3(width - 0.16, 0.04, 0.62), wood)
 	containers[id] = {"node": lid, "kind": kind, "piece": str(record[3]), "origin": lid.position}
+	var piece = str(record[3])
+	if piece != "":
+		var pickup = root.get_node(piece) as Node3D
+		pickup.reparent(lid if kind == "desk" else furniture, false)
+		pickup.position = Vector3(0, -0.065, 0.02) if kind == "desk" else Vector3(0, (0.94 if piece == "moon" else 0.45) + 0.19, 0.04)
+		pickup.rotation = Vector3(-PI / 2, 0, 0) if kind == "desk" else Vector3.ZERO
+		containers[id].pickup = pickup
+		for target in level.get_children():
+			if target is KalaInteractable and target.action_id == "fragment" and target.parameter == piece:
+				target.reparent(pickup, false)
+				target.position = Vector3.ZERO
+				target.scale = Vector3.ONE / pickup.scale
+				target.get_child(0).shape.size = Vector3(0.48, 0.38, 0.40)
 	var target = point + Vector3(0.58 if point.x < 0 else -0.58, 0.7 if kind != "locker" else 1.25, 0)
 	level.interact(target, "search", "Buka dan periksa · " + str(record[4]), id, false, Vector3(0.7, 1.2, 1.45))
 	level.nav_extra.append(Rect2(point.x - 0.43, point.z - width / 2, 0.86, width))
@@ -117,8 +139,8 @@ func search(id: String) -> String:
 	var piece = str(containers[id].piece)
 	if piece != "":
 		State.set_flag("fragmentRevealed_" + piece)
-		for object in level.get_children():
-			if object is KalaInteractable and object.action_id == "fragment" and object.parameter == piece: object.collision_layer = 2
+		for object in level.get_tree().get_nodes_in_group("interactables"):
+			if level.is_ancestor_of(object) and object.action_id == "fragment" and object.parameter == piece: object.collision_layer = 2
 		return "Ada potongan %s di dalam. Ambil dengan E%s." % [piece.capitalize(), "; Ctrl untuk melihat laci bawah" if piece != "moon" else ""]
 	return {"piket": "Loker kosong. Ada catatan: ‘Shift malam menaruhnya setelah sekat keempat.’", "arsip": "Hanya kuitansi. Sun disimpan di meja operator pertama.", "absen": "Di buku absen tertulis: ‘Star — lemari perkakas sebelum pintu servis.’", "suku_cadang": "Lemari ini kosong. Lemari perkakas yang dicari ada di sisi seberang."}.get(id, "Kosong.")
 
@@ -126,8 +148,9 @@ func update(delta: float) -> void:
 	var opened = State.flag("escapePuzzleSolved")
 	gate.collision_layer = 0 if opened else 1
 	for i in range(3):
-		root.get_node(PIECES[i]).visible = State.flag("fragmentRevealed_" + PIECES[i]) and not State.owns("fragment_" + PIECES[i])
-		var socket = root.get_node("Sockets/" + PIECES[i]) as Node3D
+		var pickup = root.find_child(PIECES[i], true, false)
+		pickup.visible = State.flag("fragmentRevealed_" + PIECES[i]) and not State.owns("fragment_" + PIECES[i])
+		var socket = level.all_doors.pursuitEscape.node.get_node("Sockets/" + PIECES[i]) as Node3D
 		for mesh in socket.get_children():
 			if mesh is MeshInstance3D:
 				mesh.material_override.emission_energy_multiplier = 0.6 if State.owns("fragment_" + PIECES[i]) else 0.02

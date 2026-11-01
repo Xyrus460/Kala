@@ -1,0 +1,63 @@
+[
+  {
+    "name": "casual",
+    "title": "Casual Character",
+    "author": "Quaternius",
+    "licence": "CC0 1.0",
+    "url": "https://poly.pizza/m/kZ3DmIoGip",
+    "download": "https://static.poly.pizza/90a9e2d4-053f-42f1-99a2-8f5e1180ea7f.glb",
+    "bytes": 1430660
+  },
+  {
+    "name": "locker",
+    "title": "Locker",
+    "author": "J-Toastie",
+    "licence": "CC-BY 3.0",
+    "url": "https://poly.pizza/m/aGmZ4jQD2y",
+    "download": "https://static.poly.pizza/ede85a90-fbe0-4a1a-a8d7-cd8dd56ee9b2.glb",
+    "bytes": 30216
+  },
+  {
+    "name": "padlock",
+    "title": "Padlock",
+    "author": "Quaternius",
+    "licence": "CC0 1.0",
+    "url": "https://poly.pizza/m/2ZSHgKVr3F",
+    "download": "https://static.poly.pizza/492d2859-724c-42a4-86a2-5502214de10c.glb",
+    "bytes": 33852
+  },
+  {
+    "name": "easel",
+    "title": "Art Easel Set Up",
+    "author": "reyshapes",
+    "licence": "CC0 1.0",
+    "url": "https://poly.pizza/m/2ZP3o8hyPA",
+    "download": "https://static.poly.pizza/de6672ae-e7be-47eb-9836-f4894bbc82f2.glb",
+    "bytes": 315024
+  },
+  {
+    "name": "piano",
+    "title": "Piano",
+    "author": "jeremy",
+    "licence": "CC-BY 3.0",
+    "url": "https://poly.pizza/m/7U-93vxPOER",
+    "download": "https://static.poly.pizza/c217645d-d51f-4b36-8237-7bffe0e49029.glb",
+    "bytes": 103804
+  },
+  {
+    "name": "guitar",
+    "title": "Guitar",
+    "author": "Quaternius",
+    "licence": "CC0 1.0",
+    "url": "https://poly.pizza/m/5Fp8gpomrb",
+    "download": "https://static.poly.pizza/7a272c92-3d46-483d-bf42-ff2c20851a2c.glb",
+    "bytes": 131612
+  },
+  {
+    "name": "monet_wheat",
+    "title": "Stacks of Wheat (End of Summer)",
+    "author": "Claude Monet / Art Institute of Chicago",
+    "licence": "Public domain / CC0 museum reproduction",
+    "url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Stacks_of_Wheat_(End_of_Summer)_-_1985.1103_-_Art_Institute_of_Chicago.jpg"
+  }
+]

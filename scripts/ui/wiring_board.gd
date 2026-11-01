@@ -19,25 +19,43 @@ func _ready() -> void:
 	view.render_target_update_mode = SubViewport.UPDATE_ALWAYS; view.msaa_3d = Viewport.MSAA_2X; add_child(view)
 	camera = Camera3D.new(); camera.position = Vector3(0, 0, 8); camera.projection = Camera3D.PROJECTION_ORTHOGONAL; camera.size = 3.6; view.add_child(camera)
 	assembly = Node3D.new(); view.add_child(assembly)
-	G.box(assembly, Vector3(0, 0, -0.10), Vector3(8.4, 3.5, 0.18), G.material("steel", Color("4e5b56")))
-	G.box(assembly, Vector3(0, 0, 0.015), Vector3(2, 3.1, 0.03), G.material("plain", Color("29312d")))
-	var light = DirectionalLight3D.new(); light.rotation_degrees = Vector3(-25, -25, 0); light.light_energy = 1.4; view.add_child(light)
-	var fill = OmniLight3D.new(); fill.position = Vector3(0, 1, 4); fill.light_energy = 2.5; fill.omni_range = 12; view.add_child(fill)
-	var title = G.sign_text(assembly, "CATU LAMPU\nM  →  K  →  B", Vector3(0, 1.14, 0.08), 23); title.pixel_size = 0.009; title.outline_size = 0
-	for y in [-0.65, 0.05, 0.65]:
-		G.box(assembly, Vector3(0, y - 0.4, 0.11), Vector3(0.85, 0.26, 0.09), G.material("plain", Color("aaa58d")))
-	for x in [-3.9, 3.9]:
-		for y in [-1.48, 1.48]:
-			G.sphere(assembly, Vector3(x, y, 0.05), Vector3(0.09, 0.09, 0.035), G.material("steel", Color("8d9387")))
+	var steel=G.material("plain",Color("666c6b")).duplicate();steel.metallic=0.65;steel.roughness=0.6
+	var dark=G.material("plain",Color("292e31"));var ivory=G.material("plain",Color("c6c5b4"))
+	G.box(assembly,Vector3(0,0,-0.16),Vector3(8.4,3.5,0.22),dark)
+	G.box(assembly,Vector3(0,0,-0.035),Vector3(8.08,3.2,0.04),steel)
+	for x in [-4.12,4.12]:G.box(assembly,Vector3(x,0,0.05),Vector3(0.12,3.48,0.28),steel)
+	for y in [-1.68,1.68]:G.box(assembly,Vector3(0,y,0.05),Vector3(8.3,0.12,0.28),steel)
+	var light=DirectionalLight3D.new();light.rotation_degrees=Vector3(-25,-25,0);light.light_energy=0.9;view.add_child(light)
+	var fill=OmniLight3D.new();fill.position=Vector3(0,1,4);fill.light_energy=1.1;fill.omni_range=12;view.add_child(fill)
+	# Two DIN rails, enclosed wire ducts and numbered screw terminals.
+	for x in [-2.5,2.5]:
+		G.box(assembly,Vector3(x,0,0.015),Vector3(0.76,2.85,0.08),steel)
+		for dx in [-0.34,0.34]:G.box(assembly,Vector3(x+dx,0,0.07),Vector3(0.045,2.85,0.04),ivory)
+	for y in [-1.36,1.36]:
+		G.box(assembly,Vector3(0,y,0.10),Vector3(6.9,0.22,0.16),ivory)
+		for i in range(44):G.box(assembly,Vector3(-3.3+i*0.15,y,0.19),Vector3(0.025,0.15,0.01),dark)
+	for x in [-3.9,3.9]:
+		for y in [-1.48,1.48]:
+			var screw=G.cylinder(assembly,Vector3(x,y,0.04),0.055,0.025,steel);screw.rotation.x=PI/2
+			G.box(assembly,Vector3(x,y,0.06),Vector3(0.06,0.009,0.008),dark)
+	G.box(assembly,Vector3(0,0.64,0.15),Vector3(1.65,0.85,0.25),ivory)
+	G.box(assembly,Vector3(0,0.66,0.285),Vector3(1.34,0.46,0.035),dark)
+	var title=G.sign_text(assembly,"AC   220 V",Vector3(0,0.66,0.315),25);title.pixel_size=0.007;title.outline_size=0;title.modulate=Color("a2b28b")
+	for x in [-0.45,0,0.45]:
+		G.box(assembly,Vector3(x,-0.38,0.16),Vector3(0.36,0.75,0.24),ivory)
+		G.box(assembly,Vector3(x,-0.35,0.30),Vector3(0.20,0.29,0.10),dark)
+	var plate=G.sign_text(assembly,"LP-01   /   PENERANGAN",Vector3(0,-1.04,0.10),17);plate.pixel_size=0.006;plate.outline_size=0
 	for i in range(3):
-		for side in [-1, 1]:
-			var socket = socket_point(i, side)
-			G.box(assembly, socket - Vector3(0, 0, 0.06), Vector3(0.48, 0.48, 0.10), G.material("plain", Color("272c29")))
-			A.place(assembly, "res://assets/vendor/kenney_factory/lever-single.glb", socket - Vector3(0, 0.12, 0), Vector3(0.22, 0.26, 0.14), 0, false)
-			var terminal = G.sphere(assembly, socket + Vector3(0, 0, 0.06), Vector3(0.14, 0.14, 0.08), G.material("plain", COLORS[i]))
-			terminal.name = "Terminal_%d_%d" % [i, side]
-			var label = G.sign_text(assembly, ["M / MERAH", "K / KUNING", "B / BIRU"][i], socket + Vector3(side * 0.72, 0, 0.1), 19)
-			label.pixel_size = 0.008; label.outline_size = 0
+		for side in [-1,1]:
+			var socket=socket_point(i,side)
+			G.box(assembly,socket-Vector3(0,0,0.07),Vector3(0.55,0.64,0.22),ivory)
+			for dy in [-0.19,0.19]:
+				var screw=G.cylinder(assembly,socket+Vector3(0,dy,0.06),0.063,0.03,steel);screw.rotation.x=PI/2
+				G.box(assembly,socket+Vector3(0,dy,0.08),Vector3(0.07,0.012,0.012),dark)
+			G.box(assembly,socket+Vector3(0,0,0.075),Vector3(0.32,0.13,0.025),dark)
+			var terminal=G.cylinder(assembly,socket+Vector3(0,0,0.12),0.075,0.08,G.material("plain",COLORS[i]));terminal.rotation.x=PI/2
+			terminal.name="Terminal_%d_%d"%[i,side]
+			var label=G.sign_text(assembly,["M","K","B"][i],socket+Vector3(side*0.47,0,0.08),23);label.pixel_size=0.006;label.outline_size=0;label.modulate=Color("eee9d7")
 	for i in completed:
 		_make_wire(socket_point(i, -1), socket_point(i, 1), COLORS[i], false)
 	var display = TextureRect.new(); display.texture = view.get_texture(); display.expand_mode = TextureRect.EXPAND_IGNORE_SIZE; display.stretch_mode = TextureRect.STRETCH_SCALE
@@ -59,11 +77,11 @@ func nearest_socket(point: Vector3, side: int) -> int:
 
 func attempt_connection(from: int, to: int) -> bool:
 	if from < 0 or to < 0 or from != to or completed.has(from):
-		if status != null: status.text = "Terminal berbeda. Ikuti label M, K, B; kabel belum dipasang."
+		if status != null: status.text = "Sambungan tidak cocok."
 		return false
 	var next_index = completed.size()
 	if from != next_index:
-		if status != null: status.text = "Catu belum stabil. Mulai M, lanjut K, terakhir B."
+		if status != null: status.text = "Urutan catu belum sesuai catatan servis."
 		return false
 	connected.emit(from)
 	return true
@@ -75,7 +93,7 @@ func _gui_input(event: InputEvent) -> void:
 			selected = nearest_socket(p, -1)
 			if completed.has(selected): selected = -1
 			if selected >= 0:
-				if status != null: status.text = "Tahan lalu tarik ujung kabel ke terminal dengan label yang sama."
+				if status != null: status.text = "Memasang kabel…"
 				_make_wire(socket_point(selected, -1), p, COLORS[selected], true)
 		else:
 			var from = selected; selected = -1

@@ -163,6 +163,7 @@ func _physics_process(delta: float) -> void:
 		var travelled = global_position - previous; travelled.y = 0
 		hands_rig.animate(delta, travelled.length(), false, 0.65 if windup > 0 or dash_left > 0 else 0.0)
 	else:
+		if visual.has_method("animate_walk"):visual.animate_walk(elapsed*7,0.45 if velocity.length()>0.5 else 0.0)
 		for i in range(limbs.size()): limbs[i].rotation.x = limb_rest[i].x + sin(elapsed * 7 + i * PI) * (0.45 if velocity.length() > 1 else 0.06)
 	if distance < 1.35 and hit_timer <= 0 and pause_time <= 0:
 		hit_timer = 1.7
@@ -278,8 +279,9 @@ func _build_visual() -> void:
 		hands_rig.bind(visual)
 		hands_rig.animate(0, 0)
 	if kind == "ash": visual.scale *= 0.43
-	target_offset = Vector3(0, 2.82, 0.2) if kind == "overseer" else Vector3(0, 1.65, 0)
+	target_offset = Vector3(0, 2.5, 0.2) if kind == "overseer" else Vector3(0,1.08,0.1) if kind=="ash" else Vector3(0, 1.65, 0)
 	for joint in visual.find_children("*", "Node3D", true, false):
+		if visual.has_method("animate_walk"):break
 		if hands_rig != null: break
 		if joint is MeshInstance3D: continue
 		if absf(joint.position.x) > 0.18 and joint.position.y > 0.4 and joint.position.y < 2.3:

@@ -147,8 +147,8 @@ func pursuit() -> void:
 		await use("search", pair[0])
 		for i in range(80): game.level.escape_puzzle.update(1.0 / 60)
 		check(target.available(), pair[1] + " revealed by actual furniture search")
-		game.player.position = Vector3(-8.0 if target.position.x < 0 else 8.0, 0.05, target.position.z)
-		game.player.last_safe_position = game.player.position; game.player.camera.look_at(target.position)
+		game.player.position = Vector3(-8.0 if target.global_position.x < 0 else 8.0, 0.05, target.global_position.z)
+		game.player.last_safe_position = game.player.position; game.player.camera.look_at(target.global_position)
 		for i in range(3): await get_tree().physics_frame
 		game.player._physics_process(1.0 / 60)
 		if game.player.target != target:

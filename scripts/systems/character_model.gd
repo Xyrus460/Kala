@@ -10,6 +10,7 @@ var elbows: Array[Node3D] = []
 var seated = false
 var clock = 0.0
 var doll = false
+var wrists: Array[Node3D] = []
 
 static func create(identity: String) -> Node3D:
 	var rig = load("res://scripts/systems/character_model.gd").new()
@@ -124,10 +125,20 @@ func build(identity: String) -> void:
 		ell(arm, "ShortSleeve", Vector3(0, -0.095, 0), Vector3(0.17, 0.24, 0.19), shirt)
 		ell(arm, "UpperArm", Vector3(0, -0.19, 0), Vector3(0.10, 0.24, 0.11), skin)
 		var elbow = joint(arm, "Elbow", Vector3(0, -0.27, 0)); elbows.append(elbow)
+		ell(elbow, "ElbowJoint", Vector3.ZERO, Vector3(0.105, 0.105, 0.105), skin)
 		ell(elbow, "Forearm", Vector3(0, -0.12, 0), Vector3(0.09, 0.25, 0.10), skin)
 		ell(elbow, "Palm", Vector3(0, -0.27, 0.015), Vector3(0.09, 0.12, 0.055), skin)
 		for i in range(4): ell(elbow, "Finger", Vector3(-0.031 + i * 0.021, -0.335, 0.02), Vector3(0.019, 0.079 - absf(i - 1.5) * 0.012, 0.021), skin)
 		ell(elbow, "Thumb", Vector3(side * 0.055, -0.29, 0.028), Vector3(0.03, 0.08, 0.027), skin)
+		# Keep the complete hand on one wrist so a reach cannot split the palm
+		# from its fingers. The joint overlaps both forearm and palm.
+		var wrist = joint(elbow, "Wrist", Vector3(0, -0.245, 0)); wrists.append(wrist)
+		ell(wrist, "WristJoint", Vector3.ZERO, Vector3(0.075, 0.08, 0.075), skin)
+		for hand_part in elbow.get_children():
+			if hand_part.name == "Palm" or str(hand_part.name).begins_with("Finger") or hand_part.name == "Thumb":
+				var pose: Transform3D = hand_part.transform
+				hand_part.reparent(wrist, false)
+				hand_part.transform = Transform3D(pose.basis, pose.origin - wrist.position)
 		arm.rotation.z = side * 0.07
 	if doll: scale = Vector3.ONE * 0.72
 
@@ -160,6 +171,27 @@ func animate_walk(time: float, strength = 0.55) -> void:
 func reach(amount: float) -> void:
 	arms[1].rotation.x = -amount * 1.35
 	elbows[1].rotation.x = -amount * 0.4
+
+func reach_world(target: Vector3, amount: float, delta: float, index = 1) -> void:
+	# Two bones with a forward elbow pole. Solve in the rig's unscaled space;
+	# flattening a silhouette after posing used to reverse-bend Daisy's arm.
+	var shoulder = arms[index]
+	var local_target: Vector3 = shoulder.get_parent().to_local(target) - shoulder.position
+	var upper = 0.27
+	var lower = 0.285
+	var distance = clampf(local_target.length(), 0.08, upper + lower - 0.006)
+	var direction = local_target.normalized()
+	var pole = Vector3(0.18 if index == 1 else -0.18, -0.6, 0.9)
+	pole = (pole - direction * pole.dot(direction)).normalized()
+	var along = (upper * upper + distance * distance - lower * lower) / (2 * distance)
+	var bend = sqrt(maxf(0, upper * upper - along * along))
+	var elbow_point = direction * along + pole * bend
+	var upper_q = Quaternion(Vector3.DOWN, elbow_point.normalized())
+	var forearm_direction = upper_q.inverse() * (direction * distance - elbow_point).normalized()
+	var lower_q = Quaternion(Vector3.DOWN, forearm_direction)
+	var blend = 1.0 - exp(-delta * 14.0)
+	shoulder.quaternion = shoulder.quaternion.slerp(Quaternion.IDENTITY.slerp(upper_q, amount), blend)
+	elbows[index].quaternion = elbows[index].quaternion.slerp(Quaternion.IDENTITY.slerp(lower_q, amount), blend)
 
 func _process(delta: float) -> void:
 	clock += delta

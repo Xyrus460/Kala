@@ -1,0 +1,56 @@
+[
+  {
+    "name": "woman_blouse",
+    "url": "https://poly.pizza/m/qJ2gsTUBHL",
+    "download": "https://static.poly.pizza/ba7a1955-ea51-4cb9-a561-188bdef0a6c7.glb",
+    "thumbnail": "https://static.poly.pizza/ba7a1955-ea51-4cb9-a561-188bdef0a6c7.jpg",
+    "author": "Quaternius",
+    "license": "CC0-1.0",
+    "bytes": 1530616
+  },
+  {
+    "name": "woman_skirt",
+    "url": "https://poly.pizza/m/nIItLV9nxS",
+    "download": "https://static.poly.pizza/46d6db5a-3c9f-4238-8cdf-8eb7194498dc.glb",
+    "thumbnail": "https://static.poly.pizza/46d6db5a-3c9f-4238-8cdf-8eb7194498dc.jpg",
+    "author": "Quaternius",
+    "license": "CC0-1.0",
+    "bytes": 1491780
+  },
+  {
+    "name": "bunny",
+    "url": "https://poly.pizza/m/irZjWFARyl",
+    "download": "https://static.poly.pizza/084b5ebe-c3eb-4e64-9b17-06e2d1e3da5d.glb",
+    "thumbnail": "https://static.poly.pizza/084b5ebe-c3eb-4e64-9b17-06e2d1e3da5d.jpg",
+    "author": "Quaternius",
+    "license": "CC0-1.0",
+    "bytes": 538360
+  },
+  {
+    "name": "male_business",
+    "url": "https://poly.pizza/m/JFrLIKqvCH",
+    "download": "https://static.poly.pizza/e599abbe-7d73-488c-9d7e-3ead281e705c.glb",
+    "thumbnail": "https://static.poly.pizza/e599abbe-7d73-488c-9d7e-3ead281e705c.jpg",
+    "author": "Quaternius",
+    "license": "CC0-1.0",
+    "bytes": 1529248
+  },
+  {
+    "name": "male_hoodie",
+    "url": "https://poly.pizza/m/gKLBoRsyKe",
+    "download": "https://static.poly.pizza/bcd66ec5-5e81-4901-a222-47abc875fe2a.glb",
+    "thumbnail": "https://static.poly.pizza/bcd66ec5-5e81-4901-a222-47abc875fe2a.jpg",
+    "author": "Quaternius",
+    "license": "CC0-1.0",
+    "bytes": 1456760
+  },
+  {
+    "name": "female_suit",
+    "url": "https://poly.pizza/m/sOUciDsoVV",
+    "download": "https://static.poly.pizza/1bd7759c-ab76-4178-8fe6-7706dffa7d5f.glb",
+    "thumbnail": "https://static.poly.pizza/1bd7759c-ab76-4178-8fe6-7706dffa7d5f.jpg",
+    "author": "Quaternius",
+    "license": "CC-BY-3.0",
+    "bytes": 1537776
+  }
+]

@@ -70,13 +70,13 @@ func _ready() -> void:
 	check(not is_instance_valid(closed.get_ref()), "closing keypad releases its viewport and input handlers")
 	await room("relay")
 	check(game.level.has_node("FactoryRevision09/ArchiveGrille"), "relay cage has a complete framed enclosure")
-	State.set_flag("lenteraOwned"); game.player.position = Vector3(-10.4, 0.05, 11)
+	State.set_flag("lenteraOwned"); game.player.position = Vector3(-4.4, 0.05, 7)
 	var cell: KalaInteractable
 	for object in game.level.get_children():
 		if object is KalaInteractable and object.action_id == "cell": cell = object
 	game.player.camera.look_at(cell.global_position)
 	await get_tree().physics_frame
-	check(game.player._tool_focus() == cell, "Lentera claw can still reach the relay cell through the framed grille")
+	check(game.player._tool_focus() == cell, "Lentera claw reaches the relay cell at its accessible service dock")
 	await room("ritual")
 	var rig = game.boss.hands_rig
 	var grounded = true; var contiguous = true

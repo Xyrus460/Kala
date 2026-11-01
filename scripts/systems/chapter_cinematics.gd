@@ -9,7 +9,6 @@ var teacher: Node3D
 var caller: Node3D
 var finished = false
 var shower: Node3D
-var wash_hands: Node3D
 const SEATS = {"Danu": Vector3(-5.6, 0, 9.02), "Raka": Vector3(-5.6, 0, 10.72), "Sari": Vector3(-5.6, 0, 12.42), "Adit": Vector3(-8, 0, 12.42)}
 
 func handles(value: String) -> bool:
@@ -22,15 +21,6 @@ func prepare(value: String) -> void:
 		host.player.position = Vector3(-3.1, 0.10, 0.68)
 		host.player.rotation = Vector3.ZERO
 		host.player.camera.rotation = Vector3(-0.35, 0, 0)
-		wash_hands = Node3D.new(); wash_hands.name = "WashingHands"; host.player.camera.add_child(wash_hands)
-		var g = preload("res://scripts/systems/geometry.gd")
-		var skin = g.material("plain", Color("ba9373"))
-		for side in [-1, 1]:
-			var hand = Node3D.new(); hand.position = Vector3(side * 0.18, -0.27, -0.45); wash_hands.add_child(hand)
-			g.sphere(hand, Vector3(0, -0.12, 0.12), Vector3(0.075, 0.28, 0.085), skin)
-			g.sphere(hand, Vector3.ZERO, Vector3(0.10, 0.11, 0.055), skin)
-			for i in range(4): g.sphere(hand, Vector3(-0.034 + i * 0.023, 0.07, -0.005), Vector3(0.021, 0.10, 0.023), skin)
-		wash_hands.hide()
 	if id in ["lesson", "return_class"]:
 		teacher = host.level.get_node("EnvironmentalDetail/Teacher")
 		teacher_pose = teacher.transform
@@ -54,11 +44,6 @@ func animate(time: float, delta: float) -> void:
 			host.ui.fade.color.a = 1 - smoothstep(0, 2, time)
 		"wash":
 			shower.set_running(time >= 1.6 and time < 13.6)
-			wash_hands.visible = time > 0.7 and time < 13.5
-			for i in range(wash_hands.get_child_count()):
-				var hand = wash_hands.get_child(i)
-				hand.position.y = -0.26 + sin(time * 2.3 + i * PI) * 0.055
-				hand.rotation = Vector3(-0.3 + sin(time * 2.5 + i) * 0.17, 0, sin(time * 1.7 + i * PI) * 0.15)
 			var target = Vector3(-3.1, 2.06, 0.37) if time < 4.0 else Vector3(-3.1, 0.94, 0.22)
 			_look(target, delta * 1.8)
 			host.ui.fade.color.a = smoothstep(13.5, 14.5, time) * (1 - smoothstep(16.5, 18, time))
@@ -110,8 +95,7 @@ func finish() -> void:
 
 func clear() -> void:
 	if is_instance_valid(shower): shower.set_running(false)
-	if is_instance_valid(wash_hands): wash_hands.queue_free()
-	shower = null; wash_hands = null
+	shower = null
 	for name_value in poses:
 		var npc = host.level.get_node_or_null("NPC_" + name_value) as Node3D
 		if npc != null:

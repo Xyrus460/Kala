@@ -4,27 +4,47 @@ signal changed
 const ROOMS = ["home", "schoolyard", "neighborhood", "school", "street", "loading", "relay", "pursuit", "production", "office", "ritual", "corridor", "daisy", "hallucination"]
 const TITLES = ["RUMAH / PAGI", "HALAMAN SEKOLAH & JALAN", "SIMPANG KARTINI", "SEKOLAH", "JALAN KARTINI", "BANGSAL MUAT", "RUMAH RELAI", "JALUR PEMELIHARAAN", "RUANG PRODUKSI", "KANTOR DANU", "RUANG RITUAL", "LORONG BELAKANG", "RUANG DAISY", "HALUSINASI / EMPAT INGATAN"]
 const SAVE = "user://kala_native_v1.json"
+const LAYOUT_REVISION=17
 const CODES = {"locker": "4729", "panel": "3268"}
 const ORDERS = {"fuse": [0, 1, 2], "breaker": [2, 0, 3, 1]}
 var data: Dictionary
 var checkpoint: Dictionary = {}
 var save_enabled = true
 var save_path = SAVE
-var settings = {"sensitivity": 1.0, "volume": 0.75, "music": 0.45, "shadows": true, "quality": 2, "scares": true}
+var archive = preload("res://scripts/systems/save_archive.gd").new()
+const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.75, "music": 0.45, "shadows": true, "quality": 2, "scares": true, "fullscreen":false, "vsync":true, "fps_limit":60, "render_scale":1.0, "msaa":2, "ssao":true, "ssil":true, "bloom":true, "fov":75.0, "head_bob":true}
+var settings = DEFAULT_SETTINGS.duplicate()
 
 func _ready() -> void:
 	reset()
 	var cfg = ConfigFile.new()
 	if cfg.load("user://settings.cfg") == OK:
+		# Older profiles only stored a preset and a separate flashlight toggle.
+		# Expand that preset first, then apply each saved override below.
+		apply_quality_preset(int(cfg.get_value("settings", "quality", settings.quality)))
 		for key in settings:
 			settings[key] = cfg.get_value("settings", key, settings[key])
 
+func apply_quality_preset(value: int) -> void:
+	var quality = clampi(value, 0, 2)
+	settings.quality = quality
+	settings.msaa = quality
+	settings.render_scale = 0.75 if quality == 0 else 1.0
+	settings.shadows = quality > 0
+	settings.ssao = quality > 0
+	settings.ssil = quality == 2
+	settings.bloom = quality > 0
+
 func reset() -> void:
-	data = {"version": 1, "room": "school", "sanity": 100.0, "elapsed": 0.0, "flags": {}, "evidence": {}, "items": {}, "installed": {}, "notes": {}, "puzzles": {}, "rotors": [0, 0, 0], "position": []}
-	for id in ["locker", "fuse", "panel", "valve", "breaker"]:
-		data.puzzles[id] = {"solved": false, "entered": "", "current": [], "pos": [0, 1, 2]}
+	data = fresh_data()
 	checkpoint = {}
 	changed.emit()
+
+func fresh_data() -> Dictionary:
+	var value = {"version": 1, "room": "school", "sanity": 100.0, "elapsed": 0.0, "flags": {}, "evidence": {}, "items": {}, "installed": {}, "notes": {}, "puzzles": {}, "rotors": [0, 0, 0], "position": []}
+	for id in ["locker", "fuse", "panel", "valve", "breaker"]:
+		value.puzzles[id] = {"solved": false, "entered": "", "current": [], "pos": [0, 1, 2]}
+	return value
 
 func flag(id: String) -> bool:
 	return bool(data.flags.get(id, false))
@@ -87,6 +107,7 @@ func order_press(id: String, index: int) -> bool:
 
 func rotate_valve(index: int) -> bool:
 	var p: Dictionary = data.puzzles.valve
+	if index<0 or index>=p.pos.size():return false
 	if not p.solved:
 		p.pos[index] = (int(p.pos[index]) + 1) % 4
 		p.solved = p.pos == [0, 0, 0]
@@ -98,15 +119,10 @@ func turn_relay(index: int) -> void:
 	if index < 2: data.rotors[index + 1] = (int(data.rotors[index + 1]) + 1) % 4
 	changed.emit()
 
-func save_game(position_data: Array = []) -> Error:
+func save_game(position_data: Array = [], kind = "auto") -> Error:
 	if not save_enabled: return OK
 	if not position_data.is_empty(): data.position = position_data
-	checkpoint = data.duplicate(true)
-	var file = FileAccess.open(save_path + ".tmp", FileAccess.WRITE)
-	if file == null: return FileAccess.get_open_error()
-	file.store_string(JSON.stringify(data))
-	file.close()
-	return DirAccess.rename_absolute(save_path + ".tmp", save_path)
+	return archive.persist(self, kind)
 
 func read_save() -> Dictionary:
 	if not FileAccess.file_exists(save_path): return {}

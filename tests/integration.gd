@@ -105,10 +105,13 @@ func _ready() -> void:
 	await use("tool")
 	check(State.flag("lenteraOwned") and game.player.lamp_available(), "LENTERA-G restores lamp")
 	game.player.position = Vector3(0, 0.1, 12)
-	game.player.camera.look_at(Vector3(0, 3.65, -9.56))
+	var middle_rotor: KalaInteractable
+	for object in game.level.get_children():
+		if object is KalaInteractable and object.action_id == "rotor" and object.parameter == "1": middle_rotor = object
+	game.player.camera.look_at(middle_rotor.global_position)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	check(is_instance_valid(game.player.target) and game.player.target.action_id == "rotor", "claw ray reaches authored rotor beyond 14 meters")
+	check(is_instance_valid(game.player.target) and game.player.target == middle_rotor and game.player.camera.global_position.distance_to(middle_rotor.global_position) > 14, "claw ray reaches the rebuilt rotor beyond 14 meters")
 	await use("cell", "", true)
 	check(not State.flag("relayCellHeld"), "cell gated by generator contact")
 	await use("latch", "", true)
@@ -141,13 +144,13 @@ func _ready() -> void:
 	check(State.flag("escapePuzzleSolved"), "three collected fragments unlock service door")
 	await game._rescue()
 	check(State.data.room == "production" and State.flag("daisyShadowRescueSeen"), "Daisy rescue transfers to production")
-	await use("puzzle", "valve")
+	await use("valve", "1")
 	check(game.ui.mode != "puzzle", "valves require missing wheel")
 	await use("item", "workshopKey")
 	await use("item", "valveWheel", true)
-	await use("puzzle", "valve")
-	for i in range(3): game._ui_action("puzzle_order", "1")
-	for i in range(2): game._ui_action("puzzle_order", "2")
+	for index in [1,1,1,2,2]:
+		game.level.refinement._process(0.6);await use("valve",str(index))
+	await get_tree().create_timer(0.7).timeout
 	check(State.solved("valve") and game.boss.kind == "hands", "pressure solution spawns hands")
 	game.player.bind_player()
 	game.player.release_bind()
@@ -160,6 +163,8 @@ func _ready() -> void:
 	game._close()
 	await use("item", "tapeReel")
 	await use("audit")
+	check(game.ui.mode=="archive_video" and not State.flag("auditVerified"),"audit tape opens the actual film before authorization")
+	game.ui.archive_video._finished()
 	check(State.flag("auditVerified") and State.data.notes.has("audit"), "audit tape grants authorization and transcript")
 	game._close()
 	await use("puzzle", "breaker")

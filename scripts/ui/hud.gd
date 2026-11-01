@@ -35,6 +35,13 @@ var pause_menu: Control
 var dialogue_card: Control
 var wiring_board: Control
 var keypad_board: Control
+var settings_menu: Control
+var load_menu: Control
+var journal_book: Control
+var corner_close: Button
+var dialogue_frame: PanelContainer
+var terminal_console: Control
+var archive_video: Control
 
 func _ready() -> void:
 	root = Control.new()
@@ -121,6 +128,7 @@ func _ready() -> void:
 	root.add_child(cinematic_hint)
 	_pin(cinematic_hint, Vector2.ONE, Rect2(-260, -32, 234, 20))
 	overlay = ColorRect.new()
+	overlay.theme = preload("res://scripts/ui/menu_style.gd").menu_theme()
 	overlay.color = Color(0.012, 0.014, 0.017, 0.94)
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root.add_child(overlay)
@@ -181,6 +189,8 @@ func _bar(pos: Vector2, dimensions: Vector2, color: Color) -> ProgressBar:
 	return bar
 
 func clear_panel(title: String, next_mode: String) -> void:
+	_clear_corner_close()
+	_clear_special()
 	dialogue_card = null; wiring_board = null; keypad_board = null
 	_clear_tutorial()
 	_clear_pause()
@@ -215,15 +225,17 @@ func button(text: String, action: String, value = "", disabled = false) -> Butto
 	return result
 
 func close_panel() -> void:
+	_clear_corner_close()
+	_clear_special()
 	_clear_tutorial()
 	_clear_pause()
 	# SubViewport rendering must end when its puzzle is closed, even when no
 	# other panel is opened afterwards. Do not keep an off-screen 3D board alive.
-	for control in [wiring_board, dialogue_card, keypad_board]:
+	for control in [wiring_board, dialogue_card, keypad_board, terminal_console]:
 		if is_instance_valid(control):
 			if control.get_parent() != null: control.get_parent().remove_child(control)
 			control.queue_free()
-	wiring_board = null; dialogue_card = null; keypad_board = null
+	wiring_board = null; dialogue_card = null; keypad_board = null; terminal_console = null
 	if is_instance_valid(title_menu): title_menu.queue_free(); title_menu = null
 	mode = ""
 	overlay.visible = false
@@ -262,9 +274,15 @@ func show_note(title: String, body: String) -> void:
 	button("SIMPAN & TUTUP  ·  E / ESC", "close")
 
 func show_dialogue(speaker: String, body: String) -> void:
-	clear_panel("", "dialogue"); panel_title.hide(); overlay.color.a = 0.74
-	dialogue_card = preload("res://scripts/ui/dialogue_card.gd").new(); content.add_child(dialogue_card)
+	clear_panel("", "dialogue"); panel_center.hide(); overlay.color.a = 0.18
+	dialogue_frame=PanelContainer.new();dialogue_frame.name="ConversationPanel"
+	var style=StyleBoxFlat.new();style.bg_color=Color(0.035,0.052,0.047,0.94);style.border_color=Color("73765c");style.border_width_top=1
+	style.content_margin_left=22;style.content_margin_right=22;style.content_margin_top=18;style.content_margin_bottom=18
+	dialogue_frame.add_theme_stylebox_override("panel",style);overlay.add_child(dialogue_frame)
+	_pin(dialogue_frame,Vector2(0.5,1),Rect2(-440,-290,880,258))
+	dialogue_card = preload("res://scripts/ui/dialogue_card.gd").new(); dialogue_frame.add_child(dialogue_card)
 	dialogue_card.build(speaker, body)
+	dialogue_card.text.custom_minimum_size.y=95
 	dialogue_card.finished.connect(func(): action_requested.emit("close", ""))
 
 func show_photo() -> void:
@@ -283,7 +301,7 @@ func show_puzzle(id: String, status = "") -> void:
 	clear_panel({"locker": "LOKER RAKA", "panel": "PANEL BANGSAL MUAT", "fuse": "RANGKAIAN PENERANGAN", "valve": "KATUP TEKANAN", "breaker": "SAKLAR RUANG RITUAL"}[id], "puzzle")
 	var p: Dictionary = State.data.puzzles[id]
 	if id == "fuse":
-		paragraph("Sambungkan sendiri kabel M → K → B. Tahan ujung kiri dan tarik ke terminal kanan dengan label yang sama.")
+		paragraph("Tahan ujung kabel dan tarik ke terminal tujuan.")
 		wiring_board = preload("res://scripts/ui/wiring_board.gd").new(); wiring_board.completed = p.current.duplicate(); content.add_child(wiring_board)
 		var connection_status = _label("Terhubung %d / 3 • Terminal berlabel; warna sebagai penanda tambahan." % p.current.size(), 15)
 		connection_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART; content.add_child(connection_status); wiring_board.status = connection_status
@@ -296,25 +314,62 @@ func show_puzzle(id: String, status = "") -> void:
 		keypad_board.key_pressed.connect(func(key): action_requested.emit("puzzle_key", key))
 		var instructions = _label("Klik tombol / ketik 4 angka · Enter: konfirmasi · C: hapus · Backspace: koreksi", 14)
 		instructions.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER; content.add_child(instructions)
-	elif id == "valve":
-		paragraph("Semua panah harus mengarah ke atas. Posisi tersimpan ketika panel ditutup.")
-		for i in range(3): button("KATUP %s    %s" % [["I", "II", "III"][i], ["↑", "→", "↓", "←"][int(p.pos[i])]], "puzzle_order", str(i))
-	else:
-		paragraph("Satu jalur setiap kali. Sambungan salah mengulang rangkaian.\nTerhubung: %d / %d" % [p.current.size(), 3 if id == "fuse" else 4])
-		var labels = ["M · MERAH", "K · KUNING", "B · BIRU"] if id == "fuse" else ["TERMINAL 1", "TERMINAL 2", "TERMINAL 3", "TERMINAL 4"]
-		for i in range(labels.size()): button(labels[i], "puzzle_order", str(i))
+	elif id == "breaker":
+		overlay.color.a = 0.80; panel_center.hide()
+		terminal_console = preload("res://scripts/ui/terminal_console.gd").new();overlay.add_child(terminal_console)
+		terminal_console.connected.connect(func(index):action_requested.emit("puzzle_order",str(index)))
 	if status != "": paragraph(status)
-	button("BUTUH PETUNJUK?", "hint", id)
-	button("TUTUP  ·  ESC", "close")
+	corner_close = Button.new()
+	corner_close.name = "PuzzleClose"
+	corner_close.text = "Tutup (Esc)"
+	corner_close.add_theme_font_size_override("font_size", 14)
+	corner_close.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+	corner_close.add_theme_color_override("font_color", Color("d4ceb9"))
+	overlay.add_child(corner_close)
+	_pin(corner_close, Vector2(1, 0), Rect2(-135, 18, 115, 30))
+	corner_close.pressed.connect(func(): action_requested.emit("close", ""))
+
+func _clear_corner_close() -> void:
+	if is_instance_valid(corner_close):
+		corner_close.get_parent().remove_child(corner_close)
+		corner_close.queue_free()
+	corner_close = null
 
 func show_journal() -> void:
-	clear_panel("JURNAL PENYELIDIKAN", "journal")
-	paragraph("BUKTI %d/4 · SANITY %d\n\nBARANG: %s\nTERPASANG: %s" % [State.data.evidence.size(), int(State.data.sanity), ", ".join(State.data.items.keys()), ", ".join(State.data.installed.keys())])
-	if State.data.evidence.has("op1"): button("PERIKSA KEMBALI FOTO", "photo")
-	if State.flag("lenteraOwned"): button("PANDUAN VIDEO LENTERA-G", "tutorial")
-	for id in State.data.notes:
-		button(str(State.data.notes[id].title), "journal_note", id)
-	button("KEMBALI  ·  J / ESC", "close")
+	clear_panel("", "journal");panel_center.hide();overlay.color.a=0.66
+	journal_book=preload("res://scripts/ui/journal_book.gd").new();overlay.add_child(journal_book)
+	journal_book.action_requested.connect(func(action,value):action_requested.emit(action,value))
+	journal_book.build()
+
+func show_settings(category="DISPLAY") -> void:
+	clear_panel("", "settings");panel_center.hide();overlay.color=Color(0,0,0,0)
+	settings_menu=preload("res://scripts/ui/settings_menu.gd").new();overlay.add_child(settings_menu)
+	settings_menu.changed.connect(func():action_requested.emit("settings_changed",""))
+	settings_menu.closed.connect(func():action_requested.emit("close",""))
+	settings_menu.build(category)
+
+func show_load_menu() -> void:
+	clear_panel("", "load"); panel_center.hide(); overlay.color = Color(0, 0, 0, 0)
+	load_menu = preload("res://scripts/ui/load_menu.gd").new(); overlay.add_child(load_menu)
+	load_menu.requested.connect(func(action, value): action_requested.emit(action, value))
+	load_menu.closed.connect(func(): action_requested.emit("close", ""))
+	load_menu.build()
+
+func _clear_special() -> void:
+	if is_instance_valid(dialogue_frame):
+		dialogue_frame.get_parent().remove_child(dialogue_frame);dialogue_frame.queue_free();dialogue_frame=null;dialogue_card=null
+	for control in [settings_menu,journal_book,load_menu,archive_video,terminal_console]:
+		if is_instance_valid(control):
+			if control.has_method("stop"):control.stop()
+			control.get_parent().remove_child(control);control.queue_free()
+	settings_menu=null;journal_book=null;load_menu=null;archive_video=null
+	terminal_console=null
+
+func show_audit_video() -> void:
+	clear_panel("", "archive_video");panel_center.hide();overlay.color=Color.BLACK
+	archive_video=preload("res://scripts/ui/archive_video.gd").new();overlay.add_child(archive_video)
+	archive_video.completed.connect(func():action_requested.emit("audit_complete",""))
+	archive_video.closed.connect(func():action_requested.emit("close",""))
 
 func notify(text: String, duration = 4.0) -> void:
 	subtitle.text = text

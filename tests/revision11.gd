@@ -70,7 +70,7 @@ func _ready() -> void:
 	game.narrative.start("wash"); game.narrative.set_process(false); game.narrative.advance(5)
 	var shower=game.level.get_node("FurnishedHome/BathroomShower")
 	check(shower.running and shower.water.visible and shower.sound.playing,"wash shows flowing water and plays shower audio")
-	check(game.player.camera.has_node("WashingHands") and not game.player.active and game.ui.fade.color.a<0.01,"first-person washing is visible and movement is locked")
+	check(not game.player.camera.has_node("WashingHands") and not game.player.active and game.ui.fade.color.a<0.01,"shower keeps movement locked without rendering hands")
 	game.narrative.cancel(); await get_tree().process_frame
 	check(not shower.running and not shower.sound.playing and not State.flag("homeReady"),"cancelling wash stops effects without granting completion")
 	check(game.player.transform.is_equal_approx(original),"cancelling shower restores player pose")
@@ -79,7 +79,7 @@ func _ready() -> void:
 	check(State.flag("homeReady") and not shower.running and not game.player.camera.has_node("WashingHands"),"full wash completes, restores controls and removes temporary hands")
 	await room("school")
 	var teacher=game.level.get_node("EnvironmentalDetail/Teacher")
-	check(teacher.get_meta("identity")=="Ratna" and teacher.find_child("RatnaLongSkirt",true,false)!=null,"Bu Ratna is an adult female teacher model")
+	check(teacher.get_meta("identity")=="Ratna" and teacher.skeleton!=null and teacher.find_child("RatnaBody",true,false)!=null,"Bu Ratna uses the imported female rig and free formal teacher outfit")
 	check(game.level.has_node("ExplorableSchool") and not game.campus.rooms.schoolyard.has_node("SchoolCampus/FreeSchoolBuilding"),"school exterior and interior share one architecture with no overlapping OBJ")
 	for floor_id in range(3):
 		for side in [-1,1]:

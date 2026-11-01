@@ -61,8 +61,8 @@
       "title": "SURAT PEMELIHARAAN"
     },
     "valve_note": {
-      "body": "Sistem tekanan memiliki tiga katup, ditandai I, II, III.\n\nSemua panah harus mengarah ke atas. Setiap putaran menggeser katup 90 derajat searah jarum jam. Katup I sudah benar; katup II macet pada 90 derajat, katup III pada 180 derajat.\n\nBuka panel gabungan dekat pipa utara. Posisi tersimpan ketika panel ditutup.\n\nPeringatan: saluran yang aktif dapat membangunkan sesuatu di bawah konveyor.",
-      "title": "PROSEDUR KATUP"
+      "body": "Peluit ketiga berbunyi padahal jarum belum kembali ke bekas kalibrasi. Cat pada muka pengukur sudah ditimpa dua kali. Tinta pemeriksaan lama masih menempel di bawahnya.\n\nRoda kedua kusimpan di bengkel. Porosnya jangan dipukul lagi. Setelah saluran diam, aku masih mendengar sesuatu merangkak di bawah konveyor.",
+      "title": "BUKU SERVIS / SALURAN K-03"
     },
     "hands_note": {
       "body": "Pengawas tidak boleh masuk ruang produksi. Makhluk dengan lengan-lengan itu tidak mengenali seragam.\n\nCahaya senter menipiskan bayangannya. Gerakkan tubuh saat ia membungkuk: itu tanda ia akan menerjang.\n\nKetika lapisan pelindungnya runtuh, lengan dari bawah lantai mengunci pergelangan kaki. Penjepit inspeksi dapat merobek cengkeramannya. Jangan biarkan tangan-tangan itu mengepungmu.",
@@ -121,7 +121,7 @@
       "title": "TEKNISI / LENTERA-G"
     },
     "wheel_log": {
-      "body": "Poros katup kedua selamat, tetapi roda penggeraknya dilepas ketika tekanan berbalik arah. Nomor pesanan tidak dihapus: orang yang melepasnya masih berharap dapat memasangnya kembali.",
+      "body": "Roda penggerak kedua dilepas setelah tekanan berbalik. Bekas kuku pada roda bukan milik orang yang melepasnya.\n\nNomor pesanan dibiarkan utuh. Ia bilang akan kembali memasangnya setelah shift terakhir.",
       "title": "CATATAN BENGKEL / KATUP II"
     },
     "memo_b": {

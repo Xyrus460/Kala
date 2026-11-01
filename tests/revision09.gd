@@ -40,7 +40,7 @@ func _ready() -> void:
 	await room("home")
 	State.data.layout_revision = 5; State.data.position = [-7.95, 0.05, 7.0, 0.0, 0.0]
 	await game.enter_room("home", true, false); game.player.active = false
-	check(game.player.position.distance_to(game.level.spawn) < 0.01 and State.data.layout_revision == 11 and State.flag("lessonSeen"), "old checkpoint relocates out of sealed geometry while preserving story progress")
+	check(game.player.position.distance_to(game.level.spawn) < 0.01 and State.data.layout_revision == State.LAYOUT_REVISION and State.flag("lessonSeen"), "old checkpoint relocates out of sealed geometry while preserving story progress")
 	await get_tree().physics_frame
 	var roof = PhysicsRayQueryParameters3D.create(Vector3(0, 3.8, 11.8), Vector3(0, 8, 11.8), 1)
 	check(not game.get_world_3d().direct_space_state.intersect_ray(roof).is_empty(), "stairwell has a solid roof above the former sky gap")
@@ -106,8 +106,9 @@ func _ready() -> void:
 	game.player.lamp_on = false; game.player.equip_blend = 1
 	game.player._update_equip(0.3)
 	check(game.player.viewmodel.position.y < -0.35, "switching flashlight off lowers the held tool out of view")
-	game.player.lamp_on = true; game.player._update_equip(0.3)
-	check(game.player.equip_blend == 1 and absf(game.player.viewmodel.position.y) < 0.02, "switching flashlight on completes the draw animation")
+	game.player.lamp_on = true
+	for i in range(30):game.player._update_equip(1.0/60)
+	check(game.player.equip_blend > 0.99 and absf(game.player.viewmodel.position.y) < 0.02, "switching flashlight on smoothly settles the draw animation")
 	State.set_flag("lenteraOwned"); game.player.lamp_on = true; game.player.active = true
 	game.player.position = Vector3(0, 0.1, 5); game.player.last_safe_position = game.player.position
 	game._start_fight("overseer"); var enemy = game.boss

@@ -59,9 +59,9 @@ func _ready() -> void:
 	State.data.puzzles.fuse.solved = true
 	check(movie.start("warehouse"), "warehouse invitation starts in street")
 	movie.set_process(false)
-	var hip_pose: Vector3 = movie.actor.hips[0].rotation
 	movie._gait(0.8, 0.6)
-	check(not movie.actor.hips[0].rotation.is_equal_approx(hip_pose) and movie.actor.knees.size() == 2, "articulated Danu hips and knees respond to gait")
+	movie.actor.animator.advance(0.35)
+	check(movie.actor.skeleton!=null and movie.actor.animator.current_animation.ends_with("|Walk") and movie.actor.walking>0, "imported Danu uses the skinned walk animation during story movement")
 	movie.advance(8)
 	check(movie.actor.position.z > 27.3, "Danu walks through warehouse entrance")
 	check(absf(game.level.all_doors.streetLeft.node.rotation.y) > 1, "authored double entrance opens")

@@ -153,7 +153,7 @@ func _animate() -> void:
 		"office":
 			if elapsed > 9:
 				var progress = clampf((elapsed - 9) / 3, 0, 1)
-				actor.position = Vector3(3, 0, -7).lerp(Vector3(0, -2.4, -19.15), progress)
+				actor.position = Vector3(3, 0, -7).lerp(Vector3(0, 0, -19.15), progress)
 				_gait(elapsed * 9, 0.36)
 		"corridor":
 			var progress = clampf(elapsed / 8.5, 0, 1)

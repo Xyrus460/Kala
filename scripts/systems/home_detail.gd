@@ -8,9 +8,36 @@ func prop(id: String, p: Vector3, size: Vector3, yaw = 0.0, solid = true, title 
 	var replacements = {"bedSingle":"bed_single", "bedDouble":"bed_double", "bookcaseClosedDoors":"wardrobe", "desk":"desk", "chairDesk":"task_chair", "cabinetBedDrawer":"chest", "loungeChairRelax":"armchair", "rugRounded":"wool_rug", "rugRound":"jute_rug", "sideTable":"nightstand", "lampRoundFloor":"floor_lamp", "lampRoundTable":"table_lamp"}
 	if replacements.has(id):
 		var item = A.place(root, "res://assets/vendor/revision10/%s.glb" % replacements[id], p, size, yaw, solid, title if title != "" else id)
+		if id == "bedSingle": _rest_pillow(item)
 		_finish(item)
 		return item
 	return A.furniture(root, id, p, size, yaw, solid, title)
+
+func _rest_pillow(bed: Node3D) -> void:
+	var pillow = bed.find_child("single-bed-timber_3", true, false) as MeshInstance3D
+	var mattress = bed.find_child("single-bed-timber_2", true, false) as MeshInstance3D
+	if pillow == null or mattress == null: return
+	# The source cushion has a baked incline. Level its long axis before
+	# seating it into the duvet, rather than only lowering one of its corners.
+	var vertices: PackedVector3Array = pillow.mesh.surface_get_arrays(0)[Mesh.ARRAY_VERTEX]
+	var center = Vector3.ZERO
+	for vertex in vertices: center += vertex
+	center /= vertices.size()
+	var yy = 0.0; var zz = 0.0; var yz = 0.0
+	for vertex in vertices:
+		var offset = vertex - center
+		yy += offset.y * offset.y; zz += offset.z * offset.z; yz += offset.y * offset.z
+	pillow.rotation.x = 0.5 * atan2(2.0 * yz, zz - yy)
+	var support = _surface_bounds(mattress)
+	var bounds = _surface_bounds(pillow)
+	pillow.global_position += Vector3(0, support.end.y - bounds.position.y - 0.016, 0.10)
+	pillow.set_meta("rests_on_mattress", true)
+
+func _surface_bounds(mesh: MeshInstance3D) -> AABB:
+	var vertices: PackedVector3Array = mesh.mesh.surface_get_arrays(0)[Mesh.ARRAY_VERTEX]
+	var bounds = AABB(mesh.global_transform * vertices[0], Vector3.ZERO)
+	for vertex in vertices: bounds = bounds.expand(mesh.global_transform * vertex)
+	return bounds
 
 func _finish(item: Node3D) -> void:
 	for mesh in item.find_children("*", "MeshInstance3D", true, false):

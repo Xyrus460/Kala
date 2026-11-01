@@ -2,6 +2,7 @@ extends RefCounted
 
 const FURNITURE = "res://assets/vendor/kenney_furniture/"
 const SUBURBAN = "res://assets/vendor/kenney_suburban/"
+static var source_cache: Dictionary = {}
 
 static func _bounds(node: Node3D, transform_value = Transform3D.IDENTITY) -> AABB:
 	var combined = AABB()
@@ -20,18 +21,21 @@ static func _bounds(node: Node3D, transform_value = Transform3D.IDENTITY) -> AAB
 				started = true
 	return combined
 
-static func place(parent: Node3D, path: String, point: Vector3, dimensions: Vector3, yaw = 0.0, solid = true, title = "", source_yaw = 0.0) -> Node3D:
+static func place(parent: Node3D, path: String, point: Vector3, dimensions: Vector3, yaw = 0.0, solid = true, title = "", source_yaw = 0.0, source_pitch = 0.0) -> Node3D:
 	var prop = Node3D.new()
 	prop.name = title if title != "" else path.get_file().get_basename().validate_node_name()
-	parent.add_child(prop)
-	var source = load(path)
+	parent.add_child(prop,true)
+	# Keep the PackedScene alive: hundreds of books/chairs otherwise reread
+	# the imported scene from disk for every instance during campus loading.
+	if not source_cache.has(path):source_cache[path]=load(path)
+	var source=source_cache[path]
 	var model: Node3D
 	if source is PackedScene: model = source.instantiate()
 	else:
 		model = MeshInstance3D.new()
 		model.mesh = source
 	var orient = Node3D.new()
-	prop.add_child(orient); orient.add_child(model); model.rotation.y = source_yaw
+	prop.add_child(orient); orient.add_child(model); model.rotation = Vector3(source_pitch,source_yaw,0)
 	var bounds = _bounds(orient)
 	var scale_value = Vector3.ONE * (dimensions.y / maxf(bounds.size.y, 0.001))
 	for axis in range(3):

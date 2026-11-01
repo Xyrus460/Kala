@@ -2,6 +2,8 @@ extends RefCounted
 const Character = preload("res://scripts/systems/character_model.gd")
 
 static func make(id: String) -> Node3D:
+	if id in ["npc_Danu","npc_Raka","npc_Adit","npc_Sari","npc_Ratna","npc_Bima","npc_Fajar","npc_Nadia","npc_Intan"]: return preload("res://scripts/systems/student_model.gd").create(id.trim_prefix("npc_"))
+	if id=="overseer":return preload("res://scripts/systems/mascot_model.gd").create()
 	if id.begins_with("npc_"): return Character.create(id.trim_prefix("npc_"))
 	if id == "actor_daisy": return Character.create("Daisy")
 	if id in ["tumbal", "nightmare"]:

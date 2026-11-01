@@ -16,6 +16,7 @@ func build(level: Node3D) -> void:
 	# Optional discoveries reward traversing the real upper floors.
 	for i in range(2):
 		var p = Vector3(-9,3.4*(i+1)+0.815,0)
+		preload("res://scripts/systems/free_assets.gd").furniture(root,"sideTable",Vector3(-9,3.4*(i+1),0),Vector3(1.1,0.80,0.7),0,true,"UpperReadingTable")
 		G.box(root,p,Vector3(0.32,0.025,0.24),G.material("plain",Color("d5c8a3")))
 		level.interact(p+Vector3.UP*0.10,"chapter","Baca catatan klub lantai %d"%(i+2),"campus_upper_%d"%i,false,Vector3(0.55,0.22,0.4))
 	refresh(level)

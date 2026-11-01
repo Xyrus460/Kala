@@ -25,8 +25,10 @@ var campus = preload("res://scripts/systems/continuous_campus.gd").new()
 var title_set: Node3D
 var scare: Node3D
 var boss_revision: Node
+var conversation_npc: Node3D
+var pause_preview: Image
+var valve_encounter_delay=0.0
 const DEFEAT_FLAGS = {"overseer": "overseerDefeated", "hands": "handsDefeated", "tumbal": "tumbalDefeated"}
-const HINTS = {"locker": "Foto kelas 1A: balik kertasnya. Sari mengingat dua angka terakhir.", "fuse": "Pita gerbang: merah → kuning → biru.", "panel": "Memo A: 3. Memo B: 2 lalu 6. Memo C: 8.", "valve": "Semua panah ke atas. Katup II tiga putaran, III dua putaran dari posisi awal.", "breaker": "Urutkan jam audit: 00.20 → 01.40 → 02.10 → 03.15."}
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -82,6 +84,7 @@ func enter_room(id: String, restore = false, save = true) -> void:
 	if entering: return
 	if not restore and campus.cross(id, save): return
 	var previous_room = str(State.data.room)
+	valve_encounter_delay=0.0
 	entering = true
 	boss_revision.clear_hazards()
 	if id not in ["ritual", "hallucination"]: boss_revision.cancel()
@@ -99,6 +102,8 @@ func enter_room(id: String, restore = false, save = true) -> void:
 	level.passage_entered.connect(_travel)
 	campus.prepare(level)
 	State.data.room = id
+	if id=="production" and State.data.notes.has("valve_note"):
+		State.data.notes.valve_note=story.notes.valve_note.duplicate()
 	if playing:
 		title_set.hide_set()
 		player.camera.make_current()
@@ -115,7 +120,7 @@ func enter_room(id: String, restore = false, save = true) -> void:
 	player.reach_time = 0
 	player.anchored = false
 	player.cable.hide()
-	if restore and State.data.get("layout_revision", 0) >= (11 if id in ["home", "school", "schoolyard", "neighborhood"] else 2) and State.data.position.size() == 5:
+	if restore and State.data.get("layout_revision", 0) >= (State.LAYOUT_REVISION if id in ["loading","relay","production","office","ritual"] else 12 if id in ["home", "school", "schoolyard", "neighborhood"] else 2) and State.data.position.size() == 5:
 		var p: Array = State.data.position
 		player.position = Vector3(p[0], p[1], p[2])
 		player.rotation.y = p[3]
@@ -128,7 +133,7 @@ func enter_room(id: String, restore = false, save = true) -> void:
 		player.position = level.spawn
 	player.last_safe_position = player.position
 	player.tool_raising = false
-	State.data.layout_revision = 11
+	State.data.layout_revision = State.LAYOUT_REVISION
 	player.lamp_on = id not in ["school", "home", "schoolyard", "neighborhood"] and player.lamp_available()
 	player.viewmodel.visible = id not in ["school", "home", "schoolyard", "neighborhood"]
 	player.lamp.light_energy = 0.099 if id == "daisy" else 2.05
@@ -157,13 +162,48 @@ func _clear_actors() -> void:
 	minions.clear()
 	burn_left = 0
 
-func _save() -> Error:
+func _save(kind = "auto") -> Error:
 	if State.data.room == "hallucination" or boss_revision.mode in ["center", "fog", "portal", "human_escape", "banish"]: return ERR_UNAVAILABLE
-	var error = State.save_game([player.position.x, player.position.y, player.position.z, player.rotation.y, player.camera.rotation.x])
+	State.data.checkpoint_title = _objective()
+	var error = State.save_game([player.position.x, player.position.y, player.position.z, player.rotation.y, player.camera.rotation.x], kind)
 	if error != OK: ui.notify("Checkpoint gagal ditulis. Kode: " + str(error))
+	elif State.save_enabled and not test_mode and DisplayServer.get_name() != "headless":
+		if ui.mode == "pause" and pause_preview != null: State.archive.save_preview(State, str(State.data.get("save_id", "")), pause_preview.duplicate())
+		else: _capture_save_preview(str(State.data.get("save_id", "")), str(State.data.room))
 	return error
 
+func _capture_save_preview(id: String, room: String) -> void:
+	# Wait for the new room to render and never photograph an open menu.
+	await RenderingServer.frame_post_draw
+	if not is_inside_tree() or not playing or entering or State.data.room != room or ui.mode != "": return
+	var image = get_viewport().get_texture().get_image()
+	if image != null: State.archive.save_preview(State, id, image)
+
+func load_checkpoint(id: String, section = false) -> void:
+	if entering: return
+	if playing and outcome == "":
+		var error = _save()
+		if error != OK and error != ERR_UNAVAILABLE:
+			if is_instance_valid(ui.load_menu): ui.load_menu.detail_body.text = "Checkpoint saat ini gagal disimpan. Kode: " + str(error)
+			return
+	var value: Dictionary = preload("res://scripts/systems/checkpoint_catalog.gd").snapshot(State, id) if section else {}
+	if section:
+		if not State.valid_save(value): return
+		State.data = value; State.checkpoint = value.duplicate(true); State.changed.emit()
+	elif not State.archive.load_slot(State, id):
+		if is_instance_valid(ui.load_menu): ui.load_menu.detail_body.text = "Simpanan tidak dapat dibaca. Pilih simpanan lain."
+		return
+	narrative.cancel(); scare.cancel(); boss_revision.cancel(); cinematic = false
+	playing = true; outcome = ""; autosave_time = 0
+	ui.close_panel()
+	await enter_room(State.data.room, true)
+	if section and id == "home" and not test_mode: narrative.start("wake_home")
+	_sync_active()
+
 func _sync_active() -> void:
+	if ui.mode not in ["dialogue", "choice"] and is_instance_valid(conversation_npc):
+		conversation_npc.conversation_target = null
+		conversation_npc = null
 	var active = playing and ui.mode == "" and not cinematic and not entering
 	player.active = active
 	ui.hud.visible = playing and ui.mode == "" and not cinematic
@@ -174,9 +214,10 @@ func _sync_active() -> void:
 	for actor in $Actors.get_children():
 		if actor is KalaEnemy: actor.enabled = active
 	level.set_process(active)
-	if not active: audio.voice.stream_paused = ui.mode in ["pause", "settings"]
+	if not active: audio.voice.stream_paused = ui.mode in ["pause", "settings", "archive_video"]
 	else: audio.voice.stream_paused = false
-	audio.music.stream_paused = ui.mode in ["pause", "settings"]
+	audio.music.stream_paused = ui.mode in ["pause", "settings", "archive_video"]
+	audio.ambience.stream_paused = ui.mode == "archive_video"
 	if active: Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _interact(target: KalaInteractable, tool: bool) -> void:
@@ -187,6 +228,7 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 	if target.tool_only and not tool: return
 	var id = target.parameter
 	match target.action_id:
+		"factory_route":level.factory_route.interact(id,self)
 		"campus_door":
 			if target.get_parent().toggle(): audio.effect("click"); _save()
 			else: ui.notify("Mundur sedikit dari ambang agar pintu bisa ditutup.")
@@ -209,6 +251,7 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 			else: ui.notify("Pengunci belum lengkap. Cari potongan: " + ", ".join(level.escape_puzzle.missing()), 5)
 		"npc": _npc(id)
 		"ratna":
+			_face_conversation(level.find_child("Teacher", true, false))
 			ui.clear_panel("BU RATNA", "choice")
 			ui.paragraph("Kesaksianmu akan berdampak pada orang lain. Periksa waktu, tempat, dan saksi.")
 			ui.button("Laporkan Raka berdasarkan yang kulihat", "ending", "bad")
@@ -216,6 +259,7 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 		"evidence": _evidence(id)
 		"note": _note(id)
 		"puzzle": _open_puzzle(id)
+		"valve": _turn_production_valve(int(id))
 		"item":
 			State.give(id)
 			ui.notify("Disimpan: " + target.caption.trim_prefix("Ambil "))
@@ -239,6 +283,8 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 		"generator":
 			ui.notify("Kontak generator terpasang." if State.install("generatorContact") else "Kontak generator belum ditemukan.")
 			_save()
+		"recall":
+			if level.relay_world != null: level.relay_world.memory.interact(id)
 		"cell":
 			if State.data.installed.has("generatorContact"):
 				State.set_flag("relayCellHeld"); _save()
@@ -272,9 +318,7 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 		"audit":
 			if not State.install("tapeReel"): ui.notify("Pemutar pita masih kosong.")
 			else:
-				State.set_flag("auditVerified")
-				State.add_note("audit", "ARSIP SUARA / 17 MARET", "PEREMPUAN: Mereka meminta satu nama supaya mesin berhenti. Aku tidak akan menulis nama anak lain.\n\nANAK: Kalau kolom itu kosong, Ibu tidak akan keluar?\n\nDANU: Raka percaya padaku. Ia akan datang kalau kubilang aku membutuhkan bantuan. Aku tahu itu salah. Aku cuma tidak mau mendengar mesin memanggil namaku lagi.")
-				ui.show_note("ARSIP SUARA / 17 MARET", State.data.notes.audit.body)
+				ui.show_audit_video()
 				_save()
 		"candle":
 			if is_instance_valid(boss): boss.pull_seal(int(id)); audio.effect("click")
@@ -292,12 +336,19 @@ func _interact(target: KalaInteractable, tool: bool) -> void:
 	_sync_active()
 
 func _npc(name_value: String) -> void:
+	_face_conversation(level.find_child("NPC_" + name_value, true, false))
 	var after = chapter_flow.school_evidence_count() >= 2 and State.data.evidence.has("op1") if State.flag("prologueVersion") else State.data.evidence.has("A")
 	var text: String = story.dialogues[name_value]["after" if after else "before"]
 	State.add_note("talk_" + name_value + str(after), name_value.to_upper(), text)
 	if name_value == "Danu" and after: State.set_flag("invited")
 	ui.show_dialogue(name_value, text)
 	_save()
+
+func _face_conversation(npc: Node3D) -> void:
+	if is_instance_valid(conversation_npc): conversation_npc.conversation_target = null
+	conversation_npc = npc
+	if is_instance_valid(npc) and "conversation_target" in npc:
+		npc.conversation_target = player
 
 func _evidence(id: String) -> void:
 	State.collect(id)
@@ -317,6 +368,8 @@ func _note(id: String) -> void:
 	_save()
 
 func _open_puzzle(id: String) -> void:
+	if id=="valve":
+		ui.notify("Poros dan roda penggerak masih terhubung ke pipa.");return
 	if State.solved(id):
 		if id == "locker": _evidence("A")
 		else: ui.notify("Panel sudah aktif.")
@@ -328,6 +381,18 @@ func _open_puzzle(id: String) -> void:
 	if id == "breaker" and (not State.flag("auditVerified") or not State.data.evidence.has("B")):
 		ui.notify("Periksa album dan dengarkan pita audit lebih dahulu."); return
 	ui.show_puzzle(id)
+
+func _turn_production_valve(index: int) -> void:
+	if State.solved("valve") or level.refinement==null:return
+	if not State.flag("lenteraOwned"):return
+	if not State.install("valveWheel"):
+		ui.notify("Poros penggerak kedua kosong.",3);return
+	if not level.refinement.turn_valve(index):return
+	var complete=State.rotate_valve(index)
+	audio.effect("click");_save()
+	if complete:
+		# Let the final wheel and gauge finish moving before the encounter.
+		valve_encounter_delay=0.65
 
 func _puzzle_complete(id: String) -> void:
 	ui.close_panel()
@@ -354,8 +419,8 @@ func _exit_room() -> void:
 	match id:
 		"school": allowed = State.data.evidence.has("A") and State.flag("invited")
 		"street": allowed = State.solved("fuse")
-		"loading": allowed = State.flag("overseerDefeated")
-		"relay": allowed = State.flag("relaySolved")
+		"loading": allowed = State.flag("overseerDefeated") and State.flag("inspectionPower")
+		"relay": allowed = State.flag("relaySolved") and State.flag("memorySolved")
 		"production": allowed = State.flag("handsDefeated")
 		"office": allowed = State.solved("breaker")
 		"ritual": allowed = State.flag("tumbalDefeated")
@@ -374,7 +439,7 @@ func _exit_room() -> void:
 	if id in ["school", "street"]: _travel(State.ROOMS[index + 1])
 	else:
 		level.passage_authorized = true
-		ui.notify("Pintu terbuka. Lanjutkan menuruni tangga akses.", 4)
+		ui.notify("Pintu terbuka. Telusuri jalur distribusi menuju area berikutnya.", 4)
 
 func _travel(id: String) -> void:
 	if entering: return
@@ -568,6 +633,7 @@ func _pause() -> void:
 		_close()
 		return
 	if not playing: return
+	if not test_mode and DisplayServer.get_name() != "headless": pause_preview = get_viewport().get_texture().get_image()
 	ui.show_pause(_objective())
 	_sync_active()
 
@@ -578,8 +644,13 @@ func _journal() -> void:
 
 func _close() -> void:
 	audio.voice.stop()
+	if ui.mode=="journal" and is_instance_valid(ui.journal_book):
+		if ui.journal_book.closing:return
+		await ui.journal_book.close_book()
+		if ui.mode!="journal":return
 	if ui.mode == "tutorial": State.set_flag("lenteraGuideSeen"); _save()
-	if ui.mode in ["settings", "controls", "graphics", "credits"] and not playing: ui.title_screen()
+	if ui.mode in ["settings", "load"] and playing and previous_menu == "pause": ui.show_pause(_objective())
+	elif ui.mode in ["settings", "controls", "load", "credits"] and not playing: ui.title_screen()
 	else: ui.close_panel()
 	_sync_active()
 
@@ -589,6 +660,10 @@ func _ui_action(action: String, value: String) -> void:
 		"continue", "retry":
 			if State.load_game(action == "retry"):
 				playing = true; outcome = ""; ui.close_panel(); enter_room(State.data.room, true)
+		"load_menu":
+			previous_menu = ui.mode; ui.show_load_menu()
+		"load_slot": load_checkpoint(value)
+		"load_section": load_checkpoint(value, true)
 		"close": _close()
 		"title":
 			if playing and outcome == "": _save()
@@ -597,17 +672,16 @@ func _ui_action(action: String, value: String) -> void:
 			ui.title_screen()
 			title_set.show_set()
 		"title_background": title_set.show_set(title_set.variant == 0)
-		"graphics": _graphics()
-		"quality": State.settings.quality = int(value); State.save_settings(); _apply_graphics(); _graphics()
 		"credits":
 			ui.clear_panel("KALA / JALAN KARTINI", "credits")
-			ui.paragraph("CHAPTER 01 — TIGA FASE\n\nSetiap cerita menyimpan seseorang yang disalahkan.\n\nCerita dasar, model, tekstur, foto dan musik: HTML referensi KALA milik pengguna.\nSculpt monster: hands_repaired.glb dari pengguna.\nModel NPC/Daisy native, rumah, jalan tersambung, halusinasi dan sistem gameplay: dikembangkan untuk edisi ini.\n\nKontrol: WASD + mouse, Shift lari, tahan Ctrl jongkok, E periksa, F lampu, R penjepit, J jurnal.\n\nKALA Native 0.10 / 27 Oktober 2026")
+			ui.paragraph("CHAPTER 01 — TIGA FASE\n\nSetiap cerita menyimpan seseorang yang disalahkan.\n\nCerita dasar, model, tekstur, foto dan musik: HTML referensi KALA milik pengguna.\nSculpt monster: hands_repaired.glb dari pengguna.\nModel NPC/Daisy native, rumah, jalan tersambung, halusinasi dan sistem gameplay: dikembangkan untuk edisi ini.\nFilm audit 17 Maret serta musik/efek rekamannya dibuat untuk KALA.\n\nKontrol: WASD + mouse, Shift lari, tahan Ctrl jongkok, E periksa, F lampu, R penjepit, J jurnal.\n\nKALA Native 0.17 / 1 November 2026")
 			ui.paragraph("Furnitur kamar: Bedroom and Living Room Furniture — 3DAssets.dev, CC0 1.0; geometri sumber dibuat dengan Muse Spark via T3 Code, disesuaikan untuk Godot.\nNakas: Classic Nightstand 01 — Kirill Sannikov / Poly Haven (CC0).\nSekering: Cartridge fuse 10 x 38 mm — Innerscene (CC0).\nKeypad, material tambahan, jeruji dan animasi kaki dibuat untuk KALA.")
 			ui.paragraph("ASET GRATIS\nKenney — Furniture Kit, Building Kit, City Kit (Suburban), Nature Kit, Factory Kit (CC0 1.0).\nQuaternius — Radio dan Animated Woman (CC0 1.0).\nInnerscene — Crib dan Adventure motorcycle (CC0).\nMixazzz / M. Khludeev — School from Moscow (CC0).\nDREAM_SEARCH_REPEAT — Banco Escuela (CC0).\n\nDaisy dan Flower Pot oleh Zsky (CC BY 3.0). Model disesuaikan ukuran dan orientasinya untuk KALA.\nDaisy: https://poly.pizza/m/4r0WBz3RZz\nFlower Pot: https://poly.pizza/m/u0CrZnpykb\nLisensi: https://creativecommons.org/licenses/by/3.0/\n\nCaveat — Pablo Impallari / Impallari Type, SIL Open Font License 1.1.\nSumber dan lisensi lengkap: assets/vendor/licenses.json.")
+			ui.paragraph("ASET SEKOLAH 0.12\nLocker — J-Toastie, CC BY 3.0: https://poly.pizza/m/aGmZ4jQD2y\nPiano — jeremy, CC BY 3.0: https://poly.pizza/m/7U-93vxPOER\nLisensi kedua model: https://creativecommons.org/licenses/by/3.0/\nUkuran, orientasi, material dan penempatan disesuaikan untuk KALA.\n\nCasual Character, Padlock dan Acoustic Guitar — Quaternius (CC0). Easel — reyshapes (CC0).\nStacks of Wheat (End of Summer) — Claude Monet / Art Institute of Chicago, domain publik.\nSumber lengkap: assets/vendor/revision12/ATTRIBUTION.txt.")
 			ui.button("KEMBALI", "close")
 		"quit": quit_game()
 		"save":
-			var error = _save()
+			var error = _save("manual")
 			var message = "Checkpoint tersimpan." if error == OK else "Checkpoint belum bisa disimpan di sini." if error == ERR_UNAVAILABLE else "Checkpoint gagal ditulis. Kode: " + str(error)
 			if is_instance_valid(ui.pause_menu): ui.pause_menu.show_status(message)
 			else: ui.notify(message)
@@ -620,6 +694,11 @@ func _ui_action(action: String, value: String) -> void:
 				State.add_note("photo_back", "BELAKANG FOTO", "47 — dua angka pertama. Sari ingat dua angka berikutnya.")
 				_save()
 		"journal_note": ui.show_note(State.data.notes[value].title, State.data.notes[value].body)
+		"audit_complete":
+			if ui.mode!="archive_video":return
+			State.set_flag("auditVerified")
+			State.add_note("audit","ARSIP VISUAL / 17 MARET","Rekaman memperlihatkan pekerja yang menolak menulis nama pengganti. Anak itu menunggu di luar pintu. Setelah mesin berhenti, kursi di ruang pengesahan sudah kosong.\n\nBertahun-tahun kemudian, Danu menulis undangan untuk Raka. Ia tahu ke mana pintu itu mengarah.\n\nSalinan rekaman tersimpan pada pemutar di ruang pemantauan.")
+			_save()
 		"puzzle_key":
 			var id = ui.puzzle_id
 			if State.keypad(id, value): _puzzle_complete(id)
@@ -627,10 +706,13 @@ func _ui_action(action: String, value: String) -> void:
 			else: ui.show_puzzle(id, "Kode belum cocok." if value == "OK" else "")
 		"puzzle_order":
 			var id = ui.puzzle_id
+			var before: int = State.data.puzzles[id].current.size()
 			var success = State.rotate_valve(int(value)) if id == "valve" else State.order_press(id, int(value))
 			if success: _puzzle_complete(id)
+			elif id=="breaker" and is_instance_valid(ui.terminal_console):
+				ui.terminal_console.acknowledge(int(value),before);audio.effect("click");_save()
 			else: ui.show_puzzle(id)
-		"hint": ui.show_puzzle(value, HINTS[value])
+		"settings_changed": _apply_graphics(); audio.apply_volume()
 		"settings": _settings()
 		"controls":
 			ui.clear_panel("KONTROL", "controls")
@@ -639,25 +721,8 @@ func _ui_action(action: String, value: String) -> void:
 	_sync_active()
 
 func _settings() -> void:
-	ui.clear_panel("PENGATURAN", "settings")
-	for spec in [["sensitivity", "Sensitivitas mouse", 0.5, 1.8], ["volume", "Volume utama", 0.0, 1.0], ["music", "Volume musik", 0.0, 1.0]]:
-		ui.paragraph(spec[1])
-		var slider = HSlider.new()
-		slider.min_value = spec[2]
-		slider.max_value = spec[3]
-		slider.step = 0.05
-		slider.value = State.settings[spec[0]]
-		slider.value_changed.connect(func(v): State.settings[spec[0]] = v; State.save_settings(); audio.apply_volume())
-		ui.content.add_child(slider)
-	var check = CheckButton.new()
-	check.text = "Bayangan lampu pemain"
-	check.button_pressed = State.settings.shadows
-	check.toggled.connect(func(v): State.settings.shadows = v; State.save_settings())
-	ui.content.add_child(check)
-	var scares = CheckButton.new(); scares.text = "Jumpscare saat tertangkap"; scares.button_pressed = State.settings.scares
-	scares.toggled.connect(func(v): State.settings.scares = v; State.save_settings()); ui.content.add_child(scares)
-	ui.button("KONTROL", "controls")
-	ui.button("KEMBALI", "close")
+	previous_menu = ui.mode
+	ui.show_settings("DISPLAY")
 
 func show_lentera_guide() -> void:
 	if not State.flag("lenteraOwned"): return
@@ -665,20 +730,19 @@ func show_lentera_guide() -> void:
 	_sync_active()
 
 func _apply_graphics() -> void:
-	var quality = clampi(int(State.settings.quality), 0, 2)
-	get_viewport().msaa_3d = [Viewport.MSAA_DISABLED, Viewport.MSAA_2X, Viewport.MSAA_4X][quality]
-	get_viewport().positional_shadow_atlas_size = 4096 if quality == 2 else 2048
-	if RenderingServer.get_current_rendering_method() == "forward_plus":
-		var env: Environment = $WorldEnvironment.environment
-		env.ssao_enabled = quality > 0; env.ssao_intensity = 1.25; env.ssao_radius = 1.0
-		env.ssil_enabled = quality == 2; env.ssil_intensity = 0.55
-		env.glow_enabled = quality > 0; env.glow_intensity = 0.35; env.glow_hdr_threshold = 1.8
-
-func _graphics() -> void:
-	ui.clear_panel("GRAPHICS", "graphics")
-	ui.paragraph("Pencahayaan terarah, material PBR, detail ruangan dan bayangan dinamis.\nPreset aktif: " + ["RINGAN", "TINGGI", "SINEMATIK"][int(State.settings.quality)])
-	for i in range(3): ui.button(["RINGAN · tanpa MSAA", "TINGGI · MSAA 2×", "SINEMATIK · MSAA 4× / shadow 4096"][i], "quality", str(i))
-	ui.button("KEMBALI", "close")
+	var quality=clampi(int(State.settings.quality),0,2)
+	get_viewport().msaa_3d=clampi(int(State.settings.msaa),0,3)
+	get_viewport().scaling_3d_scale=clampf(float(State.settings.render_scale),0.5,1.0)
+	get_viewport().positional_shadow_atlas_size=4096 if quality==2 else 2048
+	Engine.max_fps=clampi(int(State.settings.fps_limit),0,240)
+	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if State.settings.vsync else DisplayServer.VSYNC_DISABLED)
+	if not test_mode: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if State.settings.fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
+	player.camera.fov=clampf(float(State.settings.fov),65,90)
+	if RenderingServer.get_current_rendering_method()=="forward_plus":
+		var env: Environment=$WorldEnvironment.environment
+		env.ssao_enabled=State.settings.ssao;env.ssao_intensity=1.25;env.ssao_radius=1.0
+		env.ssil_enabled=State.settings.ssil;env.ssil_intensity=0.55
+		env.glow_enabled=State.settings.bloom;env.glow_intensity=0.35;env.glow_hdr_threshold=1.8
 
 func _ending(type: String) -> void:
 	outcome = type
@@ -710,11 +774,11 @@ func _objective() -> String:
 	match State.data.room:
 		"school": return "Bicara dengan Sari dan Adit. Periksa foto kelas 1A dan loker Raka." if not State.data.evidence.has("A") else "Bicarakan surat itu dengan Danu, lalu menuju gerbang." if not State.flag("invited") else "Ikuti undangan Danu melalui gerbang. Periksa bukti sebelum memutuskan."
 		"street": return "Periksa warung dan catatan servis. Sambungkan kabel penerangan." if not State.solved("fuse") else "Lampu gang menyala. Masuk Gudang Kartini."
-		"loading": return "Periksa ruang jaga dan suku cadang. Pulihkan panel bangsal." if not State.solved("panel") else "SI PENGAWAS · putuskan tugas jaganya." if not State.flag("overseerDefeated") else "Ada ruang lain di balik pintu utara."
-		"relay": return "Telusuri Rumah Relai." if not State.flag("lenteraOwned") else "Pintu arsip masih tertutup." if not State.flag("relaySolved") else "Pengunci arsip terlepas. Masuk jalur pemeliharaan."
+		"loading": return "Periksa ruang jaga dan suku cadang. Pulihkan panel bangsal." if not State.solved("panel") else "SI PENGAWAS · putuskan tugas jaganya." if not State.flag("overseerDefeated") else level.factory_route.objective()
+		"relay": return "Telusuri Rumah Relai." if not State.flag("lenteraOwned") else "Aktifkan generator, R-17, tiga relai dan tuas arsip." if not State.flag("relaySolved") else "Turuni tangga MEMORI / B1. Pulihkan Gema Arsip untuk membuka jalur servis." if not State.flag("memorySolved") else "Pengunci servis terbuka. Masuk jalur pemeliharaan dari B1."
 		"pursuit": return "Cari Sun · Moon · Star di laci meja, loker malam dan lemari perkakas (%d/3). Ctrl: sembunyi; R: rem." % [3 - level.escape_puzzle.missing().size()] if not State.flag("escapePuzzleSolved") else "Pintu SERVIS terbuka. Turuni ventilasi, tarik kisi dan rem kipas dengan R."
 		"production": return "Periksa perlengkapan tekanan di bengkel dan perawatan." if not State.solved("valve") else "TANGAN-TANGAN · putuskan cengkeramannya." if not State.flag("handsDefeated") else "Saluran aman. Masuk kantor."
-		"office": return "Baca album, cari gulungan pita dan putar rekaman audit." if not State.flag("auditVerified") else "Urutkan saklar audit. Jalur servis di selatan tetap tersedia."
+		"office": return "Baca album, cari gulungan pita dan putar rekaman audit." if not State.flag("auditVerified") else "Periksa terminal kantor dan arsip pemeliharaan."
 		"ritual": return "PEMEGANG · tarik setiap lilin tiga kali, lalu sorot tubuh / inti." if not State.flag("tumbalDefeated") else "Perjanjian runtuh. Masuk lorong belakang."
 		"corridor": return "Kejar Danu menuju pintu keluar." if not State.flag("exitLocked") else "Cari pintu logam D–08 di dinding timur."
 		"daisy": return "Periksa lemari kaca bertuliskan DAISY."
@@ -725,10 +789,14 @@ func _process(delta: float) -> void:
 	claw_cooldown = maxf(0, claw_cooldown - delta)
 	var active = player.active
 	if active:
+		if valve_encounter_delay>0:
+			valve_encounter_delay=maxf(0,valve_encounter_delay-delta)
+			if valve_encounter_delay<=0 and State.data.room=="production" and State.solved("valve") and not State.flag("handsDefeated"):
+				_puzzle_complete("valve")
 		if State.flag("prologueVersion"): chapter_flow.update(delta)
 		if State.data.room == "pursuit" and not test_mode and not State.flag("handsPursuitComplete") and State.flag("escapePuzzleSolved") and player.position.x > 86 and player.position.z < -122 and player.position.y < -7.4:
 			_rescue(); return
-		if State.data.room == "relay" and not test_mode and State.flag("relaySolved") and not State.flag("handsAmbushRunSeen") and player.position.z < -10:
+		if State.data.room == "relay" and not test_mode and State.flag("relaySolved") and State.flag("memorySolved") and not State.flag("handsAmbushRunSeen") and player.position.y > -1.0 and player.position.z < -10:
 			narrative.start("ambush")
 			return
 		State.data.elapsed += delta
@@ -773,7 +841,7 @@ func _process(delta: float) -> void:
 		if not is_instance_valid(mark) or not mark.is_inside_tree(): continue
 		var difference: Vector3 = mark.global_position - player.camera.global_position
 		var direction = difference.normalized()
-		var lit = State.flag("relayPower") and player.lamp.visible and difference.length() < 12 and (-player.camera.global_basis.z).dot(direction) > 0.94
+		var lit = State.flag("lenteraOwned") and player.lamp_on and player.cooldown <= 0 and difference.length() < 12 and (-player.camera.global_basis.z).dot(direction) > 0.94
 		if lit:
 			lit = get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(player.camera.global_position, mark.global_position - direction * 0.08, 1)).is_empty()
 		mark.visible = lit
@@ -804,12 +872,37 @@ func _smoke() -> void:
 	State.set_flag("prologueVersion")
 	test_mode = true
 	State.save_enabled = false
+	ui.show_load_menu(); ui.load_menu.show_category("sections")
+	await get_tree().process_frame
+	if ui.load_menu.records.size() != 18 or ui.load_menu.preview.texture == null:
+		push_error("SMOKE16: checkpoint catalog or packaged photographs unavailable")
+	else: print("SMOKE MENU OK: 18 sections and packaged photographs")
+	ui.show_settings("DISPLAY")
+	if ui.settings_menu.tab_buttons.size() != 4 or ui.settings_menu.rows.get_child_count() != 11:
+		push_error("SMOKE16: settings categories unavailable")
+	else: print("SMOKE MENU OK: white settings with 4 categories and 11 display controls")
 	playing = true
 	ui.close_panel()
 	for id in State.ROOMS:
 		await enter_room(id, false, false)
 		await get_tree().physics_frame
 		print("SMOKE ROOM OK: ", id, " nodes=", level.get_child_count())
+	await enter_room("production",false,false)
+	if level.refinement==null or level.refinement.wheels.size()!=3:push_error("SMOKE17: physical pressure valves unavailable")
+	else:print("SMOKE FEATURE OK: three physical pressure valves")
+	await enter_room("office",false,false)
+	State.set_flag("auditVerified");State.collect("B")
+	ui.show_puzzle("breaker");_sync_active();await get_tree().process_frame
+	if not is_instance_valid(ui.terminal_console):push_error("SMOKE17: command terminal unavailable")
+	else:
+		ui.terminal_console.submit("DIR")
+		if not ui.terminal_console.output.get_parsed_text().contains("AUDIT.LOG"):push_error("SMOKE17: terminal files unavailable")
+		else:print("SMOKE FEATURE OK: terminal filesystem and input")
+	ui.show_audit_video();_sync_active();await get_tree().create_timer(1.0).timeout
+	var playback=ui.archive_video.video
+	if playback.stream==null or not playback.is_playing() or playback.get_video_texture().get_width()!=1280:push_error("SMOKE17: packaged audit video unavailable")
+	else:print("SMOKE FEATURE OK: packaged 720p Theora and Vorbis playback")
+	ui.close_panel()
 	await quit_game()
 
 func _notification(what: int) -> void:
@@ -833,4 +926,6 @@ func quit_game() -> void:
 
 func _exit_tree() -> void:
 	KalaGeometry.materials.clear()
+	preload("res://scripts/systems/student_model.gd").uniform_materials.clear()
+	preload("res://scripts/systems/free_assets.gd").source_cache.clear()
 

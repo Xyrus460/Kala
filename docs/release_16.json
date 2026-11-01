@@ -1,0 +1,53 @@
+{
+  "suites": {
+    "story_regression": {
+      "failures": 0,
+      "checks": 28,
+      "log": "docs/story_regression_latest_console.log"
+    },
+    "integration": {
+      "failures": 0,
+      "checks": 177,
+      "log": "docs/integration_latest_console.log"
+    },
+    "revision16": {
+      "failures": 0,
+      "checks": 66,
+      "log": "docs/revision16_latest_console.log"
+    },
+    "revision12": {
+      "failures": 0,
+      "checks": 49,
+      "log": "docs/revision12_latest_console.log"
+    }
+  },
+  "exe_sha256": "AB1824F85BFD8E0E4128182C000C4003A3E042245B2967848D089B2A04B22424",
+  "screenshots": [
+    "title_16.png",
+    "settings_16.png",
+    "load_saves_16.png",
+    "load_sections_16.png",
+    "load_small_16.png",
+    "load_4x3_16.png"
+  ],
+  "version": "0.16.0",
+  "pck_sha256": "7683B2CC7E6C9DA79164C7D27155B2551CBB6C525A4CB60978D12FD173A9C421",
+  "standalone": [
+    {
+      "stdout": "C:\\Game\\kala\\docs\\exe_forward_16_stdout.log",
+      "renderer": "forward",
+      "exit_code": 0,
+      "stderr": "C:\\Game\\kala\\docs\\exe_forward_16_stderr.log"
+    },
+    {
+      "stdout": "C:\\Game\\kala\\docs\\exe_compatibility_16_stdout.log",
+      "renderer": "compatibility",
+      "exit_code": 0,
+      "stderr": "C:\\Game\\kala\\docs\\exe_compatibility_16_stderr.log"
+    }
+  ],
+  "failures": 0,
+  "sections": 18,
+  "previews": 18,
+  "total_checks": 320
+}

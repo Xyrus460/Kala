@@ -1,0 +1,281 @@
+{
+  "version": "0.15.0",
+  "verified_utc": "2026-11-01T04:33:35.7084595Z",
+  "checks": 511,
+  "failures": 0,
+  "suites": {
+    "integration": {
+      "failures": 0,
+      "log": "docs/integration_15.log",
+      "checks": 177
+    },
+    "layout": {
+      "failures": 0,
+      "log": "docs/layout_validation_15.log",
+      "checks": 150
+    },
+    "story": {
+      "failures": 0,
+      "log": "docs/story_regression_15.log",
+      "checks": 28
+    },
+    "revision12": {
+      "failures": 0,
+      "log": "docs/revision12_15.log",
+      "checks": 49
+    },
+    "revision14": {
+      "failures": 0,
+      "log": "docs/revision14_15.log",
+      "checks": 65
+    },
+    "revision15": {
+      "failures": 0,
+      "log": "docs/revision15.log",
+      "checks": 42
+    }
+  },
+  "standalone": {
+    "forward": {
+      "rooms_loaded": 14,
+      "exit_code": 0,
+      "stdout": "docs/exe_forward_15_stdout.log",
+      "stderr": "docs/exe_forward_15_stderr.log"
+    },
+    "compatibility": {
+      "rooms_loaded": 14,
+      "exit_code": 0,
+      "stdout": "docs/exe_compatibility_15_stdout.log",
+      "stderr": "docs/exe_compatibility_15_stderr.log"
+    }
+  },
+  "packed_files": 2135,
+  "known_diagnostics": [
+    {
+      "textures": 2,
+      "log": "docs/exe_compatibility_15_stderr.log",
+      "renderer": "compatibility",
+      "stage": "engine process shutdown",
+      "status": "Existing Godot Compatibility texture-release diagnostic; all rooms loaded and process exited 0."
+    }
+  ],
+  "files": [
+    {
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "file": "KALA.exe",
+      "bytes": 180858888
+    },
+    {
+      "sha256": "e5b578e6935cf3ba27c241dab386829f2d628868ab4c1a3b4685c2b15a5c1959",
+      "file": "KALA.pck",
+      "bytes": 192784624
+    },
+    {
+      "sha256": "76abc1d212a491bd7ecfcaaa9388b740223a90d3e361c8e1c1ac8ee1e6715e3d",
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 12000
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "523a00a044d628763555a9f6aa334d91837d583047fb6979d693e2f95b3f9580",
+      "file": "scripts/systems/relay_rebuild.gd",
+      "bytes": 24426
+    },
+    {
+      "sha256": "af1e019dbfd259ebe50226cd0b532226ec9545c516add0625138bd7c1f26271c",
+      "file": "scripts/systems/memory_chamber.gd",
+      "bytes": 13275
+    },
+    {
+      "sha256": "2659a36e0d4a73dc280e3b19b03e4dc820d0e745876f6b4cdc3158a0c2cc5e22",
+      "file": "scripts/systems/memory_mascot.gd",
+      "bytes": 4398
+    },
+    {
+      "sha256": "5ca09d73b3abe6c47403299ee76e5e51f2fd43407ce3f90f4fee9dbe9ff72bfa",
+      "file": "scripts/systems/main.gd",
+      "bytes": 42374
+    },
+    {
+      "sha256": "f924fd56ab3f256aa3701546b9174d1cc5b98d224b1be3fc8f905dc39c359021",
+      "file": "scripts/systems/level.gd",
+      "bytes": 22875
+    },
+    {
+      "sha256": "becd5b29ebe62b60fbcddf49e1e7b473117babe31ca321b170e1b687f0a6ca0f",
+      "file": "scripts/systems/expansion_cinematics.gd",
+      "bytes": 12402
+    },
+    {
+      "sha256": "42cd06c677054b74daef639c0d839a73b0613f4e4b501ac511d0af7d01dfa110",
+      "file": "scripts/player/player.gd",
+      "bytes": 15259
+    },
+    {
+      "sha256": "cd44cab7179a053db63acd9dec5b71ced4f34d6e8afdd0a2941cd5fd36bf4896",
+      "file": "assets/materials/memory_crt.gdshader",
+      "bytes": 524
+    },
+    {
+      "sha256": "74aa8dc08cc3f80da6ea5a7d483586c7f9e7c994aeb47a7d43d5b28c40f841af",
+      "file": "assets/materials/relay_service_floor.gdshader",
+      "bytes": 416
+    }
+  ],
+  "screenshots": [
+    {
+      "sha256": "27a5ee75d2495dabde03411e8b7fcf04b4f30a3f91dd3169cc021b2ad87854ca",
+      "file": "docs/screenshots/relay_15.png",
+      "bytes": 688955
+    },
+    {
+      "sha256": "275fca34710e10b7a5c2890b03044052a2a126a27ea94a392df9b49584213f3b",
+      "file": "docs/screenshots/relay_blue_15.png",
+      "bytes": 672056
+    },
+    {
+      "sha256": "b99fee1b8a230c73a44005e53c22d1ab4eee2402ce05a437a3546148d3224bbe",
+      "file": "docs/screenshots/socket_15.png",
+      "bytes": 816331
+    },
+    {
+      "sha256": "192f2f7e1ddba11613c7985dae4b1fc070a334887e64121a5fc77b644e1d0e60",
+      "file": "docs/screenshots/r17_unit_15.png",
+      "bytes": 814922
+    },
+    {
+      "sha256": "842f785e1242db12871a5fba7afbe471e68287705f9c62221eee48c151ad0fda",
+      "file": "docs/screenshots/lever_15.png",
+      "bytes": 751584
+    },
+    {
+      "sha256": "6f6a2b356420e8abdfc7ac763fa7a20db88d159764b8001515eae972b02a6b42",
+      "file": "docs/screenshots/generator_15.png",
+      "bytes": 656041
+    },
+    {
+      "sha256": "c3aad54ab82a978b1cda57ec9d01b45084fdf663908a4efac4373924ffd11246",
+      "file": "docs/screenshots/generator_blue_15.png",
+      "bytes": 697938
+    },
+    {
+      "sha256": "8bd9a3aacc7beeb5589e853cebde3af49a7de92fec5178dc998e3f15d8e5b4dd",
+      "file": "docs/screenshots/contact_15.png",
+      "bytes": 666242
+    },
+    {
+      "sha256": "58d644a71ae8da556b06841c1c61fd998637c310c69fc0cdbccaa7278ae84ed0",
+      "file": "docs/screenshots/archive_15.png",
+      "bytes": 703669
+    },
+    {
+      "sha256": "4fec869631406e39472a4b83a628406f8cb3e198d46c688f57be189e62088d04",
+      "file": "docs/screenshots/stairs_15.png",
+      "bytes": 615955
+    },
+    {
+      "sha256": "62dd1b141e8d382963fd5b03be6e537c59fb6f4764861637e8fef2f2412a626d",
+      "file": "docs/screenshots/memory_15.png",
+      "bytes": 661432
+    },
+    {
+      "sha256": "84ecf852d8e85b9128483a6c6ca90ec2abd0c0784b0875a5a6749233b583605c",
+      "file": "docs/screenshots/memory_console_15.png",
+      "bytes": 658047
+    },
+    {
+      "sha256": "ced42280414dea60a58297f8bfb78ec3604367bf66618a87f79da2154d941890",
+      "file": "docs/screenshots/memory_signal_15.png",
+      "bytes": 645018
+    },
+    {
+      "sha256": "d8f7445af62051d5729a97887f2821905018616e953cc181733ab78692a4bd99",
+      "file": "docs/screenshots/memory_mascot_15.png",
+      "bytes": 596930
+    },
+    {
+      "sha256": "eb7b2371434b5caae9d08d65600be3f312a6fb007009045ef381a8c5c7515f56",
+      "file": "docs/screenshots/service_15.png",
+      "bytes": 586452
+    },
+    {
+      "sha256": "361710870472f9f2ff2a9f9474048533d031b0fa337da247b4dfc420c7b6c2a4",
+      "file": "docs/screenshots/relay_15_compat.png",
+      "bytes": 760329
+    },
+    {
+      "sha256": "b86c156330564d9a4674aaca5c5dbcdb78b8840553f71933b41fc721444bd47e",
+      "file": "docs/screenshots/relay_blue_15_compat.png",
+      "bytes": 752701
+    },
+    {
+      "sha256": "599af3cea42118fbbbce1f781b4d4155a3ed968baecb6c643e11c1c40acb1dd0",
+      "file": "docs/screenshots/socket_15_compat.png",
+      "bytes": 949290
+    },
+    {
+      "sha256": "a9c397f2fbc7c162729b621f9e3449a717060ec6b704863d65c0ebeaf553bc05",
+      "file": "docs/screenshots/r17_unit_15_compat.png",
+      "bytes": 868494
+    },
+    {
+      "sha256": "ed501784a325c5f6383424433f734c3b1c17c1a2c9b48d3f32afd729192f301a",
+      "file": "docs/screenshots/lever_15_compat.png",
+      "bytes": 827803
+    },
+    {
+      "sha256": "cd75028b17c60e0632171296bce5e11aa10cd2652bf62ee30fc15e18172aa418",
+      "file": "docs/screenshots/generator_15_compat.png",
+      "bytes": 639503
+    },
+    {
+      "sha256": "95d97d4015df63088c3b01ef37a42e7f798c65ccd2eee527a48d45c376cd7883",
+      "file": "docs/screenshots/generator_blue_15_compat.png",
+      "bytes": 739085
+    },
+    {
+      "sha256": "83cc94d863baa573efb21301838c830a9e30df824b836dead4e7e7fcb76d6872",
+      "file": "docs/screenshots/contact_15_compat.png",
+      "bytes": 707713
+    },
+    {
+      "sha256": "614bc8f5503408af29ac2fa646e514d66f9f9fb754772aaa1dcc9b311f483d48",
+      "file": "docs/screenshots/archive_15_compat.png",
+      "bytes": 773248
+    },
+    {
+      "sha256": "965fa092ac3bf8d7d2b019ffb8e6ac23b885ec7a72581258ee721044f2f51da8",
+      "file": "docs/screenshots/stairs_15_compat.png",
+      "bytes": 685735
+    },
+    {
+      "sha256": "8361373c3a20dca2b7069f98b9ec69b958e4bfcdeb6d0d7cb50974fc26a5751b",
+      "file": "docs/screenshots/memory_15_compat.png",
+      "bytes": 698197
+    },
+    {
+      "sha256": "a6a245dcad8c529ec721cfc5a7c5e3b0400c3a2149e9a38d001e26d211f14e46",
+      "file": "docs/screenshots/memory_console_15_compat.png",
+      "bytes": 694802
+    },
+    {
+      "sha256": "075a5e677aa08fe4ab774558217779185309de3ca576a02643005b91906e172e",
+      "file": "docs/screenshots/memory_signal_15_compat.png",
+      "bytes": 683785
+    },
+    {
+      "sha256": "fcfed91cbabad496b54934c3cc981da7854a902ff647e02b8f9f5c66aee84f8c",
+      "file": "docs/screenshots/memory_mascot_15_compat.png",
+      "bytes": 657429
+    },
+    {
+      "sha256": "89d64feb9bcfaa6c46b8d383fb7edb9f0714a887f1d84ed4336365de50cd0488",
+      "file": "docs/screenshots/service_15_compat.png",
+      "bytes": 632269
+    }
+  ],
+  "limitations": [
+    "Automated gameplay, physical routes, the B1 exit cinematic and engine renders were checked; a manual playthrough to every ending was not performed."
+  ]
+}

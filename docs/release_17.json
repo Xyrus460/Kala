@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "standalone": [
+    {
+      "stderr": "C:\\Game\\kala\\docs\\exe_forward_17_stderr.log",
+      "stdout": "C:\\Game\\kala\\docs\\exe_forward_17_stdout.log",
+      "exit_code": 0,
+      "renderer": "forward"
+    },
+    {
+      "stderr": "C:\\Game\\kala\\docs\\exe_compatibility_17_stderr.log",
+      "stdout": "C:\\Game\\kala\\docs\\exe_compatibility_17_stdout.log",
+      "exit_code": 0,
+      "renderer": "compatibility"
+    }
+  ],
+  "version": "0.17.0",
+  "files": [
+    {
+      "bytes": 180858888,
+      "sha256": "AB1824F85BFD8E0E4128182C000C4003A3E042245B2967848D089B2A04B22424",
+      "path": "KALA.exe"
+    },
+    {
+      "bytes": 294171060,
+      "sha256": "C3FC3A56D4DE20DD42C274A3D529C99C7D23A15CC4D1F40094742237CE17D96E",
+      "path": "KALA.pck"
+    },
+    {
+      "bytes": 99315361,
+      "sha256": "12FFEAC8EED916BF712125BAA91EF0FCC93383305E01E4826D358F41D62FEFB8",
+      "path": "assets/video/audit_17_maret.ogv"
+    }
+  ]
+}

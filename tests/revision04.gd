@@ -248,7 +248,7 @@ func pursuit_test() -> void:
 		game.level.escape_puzzle.search({"sun": "operator", "moon": "istirahat", "star": "perkakas"}[piece])
 		for i in range(90): game.level.escape_puzzle.update(1.0 / 60)
 		var target = find_interaction("fragment", piece)
-		game.player.position = Vector3(target.position.x + (1.6 if target.position.x < 0 else -1.6), 0.05, target.position.z)
+		game.player.position = Vector3(target.global_position.x + (1.6 if target.global_position.x < 0 else -1.6), 0.05, target.global_position.z)
 		game.player.last_safe_position = game.player.position
 		game.player.camera.look_at(target.global_position)
 		game.player.active = true
@@ -257,12 +257,12 @@ func pursuit_test() -> void:
 		game._interact(target, false)
 		game.player.active = false
 		check(State.owns("fragment_" + piece), piece + " fragment collection is stored")
-	var moon = game.level.get_node("EscapePuzzle/moon").get_child(0) as MeshInstance3D
+	var moon = game.level.get_node("EscapePuzzle").find_child("moon",true,false).get_child(0) as MeshInstance3D
 	check(moon.mesh.get_surface_count() == 1 and moon.mesh.surface_get_arrays(0)[Mesh.ARRAY_VERTEX].size() > 50, "crescent moon has visible triangulated geometry")
 	var lock = find_interaction("escape_lock", "")
 	game.player.position = Vector3(9.3, 0.05, -57)
 	game.player.last_safe_position = game.player.position
-	game.player.camera.look_at(lock.position)
+	game.player.camera.look_at(lock.global_position)
 	game.player.active = true
 	for i in range(3): await get_tree().physics_frame
 	check(game.player.target == lock, "service lock can be targeted from corridor")
@@ -276,7 +276,7 @@ func pursuit_test() -> void:
 	check(not game.player.test_move(game.player.global_transform, Vector3(3, 0, 0)), "unlocked door is physically passable")
 	await snapshot("escape_unlocked")
 	await room("pursuit")
-	check(game.level.escape_puzzle.gate.collision_layer == 0 and not game.level.get_node("EscapePuzzle/sun").visible, "solved service lock and collected pieces survive room reload")
+	check(game.level.escape_puzzle.gate.collision_layer == 0 and not game.level.get_node("EscapePuzzle").find_child("sun",true,false).visible, "solved service lock and collected pieces survive room reload")
 
 func find_interaction(action: String, parameter: String) -> KalaInteractable:
 	for object in get_tree().get_nodes_in_group("interactables"):

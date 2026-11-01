@@ -50,4 +50,22 @@ if ((Get-Content -LiteralPath "$taskRoot\docs\revision10_latest_console.log" -Ra
 if ($taskExitCode -ne 0) { exit $taskExitCode }
 Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision11.tscn','--log-file',"$taskRoot\docs\revision11_latest.log") -Transcript "$taskRoot\docs\revision11_latest_console.log"
 if ((Get-Content -LiteralPath "$taskRoot\docs\revision11_latest_console.log" -Raw) -notmatch 'KALA REVISION11: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision12.tscn','--log-file',"$taskRoot\docs\revision12_latest.log") -Transcript "$taskRoot\docs\revision12_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision12_latest_console.log" -Raw) -notmatch 'KALA REVISION12: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision13.tscn','--log-file',"$taskRoot\docs\revision13_latest.log") -Transcript "$taskRoot\docs\revision13_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision13_latest_console.log" -Raw) -notmatch 'KALA REVISION13: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision14.tscn','--log-file',"$taskRoot\docs\revision14_latest.log") -Transcript "$taskRoot\docs\revision14_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision14_latest_console.log" -Raw) -notmatch 'KALA REVISION14: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision15.tscn','--log-file',"$taskRoot\docs\revision15_latest.log") -Transcript "$taskRoot\docs\revision15_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision15_latest_console.log" -Raw) -notmatch 'KALA REVISION15: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision16.tscn','--log-file',"$taskRoot\docs\revision16_latest.log") -Transcript "$taskRoot\docs\revision16_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision16_latest_console.log" -Raw) -notmatch 'KALA REVISION16: \d+ checks, 0 failures') { $taskExitCode = 1 }
+if ($taskExitCode -ne 0) { exit $taskExitCode }
+Invoke-KalaCheck -Arguments @('--headless','--audio-driver','Dummy','--path',$taskRoot,'--scene','res://tests/revision17.tscn','--log-file',"$taskRoot\docs\revision17_latest.log") -Transcript "$taskRoot\docs\revision17_latest_console.log"
+if ((Get-Content -LiteralPath "$taskRoot\docs\revision17_latest_console.log" -Raw) -notmatch 'KALA REVISION17: \d+ checks, 0 failures') { $taskExitCode = 1 }
 exit $taskExitCode

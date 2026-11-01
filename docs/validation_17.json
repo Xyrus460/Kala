@@ -1,0 +1,151 @@
+{
+  "timezone": "Asia/Jakarta",
+  "backups": "backups/revision17_before",
+  "total_checks": 1078.0,
+  "suite_checks": 1068.0,
+  "standalone": [
+    {
+      "stderr": "C:\\Game\\kala\\docs\\exe_forward_17_stderr.log",
+      "stdout": "C:\\Game\\kala\\docs\\exe_forward_17_stdout.log",
+      "exit_code": 0,
+      "renderer": "forward"
+    },
+    {
+      "stderr": "C:\\Game\\kala\\docs\\exe_compatibility_17_stderr.log",
+      "stdout": "C:\\Game\\kala\\docs\\exe_compatibility_17_stdout.log",
+      "exit_code": 0,
+      "renderer": "compatibility"
+    }
+  ],
+  "version": "0.17.0",
+  "failures": 0,
+  "date": "2026-11-01",
+  "realtime_video_checks": 10,
+  "suites": [
+    {
+      "name": "integration",
+      "checks": 182,
+      "failures": 0,
+      "log": "docs\\integration_latest_console.log"
+    },
+    {
+      "name": "layout",
+      "checks": 152,
+      "failures": 0,
+      "log": "docs\\layout_latest_console.log"
+    },
+    {
+      "name": "story",
+      "checks": 28,
+      "failures": 0,
+      "log": "docs\\story_latest_console.log"
+    },
+    {
+      "name": "claw",
+      "checks": 6,
+      "failures": 0,
+      "log": "docs\\claw_latest_console.log"
+    },
+    {
+      "name": "revision04",
+      "checks": 63,
+      "failures": 0,
+      "log": "docs\\revision04_latest_console.log"
+    },
+    {
+      "name": "revision05",
+      "checks": 57,
+      "failures": 0,
+      "log": "docs\\revision05_latest_console.log"
+    },
+    {
+      "name": "revision06",
+      "checks": 42,
+      "failures": 0,
+      "log": "docs\\revision06_latest_console.log"
+    },
+    {
+      "name": "revision07",
+      "checks": 30,
+      "failures": 0,
+      "log": "docs\\revision07_latest_console.log"
+    },
+    {
+      "name": "revision08",
+      "checks": 34,
+      "failures": 0,
+      "log": "docs\\revision08_latest_console.log"
+    },
+    {
+      "name": "revision09",
+      "checks": 34,
+      "failures": 0,
+      "log": "docs\\revision09_latest_console.log"
+    },
+    {
+      "name": "revision10",
+      "checks": 22,
+      "failures": 0,
+      "log": "docs\\revision10_latest_console.log"
+    },
+    {
+      "name": "revision11",
+      "checks": 98,
+      "failures": 0,
+      "log": "docs\\revision11_latest_console.log"
+    },
+    {
+      "name": "revision12",
+      "checks": 49,
+      "failures": 0,
+      "log": "docs\\revision12_latest_console.log"
+    },
+    {
+      "name": "revision13",
+      "checks": 44,
+      "failures": 0,
+      "log": "docs\\revision13_latest_console.log"
+    },
+    {
+      "name": "revision14",
+      "checks": 65,
+      "failures": 0,
+      "log": "docs\\revision14_latest_console.log"
+    },
+    {
+      "name": "revision15",
+      "checks": 42,
+      "failures": 0,
+      "log": "docs\\revision15_latest_console.log"
+    },
+    {
+      "name": "revision16",
+      "checks": 66,
+      "failures": 0,
+      "log": "docs\\revision16_latest_console.log"
+    },
+    {
+      "name": "revision17",
+      "checks": 54,
+      "failures": 0,
+      "log": "docs\\revision17_latest_console.log"
+    }
+  ],
+  "video": {
+    "width": 1280,
+    "decode_validation": "ffmpeg -v error -xerror -i audit_native17.ogv -f null -",
+    "sha256": "12FFEAC8EED916BF712125BAA91EF0FCC93383305E01E4826D358F41D62FEFB8",
+    "duration_seconds": 44,
+    "audio_codec": "Vorbis",
+    "height": 720,
+    "fps": 24,
+    "path": "assets/video/audit_17_maret.ogv",
+    "encoder": "Godot native OGV Movie Writer"
+  },
+  "visual_review": {
+    "compatibility": "docs/screenshots/*_17_compat.png",
+    "real_playback": "docs/screenshots/video17_live_*.png",
+    "forward": "docs/screenshots/*_17.png"
+  },
+  "final_targeted_log": "docs/revision17_final.log"
+}

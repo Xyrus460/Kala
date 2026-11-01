@@ -21,6 +21,9 @@ var time = 0.0
 var step_distance = 0.0
 var target: KalaInteractable
 var cable: MeshInstance3D
+var claw_muzzle: Marker3D
+var claw_head: Node3D
+var claw_head_rest=Transform3D.IDENTITY
 var reach_time = 0.0
 var reach_point = Vector3.ZERO
 var anchored = false
@@ -33,7 +36,6 @@ var pulse_cooldown = 0.0
 var pulse_flash = 0.0
 var equip_blend = 1.0
 var reveal_tick = 0.0
-var hand: Node3D
 
 func _ready() -> void:
 	add_to_group("kala_player")
@@ -106,9 +108,9 @@ func _physics_process(delta: float) -> void:
 	lamp.shadow_enabled = bool(State.settings.shadows)
 	viewmodel.get_node("Handle").visible = lamp_available() and not State.flag("lenteraOwned")
 	viewmodel.get_node("Claw").visible = State.flag("lenteraOwned") and not tool_raising
-	if hand != null: hand.visible = lamp_available() and not tool_raising
 	if not active:
 		cable.hide()
+		if is_instance_valid(claw_head):claw_head.transform=claw_head_rest
 		velocity = Vector3.ZERO
 		return
 	time += delta
@@ -150,27 +152,34 @@ func _physics_process(delta: float) -> void:
 	if step_distance >= (2.5 if crouched else 1.7):
 		step_distance = 0
 		if not crouched: footstep.emit()
-	$Head.position.y = lerpf($Head.position.y, 0.84 if crouched else 1.62, minf(1, delta * 12)) + sin(time * speed * 2) * (0.01 if input.length() > 0 else 0.0)
+	$Head.position.y = lerpf($Head.position.y, 0.84 if crouched else 1.62, minf(1, delta * 12)) + sin(time * speed * 2) * (0.01 if input.length() > 0 and State.settings.head_bob else 0.0)
 	ray.target_position.z = -32 if State.flag("lenteraOwned") else -2.5
 	ray.force_raycast_update()
 	target = null
 	if ray.is_colliding():
 		var hit = ray.get_collider()
 		if hit is KalaInteractable and hit.available():
-			if hit.tool_only or camera.global_position.distance_to(hit.global_position) <= 2.7 or (State.flag("lenteraOwned") and hit.action_id == "puzzle"):
+			if hit.tool_only or camera.global_position.distance_to(hit.global_position) <= 2.7 or (State.flag("lenteraOwned") and hit.action_id in ["puzzle", "recall"]):
 				target = hit
+	if target == null: target = _near_focus()
 	if State.flag("lenteraOwned"):
 		var tool_focus = _tool_focus()
 		if tool_focus != null: target = tool_focus
 	reach_time = maxf(0, reach_time - delta)
 	cable.visible = can_use_claw() and reach_time > 0
 	if cable.visible:
-		var start = camera.global_position + camera.global_basis.x * 0.24 - camera.global_basis.y * 0.18
+		var start = claw_muzzle.global_position
 		var end = reach_point
 		var difference = end - start
 		cable.global_position = (start + end) * 0.5
-		cable.scale = Vector3(1, difference.length() * 0.5, 1)
+		(cable.mesh as CylinderMesh).height=maxf(0.001,difference.length())
+		cable.scale = Vector3.ONE
 		cable.quaternion = Quaternion(Vector3.UP, difference.normalized())
+		# The imported three-jaw head leaves its actual barrel and follows the cable.
+		claw_head.global_position=end
+		var forward=(end-start).normalized()
+		claw_head.global_basis=Basis.looking_at(forward,Vector3.UP if absf(forward.dot(Vector3.UP))<0.98 else Vector3.RIGHT)
+	elif is_instance_valid(claw_head):claw_head.transform=claw_head_rest
 	viewmodel.get_node("Claw").visible = State.flag("lenteraOwned") and not tool_raising
 	viewmodel.get_node("Handle").visible = lamp_available() and not State.flag("lenteraOwned")
 	viewmodel.visible = State.data.room not in ["home", "school", "schoolyard", "neighborhood"]
@@ -197,7 +206,7 @@ func _tool_focus() -> KalaInteractable:
 	var best = 32.0
 	for object in get_tree().get_nodes_in_group("interactables"):
 		if not object.is_inside_tree() or not object.available(): continue
-		if not object.tool_only and object.action_id != "puzzle": continue
+		if not object.tool_only and object.action_id not in ["puzzle", "recall"]: continue
 		var difference: Vector3 = object.global_position - origin
 		var along = difference.dot(direction)
 		var side_squared = difference.length_squared() - along * along
@@ -207,6 +216,26 @@ func _tool_focus() -> KalaInteractable:
 		if distance < best and surface_distance >= distance - 0.75:
 			nearest = object
 			best = distance
+	return nearest
+
+func _near_focus() -> KalaInteractable:
+	# Aim assistance for small documents and pickups. Visibility is tested
+	# against the actual world, so this never collects through a closed wall.
+	var origin=camera.global_position
+	var forward=-camera.global_basis.z
+	var nearest: KalaInteractable
+	var best=INF
+	for object in get_tree().get_nodes_in_group("interactables"):
+		if not object.is_inside_tree() or not object.available() or object.tool_only: continue
+		if object.action_id not in ["item","note","evidence","chapter"]:continue
+		var d: Vector3=object.global_position-origin
+		if d.length()>2.7 or d.dot(forward)<=0:continue
+		var off=d.cross(forward).length()
+		if off>0.18:continue
+		var surface=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,object.global_position,1))
+		if not surface.is_empty() and surface.position.distance_to(object.global_position)>0.10:continue
+		var score=d.length()+off*3
+		if score<best:best=score;nearest=object
 	return nearest
 
 func look(relative: Vector2) -> void:
@@ -247,26 +276,21 @@ func _build_viewmodel() -> void:
 	claw.position = Vector3(0.32, -0.255, -0.66)
 	claw.rotation.z = -0.045
 	viewmodel.add_child(claw)
+	claw_head=claw.find_child("LENTERA_G_three_jaw_head",true,false)
+	claw_head_rest=claw_head.transform
+	claw_muzzle=Marker3D.new();claw_muzzle.name="ClawMuzzle"
+	# The housing aperture ends at -0.197; the jaw's own pivot (-0.235)
+	# already sits beyond it and would leave a gap behind the deployed cable.
+	claw_muzzle.position=Vector3(0,0,-0.197)
+	claw.add_child(claw_muzzle)
 	for group in [handle, claw]:
 		for mesh in group.find_children("*", "MeshInstance3D", true, false): mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	hand = Node3D.new(); hand.name = "HoldingHand"; viewmodel.add_child(hand)
-	hand.scale = Vector3.ONE * 0.82; hand.position = Vector3(0.05, -0.06, -0.07)
-	var g = preload("res://scripts/systems/geometry.gd")
-	var skin = g.material("plain", Color("aa8164")); var sleeve = g.material("plain", Color("7a8287"))
-	var forearm = g.box(hand, Vector3(0.29, -0.40, -0.21), Vector3(0.12, 0.16, 0.32), sleeve)
-	forearm.rotation.x = -0.25
-	g.sphere(hand, Vector3(0.27, -0.28, -0.42), Vector3(0.11, 0.13, 0.16), skin)
-	for i in range(4):
-		var finger = g.box(hand, Vector3(0.22 + i * 0.025, -0.26, -0.47), Vector3(0.023, 0.075, 0.045), skin)
-		finger.rotation.z = -0.25
-	g.sphere(hand, Vector3(0.20, -0.26, -0.42), Vector3(0.04, 0.08, 0.05), skin)
-	for mesh in hand.find_children("*", "MeshInstance3D", true, false): mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
 func _update_equip(delta: float) -> void:
 	if tool_raising: return # Pickup/break cinematics own their explicit animation.
 	var raised = lamp_on or reach_time > 0 or pulse_flash > 0
 	var target_blend = 1.0 if raised else 0.45 if State.flag("lenteraOwned") else 0.0
-	equip_blend = move_toward(equip_blend, target_blend, delta * 3.8)
+	equip_blend = lerpf(equip_blend, target_blend, 1.0-exp(-delta*10.0))
 	viewmodel.position = Vector3(0, -(1.0 - equip_blend) * 0.43 + sin(time * 3) * 0.003, (1.0 - equip_blend) * 0.12)
 	viewmodel.rotation = Vector3((1.0 - equip_blend) * -0.48, 0, sin(time * 3) * 0.012 + pulse_flash * 0.12)
 	var claw = viewmodel.get_node_or_null("Claw")

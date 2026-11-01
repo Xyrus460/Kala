@@ -3,6 +3,7 @@
 /android/
 /tools/engine/
 /tests/*_tmp.json
+/tests/*_tmp.json.*
 
 # Local caches, backups, and bundled dependencies
 /.qa_userdata/

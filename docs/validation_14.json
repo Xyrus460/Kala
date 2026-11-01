@@ -1,0 +1,270 @@
+{
+  "version": "0.14.0",
+  "verified_utc": "2026-11-01T03:15:11.201Z",
+  "checks": 893,
+  "failures": 0,
+  "suites": {
+    "integration": {
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    "layout": {
+      "checks": 144,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    "story": {
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    "claw": {
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    "revision04": {
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    "revision05": {
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    "revision06": {
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_latest_console.log"
+    },
+    "revision07": {
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_latest_console.log"
+    },
+    "revision08": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision08_latest_console.log"
+    },
+    "revision09": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision09_latest_console.log"
+    },
+    "revision10": {
+      "checks": 22,
+      "failures": 0,
+      "log": "docs/revision10_latest_console.log"
+    },
+    "revision11": {
+      "checks": 98,
+      "failures": 0,
+      "log": "docs/revision11_latest_console.log"
+    },
+    "revision12": {
+      "checks": 49,
+      "failures": 0,
+      "log": "docs/revision12_latest_console.log"
+    },
+    "revision13": {
+      "checks": 44,
+      "failures": 0,
+      "log": "docs/revision13_latest_console.log"
+    },
+    "revision14": {
+      "checks": 65,
+      "failures": 0,
+      "log": "docs/revision14_latest_console.log"
+    }
+  },
+  "standalone": {
+    "forward": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_forward_14_stdout.log",
+      "stderr": "docs/exe_forward_14_stderr.log"
+    },
+    "compatibility": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_compatibility_14_stdout.log",
+      "stderr": "docs/exe_compatibility_14_stderr.log"
+    }
+  },
+  "effects": {
+    "forward": {
+      "phases_rendered": 4,
+      "log": "docs/burst14_render_console.log"
+    },
+    "compatibility": {
+      "phases_rendered": 4,
+      "log": "docs/burst14_compat_console.log"
+    }
+  },
+  "packed_files": 2127,
+  "known_diagnostics": [
+    {
+      "renderer": "compatibility",
+      "stage": "engine process shutdown",
+      "textures": 2,
+      "bytes": 699048,
+      "log": "docs/exe_compatibility_14_stderr.log",
+      "status": "same engine shutdown diagnostic as the previous release; all 14 rooms loaded and the process exited 0"
+    }
+  ],
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 192745144,
+      "sha256": "af64d6fdea201b7ca0281d9ef0fd3e36b6766337ed7705e6d2fb8e939e8cdbdf"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 11131,
+      "sha256": "19478179f456cbb224ba68d8075175365dd84b0e3704f7f2510b5d878b5100f2"
+    }
+  ],
+  "source_files": [
+    {
+      "file": "scripts/systems/factory_route.gd",
+      "sha256": "ab0efe5db639921ae5804a4b903b1fc4fcd60bbc395dc54dbe53f18562b0ec90"
+    },
+    {
+      "file": "scripts/systems/flashlight_burst.gd",
+      "sha256": "25498b56784ce1f907081e4d9628dc69ec92d68bc2800af504ef72dfe6b08981"
+    },
+    {
+      "file": "assets/materials/flashlight_burst.gdshader",
+      "sha256": "35356abcc8f68256c0f73f575741f3a85726c13c9ac14a8dd96b9cb6ac4379f5"
+    },
+    {
+      "file": "scripts/systems/expansion_cinematics.gd",
+      "sha256": "6f408fbb8d0a72c9a26532b13e3bfe8cf1d6535173c458f446fa2735bd462424"
+    },
+    {
+      "file": "scripts/systems/factory_overhaul.gd",
+      "sha256": "418f597a92c6264f765aff761ee27af58fccd8409e6f1680d73aac3f403a539f"
+    },
+    {
+      "file": "scripts/systems/home_detail.gd",
+      "sha256": "0a9fc761b1a09f321c6ffb961a05c9c292c2677fa05411ec2440213562e6e425"
+    },
+    {
+      "file": "scripts/systems/student_model.gd",
+      "sha256": "beb7b3cd560be0c9c5f69a11eb479f44d197dd54319fdbf1536d5a7fbf7b8b71"
+    },
+    {
+      "file": "scripts/ui/journal_book.gd",
+      "sha256": "cc1906c51179a2a86ab20e622f5185c08bae81fc2ccd7ee25aff2ee9c9a562b0"
+    },
+    {
+      "file": "scripts/ui/hud.gd",
+      "sha256": "6316b59240bdc5d85ac6973cb7b035aee36cb6a0b135a04a239b8fa985a691ad"
+    },
+    {
+      "file": "scripts/systems/main.gd",
+      "sha256": "ca4a074c50a13a5d0908dcca4c35d5b9054a1fe23bac2cb107e11a759522071a"
+    },
+    {
+      "file": "scripts/systems/audio.gd",
+      "sha256": "b5aa22b6e1d543135dba72e20fa9263eb3580f435bed92c56dafd0cf74e9b02d"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/screenshots/pillow_14.png",
+      "sha256": "5147289e8c28b388ab7686b44e7b332299794034c95c4af0fee8c600bb4f7556"
+    },
+    {
+      "file": "docs/screenshots/conversation_14.png",
+      "sha256": "cd1ed7000ac1cc65a504f4bed2b4c8cfe0f7f02431f990629ed58939c43a958e"
+    },
+    {
+      "file": "docs/screenshots/journal_open_14.png",
+      "sha256": "2bfb33ecca9d2958e04226bcd97a85f8290a6897009070e00c6aff5f255d7c14"
+    },
+    {
+      "file": "docs/screenshots/journal_14.png",
+      "sha256": "ba298f18aea0c4ab0a4fc3a484a442ff88759a6eb2b2ada3d4b2b5b3e3f1fa39"
+    },
+    {
+      "file": "docs/screenshots/guard_shelf_14.png",
+      "sha256": "357a4bb622418c28663f24e20e0e40e5304b58ebf628f16e31d670f5bf365ff0"
+    },
+    {
+      "file": "docs/screenshots/memo_a_14.png",
+      "sha256": "dcfc3f5e127fe8c66481c9bd30b26a574c146df65197cd95b0a5b5fe2b797258"
+    },
+    {
+      "file": "docs/screenshots/keynote_14.png",
+      "sha256": "3980b8dff547de28ea1ebadf6adef1ad0108450950b4f203de387c6209bb3b4f"
+    },
+    {
+      "file": "docs/screenshots/keypad_14.png",
+      "sha256": "8d78b9adedd254c5b9dbc7db593f578e8ef4de1f685abee2bff289aba5885f9d"
+    },
+    {
+      "file": "docs/screenshots/burst_flash_14.png",
+      "sha256": "af644f5671224461b698004240ea225628a2ece4dee8f58039a24055fbfece20"
+    },
+    {
+      "file": "docs/screenshots/burst_fire_14.png",
+      "sha256": "3c81497539a0b18ca39665751a575e4c3e91b6344c1b94d0b80d3c2fb3da2931"
+    },
+    {
+      "file": "docs/screenshots/burst_sparks_14.png",
+      "sha256": "9a565b2adbfcd9431e779003b75c46c28f03b78de5aee19d83d024c9d563b1db"
+    },
+    {
+      "file": "docs/screenshots/burst_smoke_14.png",
+      "sha256": "2a02f09a7575920269445116ece5c25f0d97817c7dca5a6fcd614626d6137c11"
+    },
+    {
+      "file": "docs/screenshots/gallery_14.png",
+      "sha256": "caaafdfeeb2358cedc6b79048465593789b8b930f6dde2a6ccf2e76b94ad4793"
+    },
+    {
+      "file": "docs/screenshots/pumps_14.png",
+      "sha256": "daa798678728c3a9d3809f77e525b2e77f6be1766234b3fa13353565c0864c02"
+    },
+    {
+      "file": "docs/screenshots/pump_controls_14.png",
+      "sha256": "35a7e435e6165ecac175f224f73c79a2cb281d09900c54dd8aebf39460a59651"
+    },
+    {
+      "file": "docs/screenshots/distribution_14.png",
+      "sha256": "039804fa45a930aa0c87e00b631f9786e5e87b41f2421c6386a0d3492a2d013a"
+    },
+    {
+      "file": "docs/screenshots/route_power_14.png",
+      "sha256": "cdd9a135a689f51438bb071d55d3fee3aecebc5c434594f5f51f262e84e64a23"
+    },
+    {
+      "file": "docs/screenshots/burst_flash_14_compat.png",
+      "sha256": "354175bf26de41ea4cd15e48810ac5c38ec8ed7fcb4cb0c27350e8484031db84"
+    },
+    {
+      "file": "docs/screenshots/burst_fire_14_compat.png",
+      "sha256": "6816ad7ea4fe8863c8a1200c9daae0519816de3d14544bdd9ea0cae6c2431118"
+    },
+    {
+      "file": "docs/screenshots/burst_sparks_14_compat.png",
+      "sha256": "b4091d80073fe696eade04935ce4122d278a9d73fc212d12a89de2ed9dd2d906"
+    },
+    {
+      "file": "docs/screenshots/burst_smoke_14_compat.png",
+      "sha256": "fbd4e8880daa546f903fcbcbe2ce6450b36359ccd184bb3b0b0c2128e9acced2"
+    }
+  ],
+  "limitations": [
+    "Automated gameplay, physical routes and engine renders were checked; a manual playthrough to every ending was not performed."
+  ]
+}

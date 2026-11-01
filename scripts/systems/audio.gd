@@ -23,6 +23,7 @@ func _ready() -> void:
 	tones.pulse = _tone(68, 0.32, 0.22)
 	tones.reveal = _tone(510, 0.18, 0.025)
 	tones.disrupt = _tone(125, 0.16, 0.08)
+	tones.flash_burst = _battery_burst()
 	var drone = _tone(49, 4.0, 0.13)
 	drone.loop_mode = AudioStreamWAV.LOOP_FORWARD
 	drone.loop_end = 22050 * 4
@@ -60,7 +61,7 @@ func say(index: int) -> void:
 func effect(key: String) -> void:
 	if not tones.has(key): return
 	effects.stream = tones[key]
-	effects.volume_db = -12
+	effects.volume_db = -5 if key == "flash_burst" else -12
 	effects.play()
 
 func apply_volume() -> void:
@@ -92,4 +93,20 @@ func _tone(freq: float, length: float, noise: float) -> AudioStreamWAV:
 	stream.format = AudioStreamWAV.FORMAT_16_BITS
 	stream.mix_rate = 22050
 	stream.data = bytes
+	return stream
+
+func _battery_burst() -> AudioStreamWAV:
+	var samples=44100;var bytes=PackedByteArray();bytes.resize(samples*2)
+	var rng=RandomNumberGenerator.new();rng.seed=1407
+	var low=0.0
+	for i in range(samples):
+		var t=float(i)/22050.0
+		var noise=rng.randf_range(-1,1);low=lerpf(low,noise,0.09)
+		var blast=noise*exp(-t*15.0)*0.5+low*exp(-t*4.0)*1.4
+		var thump=sin(TAU*(68.0*t-15.0*t*t))*exp(-t*10.0)*0.55
+		var debris=0.0
+		for onset in [0.13,0.21,0.34,0.56,0.79]:
+			if t>onset:debris+=sin((t-onset)*TAU*(1820+onset*900))*exp(-(t-onset)*65)*0.13
+		bytes.encode_s16(i*2,int(clampf(blast+thump+debris,-1,1)*26000))
+	var stream=AudioStreamWAV.new();stream.format=AudioStreamWAV.FORMAT_16_BITS;stream.mix_rate=22050;stream.data=bytes
 	return stream

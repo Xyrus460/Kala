@@ -111,38 +111,12 @@ func _reception() -> void:
 	_sign("REKA / TEMAN MENYIMPAN CERITA",Vector3(-10.8,3.6,-9.5),4)
 
 func _mascot(p: Vector3) -> void:
-	var mascot=Node3D.new(); mascot.name="RekaMascot"; mascot.position=p; add_child(mascot)
-	var blue=mat("497b71"); var yellow=mat("b68b54")
-	G.sphere(mascot,Vector3(0,1.65,0),Vector3(0.7,1.05,0.48),blue)
-	G.sphere(mascot,Vector3(0,2.52,0),Vector3(0.84,0.75,0.57),blue)
-	G.box(mascot,Vector3(0,2.03,0),Vector3(0.7,0.16,0.54),mat("a4523e"))
-	G.box(mascot,Vector3(0.18,1.76,0.28),Vector3(0.17,0.48,0.055),mat("a4523e"))
-	for side in [-1,1]:
-		var ear=G.sphere(mascot,Vector3(side*0.28,3.08,-0.02),Vector3(0.21,0.68,0.18),blue); ear.rotation.z=side*0.23
-		var arm=G.sphere(mascot,Vector3(side*0.50,1.6,0),Vector3(0.23,1.15,0.24),blue); arm.rotation.z=side*0.14
-		G.sphere(mascot,Vector3(side*0.59,1.02,0.05),Vector3(0.31,0.35,0.18),yellow)
-		G.sphere(mascot,Vector3(side*0.23,0.68,0),Vector3(0.24,1.2,0.25),blue)
-		G.sphere(mascot,Vector3(side*0.24,0.12,0.14),Vector3(0.4,0.24,0.52),yellow)
-		G.sphere(mascot,Vector3(side*0.23,2.66,0.25),Vector3(0.30,0.32,0.12),mat("e6e2cc"))
-		G.sphere(mascot,Vector3(side*0.23,2.66,0.315),Vector3(0.14,0.18,0.06),mat("15232a"))
-	G.sphere(mascot,Vector3(0,2.38,0.27),Vector3(0.57,0.25,0.10),mat("c6ad82"))
-	G.sphere(mascot,Vector3(0,2.37,0.32),Vector3(0.35,0.035,0.045),mat("20272a"))
-	G.sphere(mascot,Vector3(0,2.46,0.35),Vector3(0.12,0.08,0.065),mat("343e37"))
+	var imported=preload("res://scripts/systems/mascot_model.gd").create()
+	imported.name="RekaMascot";imported.position=p;add_child(imported)
 
 func _station() -> void:
-	_arch(-10.5,"SIMPUL DAYA",9.4,4.3)
-	# Toy railway display occupies overhead structure, leaving the floor clear.
-	var train=Node3D.new(); train.name="OverheadToyTrain"; train.position=Vector3(0,3.35,-11.3); add_child(train)
-	G.box(train,Vector3(0,-0.15,0),Vector3(9.2,0.20,1.7),mat("824438"))
-	for i in range(3):
-		var x=-2.8+i*2.8
-		G.box(train,Vector3(x,0.4,0),Vector3(2.1,0.65,1.25),mat(COLORS[i]))
-		G.box(train,Vector3(x,1.2,0),Vector3(2.15,0.15,1.4),mat("c49a2e"))
-		for dx in [-0.83,0.83]: G.box(train,Vector3(x+dx,0.91,0),Vector3(0.12,0.6,1.2),mat(COLORS[i]))
-		for dx in [-0.65,0.65]:
-			var wheel=G.cylinder(train,Vector3(x+dx,0.03,0.64),0.25,0.10,mat("293734")); wheel.rotation.x=PI/2
+	_sign("RUMAH RELAI / KARTINI",Vector3(0,5.6,-16.7),9.0)
 	for p in [Vector3(-7,4.7,3),Vector3(7,4.7,3)]: _spot(p,Color("a6c5b5"),3)
-	for i in range(3): _sign(["01 · INGATAN","02 · TENAGA","03 · JALUR SERVIS"][i],Vector3(-8+i*8,3.3,-5),3.2)
 
 func _assembly() -> void:
 	_arch(-5.5,"RANGKAI RASA",8.6,4.7)
@@ -227,6 +201,9 @@ func _depths() -> void:
 
 func _process(delta: float) -> void:
 	clock+=delta
+	if level.room_id=="loading":
+		var display=get_node_or_null("RekaMascot")
+		if display!=null:display.visible=not State.solved("panel")
 	for i in range(toys.size()):
 		var toy=toys[i]; var origin: Vector3=toy.get_meta("origin")
 		toy.position=origin+Vector3(0,sin(clock*2+i)*0.006,sin(clock*0.4+i)*0.22)

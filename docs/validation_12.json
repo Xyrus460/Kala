@@ -1,0 +1,124 @@
+{
+  "version": "0.12.0",
+  "verified_utc": "2026-10-31T09:11:10.617Z",
+  "checks": 770,
+  "failures": 0,
+  "suites": {
+    "integration": {
+      "checks": 177,
+      "failures": 0,
+      "log": "docs/integration_latest_console.log"
+    },
+    "layout": {
+      "checks": 130,
+      "failures": 0,
+      "log": "docs/layout_latest_console.log"
+    },
+    "story": {
+      "checks": 28,
+      "failures": 0,
+      "log": "docs/story_latest_console.log"
+    },
+    "claw": {
+      "checks": 6,
+      "failures": 0,
+      "log": "docs/claw_latest_console.log"
+    },
+    "revision04": {
+      "checks": 63,
+      "failures": 0,
+      "log": "docs/revision04_latest_console.log"
+    },
+    "revision05": {
+      "checks": 57,
+      "failures": 0,
+      "log": "docs/revision05_latest_console.log"
+    },
+    "revision06": {
+      "checks": 42,
+      "failures": 0,
+      "log": "docs/revision06_latest_console.log"
+    },
+    "revision07": {
+      "checks": 30,
+      "failures": 0,
+      "log": "docs/revision07_latest_console.log"
+    },
+    "revision08": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision08_latest_console.log"
+    },
+    "revision09": {
+      "checks": 34,
+      "failures": 0,
+      "log": "docs/revision09_latest_console.log"
+    },
+    "revision10": {
+      "checks": 22,
+      "failures": 0,
+      "log": "docs/revision10_latest_console.log"
+    },
+    "revision11": {
+      "checks": 98,
+      "failures": 0,
+      "log": "docs/revision11_latest_console.log"
+    },
+    "revision12": {
+      "checks": 49,
+      "failures": 0,
+      "log": "docs/revision12_latest_console.log"
+    }
+  },
+  "standalone": {
+    "forward": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_forward_12_stdout.log",
+      "stderr": "docs/exe_forward_12_stderr.log"
+    },
+    "compatibility": {
+      "exit_code": 0,
+      "rooms_loaded": 14,
+      "stdout": "docs/exe_compatibility_12_stdout.log",
+      "stderr": "docs/exe_compatibility_12_stderr.log"
+    }
+  },
+  "known_diagnostics": [
+    "Compatibility reports two 349524-byte texture allocations at process shutdown. The same diagnostic was recorded in 0.11. Forward+ stderr was empty."
+  ],
+  "screenshots": [
+    "docs/screenshots/lockers_12.png",
+    "docs/screenshots/art_12.png",
+    "docs/screenshots/class_door_12.png",
+    "docs/screenshots/seated_12.png",
+    "docs/screenshots/student_12.png",
+    "docs/screenshots/upper_music_12.png",
+    "docs/screenshots/uks_12.png",
+    "docs/screenshots/floor_12.png",
+    "docs/screenshots/keypad_12.png",
+    "docs/screenshots/r17_12.png",
+    "docs/screenshots/wiring_12.png",
+    "docs/screenshots/settings_12.png",
+    "docs/screenshots/graphics_12.png",
+    "docs/screenshots/journal_12.png"
+  ],
+  "packed_files": 2104,
+  "files": [
+    {
+      "file": "KALA.exe",
+      "bytes": 180858888,
+      "sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    {
+      "file": "KALA.pck",
+      "bytes": 189757908,
+      "sha256": "3d77b9ea9f8d0398ac2d893beab31edc4788bfa30e90ea9330fe8adfaf3df518"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 9502,
+      "sha256": "b228f861e85b03efc2aae2aea1f0c666c3a043b15a4ec60d71c9f2d0f8190b05"
+    }
+  ]
+}

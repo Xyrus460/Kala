@@ -14,6 +14,7 @@ func _ready() -> void:
 	add_to_group("interactables")
 
 func available() -> bool:
+	if action_id=="factory_route" and parameter=="fuse":return not State.flag("inspectionFuseHeld")
 	if action_id == "fragment": return State.flag("fragmentRevealed_" + parameter) and not State.owns("fragment_" + parameter)
 	if action_id == "search": return not State.flag("searched_" + parameter)
 	if action_id == "item": return not State.owns(parameter)

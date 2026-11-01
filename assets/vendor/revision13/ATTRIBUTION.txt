@@ -1,0 +1,35 @@
+KALA 0.13 character assets — 31 October 2026
+
+Quaternius — Animated Woman / modular formal woman (head, skirt, shoes)
+https://poly.pizza/m/nIItLV9nxS
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Quaternius — Animated Woman / modular casual woman (blouse and bob haircut)
+https://poly.pizza/m/qJ2gsTUBHL
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Quaternius — Suit / modular female formal clothing
+https://poly.pizza/m/sOUciDsoVV
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+Adapted for Bu Ratna: torso garment bound to the formal female skeleton,
+khaki fabric colors, skirt and name badge. Attribution is retained here and
+in THIRD_PARTY_NOTICES.txt, which accompanies the Windows distribution.
+
+Quaternius — Business Man (modular head)
+https://poly.pizza/m/JFrLIKqvCH
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Quaternius — Hoodie Character (modular head)
+https://poly.pizza/m/gKLBoRsyKe
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Quaternius — Bunny (rig, mesh and animation)
+https://poly.pizza/m/irZjWFARyl
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+pengawas.glb is a KALA adaptation of bunny.glb: re-proportioned legs/torso/ears,
+rebuilt inverse bind matrices and retargeted translation keys. Runtime colors,
+large eyes, broad muzzle, black nose and red scarf match the user's Reka
+reference. The original rabbit's small nose/mouth, eyes and carrot are omitted.
+
+Additional uniform collars, badges and mascot facial accessories authored for KALA.
+Original downloads and source URLs are recorded in SOURCES.json.
